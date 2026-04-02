@@ -1,0 +1,17 @@
+{
+  "name": "hotels-frontend",
+  "version": "0.1.0",
+  "dependencies": {
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "react-scripts": "5.0.1"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build"
+  },
+  "devDependencies": {
+    "eslint": "^8.57.0",
+    "@stylistic/eslint-plugin": "^2.0.0"
+  }
+}
