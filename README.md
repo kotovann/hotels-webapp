@@ -1,4 +1,4 @@
----
+***
 В самый первый раз
 
 1. Создать .env (пример — `.env.example`)
@@ -20,7 +20,7 @@ docker compose run --rm backend uv run django-admin startproject  < имя > .
 ```bash
 make up
 ```
----
+***
 
 #### Остановить
 
