@@ -1,21 +1,26 @@
 ---
-В самый первый раз, после создания .env сначала сделайте это (в зависимости от роли)
+В самый первый раз
+
+1. Создать .env (пример — `.env.example`)
+
+2. Инициализировать проект:
+
+***Если бэк***
 
 ```bash
-docker compose run --rm < frontend или backend > < команда инициализации джанго/реакт проекта >
+docker compose run --rm backend uv run django-admin startproject  < имя > .
+```
+
+***Если фронт***
+
+Создать файлы `frontend/src/index.js` и `frontend/public/index.html`
+
+3. Запустить:
+
+```bash
+make up
 ```
 ---
-
-#### Создать файл с переменными окружения
-
-Пример - `.env.example`
-
-
-#### Запустить
-
-```bash
-make build
-```
 
 #### Остановить
 

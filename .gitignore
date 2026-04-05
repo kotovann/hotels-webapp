@@ -5,3 +5,4 @@ dist/
 build/
 .cache/
 *.log
+.venv

@@ -41,7 +41,6 @@ services:
     environment:
       - CI=false
       - CHOKIDAR_USEPOLLING=true
-    command: npm start
 
 volumes:
   postgres_data:
