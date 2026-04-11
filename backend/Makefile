@@ -18,3 +18,6 @@ lint:
 
 lint-fix:
 	docker compose exec backend uv run ruff check --fix .
+
+gen-secret:
+	docker compose exec backend uv run python -c "import secrets; print('SECRET_KEY=' + secrets.token_urlsafe(32))"
