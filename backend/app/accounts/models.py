@@ -1,6 +1,7 @@
 from django.db import models
 from django.contrib.auth.models import AbstractUser, Group
 from phonenumber_field.modelfields import PhoneNumberField
+from app.accounts.managers import UserManager
 
 
 class User(AbstractUser):
@@ -54,6 +55,7 @@ class User(AbstractUser):
 
     USERNAME_FIELD = 'email'
     REQUIRED_FIELDS = ['first_name', 'last_name', 'phone_number']
+    objects = UserManager()
 
     class Meta:
         db_table = 'user'
@@ -87,7 +89,7 @@ class User(AbstractUser):
         '''
         Возвращает основную роль пользователя.
         '''
-        return self.primary_group.name
+        return self.primary_group.name if self.primary_group else 'Нет группы'
 
     def get_full_name(self) -> str:
         return self.full_name

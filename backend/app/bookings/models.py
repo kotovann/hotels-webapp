@@ -67,6 +67,7 @@ class Booking(models.Model):
         decimal_places=2,
         editable=False,
         verbose_name='К оплате',
+        help_text='Будет расчитана после добавления записи о брони',
     )
     payment_status = models.CharField(
         choices=PaymentStatus.choices,
@@ -89,6 +90,8 @@ class Booking(models.Model):
 
     class Meta:
         db_table = 'booking'
+        verbose_name = 'Бронь'
+        verbose_name_plural = 'Брони'
         ordering = [
             '-created_at', 'room__hotel__name',
             'room__floor', 'room__number_on_floor', 'user__last_name'
@@ -170,6 +173,8 @@ class Review(models.Model):
 
     class Meta:
         db_table = 'review'
+        verbose_name = 'Отзыв'
+        verbose_name_plural = 'Отзывы'
         ordering = ['is_published', '-created_at']
         constraints = [
             models.CheckConstraint(

@@ -5,7 +5,7 @@ from app.hotels.models import Hotel, RoomType, Room, RoomPhoto
 class RoomInline(admin.TabularInline):
     model = Room
     extra = 1
-    fields = ('room_number', 'floor', 'number_on_floor', 'variant')
+    fields = ('hotel', 'floor', 'number_on_floor', 'variant')
     readonly_fields = ('room_number',)
     show_change_link = True
 
@@ -39,7 +39,6 @@ class HotelAdmin(admin.ModelAdmin):
 @admin.register(RoomType)
 class RoomTypeAdmin(admin.ModelAdmin):
     inlines = (RoomInline,)
-    list_select_related = ('hotel',)
     list_display = ('name', 'size', 'capacity', 'bedroom_count', 'bathroom_count')
     list_per_page = 30
     list_filter = ('has_balcony',)
@@ -59,7 +58,7 @@ class RoomTypeAdmin(admin.ModelAdmin):
 
 @admin.register(Room)
 class RoomAdmin(admin.ModelAdmin):
-    list_select_related = ('hotel',)
+    list_select_related = ('hotel', 'room_type')
     inlines = (RoomPhotoInline,)
     list_display = ('room_number', 'room_type__name', 'hotel__name')
     list_per_page = 30
@@ -70,9 +69,6 @@ class RoomAdmin(admin.ModelAdmin):
         ('Основная информация', {
             'fields': ('room_type', 'floor', 'number_on_floor', 'variant'),
         }),
-        ('Присвоенный номер', {
-            'fields': ('room_number',)
-        }),
         ('Особенности', {
             'fields': ('is_pets_allowed', 'is_smoking_allowed'),
         }),
@@ -81,7 +77,10 @@ class RoomAdmin(admin.ModelAdmin):
         }),
     )
 
-    @admin.display(description='Номер', ordering=('hotel__name', 'floor', 'number_on_floor', 'variant'))
+    @admin.display(
+        description='Номер',
+        ordering=('hotel__name', 'floor', 'number_on_floor', 'variant')
+    )
     def room_number(self, obj):
         return obj.room_number
 
@@ -91,13 +90,19 @@ class RoomPhotoAdmin(admin.ModelAdmin):
     list_select_related = ('room',)
     list_display = ('room_number', 'photo_path', 'sort_order_number')
     list_per_page = 30
-    search_fields = ('room__floor', 'room__number_on_floor', 'room__room_type__name', 'room__room_type__hotel__name')
+    search_fields = (
+        'room__floor', 'room__number_on_floor',
+        'room__room_type__name', 'room__hotel__name'
+    )
     fieldsets = (
         ('Загрузка фото', {
             'fields': ('room', 'photo_path', 'sort_order_number'),
         }),
     )
-    
-    @admin.display(description='Номер комнаты', ordering=('room__room_type__hotel__name', 'floor', 'number_on_floor', 'variant'))
+
+    @admin.display(
+        description='Номер комнаты',
+        ordering=('room__hotel__name', 'floor', 'number_on_floor', 'variant')
+    )
     def room_number(self, obj):
         return obj.room.room_number

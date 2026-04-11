@@ -1,6 +1,5 @@
 from django.db import models
 from django.core.validators import MinValueValidator, MaxValueValidator, RegexValidator, FileExtensionValidator
-from django.core.exceptions import ValidationError
 from phonenumber_field.modelfields import PhoneNumberField
 
 
@@ -167,7 +166,10 @@ class Room(models.Model):
         db_table = 'room'
         verbose_name = 'Номер'
         verbose_name_plural = 'Номера'
-        ordering = ['hotel__name', 'room_type__name', 'floor', 'number_on_floor', 'variant', '-price_per_night']
+        ordering = [
+            'hotel__name', 'room_type__name', 'floor',
+            'number_on_floor', 'variant', '-price_per_night'
+        ]
         constraints = [
             models.UniqueConstraint(
                 fields=('hotel', 'floor'),
@@ -208,19 +210,25 @@ class RoomPhoto(models.Model):
     photo_path = models.ImageField(
         upload_to=_photo_path,
         validators=[
-            FileExtensionValidator(allowed_extensions=['png', 'jpg', 'jpeg', 'webp'],  message='Формат файла не поддерживается')
+            FileExtensionValidator(
+                allowed_extensions=['png', 'jpg', 'jpeg', 'webp'],
+                message='Формат файла не поддерживается'
+            )
         ],
-        verbose_name='Путь к фото',
+        verbose_name='Фото',
     )
     sort_order_number = models.PositiveSmallIntegerField(
         verbose_name='Порядковый номер',
     )
-    
+
     class Meta:
         db_table = 'room_photo'
         verbose_name = 'Фото номера'
         verbose_name_plural = 'Фото номеров'
-        ordering = ['room__hotel__name', 'room__floor', 'room__number_on_floor', 'room__variant', 'sort_order_number']
+        ordering = [
+            'room__hotel__name', 'room__floor',
+            'room__number_on_floor', 'room__variant', 'sort_order_number'
+        ]
         constraints = [
             models.UniqueConstraint(
                 fields=['room', 'sort_order_number'],

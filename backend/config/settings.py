@@ -74,7 +74,7 @@ DATABASES = {
         'USER': config('POSTGRES_USER'),
         'PASSWORD': config('POSTGRES_PASSWORD'),
         'HOST': config('POSTGRES_HOST'),
-        'PORT': config('POSTGRES_PORT', default=5432, cast=int),
+        'PORT': config('POSTGRES_PORT', cast=int),
     }
 }
 
@@ -109,6 +109,8 @@ USE_I18N = True
 
 USE_TZ = True
 
+PHONENUMBER_DEFAULT_REGION = 'RU'
+PHONENUMBER_DB_FORMAT = 'E164'
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/6.0/howto/static-files/

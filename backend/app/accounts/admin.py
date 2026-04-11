@@ -24,17 +24,16 @@ class CustomUserAdmin(UserAdmin):
         ('Права доступа', {
             'fields': ('is_active', 'is_staff', 'is_superuser'),
         }),
-        ('Даты', {
-            'fields': ('last_login', 'date_joined'),
-        }),
     )
     add_fieldsets = (
-        (None, {
-            'classes': ('wide',),
-            'fields': (
-                'first_name', 'middle_name', 'last_name', 'date_of_birth',
-                'phone_number', 'email', 'password1', 'password2',
-            ),
+        ('Личные данные', {
+            'fields': ('first_name', 'middle_name', 'last_name', 'date_of_birth', 'phone_number'),
+        }),
+        ('Учётные данные', {
+            'fields': ('email', 'password'),
+        }),
+        ('Группы и роли', {
+            'fields': ('groups', 'primary_group'),
         }),
     )
 
