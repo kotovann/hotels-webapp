@@ -1,0 +1,334 @@
+[
+{
+  "model": "accounts.user",
+  "pk": 47,
+  "fields": {
+    "password": "pbkdf2_sha256$1200000$aTQX7C6RJLDEza0qaj4VJZ$+mzkGwPGbUbPrT/2qiA/MT1xnwbZrbYl9xQ8AUDNEMY=",
+    "last_login": "2026-04-17T13:53:28.511Z",
+    "is_superuser": true,
+    "is_staff": true,
+    "is_active": true,
+    "date_joined": "2026-04-17T13:52:03.004Z",
+    "email": "test@admin.com",
+    "phone_number": "+79000000000",
+    "first_name": "Admin",
+    "middle_name": null,
+    "last_name": "Adminov",
+    "date_of_birth": "2000-01-01",
+    "groups": [
+      3
+    ],
+    "user_permissions": []
+  }
+},
+{
+  "model": "accounts.user",
+  "pk": 54,
+  "fields": {
+    "password": "pbkdf2_sha256$1200000$SCpqnY5CeryD2MdrTBzjyc$VKy0/7MxVGOxzjtgyPFvx1KL/nAQGTo9beGoz9JdjDY=",
+    "last_login": null,
+    "is_superuser": false,
+    "is_staff": true,
+    "is_active": true,
+    "date_joined": "2026-04-17T13:55:47.269Z",
+    "email": "abramovoleg@example.com",
+    "phone_number": "+79848761787",
+    "first_name": "Геннадий",
+    "middle_name": "Демьянович",
+    "last_name": "Герасимов",
+    "date_of_birth": "1947-05-06",
+    "groups": [
+      1,
+      4
+    ],
+    "user_permissions": []
+  }
+},
+{
+  "model": "accounts.user",
+  "pk": 63,
+  "fields": {
+    "password": "pbkdf2_sha256$1200000$RmJborawMx02CqPJfibKA1$mA81eV5cFkbXWC1q8qRqIZVGuykPMZViqzwr76OJ9xs=",
+    "last_login": null,
+    "is_superuser": false,
+    "is_staff": true,
+    "is_active": true,
+    "date_joined": "2026-04-17T14:02:30.136Z",
+    "email": "alevtinasimonova@example.net",
+    "phone_number": "+78006279431",
+    "first_name": "Христофор",
+    "middle_name": "Артемьевич",
+    "last_name": "Субботин",
+    "date_of_birth": "1920-01-30",
+    "groups": [
+      4
+    ],
+    "user_permissions": []
+  }
+},
+{
+  "model": "accounts.user",
+  "pk": 64,
+  "fields": {
+    "password": "pbkdf2_sha256$1200000$5UNLriRlCnvrBC2noVDDuT$JGMYlWa6HimccunCWfLORO6lqNepYamTDKOoM6QZFKU=",
+    "last_login": null,
+    "is_superuser": false,
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2026-04-17T14:02:30.741Z",
+    "email": "radovantarasov@example.com",
+    "phone_number": "+79450293697",
+    "first_name": "Майя",
+    "middle_name": "Викторовна",
+    "last_name": "Воронова",
+    "date_of_birth": "1979-08-04",
+    "groups": [
+      1
+    ],
+    "user_permissions": []
+  }
+},
+{
+  "model": "accounts.user",
+  "pk": 65,
+  "fields": {
+    "password": "pbkdf2_sha256$1200000$D1C13gkrnOZ8FSg1RhMaId$yE3CNA85qa68XlrZsT4EZAgoWCnaoQcCEv7nJkUmfHc=",
+    "last_login": null,
+    "is_superuser": false,
+    "is_staff": true,
+    "is_active": true,
+    "date_joined": "2026-04-17T14:02:31.364Z",
+    "email": "aleksandrabelozerova@example.net",
+    "phone_number": "+74821581807",
+    "first_name": "Регина",
+    "middle_name": "Валериевна",
+    "last_name": "Анисимова",
+    "date_of_birth": "1952-03-15",
+    "groups": [
+      1,
+      4
+    ],
+    "user_permissions": []
+  }
+},
+{
+  "model": "accounts.user",
+  "pk": 66,
+  "fields": {
+    "password": "pbkdf2_sha256$1200000$nhhNHExKbwjN7tFXdk5gTI$tT9GKDk+Mp4SbsV1CXU27VoRysMzVRphIo0ARIQQrsA=",
+    "last_login": null,
+    "is_superuser": false,
+    "is_staff": true,
+    "is_active": true,
+    "date_joined": "2026-04-17T14:02:31.971Z",
+    "email": "mishinstanimir@example.com",
+    "phone_number": "+79415806017",
+    "first_name": "София",
+    "middle_name": "Макаровна",
+    "last_name": "Мартынова",
+    "date_of_birth": "1955-07-24",
+    "groups": [
+      4
+    ],
+    "user_permissions": []
+  }
+},
+{
+  "model": "accounts.user",
+  "pk": 67,
+  "fields": {
+    "password": "pbkdf2_sha256$1200000$bULXZGeDpq54HjYMJAClJb$XuXuCFgbBO0yrebXymyZ8SjUMUE1nyYCcAUHHaRwC3w=",
+    "last_login": null,
+    "is_superuser": false,
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2026-04-17T14:02:32.578Z",
+    "email": "dorofeevasofija@example.com",
+    "phone_number": "+73413809963",
+    "first_name": "Вацлав",
+    "middle_name": "Васильевич",
+    "last_name": "Давыдов",
+    "date_of_birth": "1920-09-08",
+    "groups": [
+      1
+    ],
+    "user_permissions": []
+  }
+},
+{
+  "model": "accounts.user",
+  "pk": 68,
+  "fields": {
+    "password": "pbkdf2_sha256$1200000$GF1ZFIQiJUhk6W7Wv8PoRL$2Mc8GO3vjFgoTmt5NT+rzML6Ne82SUVFidOIpaAtOr0=",
+    "last_login": null,
+    "is_superuser": false,
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2026-04-17T14:04:54.318Z",
+    "email": "harlampiribakov@example.org",
+    "phone_number": "+78601423765",
+    "first_name": "Аким",
+    "middle_name": "Харламович",
+    "last_name": "Рожков",
+    "date_of_birth": "1932-10-13",
+    "groups": [
+      1
+    ],
+    "user_permissions": []
+  }
+},
+{
+  "model": "accounts.user",
+  "pk": 69,
+  "fields": {
+    "password": "pbkdf2_sha256$1200000$wupc0oCq4ap7UVNFg1nafY$+yKqMk7Si4948ro8oN+ywnrzpWeAL6GXGFGEBUAt9zg=",
+    "last_login": null,
+    "is_superuser": false,
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2026-04-17T14:04:54.933Z",
+    "email": "ljudmila_05@example.org",
+    "phone_number": "+78519774188",
+    "first_name": "Мина",
+    "middle_name": "Изотович",
+    "last_name": "Матвеев",
+    "date_of_birth": "1990-04-25",
+    "groups": [
+      1
+    ],
+    "user_permissions": []
+  }
+},
+{
+  "model": "accounts.user",
+  "pk": 70,
+  "fields": {
+    "password": "pbkdf2_sha256$1200000$sy57bTpUk1t7YIrcORms3Y$vspjw2DDbTDKXSLdWjzmWXa3wTC+VnDWN69kSK8sRAg=",
+    "last_login": null,
+    "is_superuser": false,
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2026-04-17T14:04:55.545Z",
+    "email": "lihachevprohor@example.com",
+    "phone_number": "+74965875329",
+    "first_name": "Любовь",
+    "middle_name": "Рубеновна",
+    "last_name": "Сазонова",
+    "date_of_birth": "1979-07-31",
+    "groups": [
+      1
+    ],
+    "user_permissions": []
+  }
+},
+{
+  "model": "accounts.user",
+  "pk": 71,
+  "fields": {
+    "password": "pbkdf2_sha256$1200000$NFazTIDZ1ALVaSRje45NFt$9VWETULjiIIIqBi+3/iGnF38BPSBbGXeB12iNknUZP8=",
+    "last_login": null,
+    "is_superuser": false,
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2026-04-17T14:04:56.161Z",
+    "email": "valentina_1977@example.com",
+    "phone_number": "+79775014165",
+    "first_name": "Агата",
+    "middle_name": "Матвеевна",
+    "last_name": "Воронцова",
+    "date_of_birth": "1950-07-21",
+    "groups": [
+      1
+    ],
+    "user_permissions": []
+  }
+},
+{
+  "model": "accounts.user",
+  "pk": 72,
+  "fields": {
+    "password": "pbkdf2_sha256$1200000$bBlm5FZTdZUU8pln3sBFij$Rx2xRCv5SQa6jQoLA3SvSS43fJhqoyn6w6zo8a1j4ko=",
+    "last_login": null,
+    "is_superuser": false,
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2026-04-17T14:04:56.768Z",
+    "email": "miroslav_59@example.org",
+    "phone_number": "+74743417693",
+    "first_name": "Ирина",
+    "middle_name": "Константиновна",
+    "last_name": "Рогова",
+    "date_of_birth": "1971-05-15",
+    "groups": [
+      1
+    ],
+    "user_permissions": []
+  }
+},
+{
+  "model": "accounts.user",
+  "pk": 73,
+  "fields": {
+    "password": "pbkdf2_sha256$1200000$k8vw8F5s6cjfsLnVFeyDZ7$KLkDdPHCW8broVF5ILEvBNue3qcYHniidNiowBx1DQU=",
+    "last_login": null,
+    "is_superuser": false,
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2026-04-17T14:04:57.431Z",
+    "email": "adrian_94@example.net",
+    "phone_number": "+77254065627",
+    "first_name": "Кира",
+    "middle_name": "Робертовна",
+    "last_name": "Логинова",
+    "date_of_birth": "1983-02-01",
+    "groups": [
+      1
+    ],
+    "user_permissions": []
+  }
+},
+{
+  "model": "accounts.user",
+  "pk": 74,
+  "fields": {
+    "password": "pbkdf2_sha256$1200000$4AHU7i1IatgWtBkTUjLAgg$/QZ7uEVsiGz4srQF6B+/cD7memLaQaZuuqBe/jDCGvg=",
+    "last_login": null,
+    "is_superuser": false,
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2026-04-17T14:04:58.058Z",
+    "email": "pelagejapahomova@example.net",
+    "phone_number": "+79031719905",
+    "first_name": "Алина",
+    "middle_name": "Владиславовна",
+    "last_name": "Ларионова",
+    "date_of_birth": "1924-03-01",
+    "groups": [
+      1
+    ],
+    "user_permissions": []
+  }
+},
+{
+  "model": "accounts.user",
+  "pk": 75,
+  "fields": {
+    "password": "pbkdf2_sha256$1200000$swd5VHlMUGJBI1peUH5OBk$ExIo2nOdgwf43FejeTcNuSgAj+/aScgnedyviD9sl/8=",
+    "last_login": null,
+    "is_superuser": false,
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2026-04-17T14:04:58.676Z",
+    "email": "korniluvarov@example.com",
+    "phone_number": "+78311374811",
+    "first_name": "Майя",
+    "middle_name": "Владимировна",
+    "last_name": "Журавлева",
+    "date_of_birth": "1997-08-06",
+    "groups": [
+      1
+    ],
+    "user_permissions": []
+  }
+}
+]
