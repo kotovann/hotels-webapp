@@ -1,3 +1,4 @@
+from datetime import time, timedelta
 from io import BytesIO
 import random
 from typing import Optional
@@ -7,6 +8,8 @@ from django.core.files.uploadedfile import SimpleUploadedFile
 from faker import Faker
 from faker.providers import BaseProvider
 from PIL import Image
+
+from app.hotels.models import RoomCategory, Hotel
 
 
 class HotelProvider(BaseProvider):
@@ -44,7 +47,7 @@ class HotelProvider(BaseProvider):
         return f'{self.base_name} {pr} {location}'
 
     def country(self) -> str:
-        return self.generator.country()
+        return 'Россия'
 
     def city(self) -> str:
         return f'{self.generator.city_name()}{self.generator.city_suffix()}'
@@ -65,8 +68,24 @@ class HotelProvider(BaseProvider):
     def floor_count(self) -> int:
         return self.generator.random_int(min=1, max=10)
 
+    def check_in_time(self) -> time:
+        standard_time = Hotel.STND_CHECK_IN_TIME
+        if self.generator.boolean(chance_of_getting_true=5):
+            return standard_time.replace(hour=standard_time.hour + 1)
+        if self.generator.boolean(chance_of_getting_true=5):
+            return standard_time.replace(hour=standard_time.hour - 1)
+        return standard_time
+
+    def check_out_time(self) -> time:
+        standard_time = Hotel.STND_CHECK_OUT_TIME
+        if self.generator.boolean(chance_of_getting_true=5):
+            return standard_time.replace(hour=standard_time.hour + 1)
+        if self.generator.boolean(chance_of_getting_true=5):
+            return standard_time.replace(hour=standard_time.hour - 1)
+        return standard_time
+
     def is_active(self) -> bool:
-        return self.generator.boolean(chance_of_getting_true=85)
+        return self.generator.boolean(chance_of_getting_true=90)
 
     def hotel(self) -> dict:
         street = self.generator.street_name()
@@ -80,6 +99,8 @@ class HotelProvider(BaseProvider):
             'city': city,
             'address': self.address(street, city),
             'floor_count': self.floor_count(),
+            'check_in_time': self.check_in_time(),
+            'check_out_time': self.check_out_time(),
             'is_active': self.is_active(),
         }
 
@@ -89,7 +110,8 @@ class RoomTypeProvider(BaseProvider):
 
     def __init__(self, generator: Faker):
         super().__init__(generator)
-        self._types = ('Номер', 'Комната', 'Апартаменты', 'Студия')
+        self._categories = RoomCategory.Tier.values
+        self._bathroom_types = RoomCategory.BathroomType.values
         self._preposition_cases = {
             'с видом на': ('площадь', 'реку', 'здание', 'бульвар', 'залив'),
             'у': ('площади', 'реки', 'здания', 'бульвара', 'залива'),
@@ -100,8 +122,8 @@ class RoomTypeProvider(BaseProvider):
         }
         self._prepositions = tuple(self._preposition_cases.keys())
 
-    def name(self) -> str:
-        room_type_name = self.generator.random_element(self._types)
+    def name(self, category: Optional[str]=None) -> str:
+        room_type_name = category if category else self.generator.random_element(self._categories)
         pr = self.generator.random_element(self._prepositions)
         location = ' '.join([
             self.generator.random_element(self._preposition_cases[pr]),
@@ -113,36 +135,58 @@ class RoomTypeProvider(BaseProvider):
         return self.generator.text(max_nb_chars=300)
 
     def size(self) -> int:
-        return self.generator.random_int(min=2, max=200)
+        return self.generator.random_int(min=6, max=200)
 
-    def capacity(self) -> int:
+    def standard_capacity(self) -> int:
         return self.generator.random_int(min=1, max=8)
 
     def bedroom_count(self) -> int:
         return self.generator.random_int(min=1, max=5)
 
+    def living_room_count(self, max_count: Optional[int]=None) -> int:
+        max_count = max_count if max_count else 3
+        return self.generator.random_int(min=0, max=max_count)
+
     def bathroom_count(self, max_count: Optional[int]=None) -> int:
         max_count = max_count if max_count else 3
         return self.generator.random_int(min=0, max=max_count)
+
+    def bathroom_type(self) -> str:
+        return self.generator.random_element(self._categories)
+
+    def has_kitchen(self) -> bool:
+        return self.generator.boolean(chance_of_getting_true=25)
 
     def has_balcony(self) -> bool:
         return self.generator.boolean(chance_of_getting_true=25)
 
     def room_type(self) -> dict:
         bedroom_count = self.bedroom_count()
+        bathroom_count = self.bathroom_count(bedroom_count)
+        bathroom_type = RoomCategory.BathroomType.SHARED
+        if bathroom_count != 0:
+            bathroom_type = self.generator.random_element(
+                elements=(RoomCategory.BathroomType.FULL, RoomCategory.BathroomType.PARTIAL)
+            )
         return {
             'name': self.name(),
             'description': self.description(),
             'size': self.size(),
-            'capacity': self.capacity(),
+            'standard_capacity': self.standard_capacity(),
             'bedroom_count': bedroom_count,
+            'living_room_count': self.living_room_count(bedroom_count),
             'bathroom_count': self.bathroom_count(bedroom_count),
+            'bathroom_type': bathroom_type,
+            'has_kitchen': self.has_kitchen(),
             'has_balcony': self.has_balcony(),
         }
 
 
 class RoomProvider(BaseProvider):
     '''Кастомный Faker-провайдер для генерации данных модели Room'''
+
+    def bed_count(self) -> int:
+        return self.generator.random_int(min=1, max=10)
 
     def is_pets_allowed(self) -> bool:
         return self.generator.boolean(chance_of_getting_true=25)
@@ -175,6 +219,7 @@ class RoomProvider(BaseProvider):
     def room(self) -> dict:
         price = self.price_per_night()
         return {
+            'bed_count': self.bed_count(),
             'is_pets_allowed': self.is_pets_allowed(),
             'is_smoking_allowed': self.is_smoking_allowed(),
             'price_per_night': price,
@@ -188,8 +233,8 @@ class RoomProvider(BaseProvider):
 class RoomPhotoProvider(BaseProvider):
     '''Кастомный Faker-провайдер для генерации данных модели RoomPhoto'''
 
-    def photo(self, sort_number: Optional[int]) -> ImageFile:
-        filename = f'test_photo_{sort_number or self.generator.random_number(digits=3)}'
+    def photo(self) -> ImageFile:
+        filename = f'test_photo_{self.generator.random_number(digits=3)}'
         img = Image.new('RGB', (800, 600), color=self.generator.color_rgb())
         buffer = BytesIO()
         img.save(buffer, format='JPEG')
@@ -199,12 +244,11 @@ class RoomPhotoProvider(BaseProvider):
             content_type='image/jpeg',
         )
 
-    def sort_order_number(self) -> int:
+    def order_number(self) -> int:
         return self.generator.random_int(min=1, max=10)
 
     def room_photo(self) -> dict:
-        sort_order_number = self.sort_order_number()
         return {
-            'photo': self.photo(sort_order_number),
-            'sort_order_number': sort_order_number,
+            'photo': self.photo(),
+            'order_number': self.order_number(),
         }

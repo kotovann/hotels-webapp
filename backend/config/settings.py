@@ -1,3 +1,4 @@
+from datetime import timedelta
 from pathlib import Path
 from decouple import config
 
@@ -26,6 +27,9 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'rest_framework',
+    'rest_framework_simplejwt',
+    'rest_framework_simplejwt.token_blacklist',
     'phonenumber_field',
     'app.accounts',
     'app.hotels',
@@ -34,9 +38,22 @@ INSTALLED_APPS = [
 
 AUTH_USER_MODEL = 'accounts.User'
 
-ADMIN_GROUP_NAME = 'Администратор'
 
-USER_GROUP_NAME = 'Гость'
+REST_FRAMEWORK = {
+    'DEFAULT_PERMISSION_CLASSES': ['rest_framework.permissions.IsAuthenticated'],
+    'DEFAULT_AUTHENTICATION_CLASSES': [
+        'rest_framework_simplejwt.authentication.JWTAuthentication',
+    ],
+}
+
+SIMPLE_JWT = {
+    'ROTATE_REFRESH_TOKENS': True,
+    'BLACKLIST_AFTER_ROTATION': True,
+    'ACCESS_TOKEN_LIFETIME': timedelta(minutes=30),
+    'REFRESH_TOKEN_LIFETIME': timedelta(days=7),
+    'USER_ID_FIELD': 'id',
+    'USER_ID_CLAIM': 'user_id',
+}
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',

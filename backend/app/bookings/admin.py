@@ -1,55 +1,192 @@
 from django.contrib import admin
-from app.bookings.models import Booking, Review
+from django.utils.html import format_html
+from app.bookings.models import Booking, BookingPayment, CancelledBooking, Review
 
 
-class ReviewInline(admin.TabularInline):
+class ReviewInline(admin.StackedInline):
     model = Review
-    extra = 1
-    fields = ('rating', 'comment')
+    extra = 0
+    readonly_fields = ['created_at', 'published_at']
+    fields = [
+        'rating', 'comment', 'status', 'moderated_by',
+        'rejection_reason', 'published_at', 'created_at'
+    ]
+
+    def get_queryset(self, request):
+        return super().get_queryset(request).select_related('moderated_by')
+
+
+class BookingPaymentInline(admin.TabularInline):
+    model = BookingPayment
+    extra = 0
+    readonly_fields = ['created_at', 'paid_at']
+    fields = ['status', 'amount', 'purpose', 'created_at', 'paid_at']
+    can_delete = False
+
+    def get_queryset(self, request):
+        return super().get_queryset(request).order_by('-created_at')
 
 
 @admin.register(Booking)
 class BookingAdmin(admin.ModelAdmin):
-    inlines = (ReviewInline,)
-    list_display = ('user', 'room', 'check_in_date', 'check_out_date')
+    inlines = [BookingPaymentInline, ReviewInline]
+    list_select_related = ['user', 'room', 'room__hotel', 'room__room_type']
+    list_display = [
+        'id', 'get_user', 'get_hotel', 'get_room',
+        'check_in_date', 'check_out_date', 'days_count',
+        'status', 'type'
+    ]
     list_per_page = 30
-    list_filter = ('status', 'room__hotel__name', 'room__room_type__name')
-    readonly_fields = ('total_price', 'created_at')
-    search_fields = ('room__room_number',)
+    list_filter = ['status', 'room__hotel', 'room__room_type']
+    search_fields = [
+        'user__email', 'user__first_name', 'user__last_name', 'user__phone_number',
+    ]
+    readonly_fields = ['created_at', 'days_count']
     fieldsets = (
         ('Основная информация', {
-            'fields': ('room', 'check_in_date', 'check_out_date', 'status'),
+            'fields': ('room', 'check_in_date', 'check_out_date', 'days_count', 'created_at'),
         }),
         ('Гость', {
             'fields': ('user', 'adults_count', 'children_count', 'pets_count'),
         }),
-        ('Оплата', {
-            'fields': ('payment_status',),
-        }),
-        ('Отмена', {
-            'fields': ('cancelled_at', 'cancellation_reason'),
+        ('Статус и тип', {
+            'fields': ('status', 'type', 'moved_to'),
         }),
     )
+
+    @admin.display(description='Гость', ordering=('user__last_name', 'user__first_name'))
+    def get_user(self, obj):
+        return obj.user.short_name
+
+    @admin.display(description='Отель', ordering='room__hotel__name')
+    def get_hotel(self, obj):
+        return obj.room.hotel.name
+
+    @admin.display(description='Номер', ordering=('room__floor', 'room__number_on_floor'))
+    def get_room(self, obj):
+        return obj.room.room_number
+
+    @admin.display(description='Количество суток')
+    def days_count(self, obj):
+        return obj.days_count
+
+    def get_queryset(self, request):
+        return super().get_queryset(request).select_related(
+            'user', 'room', 'room__hotel', 'room__room_type'
+        )
+
+
+@admin.register(BookingPayment)
+class BookingPaymentAdmin(admin.ModelAdmin):
+    list_select_related = ['booking', 'booking__user']
+    list_display = [
+        'id', 'booking', 'get_user', 'amount', 'purpose', 
+        'status', 'created_at', 'paid_at'
+    ]
+    list_per_page = 30
+    list_filter = ['status', 'purpose']
+    search_fields = ['booking__user__email', 'booking__user__phone_number', 'booking__id']
+    readonly_fields = ['created_at']
+    autocomplete_fields = ['booking']
+
+    fieldsets = (
+        ('Бронирование', {
+            'fields': ('booking',),
+        }),
+        ('Платеж', {
+            'fields': ('amount', 'purpose', 'status'),
+        }),
+        ('Даты', {
+            'fields': ('created_at', 'paid_at'),
+        }),
+    )
+
+    @admin.display(description='Пользователь', ordering='booking__user__last_name')
+    def get_user(self, obj):
+        return obj.booking.user.short_name
+
+    def get_queryset(self, request):
+        return super().get_queryset(request).select_related('booking__user')
+
+
+@admin.register(CancelledBooking)
+class CancelledBookingAdmin(admin.ModelAdmin):
+    list_select_related = ['booking', 'booking__user', 'booking__room']
+    list_display = [
+        'id', 'booking', 'get_user', 'get_hotel', 'cancelled_at'
+    ]
+    list_per_page = 30
+    search_fields = [
+        'booking__user__email', 'booking__user__phone_number',
+        'cancellation_reason', 'booking__id'
+    ]
+    readonly_fields = ['cancelled_at', 'booking']
+    fieldsets = (
+        ('Бронирование', {
+            'fields': ('booking',),
+        }),
+        ('Отмена', {
+            'fields': ('cancellation_reason', 'cancelled_at'),
+        }),
+    )
+
+    @admin.display(description='Пользователь', ordering='booking__user__last_name')
+    def get_user(self, obj):
+        return obj.booking.user.short_name
+
+    @admin.display(description='Отель', ordering='booking__room__hotel__name')
+    def get_hotel(self, obj):
+        return obj.booking.room.hotel.name
+
+    def get_queryset(self, request):
+        return super().get_queryset(request).select_related(
+            'booking__user', 'booking__room__hotel'
+        )
 
 
 @admin.register(Review)
 class ReviewAdmin(admin.ModelAdmin):
-    list_display = ('booking', 'rating', 'created_at', 'status')
+    list_select_related = ['booking', 'booking__user', 'moderated_by']
+    list_display = ['get_user', 'rating', 'get_stars', 'created_at', 'status', 'get_moderated_by']
     list_per_page = 30
-    list_filter = ('rating', 'status')
-    readonly_fields = ('created_at',)
-    search_fields = (
-        'comment', 'booking__user__email',
-        'booking__user__phone', 'room__room_type__name'
-    )
+    list_filter = ['rating', 'status']
+    readonly_fields = ['created_at', 'published_at']
+    search_fields = ['comment', 'booking__user__email', 'booking__user__phone_number']
     fieldsets = (
         ('Бронь', {
             'fields': ('booking',),
         }),
         ('Отзыв', {
-            'fields': ('rating', 'comment'),
+            'fields': ('rating', 'comment', 'created_at'),
         }),
-        ('Модерация и публикация', {
-            'fields': ('status', 'moderated_by', 'rejection_reason', 'published_at'),
+        ('Модерация', {
+            'fields': ('status', 'moderated_by', 'rejection_reason'),
+        }),
+        ('Публикация', {
+            'fields': ('published_at',),
         }),
     )
+
+    @admin.display(description='Гость', ordering='booking__user__last_name')
+    def get_user(self, obj):
+        return obj.booking.user.short_name
+
+    @admin.display(description='Оценка')
+    def get_stars(self, obj):
+        filled = chr(0x2605) * obj.rating
+        empty = chr(0x2606) * (5 - obj.rating)
+        return format_html(
+            '<span style="font-size:14px">{}{}</span>',
+            filled, empty,
+        )
+
+    @admin.display(description='Модератор', ordering='moderated_by__last_name')
+    def get_moderated_by(self, obj):
+        if obj.moderated_by:
+            return obj.moderated_by.short_name
+        return '-'
+
+    def get_queryset(self, request):
+        return super().get_queryset(request).select_related(
+            'booking__user', 'moderated_by'
+        )

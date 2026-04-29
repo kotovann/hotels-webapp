@@ -1,11 +1,12 @@
 from collections import OrderedDict
-from datetime import datetime, timedelta
+from datetime import date, datetime, timedelta
+from decimal import Decimal
 from typing import Optional
 
 from faker import Faker
 from faker.providers import BaseProvider
 
-from app.bookings.models import Booking, Review
+from app.bookings.models import Booking, BookingPayment, Review
 
 
 class BookingProvider(BaseProvider):
@@ -13,8 +14,8 @@ class BookingProvider(BaseProvider):
 
     def __init__(self, generator: Faker):
         super().__init__(generator)
+        self._type_choices = Booking.Type.values
         self._status_choices = Booking.Status.values
-        self._pay_status_choices = Booking.PaymentStatus.values
 
     def adults_count(self) -> int:
         return self.generator.random_int(min=1, max=10)
@@ -25,29 +26,26 @@ class BookingProvider(BaseProvider):
     def pets_count(self) -> int:
         return self.generator.random_int(min=0, max=3)
 
-    def check_in_date(self, created_at: Optional[datetime]=None) -> datetime:
-        if created_at is None:
-            return self.generator.date_time_this_year()
+    def check_in_date(self, later_than: Optional[datetime]=None) -> date:
+        if later_than is None:
+            return self.generator.date_this_year()
         days = self.generator.random_int(min=1, max=30)
-        return created_at + timedelta(days=days)
+        return later_than + timedelta(days=days)
 
-    def check_out_date(self, check_in_date: Optional[datetime]=None) -> datetime:
-        if check_in_date is None:
-            return self.generator.date_time_this_year()
+    def check_out_date(self, later_than: Optional[datetime]=None) -> date:
+        if later_than is None:
+            return self.generator.date_this_year()
         days = self.generator.random_int(min=1, max=30)
-        return check_in_date + timedelta(days=days)
+        return later_than + timedelta(days=days)
 
     def status(self) -> str:
         return self.generator.random_element(self._status_choices)
 
-    def payment_status(self) -> str:
-        return self.generator.random_element(self._pay_status_choices)
+    def type(self) -> str:
+        return self.generator.random_element(self._type_choices)
 
-    def created_at(self, check_in_date: Optional[datetime]=None) -> datetime:
-        if check_in_date is None:
-            return self.generator.date_time_this_year()
-        days = self.generator.random_int(min=1, max=7)
-        return check_in_date - timedelta(days=days)
+    def created_at(self) -> datetime:
+        return self.generator.date_time_this_year()
 
     def cancelled_at(
         self, created_at: Optional[datetime]=None,
@@ -65,11 +63,6 @@ class BookingProvider(BaseProvider):
         check_in_date = self.check_in_date(created_at)
         check_out_date = self.check_out_date(check_in_date)
         status = self.status()
-        cancelled_at = None
-        cancellation_reason = None
-        if status == Booking.Status.CANCELLED:
-            cancelled_at = self.cancelled_at(created_at, check_in_date)
-            cancellation_reason = self.cancellation_reason()
         return {
             'adults_count': self.adults_count(),
             'children_count': self.children_count(),
@@ -77,10 +70,45 @@ class BookingProvider(BaseProvider):
             'check_in_date': check_in_date,
             'check_out_date': check_out_date,
             'status': status,
-            'payment_status': self.payment_status(),
+            'type': self.type(),
             'created_at': created_at,
-            'cancelled_at': cancelled_at,
-            'cancellation_reason': cancellation_reason,
+        }
+
+
+class BookingPaymentProvider(BaseProvider):
+    '''Кастомный Faker-провайдер для генерации данных модели Review'''
+
+    def __init__(self, generator: Faker):
+        super().__init__(generator)
+        self._status_choices = BookingPayment.Status.values
+        self._purpose_choices = BookingPayment.Purpose.values
+
+    def status(self) -> str:
+        return self.generator.random_element(self._status_choices)
+
+    def amount(self) -> Decimal:
+        return Decimal(self.generator.random_int(min=300, max=30000))
+
+    def purpose(self) -> str:
+        return self.generator.random_element(self._purpose_choices)
+
+    def created_at(self) -> datetime:
+        return self.generator.date_time_this_year()
+
+    def paid_at(self, later_than: Optional[datetime]=None) -> datetime:
+        if later_than is None:
+            return self.generator.date_time_this_year()
+        days = self.generator.random_int(min=1, max=7)
+        return later_than + timedelta(days=days)
+
+    def booking_payment(self) -> dict:
+        created_at = self.created_at()
+        return {
+            'status': self.status(),
+            'amount': self.amount(),
+            'purpose': self.purpose(),
+            'created_at': created_at,
+            'paid_at': self.paid_at(created_at),
         }
 
 
@@ -89,7 +117,12 @@ class ReviewProvider(BaseProvider):
 
     def __init__(self, generator: Faker):
         super().__init__(generator)
-        self._status_choices = Review.Status.values
+        self._status_choices = OrderedDict([
+            (Review.Status.PUBLISHED, 0.5),
+            (Review.Status.ON_MODERATION, 0.25),
+            (Review.Status.DELETED, 0.1),
+            (Review.Status.REJECTED, 0.15)
+        ])
         self._rating_choices = OrderedDict([
             (5, 0.5),
             (4, 0.25),
@@ -98,7 +131,7 @@ class ReviewProvider(BaseProvider):
         ])
 
     def rating(self) -> int:
-        return self.generator.random_element(elements=self._rating_choices)
+        return self.generator.random_element(self._rating_choices)
 
     def comment(self) -> str:
         return self.generator.text(max_nb_chars=3072)

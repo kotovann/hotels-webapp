@@ -1,666 +1,858 @@
 [
 {
   "model": "bookings.booking",
-  "pk": 31,
+  "pk": 157,
   "fields": {
-    "user": 68,
-    "room": 5333,
-    "adults_count": 8,
-    "children_count": 2,
-    "pets_count": 1,
-    "check_in_date": "2026-03-22T19:08:17.440Z",
-    "check_out_date": "2026-04-06T19:08:17.440Z",
-    "status": "A",
-    "total_price": "317277.60",
-    "payment_status": "O",
-    "created_at": "2026-04-23T07:32:46.075Z",
-    "cancelled_at": null,
-    "cancellation_reason": null
-  }
-},
-{
-  "model": "bookings.booking",
-  "pk": 32,
-  "fields": {
-    "user": 75,
-    "room": 5267,
-    "adults_count": 3,
-    "children_count": 3,
-    "pets_count": 2,
-    "check_in_date": "2026-04-04T23:34:54.883Z",
-    "check_out_date": "2026-04-21T23:34:54.883Z",
-    "status": "CA",
-    "total_price": "209723.56",
-    "payment_status": "O",
-    "created_at": "2026-04-23T07:32:46.075Z",
-    "cancelled_at": "2026-03-30T02:48:14.145Z",
-    "cancellation_reason": "Смертельный научить полностью поговорить. Жидкий научить госпожа угодный желание ведь."
-  }
-},
-{
-  "model": "bookings.booking",
-  "pk": 33,
-  "fields": {
-    "user": 74,
-    "room": 5303,
-    "adults_count": 4,
-    "children_count": 2,
-    "pets_count": 2,
-    "check_in_date": "2026-03-18T11:36:59.425Z",
-    "check_out_date": "2026-04-01T11:36:59.425Z",
-    "status": "CA",
-    "total_price": "87522.26",
-    "payment_status": "C",
-    "created_at": "2026-04-23T07:32:46.075Z",
-    "cancelled_at": "2026-03-18T05:06:59.381Z",
-    "cancellation_reason": "Господь коричневый прежний плод коммунизм передо. Темнеть интернет потрясти госпожа непривычный.\nПередо возмутиться провал июнь салон выражаться. Актриса пища дальний торговля штаб умолять посвятить мера."
-  }
-},
-{
-  "model": "bookings.booking",
-  "pk": 34,
-  "fields": {
-    "user": 69,
-    "room": 5318,
-    "adults_count": 10,
-    "children_count": 2,
-    "pets_count": 1,
-    "check_in_date": "2026-01-12T08:51:13.299Z",
-    "check_out_date": "2026-02-06T08:51:13.299Z",
-    "status": "CL",
-    "total_price": "520799.75",
-    "payment_status": "C",
-    "created_at": "2026-04-23T07:32:46.075Z",
-    "cancelled_at": null,
-    "cancellation_reason": null
-  }
-},
-{
-  "model": "bookings.booking",
-  "pk": 35,
-  "fields": {
-    "user": 69,
-    "room": 5232,
-    "adults_count": 4,
-    "children_count": 4,
-    "pets_count": 0,
-    "check_in_date": "2026-04-01T12:26:42.235Z",
-    "check_out_date": "2026-04-29T12:26:42.235Z",
-    "status": "CL",
-    "total_price": "557258.80",
-    "payment_status": "O",
-    "created_at": "2026-04-23T07:32:46.075Z",
-    "cancelled_at": null,
-    "cancellation_reason": null
-  }
-},
-{
-  "model": "bookings.booking",
-  "pk": 36,
-  "fields": {
-    "user": 67,
-    "room": 5255,
-    "adults_count": 7,
-    "children_count": 4,
-    "pets_count": 1,
-    "check_in_date": "2026-04-28T07:33:20.205Z",
-    "check_out_date": "2026-05-20T07:33:20.205Z",
-    "status": "A",
-    "total_price": "962085.96",
-    "payment_status": "C",
-    "created_at": "2026-04-23T07:32:46.075Z",
-    "cancelled_at": null,
-    "cancellation_reason": null
-  }
-},
-{
-  "model": "bookings.booking",
-  "pk": 37,
-  "fields": {
-    "user": 67,
-    "room": 5242,
+    "user": 6,
+    "room": 300,
     "adults_count": 2,
-    "children_count": 2,
-    "pets_count": 1,
-    "check_in_date": "2026-03-01T10:39:44.727Z",
-    "check_out_date": "2026-03-22T10:39:44.727Z",
-    "status": "M",
-    "total_price": "308324.10",
-    "payment_status": "C",
-    "created_at": "2026-04-23T07:32:46.075Z",
-    "cancelled_at": null,
-    "cancellation_reason": null
-  }
-},
-{
-  "model": "bookings.booking",
-  "pk": 38,
-  "fields": {
-    "user": 74,
-    "room": 5259,
-    "adults_count": 9,
-    "children_count": 5,
-    "pets_count": 0,
-    "check_in_date": "2026-02-26T09:08:26.030Z",
-    "check_out_date": "2026-03-02T09:08:26.030Z",
-    "status": "CL",
-    "total_price": "180811.76",
-    "payment_status": "O",
-    "created_at": "2026-04-23T07:32:46.075Z",
-    "cancelled_at": null,
-    "cancellation_reason": null
-  }
-},
-{
-  "model": "bookings.booking",
-  "pk": 39,
-  "fields": {
-    "user": 70,
-    "room": 5326,
-    "adults_count": 7,
-    "children_count": 4,
-    "pets_count": 3,
-    "check_in_date": "2026-02-21T12:05:47.644Z",
-    "check_out_date": "2026-03-18T12:05:47.644Z",
-    "status": "M",
-    "total_price": "1722690.75",
-    "payment_status": "C",
-    "created_at": "2026-04-23T07:32:46.075Z",
-    "cancelled_at": null,
-    "cancellation_reason": null
-  }
-},
-{
-  "model": "bookings.booking",
-  "pk": 40,
-  "fields": {
-    "user": 68,
-    "room": 5303,
-    "adults_count": 1,
     "children_count": 0,
-    "pets_count": 1,
-    "check_in_date": "2026-03-05T09:13:40.137Z",
-    "check_out_date": "2026-03-18T09:13:40.137Z",
-    "status": "M",
-    "total_price": "81270.67",
-    "payment_status": "C",
-    "created_at": "2026-04-23T07:32:46.075Z",
-    "cancelled_at": null,
-    "cancellation_reason": null
-  }
-},
-{
-  "model": "bookings.booking",
-  "pk": 41,
-  "fields": {
-    "user": 74,
-    "room": 5299,
-    "adults_count": 5,
-    "children_count": 4,
     "pets_count": 0,
-    "check_in_date": "2026-04-26T18:16:33.376Z",
-    "check_out_date": "2026-05-03T18:16:33.376Z",
-    "status": "A",
-    "total_price": "206664.15",
-    "payment_status": "O",
-    "created_at": "2026-04-23T07:32:46.075Z",
-    "cancelled_at": null,
-    "cancellation_reason": null
+    "check_in_date": "2026-02-08",
+    "check_out_date": "2026-03-09",
+    "status": "M",
+    "type": "G",
+    "created_at": "2026-04-29T14:34:51.685Z",
+    "updated_at": "2026-04-29T14:34:51.685Z",
+    "moved_to": 182
   }
 },
 {
   "model": "bookings.booking",
-  "pk": 42,
+  "pk": 158,
   "fields": {
-    "user": 69,
-    "room": 5230,
-    "adults_count": 2,
-    "children_count": 5,
-    "pets_count": 1,
-    "check_in_date": "2026-04-15T02:02:48.034Z",
-    "check_out_date": "2026-05-04T02:02:48.034Z",
-    "status": "CA",
-    "total_price": "332358.64",
-    "payment_status": "C",
-    "created_at": "2026-04-23T07:32:46.075Z",
-    "cancelled_at": "2026-04-13T09:56:02.009Z",
-    "cancellation_reason": "Заявление какой ставить пастух кожа ученый нож. Нажать тревога присесть сопровождаться руководитель трубка. Ученый изба прежде."
-  }
-},
-{
-  "model": "bookings.booking",
-  "pk": 43,
-  "fields": {
-    "user": 67,
-    "room": 5223,
+    "user": 2,
+    "room": 365,
     "adults_count": 4,
     "children_count": 0,
     "pets_count": 2,
-    "check_in_date": "2026-01-14T23:03:42.588Z",
-    "check_out_date": "2026-02-04T23:03:42.588Z",
-    "status": "M",
-    "total_price": "75441.66",
-    "payment_status": "O",
-    "created_at": "2026-04-23T07:32:46.075Z",
-    "cancelled_at": null,
-    "cancellation_reason": null
+    "check_in_date": "2026-02-25",
+    "check_out_date": "2026-03-23",
+    "status": "A",
+    "type": "G",
+    "created_at": "2026-04-29T14:34:51.685Z",
+    "updated_at": "2026-04-29T14:34:51.685Z",
+    "moved_to": null
   }
 },
 {
   "model": "bookings.booking",
-  "pk": 44,
+  "pk": 159,
   "fields": {
-    "user": 69,
-    "room": 5282,
-    "adults_count": 5,
+    "user": 3,
+    "room": 407,
+    "adults_count": 3,
     "children_count": 0,
     "pets_count": 0,
-    "check_in_date": "2026-02-01T19:38:39.902Z",
-    "check_out_date": "2026-02-25T19:38:39.902Z",
+    "check_in_date": "2026-05-12",
+    "check_out_date": "2026-05-17",
     "status": "A",
-    "total_price": "1004946.48",
-    "payment_status": "O",
-    "created_at": "2026-04-23T07:32:46.075Z",
-    "cancelled_at": null,
-    "cancellation_reason": null
+    "type": "G",
+    "created_at": "2026-04-29T14:34:51.685Z",
+    "updated_at": "2026-04-29T14:34:51.685Z",
+    "moved_to": null
   }
 },
 {
   "model": "bookings.booking",
-  "pk": 45,
+  "pk": 160,
   "fields": {
-    "user": 64,
-    "room": 5311,
+    "user": 36,
+    "room": 369,
     "adults_count": 1,
-    "children_count": 3,
-    "pets_count": 1,
-    "check_in_date": "2026-04-16T11:43:25.128Z",
-    "check_out_date": "2026-04-18T11:43:25.128Z",
-    "status": "CA",
-    "total_price": "9746.50",
-    "payment_status": "O",
-    "created_at": "2026-04-23T07:32:46.075Z",
-    "cancelled_at": "2026-04-16T01:10:58.422Z",
-    "cancellation_reason": "Секунда факультет цепочка палка угодный вздрогнуть. Полевой ярко полюбить потом пятеро изучить мрачно."
-  }
-},
-{
-  "model": "bookings.booking",
-  "pk": 46,
-  "fields": {
-    "user": 54,
-    "room": 5275,
-    "adults_count": 1,
-    "children_count": 4,
+    "children_count": 0,
     "pets_count": 0,
-    "check_in_date": "2026-01-08T15:12:59.131Z",
-    "check_out_date": "2026-01-23T15:12:59.131Z",
-    "status": "CL",
-    "total_price": "195357.00",
-    "payment_status": "O",
-    "created_at": "2026-04-23T07:40:15.014Z",
-    "cancelled_at": null,
-    "cancellation_reason": null
-  }
-},
-{
-  "model": "bookings.booking",
-  "pk": 47,
-  "fields": {
-    "user": 71,
-    "room": 5262,
-    "adults_count": 7,
-    "children_count": 1,
-    "pets_count": 1,
-    "check_in_date": "2026-01-24T20:37:25.771Z",
-    "check_out_date": "2026-01-28T20:37:25.771Z",
-    "status": "CA",
-    "total_price": "60486.08",
-    "payment_status": "O",
-    "created_at": "2026-04-23T07:40:15.014Z",
-    "cancelled_at": "2026-01-21T18:44:58.573Z",
-    "cancellation_reason": "Факультет лиловый вчера печатать висеть выгнать издали. Иной рот ярко миг сустав дыхание порог. Изредка выраженный затянуться мягкий оборот еврейский хотеть.\nНеобычный сопровождаться сопровождаться бак. Тревога дошлый виднеться экзамен."
-  }
-},
-{
-  "model": "bookings.booking",
-  "pk": 48,
-  "fields": {
-    "user": 70,
-    "room": 5232,
-    "adults_count": 1,
-    "children_count": 4,
-    "pets_count": 3,
-    "check_in_date": "2026-05-19T16:39:58.085Z",
-    "check_out_date": "2026-06-03T16:39:58.085Z",
-    "status": "CL",
-    "total_price": "199534.65",
-    "payment_status": "C",
-    "created_at": "2026-04-23T07:40:15.014Z",
-    "cancelled_at": null,
-    "cancellation_reason": null
-  }
-},
-{
-  "model": "bookings.booking",
-  "pk": 49,
-  "fields": {
-    "user": 65,
-    "room": 5214,
-    "adults_count": 10,
-    "children_count": 4,
-    "pets_count": 1,
-    "check_in_date": "2026-03-28T03:47:27.644Z",
-    "check_out_date": "2026-04-19T03:47:27.644Z",
-    "status": "CL",
-    "total_price": "301391.42",
-    "payment_status": "C",
-    "created_at": "2026-04-23T07:40:15.014Z",
-    "cancelled_at": null,
-    "cancellation_reason": null
-  }
-},
-{
-  "model": "bookings.booking",
-  "pk": 50,
-  "fields": {
-    "user": 74,
-    "room": 5292,
-    "adults_count": 7,
-    "children_count": 2,
-    "pets_count": 2,
-    "check_in_date": "2026-04-20T17:25:56.916Z",
-    "check_out_date": "2026-05-17T17:25:56.916Z",
-    "status": "M",
-    "total_price": "1274047.38",
-    "payment_status": "C",
-    "created_at": "2026-04-23T07:40:15.014Z",
-    "cancelled_at": null,
-    "cancellation_reason": null
-  }
-},
-{
-  "model": "bookings.booking",
-  "pk": 51,
-  "fields": {
-    "user": 69,
-    "room": 5302,
-    "adults_count": 1,
-    "children_count": 4,
-    "pets_count": 1,
-    "check_in_date": "2026-05-01T21:45:22.409Z",
-    "check_out_date": "2026-05-21T21:45:22.409Z",
+    "check_in_date": "2026-02-24",
+    "check_out_date": "2026-03-05",
     "status": "A",
-    "total_price": "833104.20",
-    "payment_status": "C",
-    "created_at": "2026-04-23T07:40:56.820Z",
-    "cancelled_at": null,
-    "cancellation_reason": null
+    "type": "G",
+    "created_at": "2026-04-29T14:34:51.685Z",
+    "updated_at": "2026-04-29T14:34:51.685Z",
+    "moved_to": null
   }
 },
 {
   "model": "bookings.booking",
-  "pk": 52,
+  "pk": 161,
   "fields": {
-    "user": 74,
-    "room": 5256,
-    "adults_count": 9,
-    "children_count": 2,
-    "pets_count": 1,
-    "check_in_date": "2026-01-11T21:36:00.553Z",
-    "check_out_date": "2026-02-05T21:36:00.553Z",
-    "status": "M",
-    "total_price": "626177.25",
-    "payment_status": "O",
-    "created_at": "2026-04-23T07:40:56.820Z",
-    "cancelled_at": null,
-    "cancellation_reason": null
-  }
-},
-{
-  "model": "bookings.booking",
-  "pk": 53,
-  "fields": {
-    "user": 73,
-    "room": 5289,
-    "adults_count": 9,
-    "children_count": 5,
-    "pets_count": 3,
-    "check_in_date": "2026-05-08T00:33:49.773Z",
-    "check_out_date": "2026-06-05T00:33:49.773Z",
-    "status": "CL",
-    "total_price": "188335.28",
-    "payment_status": "O",
-    "created_at": "2026-04-23T07:40:56.820Z",
-    "cancelled_at": null,
-    "cancellation_reason": null
-  }
-},
-{
-  "model": "bookings.booking",
-  "pk": 54,
-  "fields": {
-    "user": 65,
-    "room": 5238,
-    "adults_count": 3,
-    "children_count": 4,
-    "pets_count": 1,
-    "check_in_date": "2026-05-06T22:46:23.254Z",
-    "check_out_date": "2026-05-08T22:46:23.254Z",
-    "status": "CA",
-    "total_price": "10273.04",
-    "payment_status": "C",
-    "created_at": "2026-04-23T07:40:56.820Z",
-    "cancelled_at": "2026-04-23T22:20:49.130Z",
-    "cancellation_reason": "Предоставить поздравлять радость перебивать.\nШлем изменение анализ. Идея хлеб встать потянуться сопровождаться построить. Спорт ботинок войти подземный отъезд другой актриса."
-  }
-},
-{
-  "model": "bookings.booking",
-  "pk": 55,
-  "fields": {
-    "user": 68,
-    "room": 5323,
-    "adults_count": 9,
+    "user": 36,
+    "room": 393,
+    "adults_count": 7,
     "children_count": 1,
-    "pets_count": 1,
-    "check_in_date": "2026-02-13T23:57:51.445Z",
-    "check_out_date": "2026-03-09T23:57:51.445Z",
-    "status": "CA",
-    "total_price": "484780.08",
-    "payment_status": "C",
-    "created_at": "2026-04-23T07:40:56.820Z",
-    "cancelled_at": "2026-02-11T03:00:00.200Z",
-    "cancellation_reason": "Банк порядок счастье палата. Заведение товар пробовать пропадать посидеть услать разводить. Сверкающий сопровождаться за фонарик."
+    "pets_count": 0,
+    "check_in_date": "2026-04-22",
+    "check_out_date": "2026-05-02",
+    "status": "A",
+    "type": "N",
+    "created_at": "2026-04-29T14:34:51.685Z",
+    "updated_at": "2026-04-29T14:34:51.685Z",
+    "moved_to": null
   }
 },
 {
   "model": "bookings.booking",
-  "pk": 56,
+  "pk": 162,
   "fields": {
-    "user": 68,
-    "room": 5287,
+    "user": 6,
+    "room": 302,
     "adults_count": 2,
     "children_count": 0,
-    "pets_count": 1,
-    "check_in_date": "2026-03-03T13:27:30.025Z",
-    "check_out_date": "2026-03-05T13:27:30.025Z",
-    "status": "CA",
-    "total_price": "31701.24",
-    "payment_status": "C",
-    "created_at": "2026-04-23T07:41:26.898Z",
-    "cancelled_at": "2026-02-26T19:57:42.274Z",
-    "cancellation_reason": "Угол полоска строительство июнь. Ремень коричневый выражение порог висеть прежний природа.\nРай витрина идея коллектив. Падаль возникновение бегать задрать деловой."
+    "pets_count": 0,
+    "check_in_date": "2026-03-08",
+    "check_out_date": "2026-04-06",
+    "status": "A",
+    "type": "N",
+    "created_at": "2026-04-29T14:34:51.685Z",
+    "updated_at": "2026-04-29T14:34:51.685Z",
+    "moved_to": null
   }
 },
 {
   "model": "bookings.booking",
-  "pk": 57,
+  "pk": 163,
   "fields": {
-    "user": 73,
-    "room": 5284,
+    "user": 4,
+    "room": 361,
+    "adults_count": 4,
+    "children_count": 0,
+    "pets_count": 0,
+    "check_in_date": "2026-05-26",
+    "check_out_date": "2026-06-08",
+    "status": "A",
+    "type": "N",
+    "created_at": "2026-04-29T14:34:51.685Z",
+    "updated_at": "2026-04-29T14:34:51.685Z",
+    "moved_to": null
+  }
+},
+{
+  "model": "bookings.booking",
+  "pk": 164,
+  "fields": {
+    "user": 36,
+    "room": 383,
+    "adults_count": 4,
+    "children_count": 0,
+    "pets_count": 0,
+    "check_in_date": "2026-04-06",
+    "check_out_date": "2026-04-17",
+    "status": "A",
+    "type": "G",
+    "created_at": "2026-04-29T14:34:51.685Z",
+    "updated_at": "2026-04-29T14:34:51.685Z",
+    "moved_to": null
+  }
+},
+{
+  "model": "bookings.booking",
+  "pk": 165,
+  "fields": {
+    "user": 9,
+    "room": 401,
+    "adults_count": 1,
+    "children_count": 0,
+    "pets_count": 0,
+    "check_in_date": "2026-02-20",
+    "check_out_date": "2026-03-03",
+    "status": "CA",
+    "type": "N",
+    "created_at": "2026-04-29T14:34:51.685Z",
+    "updated_at": "2026-04-29T14:34:51.685Z",
+    "moved_to": null
+  }
+},
+{
+  "model": "bookings.booking",
+  "pk": 166,
+  "fields": {
+    "user": 7,
+    "room": 339,
+    "adults_count": 2,
+    "children_count": 3,
+    "pets_count": 3,
+    "check_in_date": "2026-04-24",
+    "check_out_date": "2026-05-11",
+    "status": "M",
+    "type": "G",
+    "created_at": "2026-04-29T14:34:51.685Z",
+    "updated_at": "2026-04-29T14:34:51.685Z",
+    "moved_to": 183
+  }
+},
+{
+  "model": "bookings.booking",
+  "pk": 167,
+  "fields": {
+    "user": 34,
+    "room": 413,
+    "adults_count": 4,
+    "children_count": 0,
+    "pets_count": 0,
+    "check_in_date": "2026-04-12",
+    "check_out_date": "2026-04-24",
+    "status": "A",
+    "type": "G",
+    "created_at": "2026-04-29T14:34:51.685Z",
+    "updated_at": "2026-04-29T14:34:51.685Z",
+    "moved_to": null
+  }
+},
+{
+  "model": "bookings.booking",
+  "pk": 168,
+  "fields": {
+    "user": 5,
+    "room": 348,
+    "adults_count": 1,
+    "children_count": 0,
+    "pets_count": 0,
+    "check_in_date": "2026-03-01",
+    "check_out_date": "2026-03-12",
+    "status": "A",
+    "type": "N",
+    "created_at": "2026-04-29T14:34:51.685Z",
+    "updated_at": "2026-04-29T14:34:51.685Z",
+    "moved_to": null
+  }
+},
+{
+  "model": "bookings.booking",
+  "pk": 169,
+  "fields": {
+    "user": 4,
+    "room": 413,
+    "adults_count": 4,
+    "children_count": 0,
+    "pets_count": 0,
+    "check_in_date": "2026-01-30",
+    "check_out_date": "2026-01-31",
+    "status": "A",
+    "type": "G",
+    "created_at": "2026-04-29T14:34:51.685Z",
+    "updated_at": "2026-04-29T14:34:51.685Z",
+    "moved_to": null
+  }
+},
+{
+  "model": "bookings.booking",
+  "pk": 170,
+  "fields": {
+    "user": 14,
+    "room": 393,
+    "adults_count": 1,
+    "children_count": 0,
+    "pets_count": 0,
+    "check_in_date": "2026-04-11",
+    "check_out_date": "2026-04-21",
+    "status": "A",
+    "type": "G",
+    "created_at": "2026-04-29T14:34:51.685Z",
+    "updated_at": "2026-04-29T14:34:51.685Z",
+    "moved_to": null
+  }
+},
+{
+  "model": "bookings.booking",
+  "pk": 171,
+  "fields": {
+    "user": 8,
+    "room": 395,
+    "adults_count": 3,
+    "children_count": 0,
+    "pets_count": 0,
+    "check_in_date": "2026-04-28",
+    "check_out_date": "2026-05-10",
+    "status": "A",
+    "type": "N",
+    "created_at": "2026-04-29T14:34:51.685Z",
+    "updated_at": "2026-04-29T14:34:51.685Z",
+    "moved_to": null
+  }
+},
+{
+  "model": "bookings.booking",
+  "pk": 172,
+  "fields": {
+    "user": 35,
+    "room": 310,
+    "adults_count": 2,
+    "children_count": 0,
+    "pets_count": 0,
+    "check_in_date": "2026-03-17",
+    "check_out_date": "2026-03-28",
+    "status": "CA",
+    "type": "N",
+    "created_at": "2026-04-29T14:34:51.685Z",
+    "updated_at": "2026-04-29T14:34:51.685Z",
+    "moved_to": null
+  }
+},
+{
+  "model": "bookings.booking",
+  "pk": 173,
+  "fields": {
+    "user": 35,
+    "room": 409,
+    "adults_count": 2,
+    "children_count": 2,
+    "pets_count": 0,
+    "check_in_date": "2026-03-31",
+    "check_out_date": "2026-04-28",
+    "status": "A",
+    "type": "N",
+    "created_at": "2026-04-29T14:34:51.685Z",
+    "updated_at": "2026-04-29T14:34:51.685Z",
+    "moved_to": null
+  }
+},
+{
+  "model": "bookings.booking",
+  "pk": 174,
+  "fields": {
+    "user": 16,
+    "room": 362,
+    "adults_count": 7,
+    "children_count": 0,
+    "pets_count": 0,
+    "check_in_date": "2026-01-26",
+    "check_out_date": "2026-01-30",
+    "status": "A",
+    "type": "G",
+    "created_at": "2026-04-29T14:34:51.685Z",
+    "updated_at": "2026-04-29T14:34:51.685Z",
+    "moved_to": null
+  }
+},
+{
+  "model": "bookings.booking",
+  "pk": 175,
+  "fields": {
+    "user": 16,
+    "room": 290,
+    "adults_count": 7,
+    "children_count": 0,
+    "pets_count": 0,
+    "check_in_date": "2026-04-11",
+    "check_out_date": "2026-05-10",
+    "status": "A",
+    "type": "G",
+    "created_at": "2026-04-29T14:34:51.685Z",
+    "updated_at": "2026-04-29T14:34:51.685Z",
+    "moved_to": null
+  }
+},
+{
+  "model": "bookings.booking",
+  "pk": 176,
+  "fields": {
+    "user": 7,
+    "room": 326,
     "adults_count": 3,
     "children_count": 2,
-    "pets_count": 2,
-    "check_in_date": "2026-04-15T00:57:06.161Z",
-    "check_out_date": "2026-05-10T00:57:06.161Z",
-    "status": "CA",
-    "total_price": "481864.25",
-    "payment_status": "C",
-    "created_at": "2026-04-23T07:41:26.898Z",
-    "cancelled_at": "2026-04-08T09:19:11.442Z",
-    "cancellation_reason": "Парень спорт конференция. Материя дорогой естественный.\nТанцевать сынок конструкция триста сустав сохранять. Приятель рассуждение боец мгновение ученый порт песня тесно.\nРассуждение факультет плод социалистический. Июнь дальний строительство."
+    "pets_count": 0,
+    "check_in_date": "2026-01-14",
+    "check_out_date": "2026-01-26",
+    "status": "CL",
+    "type": "G",
+    "created_at": "2026-04-29T14:34:51.685Z",
+    "updated_at": "2026-04-29T14:34:51.685Z",
+    "moved_to": null
   }
 },
 {
   "model": "bookings.booking",
-  "pk": 58,
+  "pk": 177,
   "fields": {
-    "user": 70,
-    "room": 5293,
-    "adults_count": 5,
-    "children_count": 3,
-    "pets_count": 1,
-    "check_in_date": "2026-03-19T23:38:31.268Z",
-    "check_out_date": "2026-04-03T23:38:31.268Z",
-    "status": "M",
-    "total_price": "541002.75",
-    "payment_status": "O",
-    "created_at": "2026-04-23T07:41:26.898Z",
-    "cancelled_at": null,
-    "cancellation_reason": null
+    "user": 7,
+    "room": 334,
+    "adults_count": 4,
+    "children_count": 0,
+    "pets_count": 0,
+    "check_in_date": "2026-04-29",
+    "check_out_date": "2026-05-10",
+    "status": "CL",
+    "type": "N",
+    "created_at": "2026-04-29T14:34:51.685Z",
+    "updated_at": "2026-04-29T14:34:51.685Z",
+    "moved_to": null
   }
 },
 {
   "model": "bookings.booking",
-  "pk": 59,
+  "pk": 178,
   "fields": {
-    "user": 74,
-    "room": 5299,
-    "adults_count": 8,
+    "user": 9,
+    "room": 306,
+    "adults_count": 7,
+    "children_count": 0,
+    "pets_count": 0,
+    "check_in_date": "2026-01-31",
+    "check_out_date": "2026-02-11",
+    "status": "CL",
+    "type": "N",
+    "created_at": "2026-04-29T14:34:51.685Z",
+    "updated_at": "2026-04-29T14:34:51.685Z",
+    "moved_to": null
+  }
+},
+{
+  "model": "bookings.booking",
+  "pk": 179,
+  "fields": {
+    "user": 13,
+    "room": 300,
+    "adults_count": 2,
+    "children_count": 0,
+    "pets_count": 0,
+    "check_in_date": "2026-03-14",
+    "check_out_date": "2026-03-17",
+    "status": "CL",
+    "type": "G",
+    "created_at": "2026-04-29T14:34:51.685Z",
+    "updated_at": "2026-04-29T14:34:51.685Z",
+    "moved_to": null
+  }
+},
+{
+  "model": "bookings.booking",
+  "pk": 180,
+  "fields": {
+    "user": 7,
+    "room": 348,
+    "adults_count": 1,
+    "children_count": 0,
+    "pets_count": 0,
+    "check_in_date": "2026-01-29",
+    "check_out_date": "2026-02-02",
+    "status": "CL",
+    "type": "G",
+    "created_at": "2026-04-29T14:34:51.685Z",
+    "updated_at": "2026-04-29T14:34:51.685Z",
+    "moved_to": null
+  }
+},
+{
+  "model": "bookings.booking",
+  "pk": 181,
+  "fields": {
+    "user": 14,
+    "room": 363,
+    "adults_count": 6,
     "children_count": 1,
     "pets_count": 0,
-    "check_in_date": "2026-03-08T16:51:47.337Z",
-    "check_out_date": "2026-03-29T16:51:47.337Z",
-    "status": "CA",
-    "total_price": "619992.45",
-    "payment_status": "C",
-    "created_at": "2026-04-23T07:41:26.898Z",
-    "cancelled_at": "2026-03-05T11:32:37.030Z",
-    "cancellation_reason": "Голубчик один белье кожа через белье. Кожа потом пропадать дошлый.\nВряд покидать ремень недостаток войти написать. Беспомощный задержать тревога дорогой зима поговорить печатать. Свежий совет устройство космос кпсс пробовать слать."
+    "check_in_date": "2026-01-31",
+    "check_out_date": "2026-02-18",
+    "status": "CL",
+    "type": "G",
+    "created_at": "2026-04-29T14:34:51.685Z",
+    "updated_at": "2026-04-29T14:34:51.685Z",
+    "moved_to": null
   }
 },
 {
   "model": "bookings.booking",
-  "pk": 60,
+  "pk": 182,
   "fields": {
-    "user": 70,
-    "room": 5223,
-    "adults_count": 1,
-    "children_count": 2,
+    "user": 6,
+    "room": 300,
+    "adults_count": 2,
+    "children_count": 0,
     "pets_count": 0,
-    "check_in_date": "2026-03-15T04:28:52.690Z",
-    "check_out_date": "2026-04-01T04:28:52.690Z",
-    "status": "CL",
-    "total_price": "61071.82",
-    "payment_status": "O",
-    "created_at": "2026-04-23T07:41:26.898Z",
-    "cancelled_at": null,
-    "cancellation_reason": null
+    "check_in_date": "2026-02-06",
+    "check_out_date": "2026-02-14",
+    "status": "A",
+    "type": "G",
+    "created_at": "2026-04-29T14:34:51.697Z",
+    "updated_at": "2026-04-29T14:34:51.697Z",
+    "moved_to": null
   }
 },
 {
-  "model": "bookings.review",
+  "model": "bookings.booking",
+  "pk": 183,
+  "fields": {
+    "user": 7,
+    "room": 339,
+    "adults_count": 2,
+    "children_count": 3,
+    "pets_count": 3,
+    "check_in_date": "2026-02-25",
+    "check_out_date": "2026-03-04",
+    "status": "A",
+    "type": "G",
+    "created_at": "2026-04-29T14:34:51.703Z",
+    "updated_at": "2026-04-29T14:34:51.703Z",
+    "moved_to": null
+  }
+},
+{
+  "model": "bookings.bookingpayment",
+  "pk": 1,
+  "fields": {
+    "booking": 157,
+    "status": "E",
+    "amount": "15029.00",
+    "purpose": "EP",
+    "created_at": "2026-04-29T14:34:51.710Z",
+    "paid_at": "2026-04-17T03:16:10Z"
+  }
+},
+{
+  "model": "bookings.bookingpayment",
+  "pk": 2,
+  "fields": {
+    "booking": 158,
+    "status": "I",
+    "amount": "29813.00",
+    "purpose": "PP",
+    "created_at": "2026-04-29T14:34:51.710Z",
+    "paid_at": "2026-01-02T07:29:39Z"
+  }
+},
+{
+  "model": "bookings.bookingpayment",
+  "pk": 3,
+  "fields": {
+    "booking": 159,
+    "status": "I",
+    "amount": "16453.00",
+    "purpose": "PN",
+    "created_at": "2026-04-29T14:34:51.710Z",
+    "paid_at": "2026-03-15T21:07:15Z"
+  }
+},
+{
+  "model": "bookings.bookingpayment",
+  "pk": 4,
+  "fields": {
+    "booking": 160,
+    "status": "C",
+    "amount": "25274.00",
+    "purpose": "FP",
+    "created_at": "2026-04-29T14:34:51.710Z",
+    "paid_at": "2026-02-18T19:33:17Z"
+  }
+},
+{
+  "model": "bookings.bookingpayment",
+  "pk": 5,
+  "fields": {
+    "booking": 161,
+    "status": "O",
+    "amount": "29005.00",
+    "purpose": "PP",
+    "created_at": "2026-04-29T14:34:51.710Z",
+    "paid_at": "2026-02-08T21:05:16Z"
+  }
+},
+{
+  "model": "bookings.bookingpayment",
+  "pk": 6,
+  "fields": {
+    "booking": 162,
+    "status": "O",
+    "amount": "22737.00",
+    "purpose": "PN",
+    "created_at": "2026-04-29T14:34:51.710Z",
+    "paid_at": "2026-03-16T13:54:17Z"
+  }
+},
+{
+  "model": "bookings.bookingpayment",
+  "pk": 7,
+  "fields": {
+    "booking": 163,
+    "status": "O",
+    "amount": "20824.00",
+    "purpose": "FP",
+    "created_at": "2026-04-29T14:34:51.710Z",
+    "paid_at": "2026-04-22T09:32:53Z"
+  }
+},
+{
+  "model": "bookings.bookingpayment",
+  "pk": 8,
+  "fields": {
+    "booking": 164,
+    "status": "I",
+    "amount": "19555.00",
+    "purpose": "EP",
+    "created_at": "2026-04-29T14:34:51.710Z",
+    "paid_at": "2026-03-23T11:15:12Z"
+  }
+},
+{
+  "model": "bookings.bookingpayment",
+  "pk": 9,
+  "fields": {
+    "booking": 165,
+    "status": "O",
+    "amount": "24263.00",
+    "purpose": "EP",
+    "created_at": "2026-04-29T14:34:51.710Z",
+    "paid_at": "2026-03-30T12:09:39Z"
+  }
+},
+{
+  "model": "bookings.bookingpayment",
+  "pk": 10,
+  "fields": {
+    "booking": 166,
+    "status": "O",
+    "amount": "20468.00",
+    "purpose": "PN",
+    "created_at": "2026-04-29T14:34:51.710Z",
+    "paid_at": "2026-04-13T05:19:42Z"
+  }
+},
+{
+  "model": "bookings.bookingpayment",
   "pk": 11,
   "fields": {
-    "booking": 34,
-    "rating": 5,
-    "comment": "Запретить горький выражение прежний миф господь. Покинуть ремень отдел потрясти жить. Факультет социалистический низкий увеличиваться палата бровь.\nГулять функция багровый функция жестокий печатать. Проход бочок рассуждение процесс степь какой кузнец. Дрогнуть следовательно кожа экзамен невозможно.\nЗарплата реклама крыса потом. Зарплата исследование магазин. Естественный счастье написать ребятишки.\nНевозможно полностью добиться совещание. Коммунизм дыхание полевой беспомощный наслаждение выкинуть граница.\nНевыносимый художественный хотеть. Увеличиваться функция плясать.\nО головной засунуть возникновение. Прежний неудобно невозможно пастух неправда.\nАрмейский покидать конференция следовательно тюрьма деньги. Запустить светило войти строительство. Разводить самостоятельно иной торговля провинция четыре спорт. Аж экзамен полюбить миллиард.\nКосмос естественный естественный плод передо исполнять спорт. Горький появление школьный вряд бок развитый присесть. Помолчать угроза падать вряд строительство.\nАктриса кпсс руководитель выразить парень кидать. Июнь человечек жидкий.\nИсследование палец ярко дальний посвятить пламя кольцо. Счастье левый число посвятить поймать важный манера самостоятельно. Пересечь стакан второй школьный поставить.\nБак степь дыхание костер плясать. Разнообразный недостаток заплакать важный. Господь сравнение жидкий горький низкий девка девка граница.\nГосподь прощение спичка. Витрина способ райком передо освободить торопливый мера столетие.\nРучей ремень мелькнуть. Пропадать указанный идея увеличиваться казнь.\nСолнце упор академик нож актриса. Торопливый страсть упор висеть зима юный невыносимый. Вскакивать тюрьма посидеть за уничтожение прошептать школьный. Функция цель руководитель исследование налоговый.\nБоец свежий райком цель услать. Трубка советовать вскинуть очередной господь устройство зарплата расстройство.\nВиднеться танцевать скользить бок хлеб. Отъезд мальчишка дорогой пасть райком неудобно художественный.\nГулять близко естественный очко неправда господь слишком. Ботинок конструкция вздрагивать разнообразный. Командование каюта палец прежний.\nЧто деньги упор. Аллея спасть сходить тревога. Поздравлять темнеть бабочка изображать.\nРота следовательно запретить коллектив возможно разнообразный.\nРешение пасть скрытый степь тысяча поговорить опасность. Монета командующий обида белье.\nТысяча сверкающий функция естественный инструкция пастух. Избегать граница дьявол лететь ответить успокоиться. Пропадать набор пространство низкий ныне выраженный адвокат спешить.\nСутки за пасть пламя соответствие советовать. Угол ночь тусклый поезд еврейский прежний металл.\nПотом пасть граница медицина сверкающий славный разуметься. Правый песенка устройство умолять миллиард. Головка расстройство бегать инструкция торговля изменение идея.\nО выкинуть сходить славный избегать. Легко непривычный изба парень. Роса боец бровь художественный смеяться неправда бетонный.\nМучительно низкий невозможно функция картинка подробность инструкция бригада. Ложиться факультет прежний один хозяйка пробовать избегать разнообразный.",
-    "created_at": "2026-04-23T07:32:46.101Z",
-    "status": "M",
-    "moderated_by": null,
-    "rejection_reason": null,
-    "published_at": null
+    "booking": 167,
+    "status": "O",
+    "amount": "25425.00",
+    "purpose": "RF",
+    "created_at": "2026-04-29T14:34:51.710Z",
+    "paid_at": "2026-04-01T02:12:43Z"
   }
 },
 {
-  "model": "bookings.review",
+  "model": "bookings.bookingpayment",
   "pk": 12,
   "fields": {
-    "booking": 35,
-    "rating": 5,
-    "comment": "Приличный мусор мера при. Болото правление кидать умирать столетие неправда ночь другой.\nПропаганда магазин терапия. Мрачно гулять приятель инфекция спичка пропасть. Ход способ бак слишком пространство.\nТорговля коробка мимо приходить неправда степь.\nПосвятить бригада демократия понятный серьезный палка чувство смеяться. Кпсс слишком терапия серьезный рот полоска.\nСпорт вздрогнуть академик остановить. Страсть банда пламя лиловый. Торговля крутой бабочка точно витрина.\nЖить пропасть светило сходить за князь поговорить. Инфекция житель ремень отъезд снимать о монета покинуть.\nПромолчать развернуться аллея валюта банда.\nСустав банк подземный. Понятный очередной полностью поезд наступать заявление. Тысяча смелый дружно освободить.\nСравнение через изучить господь заведение уточнить. Боец поезд медицина радость приятель похороны механический промолчать.\nСвежий исполнять выгнать видимо угодный интернет провинция. Находить шлем рай жидкий печатать появление князь.\nУслать левый валюта. Успокоиться горький левый. Школьный сопровождаться слишком очутиться успокоиться более.\nНаслаждение полюбить мрачно коммунизм трубка.\nРоса пища означать дошлый сустав.\nМелькнуть дружно июнь привлекать приходить шлем через. Пропадать число холодно крыса. Провал карандаш миг деловой промолчать.\nСекунда счастье парень освобождение головной ныне. Какой мальчишка изображать избегать мелочь бегать плод.\nМера карандаш кидать спорт прежде князь. Столетие около сынок.\nБелье нож вперед жестокий. Район счастье товар снимать выражаться слишком невозможно.\nСомнительный совещание пасть грустный дыхание ленинград грудь. Перебивать чем развернуться песенка. Крутой потрясти недостаток иной покидать заведение.\nПризыв войти витрина вскинуть оборот естественный. Пересечь засунуть научить процесс житель ботинок.\nВыражаться за передо единый инструкция промолчать.\nХудожественный деловой танцевать назначить. Миг деньги коробка непривычный.\nСопровождаться торопливый разнообразный устройство а покидать. Вздрогнуть космос мгновение ход.\nБанк помимо каюта ягода анализ вздрогнуть. Пастух настать самостоятельно нож ведь один. Полюбить экзамен горький исследование успокоиться присесть тысяча.\nДорогой прощение заведение хотеть боец смертельный. Девка сынок пол. Наткнуться сравнение ремень.\nТермин число слишком передо новый самостоятельно мгновение. Волк растеряться район. Назначить заложить некоторый труп спешить решетка.\nМрачно вариант изредка банда монета выгнать. Порода нервно пересечь предоставить слать. Дальний сутки господь ярко исполнять тюрьма.\nРассуждение гулять степь палка сверкать медицина число прощение. Интернет приличный штаб тревога следовательно освобождение.\nЖитель господь пространство мальчишка. Анализ лапа вряд присесть.\nПрименяться чувство вряд бригада потянуться пища. Горький коробка механический бок бровь жидкий. Наткнуться грудь увеличиваться.\nИзучить рассуждение место адвокат скользить социалистический рот. Прощение слишком равнодушный вариант. Сохранять печатать освобождение академик протягивать ставить.",
-    "created_at": "2026-04-23T07:32:46.101Z",
-    "status": "R",
-    "moderated_by": 65,
-    "rejection_reason": "Через виднеться угол реклама войти плод. Умолять головной танцевать очко развитый тысяча. Славный вряд райком роскошный степь порядок скользить.\nСлишком бригада иной. Выраженный видимо степь столетие витрина важный назначить.",
-    "published_at": null
+    "booking": 168,
+    "status": "E",
+    "amount": "2078.00",
+    "purpose": "PP",
+    "created_at": "2026-04-29T14:34:51.710Z",
+    "paid_at": "2026-01-09T13:42:54Z"
   }
 },
 {
-  "model": "bookings.review",
+  "model": "bookings.bookingpayment",
   "pk": 13,
   "fields": {
-    "booking": 38,
-    "rating": 5,
-    "comment": "Славный более постоянный. Коллектив плод передо бригада интеллектуальный поезд. Ведь мусор трясти постоянный вчера. Головной намерение бегать недостаток приятель мучительно число.\nДомашний редактор каюта направо стакан бабочка привлекать. Медицина монета уничтожение вывести багровый неудобно. Проход помимо школьный умирать.\nПокидать забирать уронить горький. Поговорить падать госпожа находить постоянный. Мера за интернет необычный угроза деньги расстегнуть.\nПятеро правление выкинуть механический болото темнеть. Зеленый носок плод ягода следовательно что ведь. Зачем потрясти каюта космос необычный дьявол изредка носок.\nТрясти школьный деньги жить цепочка. Заработать посидеть функция счастье изображать художественный.\nПрошептать видимо исполнять бегать правление правление пастух. Трясти крыса табак степь крутой мера.\nБолото расстегнуть кпсс. Засунуть уточнить банда коричневый помимо.\nСчастье потрясти дьявол о. Домашний встать тревога зато коллектив дремать плясать.\nАктриса металл дурацкий природа невыносимый. Бок рай недостаток ночь блин. Угодный ломать провинция покинуть спешить. Идея еврейский песенка провинция.\nВстать поймать исследование полностью.\nТрубка угроза издали. Стакан еврейский триста присесть. Мера что заведение ломать монета теория.\nСпорт совещание секунда пища порог. Интернет социалистический спасть миг. Вряд вперед мгновение основание. Горький счастье спалить.\nТанцевать витрина реклама райком единый уточнить. Штаб левый реклама.\nУстройство наткнуться поезд уронить сынок. Спичка сбросить банда рот оставить понятный.\nИнструкция порог умолять рота даль порт задрать. Жестокий механический граница ставить каюта.\nХудожественный предоставить вывести вздрагивать цепочка. Хозяйка решетка табак идея спорт.\nПокидать факультет жидкий поймать слишком за коммунизм цель. Металл покидать новый.\nОстановить призыв тюрьма услать опасность гулять. Передо инструкция следовательно полоска приходить.\nПриличный важный освобождение мера. Художественный выраженный миллиард ботинок приходить советовать премьера. Изменение разуметься мгновение забирать художественный.\nСопровождаться приятель металл рот кожа. Вытаскивать лететь грудь инвалид казнь вздрагивать.\nСкользить упорно интеллектуальный спалить дальний даль. Близко инструкция конструкция карандаш. Находить коммунизм следовательно монета.\nКазнь четко научить очко выкинуть табак манера. Возбуждение около запустить вздрогнуть около. Подземный миг прощение мимо увеличиваться. Слишком нож спешить заплакать решетка славный.\nРасстегнуть спешить запретить костер наслаждение витрина плод опасность. Витрина возбуждение неожиданный возмутиться соответствие.\nПокинуть банда тюрьма неожиданно аллея жидкий мрачно. Горький еврейский нажать место торговля гулять написать спорт.\nНекоторый поздравлять проход отражение торговля совет. Перебивать очко роскошный хотеть мрачно.\nПлод сомнительный применяться поколение. Господь отражение присесть спасть. Вчера способ порог спешить оставить.\nЛапа коммунизм посидеть дурацкий наступать миф сутки приходить. Пересечь плод отъезд песня сравнение.",
-    "created_at": "2026-04-23T07:32:46.101Z",
-    "status": "D",
-    "moderated_by": null,
-    "rejection_reason": null,
-    "published_at": null
+    "booking": 169,
+    "status": "E",
+    "amount": "9266.00",
+    "purpose": "PN",
+    "created_at": "2026-04-29T14:34:51.710Z",
+    "paid_at": "2026-01-08T13:30:15Z"
   }
 },
 {
-  "model": "bookings.review",
+  "model": "bookings.bookingpayment",
+  "pk": 14,
+  "fields": {
+    "booking": 170,
+    "status": "I",
+    "amount": "14163.00",
+    "purpose": "RF",
+    "created_at": "2026-04-29T14:34:51.710Z",
+    "paid_at": "2026-03-08T18:27:16Z"
+  }
+},
+{
+  "model": "bookings.bookingpayment",
   "pk": 15,
   "fields": {
-    "booking": 60,
-    "rating": 5,
-    "comment": "Витрина задержать возмутиться. Смертельный решетка мимо труп триста вариант набор поставить.\nОставить пища основание пропадать доставать. Передо бетонный обида блин посидеть экзамен.\nСтепь тревога ребятишки. Потом новый бегать прежний подробность порядок слишком. Художественный грудь мгновение потянуться постоянный увеличиваться присесть. Прежний устройство полюбить неудобно иной полностью.\nСтавить ночь поздравлять выгнать. Хлеб указанный горький возникновение.\nБлизко правый тысяча аж миф задержать. Кожа господь костер спасть пол мрачно исполнять. Коллектив покидать точно.\nНевыносимый выкинуть рис тусклый ремень. Полностью основание спасть бетонный подземный.\nПлод космос наслаждение солнце. Нажать уничтожение легко слать. Мелькнуть сравнение сопровождаться возбуждение еврейский возбуждение совещание песенка.\nМонета хозяйка снимать задержать картинка ручей. Магазин изучить мера угодный металл отражение ребятишки.\nКоричневый запустить зачем задрать более уточнить. Угодный природа поколение наткнуться налоговый левый.\nПокидать художественный запретить господь вытаскивать. Посвятить самостоятельно вскинуть.\nЕврейский сынок функция тысяча скользить голубчик. Что умолять спешить мусор бак. Страсть запустить сынок аж.\nАктриса второй потрясти приятель. Скользить роса умолять жидкий госпожа низкий шлем. Хлеб результат дурацкий следовательно возникновение девка.\nКоммунизм снимать увеличиваться соответствие хлеб. Танцевать сбросить изба невыносимый июнь. Намерение низкий неожиданно приходить поймать куча.\nВряд запустить радость полностью райком предоставить мелькнуть приходить. Художественный куча мучительно ремень пространство забирать. Равнодушный руководитель полностью совещание.\nПравление даль мальчишка сверкающий холодно ночь выражение. Демократия витрина за прошептать.\nДостоинство опасность медицина. Вряд призыв рис. Изучить изба совет деньги инфекция бегать куча о.\nВыраженный ночь обида сверкающий аж карандаш. Собеседник горький носок изменение.\nДаль демократия магазин коллектив заведение. Интернет очко заплакать витрина сынок появление тута монета. Хотеть монета сбросить задрать плавно за отдел.\nКомандующий сутки пространство художественный выбирать. Место поколение мимо мелькнуть счастье.\nРучей изменение назначить висеть. Салон банк полюбить около.\nОтъезд бригада падать заявление свежий применяться армейский. Светило жидкий дрогнуть витрина сверкать.\nСовет привлекать счастье голубчик угроза следовательно рассуждение.\nБеспомощный правильный бак реклама цель отъезд. Июнь пол присесть потом голубчик.\nМучительно изба свежий кузнец нажать промолчать актриса. Сынок цвет народ вытаскивать валюта войти потрясти. Решетка упор дрогнуть. Рота ручей сохранять жить актриса наслаждение строительство.\nМагазин отметить исполнять лететь заявление настать. Обида жить другой полевой. Счастье бок умирать пропаганда.\nПотянуться зима танцевать монета. Правление смертельный район конструкция другой провал находить. Пламя конференция необычный палка сходить.",
-    "created_at": "2026-04-23T07:41:26.919Z",
-    "status": "R",
-    "moderated_by": 54,
-    "rejection_reason": "Провал район еврейский назначить. Рассуждение покидать падать нажать сопровождаться через трубка. Вряд дружно войти.\nЛегко интеллектуальный доставать. Руководитель трясти академик самостоятельно.",
-    "published_at": null
+    "booking": 171,
+    "status": "O",
+    "amount": "22527.00",
+    "purpose": "PN",
+    "created_at": "2026-04-29T14:34:51.710Z",
+    "paid_at": "2026-04-30T00:52:23Z"
   }
 },
 {
-  "model": "bookings.review",
+  "model": "bookings.bookingpayment",
   "pk": 16,
   "fields": {
-    "booking": 53,
-    "rating": 4,
-    "comment": "Угроза возмутиться что ход карман. Валюта скрытый заложить порода бетонный избегать.\nПохороны правильный наткнуться вытаскивать. Дрогнуть настать витрина висеть плавно. Изменение рота возникновение добиться.\nТабак ход социалистический левый художественный палец. Тусклый увеличиваться разнообразный мотоцикл район даль князь.\nТруп житель руководитель левый трубка тревога коммунизм протягивать. Еврейский космос растеряться место проход радость товар заведение.\nСынок второй понятный ученый. Угроза возникновение космос провал ломать песенка невыносимый.\nСынок инструкция проход хотеть. Стакан инвалид легко рассуждение тревога еврейский остановить.\nКарман эпоха добиться ложиться приходить приличный редактор рай. Намерение банк провал мимо правильный госпожа неожиданно.\nПоставить наслаждение растеряться вариант механический пасть девка задрать. Дыхание аж район полоска обида.\nСветило выгнать заявление район беспомощный слишком да. Командир плясать цепочка да.\nОснование рот одиннадцать крутой пропаганда.\nВитрина страсть способ ручей возбуждение палец вскакивать. Материя похороны неожиданный даль. Чем редактор через мера висеть прелесть коллектив.\nУказанный штаб бок эпоха правление настать.\nРазуметься нажать функция. Академик правление оставить войти разуметься иной монета. Мотоцикл блин холодно беспомощный посвятить мучительно интернет.\nСекунда умирать лететь карман около. Дыхание отдел зарплата ученый спичка низкий бок.\nБанк грудь костер кузнец. Растеряться сохранять вздрогнуть поздравлять.\nГорький войти намерение конференция столетие разводить. Коробка инструкция неправда смеяться потянуться мелькнуть основание. Разнообразный госпожа художественный промолчать рабочий.\nСветило миг головка пропасть. Сутки нож сустав гулять деньги более выгнать.\nГосподь назначить остановить провинция покидать результат мера. Дружно протягивать разнообразный разводить выдержать бровь ночь. Правильный покидать радость ложиться непривычный темнеть.\nСовещание деловой идея манера коричневый приходить. Важный пропасть степь табак исполнять деньги витрина термин. Выгнать вздрогнуть развитый.\nПадать рот военный бабочка приличный блин. Ремень легко вариант передо. Райком хотеть выбирать возникновение кожа печатать решетка.\nКуча спорт крыса единый. Невыносимый бок призыв приятель.\nМягкий намерение уничтожение развернуться дыхание поздравлять.\nСтепь вряд кидать отъезд похороны пламя идея. Дальний задержать крыса растеряться полоска налоговый белье.\nГорький бабочка карман полюбить.\nПоявление дальний услать пятеро запустить. Да основание сутки зеленый порода неправда лапа. Оборот коричневый желание сохранять висеть висеть следовательно.\nГрудь угроза багровый инвалид серьезный. Четыре головной пространство ботинок граница палка тута пропадать.\nМеханический присесть адвокат совет голубчик космос. Руководитель цель приятель засунуть миллиард. Горький спорт поставить.\nПорт костер стакан налоговый ученый. Реклама смелый пространство монета.\nЕврейский протягивать сутки правление.",
-    "created_at": "2026-04-23T07:41:42.167Z",
-    "status": "M",
-    "moderated_by": null,
-    "rejection_reason": null,
-    "published_at": null
+    "booking": 172,
+    "status": "E",
+    "amount": "16451.00",
+    "purpose": "FP",
+    "created_at": "2026-04-29T14:34:51.710Z",
+    "paid_at": "2026-04-17T19:18:39Z"
   }
 },
 {
-  "model": "bookings.review",
+  "model": "bookings.bookingpayment",
   "pk": 17,
   "fields": {
-    "booking": 49,
-    "rating": 4,
-    "comment": "Юный сверкающий реклама. Песенка исполнять применяться деньги полностью.\nНеудобно командование полюбить художественный. Песня пробовать сутки песенка ярко мгновение. Инвалид добиться выражаться палец снимать пастух.\nОстановить совет миг вряд командование дорогой. Выдержать очко ломать вскинуть наступать пламя. Сверкающий порядок домашний грудь миг медицина.\nЭпоха пробовать упорно деньги реклама некоторый палка построить. Около следовательно интернет. Адвокат сравнение покинуть выдержать грудь. Рот второй инфекция.\nВыраженный спичка упорно природа отражение рот. Плод магазин трубка социалистический ярко соответствие поставить порт. Передо отражение житель тута головной руководитель космос.\nЗадержать сверкать возникновение. Даль инструкция прежний металл. Приличный приходить покинуть отражение коммунизм.\nИздали правление решение медицина чем. Монета грудь ботинок солнце носок мелочь.\nПодземный металл второй металл банда заведение. Функция вперед появление ленинград деньги перебивать.\nЗабирать написать художественный пасть наступать. Очутиться непривычный результат изредка около рассуждение обида. Отметить житель способ армейский нож сверкающий порода.\nУченый господь уронить недостаток.\nВыбирать подземный разнообразный. Совещание бегать рабочий угодный мрачно ремень уничтожение. Ложиться порядок около стакан сравнение ботинок чувство.\nМонета пропасть рабочий приятель человечек зеленый. Перебивать парень манера. Изображать кпсс инструкция багровый демократия.\nМиллиард механический тревога мотоцикл некоторый. Грудь мимо ребятишки банк ярко очко горький торговля. Дьявол освобождение славный коммунизм.\nДошлый сутки разводить тута. Приятель крыса материя выбирать число.\nНепривычный коричневый вчера конференция дрогнуть необычный. Четко рота выдержать мальчишка. Падать радость монета.\nЗа строительство пробовать нажать нож привлекать. Возникновение заведение плясать бак мера назначить рота.\nМатерия лиловый инфекция прощение жестокий. Мотоцикл госпожа вариант блин освобождение ручей. Тревога адвокат рассуждение возмутиться другой.\nБригада мимо сынок госпожа равнодушный. Ложиться чувство единый полюбить спорт.\nСходить постоянный неправда премьера головка. Витрина зеленый через вариант ребятишки.\nКарандаш вскакивать крутой палец солнце. Термин вскинуть степь.\nРазводить похороны а факультет армейский тревога падать. Да мучительно мелькнуть аж покидать.\nВозмутиться решетка рис запеть висеть неожиданный.\nДевка слать применяться отметить деньги войти. Пол о сбросить около около народ новый. Прошептать разнообразный смертельный. Палец цвет пламя актриса.\nРасстройство исследование крутой.\nДошлый пятеро оборот кидать школьный.\nСомнительный валюта конструкция зеленый ярко сынок. Важный беспомощный постоянный успокоиться ныне.\nФакультет доставать затянуться падать другой счастье более. О адвокат неожиданный потянуться правый кузнец. Миф дорогой спорт тюрьма заявление.",
-    "created_at": "2026-04-23T07:41:42.167Z",
-    "status": "M",
-    "moderated_by": null,
+    "booking": 173,
+    "status": "E",
+    "amount": "26384.00",
+    "purpose": "PN",
+    "created_at": "2026-04-29T14:34:51.710Z",
+    "paid_at": "2026-03-21T08:31:36Z"
+  }
+},
+{
+  "model": "bookings.bookingpayment",
+  "pk": 18,
+  "fields": {
+    "booking": 174,
+    "status": "O",
+    "amount": "6328.00",
+    "purpose": "RF",
+    "created_at": "2026-04-29T14:34:51.710Z",
+    "paid_at": "2026-03-02T02:29:12Z"
+  }
+},
+{
+  "model": "bookings.bookingpayment",
+  "pk": 19,
+  "fields": {
+    "booking": 175,
+    "status": "E",
+    "amount": "18947.00",
+    "purpose": "FP",
+    "created_at": "2026-04-29T14:34:51.710Z",
+    "paid_at": "2026-01-29T09:29:48Z"
+  }
+},
+{
+  "model": "bookings.bookingpayment",
+  "pk": 20,
+  "fields": {
+    "booking": 176,
+    "status": "O",
+    "amount": "14984.00",
+    "purpose": "RF",
+    "created_at": "2026-04-29T14:34:51.710Z",
+    "paid_at": "2026-04-29T04:33:33Z"
+  }
+},
+{
+  "model": "bookings.bookingpayment",
+  "pk": 21,
+  "fields": {
+    "booking": 177,
+    "status": "O",
+    "amount": "29066.00",
+    "purpose": "PP",
+    "created_at": "2026-04-29T14:34:51.710Z",
+    "paid_at": "2026-01-05T10:05:06Z"
+  }
+},
+{
+  "model": "bookings.bookingpayment",
+  "pk": 22,
+  "fields": {
+    "booking": 178,
+    "status": "I",
+    "amount": "9237.00",
+    "purpose": "PP",
+    "created_at": "2026-04-29T14:34:51.710Z",
+    "paid_at": "2026-04-27T19:10:25Z"
+  }
+},
+{
+  "model": "bookings.bookingpayment",
+  "pk": 23,
+  "fields": {
+    "booking": 179,
+    "status": "E",
+    "amount": "17915.00",
+    "purpose": "EP",
+    "created_at": "2026-04-29T14:34:51.710Z",
+    "paid_at": "2026-04-19T15:09:40Z"
+  }
+},
+{
+  "model": "bookings.bookingpayment",
+  "pk": 24,
+  "fields": {
+    "booking": 180,
+    "status": "O",
+    "amount": "28454.00",
+    "purpose": "FP",
+    "created_at": "2026-04-29T14:34:51.710Z",
+    "paid_at": "2026-01-23T08:26:01Z"
+  }
+},
+{
+  "model": "bookings.bookingpayment",
+  "pk": 25,
+  "fields": {
+    "booking": 181,
+    "status": "O",
+    "amount": "12316.00",
+    "purpose": "PN",
+    "created_at": "2026-04-29T14:34:51.710Z",
+    "paid_at": "2026-04-01T17:54:25Z"
+  }
+},
+{
+  "model": "bookings.cancelledbooking",
+  "pk": 11,
+  "fields": {
+    "booking": 165,
+    "cancelled_at": "2026-04-29T14:34:51.690Z",
+    "cancellation_reason": "Адвокат холодно невозможно славный.\nТруп избегать сохранять функция аллея. Монета тута около палка увеличиваться отъезд достоинство.\nГраница медицина зато кпсс художественный. Порог четыре более тесно кузнец казнь точно. Остановить грудь роса степь."
+  }
+},
+{
+  "model": "bookings.cancelledbooking",
+  "pk": 12,
+  "fields": {
+    "booking": 172,
+    "cancelled_at": "2026-04-29T14:34:51.691Z",
+    "cancellation_reason": "Пятеро ставить механический вряд природа протягивать невыносимый находить. Понятный висеть жить эпоха. Угодный изменение песня посвятить исследование налево подробность передо.\nВисеть бегать плод лететь. Зима помимо разводить пища команда уронить ведь."
+  }
+},
+{
+  "model": "bookings.review",
+  "pk": 5,
+  "fields": {
+    "booking": 176,
+    "rating": 3,
+    "comment": "Военный о что передо лететь зарплата. Число другой очередной хлеб.\nПоймать нажать возмутиться штаб премьера отдел. Очутиться металл поезд подземный что недостаток поговорить.\nЭпоха рассуждение инфекция штаб недостаток вытаскивать следовательно. Светило инвалид результат ленинград. Стакан порода художественный оставить болото заработать отдел.\nМагазин наслаждение спешить парень. Кпсс сравнение рай чувство необычный опасность.\nТоропливый вздрогнуть тысяча поговорить выбирать запеть. Изредка вскакивать спичка бетонный природа домашний. Дорогой торопливый неожиданно полюбить умолять написать. Отдел выбирать багровый отражение армейский тюрьма поздравлять мрачно.\nТысяча даль услать тревога важный услать о. Художественный смелый ленинград промолчать витрина интернет.\nУгроза провал пересечь решение шлем угол угодный за. Тяжелый смелый строительство правильный рай страсть встать. Функция запретить прелесть прелесть войти мотоцикл народ парень.\nПровинция разнообразный тесно роскошный отметить. Полностью вытаскивать спасть степь миллиард следовательно юный. Мелькнуть ярко доставать палка лиловый песенка. Смелый пространство порог равнодушный призыв.\nОсвобождение вряд танцевать неправда. Дошлый затянуться пропадать правый боец посвятить труп палка. Вскакивать пропаганда тесно устройство монета ход.\nСлать роскошный салон холодно казнь. Мимо парень лететь пересечь приятель помолчать зима.\nХолодно настать мучительно казнь результат бегать. Руководитель термин пропаганда поколение изба художественный каюта.\nМиг ребятишки заложить пропасть карман. Виднеться холодно угодный конструкция.\nПечатать трубка грудь приятель через ученый. Монета заявление один деловой редактор отражение трубка пропаганда.\nСпорт какой результат бетонный. Лапа нож перебивать торговля ботинок монета покинуть.\nНаступать сохранять устройство войти передо. Опасность голубчик желание бригада рабочий интернет страсть.\nКоробка выражаться затянуться вздрогнуть салон потрясти очередной. Настать прощение жить куча художественный соответствие.\nУгодный войти применяться полевой находить разнообразный конференция.\nВряд указанный тута порода жидкий провинция мусор багровый. Ученый магазин ставить горький. Командир задрать тусклый мимо еврейский ставить.\nИсполнять военный второй. Песенка опасность художественный приятель очередной домашний.\nДружно пространство сохранять пол подробность госпожа салон. Металл избегать покидать вздрагивать какой триста. Посвятить дремать прощение услать трубка ныне нажать.\nУказанный чем хотеть июнь важный девка опасность космос. Столетие аллея картинка.\nГоловка спешить аллея бак художественный. Подробность похороны наслаждение намерение танцевать угодный. Близко мимо еврейский вскинуть мусор.\nПрирода угол порода миллиард мрачно жидкий юный. Зеленый совет роса спорт за.\nБлизко освободить штаб.\nМиллиард возбуждение полевой голубчик. Ремень хотеть направо вперед равнодушный эпоха. Отметить горький еврейский направо.\nПлясать темнеть упор наслаждение металл упор мусор. Разводить вряд бегать покидать висеть пространство уточнить.",
+    "created_at": "2026-04-29T14:34:51.738Z",
+    "status": "P",
+    "moderated_by": 29,
     "rejection_reason": null,
+    "published_at": "2026-02-28T18:57:57Z"
+  }
+},
+{
+  "model": "bookings.review",
+  "pk": 6,
+  "fields": {
+    "booking": 177,
+    "rating": 5,
+    "comment": "Спешить пища пространство обида промолчать неожиданный мера. Грустный девка мелькнуть встать мимо возмутиться.\nБагровый материя вытаскивать приятель медицина поздравлять художественный. Кольцо конференция кузнец легко.\nНамерение при следовательно ложиться лететь постоянный оборот. Оборот очко порода волк.\nНож появление основание число. Легко разуметься дрогнуть запустить строительство жить встать дальний. Дружно горький заявление неправда ярко сходить применяться.\nПонятный бровь сутки покидать способ песенка тута. Постоянный каюта спорт темнеть. Находить выраженный очутиться поезд палка.\nПотянуться сынок освободить мелочь задрать порода приходить. Выдержать скользить мелькнуть ручей написать покидать правый прежний. Развитый виднеться посвятить лететь висеть волк приятель.\nПоговорить невыносимый миллиард каюта костер изредка мягкий. Природа близко рассуждение торговля палата скрытый равнодушный. Человечек хлеб спалить скользить господь передо.\nПодробность что кольцо настать. Поставить коммунизм демократия военный развернуться успокоиться.\nШкольный кольцо исследование сутки нервно. Демократия радость подробность славный металл.\nРазвитый цель одиннадцать дружно разнообразный голубчик порог. Цепочка командующий выражаться научить страсть.\nКуча поговорить ломать жидкий командир. Посидеть забирать материя изображать плясать. Находить снимать кидать научить дорогой.\nМиг труп порт перебивать непривычный. Товар вряд карандаш направо гулять выразить.\nДоставать еврейский полоска прошептать лететь порт выражаться. Изредка космос самостоятельно.\nЛапа терапия низкий естественный задержать вряд. Бровь парень издали.\nКузнец написать проход. Школьный носок мотоцикл.\nМера казнь дальний степь. Печатать встать уронить левый. Мелькнуть район район.\nПропасть грустный костер расстегнуть шлем анализ торговля. Гулять назначить горький дрогнуть.\nПробовать тесно сравнение другой. Выраженный неправда процесс господь сустав поздравлять. Посвятить коллектив мусор.\nЕврейский девка командование важный порядок оборот. Находить советовать спасть коробка академик.\nПол дрогнуть решетка слишком прощение юный. Возникновение слишком решетка.\nЕдиный направо поздравлять добиться темнеть бровь. Медицина функция потянуться слишком полюбить потянуться.\nРасстройство заявление эффект. Боец место вперед экзамен. Выражаться о штаб монета интеллектуальный угроза недостаток смертельный.\nОтдел функция дружно некоторый товар спалить терапия отдел. Радость юный падаль валюта волк привлекать рай.\nРис упор помолчать. Вывести запустить бегать. Пропаганда солнце вздрогнуть дошлый космос руководитель манера адвокат.\nВозмутиться находить мгновение заложить.\nКазнь функция юный. Пастух тяжелый белье аж костер.\nВисеть рассуждение бригада встать висеть. Освобождение освободить присесть порода выбирать растеряться грустный вытаскивать. Виднеться написать адвокат порядок.\nНаписать руководитель освобождение ведь граница. За космос прежний инструкция нервно ложиться бригада.\nАнализ спичка ныне плод господь покидать. Изредка желание при передо.",
+    "created_at": "2026-04-29T14:34:51.738Z",
+    "status": "P",
+    "moderated_by": 29,
+    "rejection_reason": null,
+    "published_at": "2026-04-09T02:29:18Z"
+  }
+},
+{
+  "model": "bookings.review",
+  "pk": 7,
+  "fields": {
+    "booking": 178,
+    "rating": 5,
+    "comment": "Правый парень казнь лететь природа. Ребятишки засунуть сходить волк. Четко прежний услать успокоиться тусклый металл эпоха поезд.\nВообще появление серьезный около деньги лететь плясать возмутиться. Растеряться волк запеть тысяча миг.\nПередо иной дорогой эффект. Проход низкий подземный провинция.\nИнтернет полюбить кольцо исследование плод. Пропасть художественный пламя уничтожение падаль. Мера выражаться направо провинция.\nТрубка тысяча мальчишка волк слать. Свежий вскинуть иной бочок возмутиться предоставить нервно.\nБолее смертельный вытаскивать карман коробка. Бабочка хлеб неудобно чем помолчать. Изменение домашний командующий процесс.\nВыражаться тута деловой бак. Упор сохранять багровый. Ставить находить магазин скользить. Некоторый ремень достоинство правый пасть за.\nРасстройство сбросить секунда сутки угодный вздрогнуть бок. Юный трубка термин конференция тута.\nУченый лиловый самостоятельно нервно необычный ленинград рай. Прелесть порог жидкий тута перебивать.\nКидать советовать выкинуть исследование провал. Нажать прощение другой интернет рай более еврейский миф.\nЗаведение мотоцикл июнь степь угодный другой витрина. Крыса кожа возбуждение даль освободить.\nОбида анализ за соответствие. Прелесть художественный полностью носок домашний район изображать. Монета вперед интеллектуальный успокоиться.\nЧетко песня инфекция упор передо. Ягода сутки магазин выгнать строительство.\nНеожиданный находить вздрогнуть наслаждение. Изображать ломать домашний невыносимый о один. Степь спичка скрытый строительство фонарик дрогнуть. Горький рай сутки.\nКожа казнь мимо угроза выраженный приятель.\nПоявление набор призыв лиловый. Хозяйка нажать поставить.\nМрачно полностью очутиться свежий. Дальний тысяча страсть пасть невыносимый исследование карандаш рот. Пасть подземный мера порт прелесть результат.\nГолубчик сутки неправда природа заведение исследование. Сохранять очко одиннадцать новый ложиться народ. Ставить ягода задрать сохранять команда рот терапия левый.\nЯрко товар военный другой. Жидкий лиловый пересечь человечек угроза. Чем район аллея единый.\nИнтеллектуальный протягивать инвалид художественный. Головка смертельный четыре. Карандаш человечек граница палата поставить находить житель волк. Аж правильный мучительно уронить спичка развернуться.\nЗапеть пробовать оставить изучить. Карандаш издали носок степь.\nПробовать наступать граница выдержать налоговый. Свежий расстройство заявление тяжелый роскошный соответствие лететь приятель. Неправда развитый лапа госпожа.\nДеньги смертельный вариант посидеть роса а. Военный запустить поезд носок привлекать сбросить собеседник.\nПолюбить за космос космос. Запретить торопливый успокоиться крутой аллея кожа.\nПроход выражаться интернет новый встать полюбить подробность. Войти о поздравлять важный встать выкинуть неправда. Банда слишком строительство посвятить исследование спешить.\nГосподь ребятишки бак миг танцевать.\nИзменение пересечь пол нервно очко костер заявление помолчать. Оставить сустав спорт домашний. Крутой ответить посидеть промолчать изменение июнь.",
+    "created_at": "2026-04-29T14:34:51.738Z",
+    "status": "R",
+    "moderated_by": 28,
+    "rejection_reason": "Мгновение потрясти процесс очередной.\nМрачно устройство иной около горький банк пропадать. Научить привлекать степь уронить теория песенка.\nСомнительный порт картинка прежде совет. Табак вздрагивать тюрьма рай рассуждение солнце домашний.",
     "published_at": null
   }
 },
 {
   "model": "bookings.review",
-  "pk": 18,
+  "pk": 8,
   "fields": {
-    "booking": 48,
-    "rating": 5,
-    "comment": "Выражение заплакать рассуждение заработать. Механический слишком бак поздравлять дружно. Расстегнуть умирать означать угодный заработать. Волк совещание ботинок вывести рабочий угодный командующий запретить.\nКазнь деньги материя. Научить деловой тревога князь близко торопливый армейский. Слишком мусор инфекция выбирать.\nПорог граница дорогой холодно жидкий господь. Медицина еврейский салон ныне.\nКидать а функция важный. Порог табак вскинуть пастух настать ярко непривычный.\nИсследование спасть факультет неправда монета хотеть. Спорт совет танцевать поговорить космос естественный.\nЦепочка вскинуть запретить сверкающий полностью. Горький анализ четко скрытый господь приходить. Бабочка пламя ремень второй прощение выдержать.\nСпорт решетка жить следовательно.\nШтаб поколение космос сустав команда выдержать успокоиться. Мальчишка народ второй покинуть. Издали даль госпожа порядок указанный товар горький. Куча налево падать.\nСтепь поздравлять манера трясти выгнать следовательно изображать. Один теория демократия выраженный.\nЖидкий стакан легко. Тута сопровождаться фонарик блин уничтожение выраженный. Правление добиться развернуться покинуть сустав находить.\nУвеличиваться призыв виднеться июнь. Чем палата академик вытаскивать демократия. Ремень витрина научить отдел умирать.\nДомашний монета цепочка легко. Добиться постоянный вскакивать неудобно некоторый плод издали князь.\nТоропливый кольцо домашний.\nПолоска секунда палата передо порт головка правильный куча. Инфекция чувство спасть.\nПредоставить кольцо висеть отметить ручей правый. Угроза вывести поговорить песенка рай.\nГоловка академик слишком цепочка столетие. Столетие доставать спичка.\nТанцевать добиться нервно сопровождаться плод. Бегать исследование эффект багровый аж.\nСпорт еврейский угроза четко ручей. Цвет необычный мимо нож применяться левый. Виднеться единый идея трубка сутки. Степь лиловый советовать.\nБабочка мера нож за сопровождаться. Банда пробовать серьезный уронить сверкающий. Чем избегать анализ серьезный житель миг сходить. Горький спорт отметить серьезный неудобно функция вряд.\nМелочь тысяча возмутиться пространство. Сутки нажать ученый издали более помимо лиловый парень. Пол порода радость премьера счастье более дошлый плавно.\nТеория армейский посидеть. Аллея выражение возбуждение предоставить упор настать доставать свежий.\nЗа одиннадцать коричневый приличный пропаганда. Салон забирать даль тюрьма.\nБлин ботинок советовать свежий. Парень правильный растеряться помолчать правый отъезд художественный. Расстройство нажать иной степь. Трясти появление построить освобождение войти поколение.\nРабочий адвокат сходить заявление. Волк серьезный анализ дремать низкий. Заложить ленинград упор плод.\nНекоторый кузнец банда инфекция. Один ягода мрачно рассуждение. Новый покидать роса покидать коммунизм пропаганда полюбить даль.\nПокидать поставить сохранять ремень опасность. Магазин вперед еврейский мелькнуть радость функция.\nТрясти карандаш намерение неожиданный. Бочок мусор войти страсть плод танцевать школьный. Славный трясти помимо набор смелый возмутиться.",
-    "created_at": "2026-04-23T07:41:42.167Z",
+    "booking": 179,
+    "rating": 4,
+    "comment": "Пища важный неожиданный свежий народ провал рот. Задержать неправда мрачно.\nПорядок некоторый полевой дурацкий построить. Банда ныне порог серьезный отдел добиться социалистический.\nБлин запустить видимо стакан дрогнуть настать новый. Четко услать уничтожение палата правильный девка другой. Горький витрина манера хотеть правление налево кольцо затянуться.\nСолнце печатать кожа равнодушный песня. Горький житель школьный пропасть выкинуть упорно какой.\nСлишком эффект деловой тяжелый слишком. Мелькнуть уничтожение социалистический картинка вздрагивать кузнец а. Светило рабочий хлеб дальний.\nМиг мера возможно развернуться написать потом намерение. Желание висеть металл а монета.\nБабочка деньги пища приличный бок интеллектуальный возможно. Левый аж изучить командование господь похороны торговля. Оставить прошептать написать приходить спорт инвалид.\nЗеленый вздрогнуть правление сверкать вскинуть кпсс выраженный. Ход серьезный освобождение банк редактор желание.\nКазнь тесно очутиться при. Плавно жидкий носок эффект анализ наслаждение результат.\nГолубчик решение космос роса сомнительный бак. Банда неожиданно материя сомнительный палата песня. Сверкать упорно поставить спичка разуметься.\nПротягивать угол плод степь разнообразный. Песенка даль собеседник адвокат мальчишка нож руководитель инфекция. Пол ленинград грустный прошептать бегать висеть.\nНеправда банк каюта приходить командующий инвалид. Порядок угодный низкий деньги еврейский правый пламя. Ночь дыхание деньги уточнить изучить.\nПропаганда горький еврейский привлекать освобождение господь валюта. Домашний степь посидеть написать.\nСлишком райком дорогой непривычный. Порог набор висеть пятеро единый жестокий металл упор.\nУгодный природа четко товар. Степь левый коллектив гулять тревога школьный пространство. Еврейский рай смелый головка.\nПотрясти расстегнуть правление другой строительство пространство. Оборот угроза бегать вариант демократия поймать хотеть. Выдержать сохранять покинуть чем висеть при. Ягода деловой мотоцикл вариант вариант необычный юный уточнить.\nСалон рот вчера посвятить монета терапия социалистический лиловый. Советовать коробка пропасть порода собеседник некоторый наткнуться. Товар командующий господь спешить носок.\nПроцесс услать очередной кузнец сынок. Помолчать спорт бабочка потрясти счастье. Сравнение аж зима.\nВыражение перебивать упор секунда. Покидать умолять степь пересечь ленинград горький. Покидать второй жидкий изучить.\nКарандаш пропасть выраженный скользить левый. Сынок растеряться мгновение лететь. Кузнец поставить аж.\nУказанный пробовать добиться деньги. Через выражаться руководитель пастух расстегнуть бровь чем перебивать.\nИнфекция степь другой сынок. Цель пропаганда единый металл слишком спичка. Труп изменение естественный слать чувство командир наслаждение.\nВыкинуть отъезд крыса порог. Правление угроза вывести слать страсть пламя. Войти ход теория.\nВисеть низкий белье а. Изображать дрогнуть стакан избегать намерение дорогой сынок. Угодный направо изменение основание бак неожиданный.",
+    "created_at": "2026-04-29T14:34:51.738Z",
     "status": "D",
     "moderated_by": null,
     "rejection_reason": null,
@@ -669,12 +861,12 @@
 },
 {
   "model": "bookings.review",
-  "pk": 19,
+  "pk": 9,
   "fields": {
-    "booking": 46,
-    "rating": 5,
-    "comment": "Легко миллиард металл слишком что умирать ход. Мера факультет провал привлекать. Еврейский правый премьера лететь.\nМелочь эпоха уничтожение инструкция смелый левый более. Художественный близко тесно ребятишки горький. Светило песенка волк секунда зато коммунизм.\nЮный заплакать полюбить печатать пространство заработать. Картинка пересечь спешить потрясти следовательно стакан пропаганда.\nПлясать армейский еврейский роса печатать вряд появление второй. Демократия пастух через зато князь командование головка.\nГоловка вздрагивать армейский полевой пламя. Нож издали единый дружно присесть.\nО ребятишки сомнительный интеллектуальный порог угроза четыре. Заработать светило пастух приятель развернуться штаб.\nКарандаш наткнуться развитый построить даль. Коробка рассуждение иной витрина спешить господь подземный.\nВыкинуть князь магазин приятель слишком инвалид самостоятельно зачем. Порядок салон князь пятеро легко мгновение.\nПрежде встать серьезный рот что помимо расстегнуть. Полюбить адвокат мальчишка засунуть.\nМеталл зато выдержать зима цепочка карандаш правильный медицина. Командование указанный премьера наступать легко приличный.\nУронить исследование исполнять наступать поздравлять. Естественный полностью зима падать бетонный ремень.\nЛегко через карандаш заявление близко сравнение армейский. Полностью похороны одиннадцать соответствие смеяться художественный дрогнуть. Отражение тюрьма вытаскивать.\nПоймать спасть упорно мягкий хлеб.\nНалево подземный куча лететь пробовать спалить коричневый. Строительство пятеро бригада провал.\nНажать жестокий число жить налоговый легко командующий. Манера сбросить написать ученый степь кпсс.\nХозяйка ход штаб полюбить. Желание около боец при подземный.\nРота грудь ягода решение. Плод тысяча багровый ягода обида. Народ возбуждение место самостоятельно.\nСтепь сравнение металл покидать. Эпоха через основание песенка анализ решение.\nВскинуть левый выдержать мимо. Дыхание вздрогнуть вскинуть пространство.\nПеребивать художественный салон коллектив. Забирать пятеро совет выразить постоянный сынок порт. Войти беспомощный витрина покинуть домашний природа.\nНаходить поколение избегать песенка правильный хотеть.\nГорький инвалид потом угол проход витрина рис промолчать. Коммунизм порядок вывести запретить пространство ломать.\nИзредка дорогой лететь сопровождаться ход тусклый. Неожиданный правильный теория порядок приличный. Прежде дружно оборот прежний.\nСвежий смеяться инфекция второй ученый блин правление затянуться.\nПоявление нажать вздрогнуть палата космос. Кожа бочок изменение зачем.\nГоловной отметить перебивать бригада нажать песенка.\nМера другой неправда возмутиться.\nЕврейский горький приличный число. Монета зато налево.\nЧем неудобно собеседник солнце дорогой. Природа цель единый плавно разводить передо жестокий. Тута увеличиваться близко солнце горький пропадать.\nБолее песня господь увеличиваться следовательно шлем. Равнодушный магазин карман.\nТута висеть упорно конференция возникновение. Товар ярко теория затянуться чувство плясать при.",
-    "created_at": "2026-04-23T07:41:42.167Z",
+    "booking": 180,
+    "rating": 4,
+    "comment": "Палка сомнительный налево соответствие. Цвет помимо выраженный мелькнуть освобождение направо задрать.\nДругой идея нажать цвет анализ сверкать. Подробность магазин хозяйка подземный. Светило прежде сбросить тяжелый торговля.\nКнязь рай сопровождаться висеть. Войти бригада мимо.\nНазначить налево блин о металл дошлый угроза. Видимо цель призыв предоставить зачем зима интеллектуальный. Пища мгновение социалистический райком плавно.\nПриятель промолчать парень бок изредка факультет иной. Неожиданный спалить мучительно вариант набор степь страсть равнодушный. Очередной выкинуть вариант господь мучительно посидеть миллиард ночь. Печатать необычный мимо возможно исполнять цвет.\nРазвитый опасность около возможно. Зима через головной карман.\nНервно разводить правление сынок отражение строительство палата. Советовать вскакивать изучить. Реклама промолчать прошептать банк подземный магазин.\nВозмутиться правление кожа актриса цвет возможно. Терапия левый мучительно серьезный.\nНарод изменение плод монета гулять. Кольцо собеседник бак заработать. Рабочий беспомощный коллектив пробовать неожиданно мгновение. Кольцо сынок избегать человечек вскинуть.\nПолоска процесс исследование холодно означать деньги проход рот.\nСтепь издали вытаскивать пища гулять задержать. Фонарик прошептать витрина палка житель заработать сустав. Посвятить спорт левый призыв ведь спалить термин. Рис тута выбирать неправда помимо господь.\nМусор спалить холодно результат смеяться. Витрина указанный более нервно а заложить.\nЕдиный природа коллектив беспомощный порода. Пастух ручей монета демократия провинция. Подробность шлем одиннадцать слишком невозможно приятель.\nЧеловечек новый увеличиваться бабочка соответствие. Результат беспомощный предоставить. Возможно отметить одиннадцать тревога. Ломать июнь приятель лететь табак.\nВозмутиться сходить место сверкающий. Ломать хлеб построить райком виднеться полевой. Присесть мелькнуть пастух холодно.\nНож доставать промолчать секунда ставить. Цвет легко неправда похороны палка.\nСалон лиловый человечек промолчать ремень человечек. Находить металл ремень какой полюбить смелый покидать.\nХудожественный висеть ответить народ. Штаб дьявол оборот витрина картинка трясти тяжелый. Плясать бак ярко волк. Засунуть запретить ребятишки достоинство.\nИзображать печатать юный. Актриса рис совет. Плод неудобно человечек материя возможно.\nПолевой материя посвятить рот промолчать еврейский снимать академик. Райком желание команда крутой.\nМедицина валюта механический запустить тысяча спорт райком. Уточнить издали поезд цель. Товар еврейский полюбить гулять. Развернуться угроза отъезд падать недостаток академик.\nРис степь премьера сынок столетие. Чем смертельный ученый хлеб изучить порт.\nДоставать совещание кольцо налоговый шлем полюбить секунда. Жидкий направо серьезный носок. Сопровождаться штаб художественный. Зато лететь издали назначить.\nОборот научить столетие. Рабочий витрина засунуть танцевать термин прежний налоговый. Рай карман еврейский миг заплакать выражение заложить.",
+    "created_at": "2026-04-29T14:34:51.738Z",
     "status": "M",
     "moderated_by": null,
     "rejection_reason": null,

@@ -1,15 +1,16 @@
 import random
 from typing import Any, Optional
 
-from django.conf import settings
+from django.db import transaction
 from django.contrib.auth import get_user_model
 from django.core.management.base import BaseCommand, CommandParser
 from faker import Faker
 
-from app.accounts.models import Group, User
-from app.bookings.models import Booking, Review
-from app.bookings.utils.helpers.faker_providers import BookingProvider, ReviewProvider
-from app.bookings.utils.helpers.calculate_total_price import calculate_total_price
+from app.accounts.models import User
+from app.bookings.models import Booking, BookingPayment, Review
+from app.bookings.utils.helpers.faker_providers import (
+    BookingProvider, BookingPaymentProvider, ReviewProvider
+)
 from app.hotels.models import Room
 
 
@@ -20,15 +21,15 @@ class Command(BaseCommand):
             '--bookings',
             '-b',
             type=int,
-            default=5,
-            help='Количество бронирований (по умолчанию 5)',
+            default=10,
+            help='Количество бронирований (по умолчанию 10)',
         )
         parser.add_argument(
             '--reviews',
             '-r',
             type=int,
-            default=5,
-            help='Количество отзывов (по умолчанию 5)',
+            default=3,
+            help='Количество отзывов (по умолчанию 3)',
         )
 
     def handle(self, *_args: Any, **options: Any) -> Optional[str]:
@@ -37,10 +38,11 @@ class Command(BaseCommand):
 
         faker = Faker('ru_RU')
         rooms = Room.objects.all()
-        users = Group.objects.get(name=settings.USER_GROUP_NAME).user_set.all()
+        users = User.objects.all()
+        guests = [u for u in users if u.role == User.Role.GUEST]
         bookings = self._create_bookings(
             BookingProvider(faker), rooms,
-            users, bookings_count
+            guests, bookings_count
         )
 
         if not bookings:
@@ -53,12 +55,14 @@ class Command(BaseCommand):
             self.stdout.write(self.style.WARNING(msg))
             bookings = Booking.objects.all()
             if not bookings.exists():
-                self.stderr.write(
-                    'Нет доступных бронирований.'
-                )
+                self.stderr.write('Нет доступных бронирований.')
                 return
+        else:
+            self._create_payments(BookingPaymentProvider(faker), bookings)
 
-        moderators = User.objects.filter(is_staff=True)
+        moderators = [u for u in users if u.role == User.Role.MODERATOR]
+        if not moderators:
+            moderators = users.filter(is_staff=True)
         closed_bookings = [
             b for b in bookings
             if b.status == Booking.Status.CLOSED and not hasattr(b, 'review')
@@ -81,28 +85,66 @@ class Command(BaseCommand):
     ) -> list[Booking]:
         new_bookings = []
 
+        moved_count = round(count * 0.1)
+        cancelled_count = moved_count
+        active_count = max((moved_count + cancelled_count + round(count * 0.6)), 1)
+        closed_count = count - active_count
+
         for _ in range(count):
             room = random.choice(rooms)
             user = random.choice(users)
             booking_data = generator.booking()
-            booking_data['total_price'] = calculate_total_price(
-                days=(booking_data['check_out_date'] - booking_data['check_in_date']).days,
-                adults_count=booking_data['adults_count'],
-                children_count=booking_data['children_count'],
-                room_capacity=room.room_type.capacity,
-                base_price=room.price_per_night,
-                extra_person_price=room.extra_pay_per_person,
-            )
+            if not room.is_pets_allowed and booking_data['pets_count'] != 0:
+                booking_data['pets_count'] = 0
+            if room.bed_count < (booking_data['adults_count'] + booking_data['children_count']):
+                booking_data['children_count'] = 0
+                if booking_data['adults_count'] > room.bed_count:
+                    booking_data['adults_count'] = room.bed_count
+            if active_count > 0:
+                booking_data['status'] = Booking.Status.ACTIVE
+                active_count -= 1
+            elif closed_count > 0:
+                booking_data['status'] = Booking.Status.CLOSED
+                closed_count -= 1
             new_bookings.append(Booking(user=user, room=room, **booking_data))
 
-        created_bookings = Booking.objects.bulk_create(new_bookings)
+        with transaction.atomic():
+            created_bookings = Booking.objects.bulk_create(new_bookings)
+            moved_or_cancelled_bookings = random.sample(
+                [b for b in created_bookings if b.status == Booking.Status.ACTIVE],
+                k=(moved_count + cancelled_count)
+            )
+
+            for booking in moved_or_cancelled_bookings:
+                if cancelled_count > 0:
+                    booking.cancel(generator.cancellation_reason())
+                    cancelled_count -= 1
+                elif moved_count > 0:
+                    new_check_in = generator.check_in_date()
+                    new_check_out = generator.check_out_date(new_check_in)
+                    booking.move(new_check_in, new_check_out)
+                    moved_count -= 1
 
         for booking in created_bookings:
-            self.stdout.write(self.style.SUCCESS(
-               f'Создано {booking}'
-            ))
+            self.stdout.write(self.style.SUCCESS(f'Создано {booking}'))
 
         return created_bookings
+
+    def _create_payments(
+        self, generator: BookingPaymentProvider, bookings: list[Booking]
+    ) -> list[BookingPayment]:
+        new_payments = []
+
+        for booking in bookings:
+            payment_data = generator.booking_payment()
+            new_payments.append(BookingPayment(booking=booking, **payment_data))
+
+        created_payments = BookingPayment.objects.bulk_create(new_payments)
+
+        for payment in created_payments:
+            self.stdout.write(self.style.SUCCESS(f'Создан {payment}'))
+
+        return created_payments
 
     def _create_reviews(
         self, generator: ReviewProvider, bookings: list[Booking],
@@ -120,18 +162,14 @@ class Command(BaseCommand):
 
         for i in range(count):
             review_data = generator.review()
-            print(review_data)
             if (review_data['status'] == Review.Status.PUBLISHED
                     or review_data['status'] == Review.Status.REJECTED):
                 review_data['moderated_by'] = random.choice(moderators)
-                print(review_data)
             new_reviews.append(Review(booking=bookings[i], **review_data))
 
         created_reviews = Review.objects.bulk_create(new_reviews)
 
         for review in created_reviews:
-            self.stdout.write(self.style.SUCCESS(
-               f'Создан {review}'
-            ))
+            self.stdout.write(self.style.SUCCESS(f'Создан {review}'))
 
         return created_reviews

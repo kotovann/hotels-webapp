@@ -4,7 +4,7 @@ from typing import Any, Optional
 from django.core.management.base import BaseCommand, CommandParser
 from faker import Faker
 
-from app.hotels.models import Hotel, RoomType, Room, RoomPhoto
+from app.hotels.models import Hotel, RoomCategory, RoomType, Room, RoomPhoto
 from app.hotels.utils.helpers.faker_providers import (
     HotelProvider,
     RoomTypeProvider,
@@ -147,18 +147,26 @@ class Command(BaseCommand):
         return created_hotels
 
     def _create_room_types(self, generator: RoomTypeProvider, count: int) -> list[RoomType]:
+        room_categories = RoomCategory.objects.all()
         existing_names = set(RoomType.objects.values_list('name', flat=True))
         room_types = []
 
         for _ in range(count):
-            name = generator.name()
+            category = random.choice(room_categories)
+            name = generator.name(category.get_tier_display())
             while name in existing_names:
-                name = generator.name()
+                name = generator.name(category.get_tier_display())
             existing_names.add(name)
 
             room_type_data = generator.room_type()
             room_type_data['name'] = name
-            room_types.append(RoomType(**room_type_data))
+            if room_type_data['size'] < category.min_area:
+                room_type_data['size'] = category.min_area
+            if room_type_data['has_kitchen'] != category.requires_kitchen:
+                room_type_data['has_kitchen'] = category.requires_kitchen
+            if room_type_data['bathroom_type'] != category.required_bathroom_type:
+                room_type_data['bathroom_type'] = category.required_bathroom_type
+            room_types.append(RoomType(category=category, **room_type_data))
 
         created_room_types = RoomType.objects.bulk_create(room_types)
 
@@ -243,7 +251,7 @@ class Command(BaseCommand):
                 photos_count = faker.random_int(min=0, max=3)
                 for i in range(photos_count):
                     room_photo_data = generator.room_photo()
-                    room_photo_data['sort_order_number'] = i + 1
+                    room_photo_data['order_number'] = i + 1
                     new_photos.append(RoomPhoto(**room_photo_data, room=room))
 
         created_photos = RoomPhoto.objects.bulk_create(new_photos)

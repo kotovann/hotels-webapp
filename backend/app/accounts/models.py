@@ -1,5 +1,3 @@
-from typing import Optional
-
 from django.db import models
 from django.contrib.auth.models import AbstractUser, Group as BaseGroup
 
@@ -7,38 +5,9 @@ from phonenumber_field.modelfields import PhoneNumberField
 from app.accounts.managers import UserManager
 
 
-class GroupPriority(models.Model):
-    '''
-    Модель приоритета группы пользователей.
-    '''
-    group = models.OneToOneField(
-        BaseGroup,
-        verbose_name='Группа пользователей',
-        on_delete=models.CASCADE,
-        related_name='group_priority',
-    )
-    priority = models.SmallIntegerField(
-        verbose_name='Приоритет группы'
-    )
-
-    class Meta:
-        verbose_name = 'Приоритет группы пользователей'
-        verbose_name_plural = 'Приоритеты групп пользователей'
-        ordering = ['-priority']
-
-    def delete(self, *args, **kwargs):
-        deleted_priority = self.priority
-        super().delete(*args, **kwargs)
-        GroupPriority.objects.filter(priority__gt=deleted_priority) \
-            .update(priority=models.F('priority') - 1)
-
-    def __str__(self):
-        return f'Группа {self.group.name}: приоритет {self.priority}'
-
-
 class Group(BaseGroup):
     '''
-    Прокси-модель Group, добавляющая verbose_name и приоритет.
+    Прокси-модель Group, добавляющая verbose_name.
     '''
     class Meta:
         proxy = True
@@ -46,20 +15,18 @@ class Group(BaseGroup):
         verbose_name_plural = 'Группы пользователей'
         ordering = ['name']
 
-    @property
-    def priority(self):
-        return self.group_priority.priority
-
-    def __str__(self):
-        return self.name
-
 
 class User(AbstractUser):
     '''
     Кастомная модель пользователя, наследующая AbstractUser.
     В качестве идентификатора используется email, поле username отключено.
     '''
-    NO_ROLE = 'Нет роли'
+    class Role:
+        GUEST = 'Гость'
+        EMPLOYEE = 'Сотрудник'
+        MODERATOR = 'Модератор'
+        ADMIN = 'Администратор'
+        OWNER = 'Владелец'
 
     username = None
     email = models.EmailField(
@@ -96,7 +63,8 @@ class User(AbstractUser):
     )
 
     USERNAME_FIELD = 'email'
-    REQUIRED_FIELDS = ['first_name', 'last_name', 'phone_number']
+    EMAIL_FIELD = 'email'
+    REQUIRED_FIELDS = ('first_name', 'last_name', 'phone_number')
     objects = UserManager()
 
     class Meta:
@@ -127,21 +95,51 @@ class User(AbstractUser):
         return f"{self.last_name} {first_initial}{middle_initial}"
 
     @property
-    def primary_group(self) -> Optional[Group]:
-        '''
-        Возвращает основную группу пользователя.
-        '''
-        groups = list(self.groups.select_related('group_priority'))
-        if not groups:
-            return None
-        return min(groups, key=lambda g: g.group_priority.priority)
+    def is_admin(self) -> bool:
+        return hasattr(self, 'admin')
+
+    @property
+    def is_moderator(self) -> bool:
+        return hasattr(self, 'moderator')
+
+    @property
+    def is_employee(self) -> bool:
+        return hasattr(self, 'employee')
+
+    @property
+    def is_owner(self) -> bool:
+        return self.is_admin and self.admin.is_owner
+
+    @property
+    def is_superuser(self) -> bool:
+        return self.is_owner
+
+    @property
+    def is_staff(self) -> bool:
+        return self.is_employee or self.is_moderator or self.is_admin
+
+    @is_superuser.setter
+    def is_superuser(self, _):
+        pass
+
+    @is_staff.setter
+    def is_staff(self, _):
+        pass
 
     @property
     def role(self) -> str:
         '''
         Возвращает основную роль пользователя.
         '''
-        return self.primary_group.name if self.primary_group else User.NO_ROLE
+        if self.is_owner:
+            return self.Role.OWNER
+        if self.is_admin:
+            return self.Role.ADMIN
+        if self.is_moderator:
+            return self.Role.MODERATOR
+        if self.is_employee:
+            return self.Role.EMPLOYEE
+        return self.Role.GUEST
 
     def get_full_name(self) -> str:
         '''
@@ -156,8 +154,62 @@ class User(AbstractUser):
         return self.short_name
 
     def __str__(self) -> str:
-        return (
-            f'Пользователь pk {self.pk}: {self.short_name}, '
-            f'почта {self.email}, телефон {self.phone_number}, '
-            f'роль: {self.role}'
-        )
+        return f'{self.role} {self.full_name}, {self.email}, {self.phone_number}'
+
+
+class Employee(models.Model):
+    user = models.OneToOneField(
+        User,
+        on_delete=models.CASCADE,
+        related_name='employee',
+        verbose_name='Пользователь'
+    )
+    hotel = models.ForeignKey(
+        'hotels.Hotel',
+        on_delete=models.CASCADE,
+        related_name='employees',
+        verbose_name='Отель'
+    )
+
+    class Meta:
+        db_table = 'employee'
+        verbose_name = 'Сотрудник'
+        verbose_name_plural = 'Сотрудники'
+
+    def __str__(self):
+        return str(self.user)
+
+
+class Moderator(models.Model):
+    user = models.OneToOneField(
+        User,
+        on_delete=models.CASCADE,
+        related_name='moderator',
+        verbose_name='Пользователь'
+    )
+
+    class Meta:
+        db_table = 'moderator'
+        verbose_name = 'Модератор'
+        verbose_name_plural = 'Модераторы'
+
+    def __str__(self):
+        return str(self.user)
+
+
+class Administrator(models.Model):
+    user = models.OneToOneField(
+        User,
+        on_delete=models.CASCADE,
+        related_name='admin',
+        verbose_name='Пользователь'
+    )
+    is_owner = models.BooleanField(default=False)
+
+    class Meta:
+        db_table = 'admin'
+        verbose_name = 'Администратор'
+        verbose_name_plural = 'Администраторы'
+
+    def __str__(self):
+        return str(self.user)

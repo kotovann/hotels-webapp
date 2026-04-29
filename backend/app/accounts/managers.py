@@ -1,3 +1,4 @@
+from django.db import transaction
 from django.contrib.auth.models import BaseUserManager
 
 
@@ -24,26 +25,19 @@ class UserManager(BaseUserManager):
             phone_number=phone_number,
             last_name=last_name,
             first_name=first_name,
-            password=password,
             **extra_fields
         )
         user.set_password(password)
         user.save(using=self._db)
         return user
 
+    @transaction.atomic
     def create_superuser(
         self,  email, phone_number, last_name, first_name, password,
         **extra_fields
     ):
-        extra_fields.setdefault('is_staff', True)
-        extra_fields.setdefault('is_superuser', True)
-
-        if extra_fields.get('is_staff') is not True:
-            raise ValueError('Суперпользователь должен иметь is_staff=True.')
-        if extra_fields.get('is_superuser') is not True:
-            raise ValueError('Суперпользователь должен иметь is_superuser=True.')
-
-        return self.create_user(
+        extra_fields.setdefault('is_active', True)
+        user = self.create_user(
             email=email,
             phone_number=phone_number,
             last_name=last_name,
@@ -51,3 +45,8 @@ class UserManager(BaseUserManager):
             password=password,
             **extra_fields
         )
+
+        from app.accounts.models import Administrator
+        Administrator.objects.create(user=user, is_owner=True)
+
+        return user
