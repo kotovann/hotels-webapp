@@ -1,10 +1,15 @@
 from datetime import date
 
 from django.db import models
-from django.conf import settings
+from django.contrib.auth import get_user_model
 from django.core.validators import MinValueValidator, MaxValueValidator
 from django.core.exceptions import ValidationError
 from django.utils import timezone
+
+from app.accounts.models import Guest, Moderator
+
+
+User = get_user_model()
 
 
 class _BookingStatus(models.TextChoices):
@@ -19,11 +24,11 @@ class Booking(models.Model):
         NOT_GUARANTEED = 'N', 'Негарантированное'
     Status = _BookingStatus
 
-    user = models.ForeignKey(
-        settings.AUTH_USER_MODEL,
+    guest = models.ForeignKey(
+        Guest,
         on_delete=models.CASCADE,
         related_name='bookings',
-        verbose_name='Зарегистрированный пользователь'
+        verbose_name='Гость'
     )
     room = models.ForeignKey(
         'hotels.Room',
@@ -83,7 +88,7 @@ class Booking(models.Model):
         verbose_name_plural = 'Бронирования'
         ordering = [
             '-created_at', 'room__hotel__name',
-            'room__floor', 'room__number_on_floor', 'user__last_name'
+            'room__floor', 'room__number_on_floor', 'guest__user__last_name'
         ]
         constraints = [
             models.CheckConstraint(
@@ -132,7 +137,7 @@ class Booking(models.Model):
             raise ValueError('Нельзя перенести неактивное бронирование')
         self.status = Booking.Status.MOVED
         new_booking = Booking.objects.create(
-            user=self.user,
+            guest=self.guest,
             room=self.room,
             adults_count=self.adults_count,
             children_count=self.children_count,
@@ -239,9 +244,10 @@ class CancelledBooking(models.Model):
 
 class _ReviewStatus(models.TextChoices):
     PUBLISHED = 'P', 'Опубликован'
+    DRAFT = 'D', 'Черновик'
     ON_MODERATION = 'M', 'Ожидает проверки'
     REJECTED = 'R', 'Не прошел модерацию'
-    DELETED = 'D', 'Удален'
+    ARCHIVED = 'A', 'Убран из публичного доступа'
 
 
 class Review(models.Model):
@@ -276,11 +282,12 @@ class Review(models.Model):
         default=Status.ON_MODERATION,
     )
     moderated_by = models.ForeignKey(
-        settings.AUTH_USER_MODEL,
+        Moderator,
         on_delete=models.SET_NULL,
         null=True,
         blank=True,
         related_name='moderated_reviews',
+        verbose_name='Модератор'
     )
     rejection_reason = models.CharField(
         max_length=255,
@@ -311,10 +318,9 @@ class Review(models.Model):
             models.CheckConstraint(
                 condition=(
                     models.Q(
-                        status__in=[_ReviewStatus.PUBLISHED, _ReviewStatus.REJECTED],
+                        ~models.Q(status=_ReviewStatus.DRAFT),
                         moderated_by__isnull=False
-                    ) |
-                    models.Q(status__in=[_ReviewStatus.ON_MODERATION, _ReviewStatus.DELETED])
+                    ) | models.Q(status=_ReviewStatus.DRAFT)
                 ),
                 name='review_moderated_by_required',
                 violation_error_message='Необходимо указать модератора'

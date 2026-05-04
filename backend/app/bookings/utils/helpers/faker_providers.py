@@ -118,10 +118,11 @@ class ReviewProvider(BaseProvider):
     def __init__(self, generator: Faker):
         super().__init__(generator)
         self._status_choices = OrderedDict([
-            (Review.Status.PUBLISHED, 0.5),
-            (Review.Status.ON_MODERATION, 0.25),
-            (Review.Status.DELETED, 0.1),
-            (Review.Status.REJECTED, 0.15)
+            (Review.Status.PUBLISHED, 0.35),
+            (Review.Status.DRAFT, 0.3),
+            (Review.Status.ON_MODERATION, 0.2),
+            (Review.Status.REJECTED, 0.1),
+            (Review.Status.ARCHIVED, 0.05),
         ])
         self._rating_choices = OrderedDict([
             (5, 0.5),

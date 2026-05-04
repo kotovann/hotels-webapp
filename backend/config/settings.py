@@ -44,6 +44,11 @@ REST_FRAMEWORK = {
     'DEFAULT_AUTHENTICATION_CLASSES': [
         'rest_framework_simplejwt.authentication.JWTAuthentication',
     ],
+    'DEFAULT_FILTER_BACKENDS': [
+        'django_filters.rest_framework.DjangoFilterBackend',
+        'rest_framework.filters.SearchFilter',
+        'rest_framework.filters.OrderingFilter',
+    ],
 }
 
 SIMPLE_JWT = {
@@ -96,7 +101,10 @@ DATABASES = {
         'PASSWORD': config('POSTGRES_PASSWORD'),
         'HOST': config('POSTGRES_HOST'),
         'PORT': config('POSTGRES_PORT', cast=int),
-    }
+        'TEST': {
+            'ENGINE': 'django.db.backends.sqlite3',
+        }
+    },
 }
 
 
@@ -144,3 +152,22 @@ STATIC_URL = 'static/'
 MEDIA_URL = 'media/'
 
 MEDIA_ROOT = BASE_DIR / 'media/'
+
+# Сброс пароля:
+## Для генерации ссылки в письме
+FRONTEND_URL = config('FRONTEND_URL')
+
+_email_backend = 'django.core.mail.backends.smtp.EmailBackend'
+## В режиме разработки письма пишутся в консоль
+if DEBUG:
+    _email_backend = 'django.core.mail.backends.console.EmailBackend'
+
+EMAIL_BACKEND = _email_backend
+
+## Только для продакшена:
+EMAIL_HOST = config('EMAIL_HOST')
+EMAIL_PORT = config('EMAIL_PORT')
+EMAIL_USE_TLS = config('EMAIL_USE_TLS')
+EMAIL_HOST_USER = config('EMAIL_HOST_USER')
+EMAIL_HOST_PASSWORD = config('EMAIL_HOST_PASSWORD')
+DEFAULT_FROM_EMAIL = config('DEFAULT_FROM_EMAIL')

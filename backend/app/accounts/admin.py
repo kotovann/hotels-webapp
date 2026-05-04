@@ -1,13 +1,19 @@
 from django.contrib import admin
-from django.contrib.auth.admin import UserAdmin as BaseUserAdmin
-from app.accounts.models import Group, User, Employee, Moderator, Administrator
+from django.contrib.auth import get_user_model
+from django.contrib.auth.admin import UserAdmin as BaseUserAdmin, GroupAdmin
+from django.contrib.auth.models import Group as BaseGroup
+from rest_framework_simplejwt.token_blacklist.models import OutstandingToken, BlacklistedToken
+
+from app.accounts.models import Group, Guest, Moderator, Administrator
 
 
-class EmployeeInline(admin.StackedInline):
-    model = Employee
+User = get_user_model()
+
+
+class GuestInline(admin.StackedInline):
+    model = Guest
     can_delete = True
-    verbose_name = 'Сотрудник'
-    autocomplete_fields = ['hotel']
+    verbose_name = 'Гость'
     extra = 0
 
 
@@ -77,15 +83,14 @@ class UserAdmin(BaseUserAdmin):
 
     def get_queryset(self, request):
         return super().get_queryset(request).prefetch_related('groups') \
-            .select_related('employee', 'moderator', 'admin')
+            .select_related('guest', 'moderator', 'admin')
 
 
-@admin.register(Employee)
-class EmployeeAdmin(admin.ModelAdmin):
-    list_display = ['user', 'hotel']
-    list_filter = ['hotel']
+@admin.register(Guest)
+class GuestAdmin(admin.ModelAdmin):
+    list_display = ['user']
     search_fields = ['user__email', 'user__first_name', 'user__last_name']
-    autocomplete_fields = ['user', 'hotel']
+    autocomplete_fields = ['user']
 
 
 @admin.register(Moderator)
@@ -97,14 +102,10 @@ class ModeratorAdmin(admin.ModelAdmin):
 
 @admin.register(Administrator)
 class AdministratorAdmin(admin.ModelAdmin):
-    list_display = ['user', 'is_owner']
-    list_filter = ['is_owner']
+    list_display = ['user']
     search_fields = ['user__email', 'user__first_name', 'user__last_name']
     autocomplete_fields = ['user']
 
 
-@admin.register(Group)
-class GroupAdmin(admin.ModelAdmin):
-    list_display = ['name']
-    search_fields = ['name']
-    filter_horizontal = ['permissions']
+admin.site.unregister(BaseGroup)
+admin.site.register(Group, GroupAdmin)

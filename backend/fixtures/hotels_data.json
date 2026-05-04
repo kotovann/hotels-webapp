@@ -1,78 +1,30 @@
 [
 {
   "model": "hotels.hotel",
-  "pk": 55,
+  "pk": 1,
   "fields": {
-    "name": "ИмяСетиОтелей на бул. Тюленина",
-    "phone_number": "+79515706627",
-    "email": "elizavetamiheeva@ooo.info",
+    "name": "ИмяСетиОтелей на алл. Кузнечная",
+    "phone_number": "+79001422936",
+    "email": "epifan_65@ao.ru",
     "country": "Россия",
-    "city": "Токмабург",
-    "address": "бул. Тюленина, д. 353, Токмабург, Приморский край",
+    "city": "Лабинскполь",
+    "address": "алл. Кузнечная, д. 4/7, Лабинскполь, респ. Башкортостан",
     "floor_count": 6,
     "check_in_time": "14:00:00",
-    "check_out_time": "11:00:00",
-    "is_active": true
+    "check_out_time": "13:00:00",
+    "is_active": false
   }
 },
 {
   "model": "hotels.hotel",
-  "pk": 56,
+  "pk": 2,
   "fields": {
-    "name": "ИмяСетиОтелей на ш. Владимирское",
-    "phone_number": "+74873519489",
-    "email": "zinovevatatjana@sladkovsko-zarechnoe.org",
+    "name": "ИмяСетиОтелей на алл. Ярославская",
+    "phone_number": "+77857361690",
+    "email": "evasilev@zao.net",
     "country": "Россия",
-    "city": "Горячинскск",
-    "address": "ш. Владимирское, д. 8, Горячинскск, Камчатский край",
-    "floor_count": 5,
-    "check_in_time": "14:00:00",
-    "check_out_time": "12:00:00",
-    "is_active": true
-  }
-},
-{
-  "model": "hotels.hotel",
-  "pk": 57,
-  "fields": {
-    "name": "ИмяСетиОтелей на ш. Тенистое",
-    "phone_number": "+77068817876",
-    "email": "qdanilov@npo.ru",
-    "country": "Россия",
-    "city": "Амурсков",
-    "address": "ш. Тенистое, д. 402, Амурсков, респ. Хакасия",
-    "floor_count": 1,
-    "check_in_time": "14:00:00",
-    "check_out_time": "11:00:00",
-    "is_active": true
-  }
-},
-{
-  "model": "hotels.hotel",
-  "pk": 58,
-  "fields": {
-    "name": "ИмяСетиОтелей на наб. М.Горького",
-    "phone_number": "+79243651555",
-    "email": "samsonavdeev@oao.net",
-    "country": "Россия",
-    "city": "Мытищивль",
-    "address": "наб. М.Горького, д. 8, Мытищивль, Ханты-Мансийский АО",
-    "floor_count": 7,
-    "check_in_time": "14:00:00",
-    "check_out_time": "12:00:00",
-    "is_active": true
-  }
-},
-{
-  "model": "hotels.hotel",
-  "pk": 59,
-  "fields": {
-    "name": "ИмяСетиОтелей на наб. Подгорная",
-    "phone_number": "+74231390139",
-    "email": "denis_2015@neftetransservis.ru",
-    "country": "Россия",
-    "city": "Завьялихаов",
-    "address": "наб. Подгорная, д. 9/8, Завьялихаов, Архангельская обл.",
+    "city": "Нижнеудинскин",
+    "address": "алл. Ярославская, д. 30, Нижнеудинскин, Чукотский АО",
     "floor_count": 10,
     "check_in_time": "14:00:00",
     "check_out_time": "12:00:00",
@@ -81,15 +33,15 @@
 },
 {
   "model": "hotels.hotel",
-  "pk": 60,
+  "pk": 3,
   "fields": {
-    "name": "ИмяСетиОтелей на наб. Разина",
-    "phone_number": "+79425539817",
-    "email": "kornilovinnokenti@naumova.edu",
+    "name": "ИмяСетиОтелей на алл. Майская",
+    "phone_number": "+79599692337",
+    "email": "zikovnestor@noskov.org",
     "country": "Россия",
-    "city": "Астраханьск",
-    "address": "наб. Разина, д. 7, Астраханьск, Хабаровский край",
-    "floor_count": 9,
+    "city": "Ялуторовскин",
+    "address": "алл. Майская, д. 2/2, Ялуторовскин, респ. Калмыкия",
+    "floor_count": 6,
     "check_in_time": "14:00:00",
     "check_out_time": "12:00:00",
     "is_active": true
@@ -97,17 +49,33 @@
 },
 {
   "model": "hotels.hotel",
-  "pk": 61,
+  "pk": 4,
   "fields": {
-    "name": "ИмяСетиОтелей на ул. Таманская",
-    "phone_number": "+79740117052",
-    "email": "viktorin_2024@npo.ru",
+    "name": "ИмяСетиОтелей на пр. Ивановский",
+    "phone_number": "+77077712985",
+    "email": "lukjan_1995@oao.edu",
     "country": "Россия",
-    "city": "Сальскполь",
-    "address": "ул. Таманская, д. 3/8, Сальскполь, Ханты-Мансийский АО",
-    "floor_count": 9,
+    "city": "Бодайбобург",
+    "address": "пр. Ивановский, д. 90, Бодайбобург, Ямало-Ненецкий АО",
+    "floor_count": 5,
     "check_in_time": "14:00:00",
     "check_out_time": "12:00:00",
+    "is_active": true
+  }
+},
+{
+  "model": "hotels.hotel",
+  "pk": 5,
+  "fields": {
+    "name": "ИмяСетиОтелей на пр. Победы",
+    "phone_number": "+79218079025",
+    "email": "ninelkovaleva@rao.com",
+    "country": "Россия",
+    "city": "Игаркаград",
+    "address": "пр. Победы, д. 54, Игаркаград, Камчатский край",
+    "floor_count": 9,
+    "check_in_time": "14:00:00",
+    "check_out_time": "13:00:00",
     "is_active": true
   }
 },
@@ -223,16 +191,33 @@
 },
 {
   "model": "hotels.roomtype",
+  "pk": 1,
+  "fields": {
+    "name": "Третья категория с видом на бульвар Химиков",
+    "category": 8,
+    "description": "Тюрьма находить призыв пропаганда. Намерение очко пробовать освобождение сомнительный.\nДьявол призыв означать результат привлекать степь помимо. Кожа направо ярко понятный угол прощение выдержать.\nПолевой грудь сустав что вздрагивать зеленый. Падаль горький пробовать очутиться коробка карман.",
+    "size": 63,
+    "standard_capacity": 6,
+    "bedroom_count": 4,
+    "living_room_count": 3,
+    "bathroom_count": 2,
+    "bathroom_type": "F",
+    "has_kitchen": false,
+    "has_balcony": true
+  }
+},
+{
+  "model": "hotels.roomtype",
   "pk": 2,
   "fields": {
-    "name": "Апартамент над площадью З.Космодемьянской",
-    "category": 2,
-    "description": "Тута поздравлять руководитель прощение выраженный очко домашний. Уточнить лиловый блин бабочка перебивать валюта.\nНеожиданный необычный деловой деньги желание рис висеть. Жестокий функция пропадать вперед чем.",
-    "size": 62,
-    "standard_capacity": 3,
+    "name": "Студия в центре площади Фабричная",
+    "category": 5,
+    "description": "Командующий изображать висеть хозяйка госпожа применяться ложиться. Деньги через серьезный блин счастье ночь плод. Появление труп порода трубка миф следовательно инвалид.\nНеожиданно низкий неправда монета отражение инструкция ленинград. Лапа поколение ленинград помолчать адвокат.",
+    "size": 199,
+    "standard_capacity": 6,
     "bedroom_count": 4,
-    "living_room_count": 1,
-    "bathroom_count": 4,
+    "living_room_count": 2,
+    "bathroom_count": 3,
     "bathroom_type": "F",
     "has_kitchen": true,
     "has_balcony": false
@@ -242,14 +227,14 @@
   "model": "hotels.roomtype",
   "pk": 3,
   "fields": {
-    "name": "Люкс над площадью Короленко",
-    "category": 3,
-    "description": "Пространство некоторый неправда пересечь белье космос. Близко ребятишки домашний наслаждение призыв пространство вывести о.\nУпор торопливый сопровождаться миг пробовать расстройство. Инвалид прощение следовательно чувство встать рабочий. Художественный уничтожение наткнуться зачем.",
-    "size": 179,
-    "standard_capacity": 1,
-    "bedroom_count": 1,
-    "living_room_count": 1,
-    "bathroom_count": 0,
+    "name": "Сюит с видом на залив Ивановская",
+    "category": 1,
+    "description": "Слишком ученый легко нож космос. Неожиданный чувство столетие близко налево лиловый. Приличный изредка падаль триста еврейский. Цепочка чувство июнь добиться.\nГолубчик зачем сынок тута более решение выражение юный. Висеть выражение адвокат триста отражение.",
+    "size": 156,
+    "standard_capacity": 3,
+    "bedroom_count": 4,
+    "living_room_count": 4,
+    "bathroom_count": 3,
     "bathroom_type": "F",
     "has_kitchen": false,
     "has_balcony": false
@@ -259,16 +244,16 @@
   "model": "hotels.roomtype",
   "pk": 4,
   "fields": {
-    "name": "Джуниор сюит на площади Специалистов",
-    "category": 4,
-    "description": "Уронить доставать танцевать решетка. Упор слать неожиданно передо голубчик изредка. Песня спорт мотоцикл протягивать достоинство спешить единый.\nТемнеть художественный каюта рай ночь. Зима дружно вообще. Выдержать устройство второй зарплата выражаться сходить задержать.",
-    "size": 145,
-    "standard_capacity": 5,
-    "bedroom_count": 1,
-    "living_room_count": 0,
-    "bathroom_count": 1,
+    "name": "Апартамент в центре квартала Волочаевская",
+    "category": 2,
+    "description": "Светило картинка спешить функция промолчать. Горький одиннадцать дьявол нажать расстегнуть потом. Бригада лапа избегать демократия.\nБотинок премьера юный сынок. Дыхание построить госпожа легко инвалид космос умирать. Около анализ терапия увеличиваться набор.",
+    "size": 92,
+    "standard_capacity": 6,
+    "bedroom_count": 4,
+    "living_room_count": 3,
+    "bathroom_count": 0,
     "bathroom_type": "F",
-    "has_kitchen": false,
+    "has_kitchen": true,
     "has_balcony": false
   }
 },
@@ -276,31 +261,31 @@
   "model": "hotels.roomtype",
   "pk": 5,
   "fields": {
-    "name": "Джуниор сюит над зданием Декабристов",
-    "category": 4,
-    "description": "Исполнять теория торговля освобождение освобождение оборот тюрьма. Хотеть неудобно через жидкий цель исследование вздрагивать.\nРадость важный академик левый. Четко салон посвятить важный вообще. Указанный равнодушный холодно пробовать поставить.",
-    "size": 164,
-    "standard_capacity": 3,
-    "bedroom_count": 4,
-    "living_room_count": 4,
-    "bathroom_count": 1,
+    "name": "Люкс с видом на реку Лесхозная",
+    "category": 3,
+    "description": "Гулять столетие расстройство равнодушный плясать. Эффект рай равнодушный плод. Каюта спорт дорогой ломать издали левый товар.\nВариант поздравлять тесно применяться. Отъезд промолчать изучить расстройство встать посидеть гулять.",
+    "size": 91,
+    "standard_capacity": 7,
+    "bedroom_count": 2,
+    "living_room_count": 1,
+    "bathroom_count": 0,
     "bathroom_type": "F",
     "has_kitchen": false,
-    "has_balcony": true
+    "has_balcony": false
   }
 },
 {
   "model": "hotels.roomtype",
   "pk": 6,
   "fields": {
-    "name": "Студия на площади 40 лет Октября",
+    "name": "Студия на заливе Жданова",
     "category": 5,
-    "description": "Полевой идея каюта зато. Карандаш голубчик мальчишка тысяча миг нож. Карман кидать растеряться слишком.\nТяжелый остановить кузнец. Материя военный триста четыре угроза вперед новый. Успокоиться мягкий пространство посвятить шлем гулять рот.",
-    "size": 153,
-    "standard_capacity": 4,
-    "bedroom_count": 5,
-    "living_room_count": 5,
-    "bathroom_count": 1,
+    "description": "Тревога идея светило устройство освобождение. Бетонный конференция провинция ночь вскакивать. Подробность заявление налево тута руководитель руководитель процесс заведение.\nРешетка мимо тесно набор. Слишком коллектив выраженный сустав теория.",
+    "size": 185,
+    "standard_capacity": 6,
+    "bedroom_count": 4,
+    "living_room_count": 3,
+    "bathroom_count": 2,
     "bathroom_type": "F",
     "has_kitchen": true,
     "has_balcony": false
@@ -310,30 +295,30 @@
   "model": "hotels.roomtype",
   "pk": 7,
   "fields": {
-    "name": "Третья категория на реке Болотная",
-    "category": 8,
-    "description": "Костер привлекать результат редактор миф совещание. Падаль коричневый командующий устройство поговорить заведение угол выражаться. Палата очутиться командующий низкий космос заведение прежде второй. Беспомощный инструкция витрина пропасть покидать аж боец.",
-    "size": 88,
-    "standard_capacity": 2,
+    "name": "Джуниор сюит в центре квартала Трактовая",
+    "category": 4,
+    "description": "Реклама угроза покидать бетонный изменение тюрьма. Упор ребятишки бровь задержать коробка четыре палка. Мучительно естественный плод райком оборот. Отражение актриса бок вскинуть спорт через материя.",
+    "size": 184,
+    "standard_capacity": 8,
     "bedroom_count": 3,
     "living_room_count": 0,
-    "bathroom_count": 0,
+    "bathroom_count": 2,
     "bathroom_type": "F",
     "has_kitchen": false,
-    "has_balcony": false
+    "has_balcony": true
   }
 },
 {
   "model": "hotels.roomtype",
   "pk": 8,
   "fields": {
-    "name": "Апартамент с видом на реку Димитрова",
+    "name": "Апартамент над рекой Кооперативная",
     "category": 2,
-    "description": "Строительство степь нервно тяжелый кольцо зачем. Карман а прелесть потом носок.\nОсвобождение понятный ремень художественный сверкающий спорт. Еврейский мелькнуть кузнец район торопливый развитый триста. Манера пастух витрина тесно очутиться полевой изучить.",
-    "size": 166,
-    "standard_capacity": 3,
-    "bedroom_count": 5,
-    "living_room_count": 1,
+    "description": "Протягивать поезд сустав горький. Пища низкий карандаш полоска.\nИсследование потом монета тюрьма. Развернуться выраженный упорно бригада жить терапия пятеро.\nБанда подробность приятель пересечь хозяйка доставать присесть. Чем рис космос поезд.",
+    "size": 176,
+    "standard_capacity": 2,
+    "bedroom_count": 2,
+    "living_room_count": 2,
     "bathroom_count": 1,
     "bathroom_type": "F",
     "has_kitchen": true,
@@ -344,33 +329,33 @@
   "model": "hotels.roomtype",
   "pk": 9,
   "fields": {
-    "name": "Пятая категория на площади Торговая",
-    "category": 10,
-    "description": "Анализ запустить казнь. Наслаждение возникновение эффект.\nНаправо присесть налоговый исследование устройство. Способ руководитель увеличиваться эффект столетие научить пространство. Армейский поговорить новый.",
-    "size": 151,
-    "standard_capacity": 1,
-    "bedroom_count": 3,
-    "living_room_count": 0,
-    "bathroom_count": 0,
+    "name": "Четвёртая категория рядом с рекой Окружная",
+    "category": 9,
+    "description": "Степь необычный зеленый механический совет угол. Передо сверкать неожиданно сынок поколение успокоиться.\nУслать новый сверкать зарплата коллектив банда пища. Холодно спешить приятель темнеть салон командир.",
+    "size": 187,
+    "standard_capacity": 2,
+    "bedroom_count": 2,
+    "living_room_count": 2,
+    "bathroom_count": 1,
     "bathroom_type": "F",
     "has_kitchen": false,
-    "has_balcony": true
+    "has_balcony": false
   }
 },
 {
   "model": "hotels.roomtype",
   "pk": 10,
   "fields": {
-    "name": "Четвёртая категория рядом с площадью Отрадная",
-    "category": 9,
-    "description": "Бегать господь равнодушный вряд. Провинция палец развернуться возбуждение поезд прощение пробовать.\nКосмос кпсс тусклый металл ленинград дремать господь. Неудобно космос дремать передо лететь ярко пересечь. Второй цель сбросить ведь пробовать ручей палка.",
-    "size": 141,
-    "standard_capacity": 8,
-    "bedroom_count": 3,
-    "living_room_count": 3,
-    "bathroom_count": 2,
+    "name": "Апартамент над рекой Родниковая",
+    "category": 2,
+    "description": "Сустав совещание кпсс сутки выраженный развернуться.\nСынок пространство упор монета полоска дорогой степь пятеро. Деловой непривычный поставить умирать исследование. Прощение командир порода выгнать.",
+    "size": 40,
+    "standard_capacity": 6,
+    "bedroom_count": 5,
+    "living_room_count": 1,
+    "bathroom_count": 4,
     "bathroom_type": "F",
-    "has_kitchen": false,
+    "has_kitchen": true,
     "has_balcony": false
   }
 },
@@ -378,16 +363,16 @@
   "model": "hotels.roomtype",
   "pk": 11,
   "fields": {
-    "name": "Апартамент в центре квартала Октября",
-    "category": 2,
-    "description": "Еврейский функция ученый прежний приятель пропаганда еврейский. Конференция дьявол пастух освобождение столетие теория головной. Рассуждение правление прощение бегать через мгновение.",
-    "size": 103,
-    "standard_capacity": 8,
-    "bedroom_count": 1,
-    "living_room_count": 1,
-    "bathroom_count": 1,
+    "name": "Джуниор сюит с видом на реку Дальневосточная",
+    "category": 4,
+    "description": "Выражение выраженный трясти рай человечек эффект. Юный болото остановить поговорить рис.\nОборот манера костер подробность ломать головка. Князь а монета помолчать боец.\nНарод сынок ярко исполнять. Житель кожа кольцо.",
+    "size": 137,
+    "standard_capacity": 4,
+    "bedroom_count": 4,
+    "living_room_count": 4,
+    "bathroom_count": 4,
     "bathroom_type": "F",
-    "has_kitchen": true,
+    "has_kitchen": false,
     "has_balcony": false
   }
 },
@@ -395,33 +380,33 @@
   "model": "hotels.roomtype",
   "pk": 12,
   "fields": {
-    "name": "Джуниор сюит рядом с бульваром Мирная",
-    "category": 4,
-    "description": "Еврейский грудь цвет. Заявление счастье коробка слать проход банк очередной. Некоторый ремень ставить мгновение зачем ленинград дошлый.\nМонета спорт угроза спорт хозяйка пламя торопливый поколение. Прежде слишком необычный полностью.",
-    "size": 25,
-    "standard_capacity": 2,
-    "bedroom_count": 5,
+    "name": "Люкс рядом с зданием Осипенко",
+    "category": 3,
+    "description": "Штаб мелочь адвокат сынок носок господь материя космос. Успокоиться вскинуть вряд войти секунда вообще. Постоянный теория медицина серьезный место обида витрина.\nЧто ответить салон тревога чем торопливый. Ночь заработать вскакивать достоинство чувство космос.",
+    "size": 63,
+    "standard_capacity": 4,
+    "bedroom_count": 4,
     "living_room_count": 4,
-    "bathroom_count": 5,
+    "bathroom_count": 4,
     "bathroom_type": "F",
     "has_kitchen": false,
-    "has_balcony": true
+    "has_balcony": false
   }
 },
 {
   "model": "hotels.roomtype",
   "pk": 13,
   "fields": {
-    "name": "Апартамент рядом с зданием Мелиоративная",
-    "category": 2,
-    "description": "Серьезный поймать сустав металл реклама. Актриса изредка демократия беспомощный исследование отражение свежий зарплата.\nЭкзамен исполнять избегать соответствие пасть один монета. Набор оставить командир палец счастье дьявол поздравлять падать.",
-    "size": 108,
-    "standard_capacity": 3,
-    "bedroom_count": 2,
+    "name": "Пятая категория на площади Новоселов",
+    "category": 10,
+    "description": "Поздравлять аллея трубка головной академик. Невозможно багровый валюта еврейский премьера ломать.\nЗапеть выдержать изредка. Неожиданный процесс поезд спорт кузнец витрина точно.\nТоропливый невыносимый блин боец ночь. Зато выразить смелый поздравлять темнеть изучить.",
+    "size": 148,
+    "standard_capacity": 6,
+    "bedroom_count": 4,
     "living_room_count": 2,
-    "bathroom_count": 0,
+    "bathroom_count": 2,
     "bathroom_type": "F",
-    "has_kitchen": true,
+    "has_kitchen": false,
     "has_balcony": true
   }
 },
@@ -429,16 +414,16 @@
   "model": "hotels.roomtype",
   "pk": 14,
   "fields": {
-    "name": "Апартамент на реке Подлесная",
-    "category": 2,
-    "description": "Дурацкий указанный мрачно. Ложиться неудобно выбирать термин функция. Июнь разводить пробовать наступать.\nНалоговый спасть товар непривычный роса коллектив.",
-    "size": 52,
-    "standard_capacity": 7,
-    "bedroom_count": 4,
-    "living_room_count": 3,
+    "name": "Пятая категория с видом на здание Володарского",
+    "category": 10,
+    "description": "Терапия лиловый мучительно белье уточнить потрясти. Мелочь неправда прежде пламя. Бабочка конференция господь академик приятель.\nПастух жить уничтожение интернет. Правильный секунда полюбить.\nДеловой угроза художественный социалистический выражение жить войти.",
+    "size": 168,
+    "standard_capacity": 8,
+    "bedroom_count": 1,
+    "living_room_count": 0,
     "bathroom_count": 0,
     "bathroom_type": "F",
-    "has_kitchen": true,
+    "has_kitchen": false,
     "has_balcony": false
   }
 },
@@ -446,541 +431,14 @@
   "model": "hotels.roomtype",
   "pk": 15,
   "fields": {
-    "name": "Апартамент на заливе Снежная",
-    "category": 2,
-    "description": "Деньги сынок господь роскошный страсть приятель применяться. Висеть советовать кузнец. Пятеро белье господь пропасть нажать спорт прошептать.\nРуководитель вскинуть школьный князь. Заведение место дрогнуть один единый умолять.",
-    "size": 193,
-    "standard_capacity": 3,
-    "bedroom_count": 5,
-    "living_room_count": 2,
-    "bathroom_count": 5,
-    "bathroom_type": "F",
-    "has_kitchen": true,
-    "has_balcony": true
-  }
-},
-{
-  "model": "hotels.roomtype",
-  "pk": 16,
-  "fields": {
-    "name": "Студия с видом на бульвар Маркса",
-    "category": 5,
-    "description": "Торговля полевой точно за присесть жить тесно. Песенка висеть фонарик.\nХудожественный кузнец полностью отражение. Прелесть грустный правление металл металл выкинуть мусор. Манера поезд спичка виднеться инструкция оставить хлеб.\nСверкать совещание пропасть помимо достоинство чем.",
-    "size": 116,
-    "standard_capacity": 4,
-    "bedroom_count": 1,
-    "living_room_count": 1,
-    "bathroom_count": 1,
-    "bathroom_type": "F",
-    "has_kitchen": true,
-    "has_balcony": false
-  }
-},
-{
-  "model": "hotels.roomtype",
-  "pk": 17,
-  "fields": {
-    "name": "Первая категория (стандарт) с видом на здание Шоссейная",
-    "category": 6,
-    "description": "Другой пол появление космос. Палка расстройство заложить соответствие функция.\nРайком грустный плод результат смертельный страсть возможно. Спичка что поставить болото низкий. Роса недостаток разнообразный.",
-    "size": 193,
-    "standard_capacity": 4,
-    "bedroom_count": 4,
-    "living_room_count": 3,
-    "bathroom_count": 3,
-    "bathroom_type": "F",
-    "has_kitchen": false,
-    "has_balcony": true
-  }
-},
-{
-  "model": "hotels.roomtype",
-  "pk": 18,
-  "fields": {
-    "name": "Первая категория (стандарт) в центре квартала Папанина",
-    "category": 6,
-    "description": "Природа падать цель смелый. Легко триста палец дрогнуть применяться костер слать ответить.\nИной лиловый головной мальчишка достоинство. Нервно рассуждение новый нажать горький. Задержать падать пространство носок засунуть головка непривычный.",
-    "size": 56,
-    "standard_capacity": 4,
-    "bedroom_count": 3,
-    "living_room_count": 0,
-    "bathroom_count": 2,
-    "bathroom_type": "F",
-    "has_kitchen": false,
-    "has_balcony": true
-  }
-},
-{
-  "model": "hotels.roomtype",
-  "pk": 19,
-  "fields": {
-    "name": "Апартамент у площади Мичурина",
-    "category": 2,
-    "description": "Мальчишка остановить подробность слишком юный сомнительный. Куча вряд передо тута.\nТовар уточнить девка порт функция. Счастье означать столетие академик перебивать угроза.",
-    "size": 73,
-    "standard_capacity": 2,
-    "bedroom_count": 4,
-    "living_room_count": 3,
-    "bathroom_count": 0,
-    "bathroom_type": "F",
-    "has_kitchen": true,
-    "has_balcony": false
-  }
-},
-{
-  "model": "hotels.roomtype",
-  "pk": 20,
-  "fields": {
-    "name": "Апартамент у залива Слободская",
-    "category": 2,
-    "description": "Лиловый иной премьера табак. Полностью горький снимать постоянный поставить тута. Советовать степь разнообразный палка.\nСопровождаться спорт спичка головной протягивать валюта механический. Кузнец неправда коллектив коллектив беспомощный коммунизм.",
-    "size": 72,
-    "standard_capacity": 8,
-    "bedroom_count": 2,
-    "living_room_count": 1,
-    "bathroom_count": 0,
-    "bathroom_type": "F",
-    "has_kitchen": true,
-    "has_balcony": false
-  }
-},
-{
-  "model": "hotels.roomtype",
-  "pk": 21,
-  "fields": {
-    "name": "Джуниор сюит рядом с заливом Короткая",
+    "name": "Джуниор сюит рядом с заливом Вокзальная",
     "category": 4,
-    "description": "Аллея строительство голубчик разводить холодно палка другой. Народ успокоиться процесс славный дружно мрачно. Виднеться избегать бочок. Валюта четыре решетка решетка зима инструкция.\nМатерия спасть сбросить. Коробка наткнуться настать выгнать.",
-    "size": 86,
-    "standard_capacity": 3,
-    "bedroom_count": 3,
-    "living_room_count": 3,
-    "bathroom_count": 2,
-    "bathroom_type": "F",
-    "has_kitchen": false,
-    "has_balcony": true
-  }
-},
-{
-  "model": "hotels.roomtype",
-  "pk": 22,
-  "fields": {
-    "name": "Вторая категория с видом на залив Ватутина",
-    "category": 7,
-    "description": "Виднеться госпожа коробка военный. Миллиард каюта выкинуть витрина тысяча рот дрогнуть. Заложить зачем вытаскивать.\nКомандующий конференция оборот ягода приятель возникновение. Доставать что забирать рота мелочь идея. Смелый падать конструкция уточнить жидкий.",
-    "size": 9,
-    "standard_capacity": 6,
-    "bedroom_count": 2,
-    "living_room_count": 2,
-    "bathroom_count": 1,
-    "bathroom_type": "F",
-    "has_kitchen": false,
-    "has_balcony": false
-  }
-},
-{
-  "model": "hotels.roomtype",
-  "pk": 23,
-  "fields": {
-    "name": "Третья категория с видом на здание Верхняя",
-    "category": 8,
-    "description": "Находить заработать командир художественный казнь интеллектуальный упорно. Мрачно процесс заведение житель полностью. Заведение выкинуть спичка плавно что наступать.",
-    "size": 37,
-    "standard_capacity": 3,
-    "bedroom_count": 2,
-    "living_room_count": 1,
-    "bathroom_count": 2,
-    "bathroom_type": "F",
-    "has_kitchen": false,
-    "has_balcony": true
-  }
-},
-{
-  "model": "hotels.roomtype",
-  "pk": 24,
-  "fields": {
-    "name": "Пятая категория в центре квартала О.Кошевого",
-    "category": 10,
-    "description": "Спорт висеть недостаток бок встать сынок.\nСтепь команда бочок равнодушный. Четко тусклый помолчать тревога кузнец.\nИнвалид освобождение командование о дошлый падать очутиться вообще. Уточнить мягкий жить более покидать следовательно очутиться.",
-    "size": 57,
-    "standard_capacity": 8,
-    "bedroom_count": 4,
-    "living_room_count": 2,
-    "bathroom_count": 0,
-    "bathroom_type": "F",
-    "has_kitchen": false,
-    "has_balcony": false
-  }
-},
-{
-  "model": "hotels.roomtype",
-  "pk": 25,
-  "fields": {
-    "name": "Апартамент над заливом Строителей",
-    "category": 2,
-    "description": "Расстройство идея исполнять добиться народ. Передо банда фонарик.\nСтепь виднеться похороны угол прелесть. Заложить мгновение руководитель. Освободить военный плод карман невыносимый конференция пастух.",
-    "size": 124,
-    "standard_capacity": 6,
-    "bedroom_count": 3,
-    "living_room_count": 2,
-    "bathroom_count": 0,
-    "bathroom_type": "F",
-    "has_kitchen": true,
-    "has_balcony": false
-  }
-},
-{
-  "model": "hotels.roomtype",
-  "pk": 26,
-  "fields": {
-    "name": "Апартамент рядом с бульваром Иркутская",
-    "category": 2,
-    "description": "Человечек армейский дыхание смертельный новый освободить. Нож пол сынок пасть сходить. Господь ход кольцо табак изучить означать.\nСтрасть поздравлять ныне смелый школьный сутки запустить. Вздрогнуть даль район трясти. Протягивать указанный экзамен запеть валюта песенка.",
-    "size": 132,
-    "standard_capacity": 5,
-    "bedroom_count": 4,
-    "living_room_count": 3,
-    "bathroom_count": 0,
-    "bathroom_type": "F",
-    "has_kitchen": true,
-    "has_balcony": true
-  }
-},
-{
-  "model": "hotels.roomtype",
-  "pk": 27,
-  "fields": {
-    "name": "Люкс на реке Харьковская",
-    "category": 3,
-    "description": "Проход применяться изредка мелькнуть. Что число жестокий терапия иной растеряться. Коллектив набор зима зеленый основание что.\nКрыса вряд число мотоцикл нажать. Командование запустить слать карман кольцо привлекать.",
-    "size": 154,
-    "standard_capacity": 3,
-    "bedroom_count": 3,
-    "living_room_count": 2,
-    "bathroom_count": 0,
-    "bathroom_type": "F",
-    "has_kitchen": false,
-    "has_balcony": false
-  }
-},
-{
-  "model": "hotels.roomtype",
-  "pk": 28,
-  "fields": {
-    "name": "Первая категория (стандарт) в центре района Гончарова",
-    "category": 6,
-    "description": "Еврейский набор поколение актриса промолчать.\nТрясти нервно поздравлять недостаток ложиться заложить. Поздравлять вскинуть нож дьявол засунуть.\nВскинуть четко вытаскивать вряд. Упорно плод помолчать бак боец. Роса куча единый носок невыносимый упорно выраженный.",
-    "size": 197,
-    "standard_capacity": 2,
-    "bedroom_count": 2,
-    "living_room_count": 2,
-    "bathroom_count": 2,
-    "bathroom_type": "F",
-    "has_kitchen": false,
-    "has_balcony": true
-  }
-},
-{
-  "model": "hotels.roomtype",
-  "pk": 29,
-  "fields": {
-    "name": "Люкс над зданием Краснофлотская",
-    "category": 3,
-    "description": "Горький снимать прощение. Спорт серьезный самостоятельно поколение место.\nПрежде изба мелькнуть заведение пятеро задрать. Пятеро чем дьявол песня радость пространство четко. Трясти цвет полевой прелесть вскинуть протягивать построить намерение.",
-    "size": 191,
-    "standard_capacity": 6,
-    "bedroom_count": 1,
-    "living_room_count": 0,
-    "bathroom_count": 1,
-    "bathroom_type": "F",
-    "has_kitchen": false,
-    "has_balcony": false
-  }
-},
-{
-  "model": "hotels.roomtype",
-  "pk": 30,
-  "fields": {
-    "name": "Сюит на реке Курская",
-    "category": 1,
-    "description": "Сынок разуметься отъезд космос. Строительство чем господь.\nБочок левый князь эффект трясти четыре выраженный. Школьный природа мучительно выкинуть пасть потом. Выраженный недостаток бетонный чувство достоинство.",
-    "size": 189,
-    "standard_capacity": 1,
-    "bedroom_count": 3,
-    "living_room_count": 3,
-    "bathroom_count": 1,
-    "bathroom_type": "F",
-    "has_kitchen": false,
-    "has_balcony": false
-  }
-},
-{
-  "model": "hotels.roomtype",
-  "pk": 31,
-  "fields": {
-    "name": "Вторая категория в центре квартала Славянская",
-    "category": 7,
-    "description": "Штаб полностью уточнить пастух кольцо. Ведь написать нажать дорогой деньги.",
-    "size": 167,
-    "standard_capacity": 2,
-    "bedroom_count": 5,
-    "living_room_count": 1,
-    "bathroom_count": 4,
-    "bathroom_type": "F",
-    "has_kitchen": false,
-    "has_balcony": false
-  }
-},
-{
-  "model": "hotels.roomtype",
-  "pk": 32,
-  "fields": {
-    "name": "Люкс в центре квартала Ясная",
-    "category": 3,
-    "description": "Мягкий голубчик выразить потрясти монета. Прежде забирать монета поезд. Угодный ведь назначить магазин умолять головка легко материя.\nРабочий горький падаль смертельный мера совет школьный. Песенка кидать угроза вытаскивать.",
-    "size": 35,
-    "standard_capacity": 5,
-    "bedroom_count": 1,
-    "living_room_count": 1,
-    "bathroom_count": 0,
-    "bathroom_type": "F",
-    "has_kitchen": false,
-    "has_balcony": false
-  }
-},
-{
-  "model": "hotels.roomtype",
-  "pk": 33,
-  "fields": {
-    "name": "Сюит с видом на реку Снежная",
-    "category": 1,
-    "description": "Близко порог передо подробность роскошный неожиданно анализ. Через болото художественный тюрьма.",
-    "size": 75,
-    "standard_capacity": 3,
-    "bedroom_count": 5,
-    "living_room_count": 1,
-    "bathroom_count": 4,
-    "bathroom_type": "F",
-    "has_kitchen": false,
-    "has_balcony": false
-  }
-},
-{
-  "model": "hotels.roomtype",
-  "pk": 34,
-  "fields": {
-    "name": "Апартамент на реке Кленовая",
-    "category": 2,
-    "description": "Пламя вообще отдел выражаться. Рабочий цепочка зачем миг единый.\nСнимать господь команда уронить кольцо изредка труп ручей.\nНаписать торговля плавно естественный возмутиться поезд дорогой. Материя ведь дурацкий художественный. Зато падаль заложить покидать нож очко.",
-    "size": 67,
-    "standard_capacity": 2,
-    "bedroom_count": 1,
-    "living_room_count": 1,
-    "bathroom_count": 0,
-    "bathroom_type": "F",
-    "has_kitchen": true,
-    "has_balcony": false
-  }
-},
-{
-  "model": "hotels.roomtype",
-  "pk": 35,
-  "fields": {
-    "name": "Четвёртая категория над рекой Космодемьянской",
-    "category": 9,
-    "description": "Художественный плясать дьявол парень помолчать. Серьезный ночь тревога болото. Новый видимо выражение выражение.\nПрежний выдержать ставить вывести сверкающий. Темнеть ход валюта более инфекция намерение эффект.\nЖестокий бетонный другой сохранять столетие функция.",
-    "size": 161,
-    "standard_capacity": 6,
-    "bedroom_count": 5,
-    "living_room_count": 4,
-    "bathroom_count": 2,
-    "bathroom_type": "F",
-    "has_kitchen": false,
-    "has_balcony": false
-  }
-},
-{
-  "model": "hotels.roomtype",
-  "pk": 36,
-  "fields": {
-    "name": "Апартамент у залива Урожайная",
-    "category": 2,
-    "description": "Горький набор порог плод издали. Художественный лететь намерение подземный выгнать. Вздрогнуть труп тесно горький.\nИзба нажать видимо плясать решетка.\nСбросить очко экзамен носок художественный. Сутки лапа выражаться вариант левый заплакать эпоха. Горький через салон функция демократия тяжелый.",
-    "size": 173,
-    "standard_capacity": 2,
-    "bedroom_count": 4,
-    "living_room_count": 0,
-    "bathroom_count": 2,
-    "bathroom_type": "F",
-    "has_kitchen": true,
-    "has_balcony": false
-  }
-},
-{
-  "model": "hotels.roomtype",
-  "pk": 37,
-  "fields": {
-    "name": "Третья категория у площади Больничная",
-    "category": 8,
-    "description": "Близко нож процесс инструкция тревога умирать прелесть умирать.\nРасстройство горький вытаскивать. Равнодушный изображать правый более песенка пространство песенка.",
-    "size": 67,
-    "standard_capacity": 4,
-    "bedroom_count": 5,
-    "living_room_count": 1,
-    "bathroom_count": 2,
-    "bathroom_type": "F",
-    "has_kitchen": false,
-    "has_balcony": false
-  }
-},
-{
-  "model": "hotels.roomtype",
-  "pk": 38,
-  "fields": {
-    "name": "Четвёртая категория над зданием Розы Люксембург",
-    "category": 9,
-    "description": "Что сверкать штаб голубчик народ беспомощный палец. Войти число дьявол плясать теория багровый. Провинция точно эпоха холодно дальний.\nФункция полностью грудь торопливый деньги угроза. Прелесть пропаганда интернет изображать исполнять пропаганда.",
-    "size": 107,
-    "standard_capacity": 8,
-    "bedroom_count": 4,
-    "living_room_count": 2,
-    "bathroom_count": 0,
-    "bathroom_type": "F",
-    "has_kitchen": false,
-    "has_balcony": false
-  }
-},
-{
-  "model": "hotels.roomtype",
-  "pk": 39,
-  "fields": {
-    "name": "Пятая категория у бульвара Виноградная",
-    "category": 10,
-    "description": "Зима монета помолчать ночь. Карман деньги поезд сверкать. Оборот ложиться свежий материя порог оставить народ.\nПрисесть актриса приличный теория. Возмутиться правый ответить актриса плавно народ выраженный. Сомнительный разуметься возбуждение провал грустный.",
-    "size": 56,
-    "standard_capacity": 1,
-    "bedroom_count": 5,
-    "living_room_count": 1,
-    "bathroom_count": 3,
-    "bathroom_type": "F",
-    "has_kitchen": false,
-    "has_balcony": false
-  }
-},
-{
-  "model": "hotels.roomtype",
-  "pk": 40,
-  "fields": {
-    "name": "Вторая категория над зданием Подгорная",
-    "category": 7,
-    "description": "Июнь ложиться страсть механический аж хозяйка. Секунда ответить тюрьма сутки основание дальний госпожа.\nСкользить приличный мрачно торговля мимо монета приятель. Художественный темнеть полоска тута. Издали боец социалистический бровь.",
-    "size": 135,
-    "standard_capacity": 6,
-    "bedroom_count": 1,
-    "living_room_count": 0,
-    "bathroom_count": 0,
-    "bathroom_type": "F",
-    "has_kitchen": false,
-    "has_balcony": false
-  }
-},
-{
-  "model": "hotels.roomtype",
-  "pk": 41,
-  "fields": {
-    "name": "Пятая категория рядом с зданием Хвойная",
-    "category": 10,
-    "description": "Инфекция запретить пища металл развернуться самостоятельно соответствие очко. Природа видимо протягивать желание коричневый за шлем. Нож тюрьма спорт порт деньги.",
-    "size": 22,
-    "standard_capacity": 5,
-    "bedroom_count": 1,
-    "living_room_count": 1,
-    "bathroom_count": 0,
-    "bathroom_type": "F",
-    "has_kitchen": false,
-    "has_balcony": false
-  }
-},
-{
-  "model": "hotels.roomtype",
-  "pk": 42,
-  "fields": {
-    "name": "Люкс рядом с бульваром Осипенко",
-    "category": 3,
-    "description": "Премьера трясти сустав господь. Угодный идея актриса обида выбирать скрытый дыхание бригада.\nГрустный уничтожение инструкция изредка функция изредка проход. Построить валюта протягивать устройство отражение.",
-    "size": 35,
-    "standard_capacity": 2,
-    "bedroom_count": 4,
-    "living_room_count": 0,
-    "bathroom_count": 4,
-    "bathroom_type": "F",
-    "has_kitchen": false,
-    "has_balcony": false
-  }
-},
-{
-  "model": "hotels.roomtype",
-  "pk": 43,
-  "fields": {
-    "name": "Четвёртая категория в центре квартала Элеваторная",
-    "category": 9,
-    "description": "Пересечь пробовать пропаганда радость. Слишком торопливый ложиться жидкий. Плод встать скрытый запеть бегать ремень рассуждение.\nПравление падать дружно адвокат неправда за. Славный падать приходить. Свежий нажать деньги жить рай.\nЛевый мотоцикл господь заведение кузнец прелесть.",
-    "size": 48,
-    "standard_capacity": 4,
-    "bedroom_count": 4,
-    "living_room_count": 4,
-    "bathroom_count": 0,
-    "bathroom_type": "F",
-    "has_kitchen": false,
-    "has_balcony": false
-  }
-},
-{
-  "model": "hotels.roomtype",
-  "pk": 44,
-  "fields": {
-    "name": "Студия рядом с зданием Воровского",
-    "category": 5,
-    "description": "Деловой бетонный коммунизм выдержать. Сопровождаться премьера приятель.\nНеожиданный факультет наткнуться зачем некоторый. Покинуть освобождение зеленый монета уточнить выражаться анализ. Снимать девка успокоиться порт.",
-    "size": 83,
-    "standard_capacity": 4,
-    "bedroom_count": 4,
-    "living_room_count": 1,
-    "bathroom_count": 4,
-    "bathroom_type": "F",
-    "has_kitchen": true,
-    "has_balcony": false
-  }
-},
-{
-  "model": "hotels.roomtype",
-  "pk": 45,
-  "fields": {
-    "name": "Апартамент на заливе Краснофлотская",
-    "category": 2,
-    "description": "Освобождение командование передо сопровождаться. Приличный неправда устройство. Миллиард термин вариант тута июнь.\nНосок мгновение народ изба наступать. Похороны прежде разуметься руководитель прелесть космос появление.\nСкользить адвокат совет за. Банк потом упорно монета бочок порода.",
-    "size": 45,
+    "description": "Плод мотоцикл миллиард предоставить. Рота пастух хотеть потрясти. Валюта подробность добиться эффект механический. Тревога трубка одиннадцать госпожа.\nНож школьный выразить рассуждение степь поздравлять. Вряд единый невыносимый пробовать.",
+    "size": 78,
     "standard_capacity": 7,
     "bedroom_count": 4,
-    "living_room_count": 4,
-    "bathroom_count": 3,
-    "bathroom_type": "F",
-    "has_kitchen": true,
-    "has_balcony": false
-  }
-},
-{
-  "model": "hotels.roomtype",
-  "pk": 46,
-  "fields": {
-    "name": "Сюит над рекой Ульяновская",
-    "category": 1,
-    "description": "Июнь войти господь сутки. Поговорить белье совет цвет аж куча наткнуться.\nИзображать мягкий уничтожение сходить. Изредка наслаждение изредка ручей при. Порядок карман серьезный сбросить сверкающий бак.",
-    "size": 75,
-    "standard_capacity": 2,
-    "bedroom_count": 3,
-    "living_room_count": 1,
-    "bathroom_count": 2,
+    "living_room_count": 2,
+    "bathroom_count": 0,
     "bathroom_type": "F",
     "has_kitchen": false,
     "has_balcony": false
@@ -988,591 +446,271 @@
 },
 {
   "model": "hotels.room",
-  "pk": 281,
+  "pk": 1,
   "fields": {
-    "hotel": 55,
-    "room_type": 36,
-    "bed_count": 1,
-    "is_pets_allowed": false,
-    "is_smoking_allowed": true,
-    "price_per_night": "5297.92",
-    "extra_pay_per_person": "1898.30",
-    "floor": 1,
-    "number_on_floor": 1,
-    "variant": null
-  }
-},
-{
-  "model": "hotels.room",
-  "pk": 282,
-  "fields": {
-    "hotel": 55,
-    "room_type": 36,
-    "bed_count": 4,
-    "is_pets_allowed": false,
-    "is_smoking_allowed": false,
-    "price_per_night": "10100.64",
-    "extra_pay_per_person": "2933.39",
-    "floor": 1,
-    "number_on_floor": 2,
-    "variant": "A"
-  }
-},
-{
-  "model": "hotels.room",
-  "pk": 283,
-  "fields": {
-    "hotel": 55,
-    "room_type": 36,
-    "bed_count": 10,
-    "is_pets_allowed": false,
-    "is_smoking_allowed": false,
-    "price_per_night": "12031.38",
-    "extra_pay_per_person": "4136.27",
-    "floor": 1,
-    "number_on_floor": 3,
-    "variant": null
-  }
-},
-{
-  "model": "hotels.room",
-  "pk": 284,
-  "fields": {
-    "hotel": 55,
-    "room_type": 39,
-    "bed_count": 7,
+    "hotel": 1,
+    "room_type": 10,
+    "bed_count": 2,
     "is_pets_allowed": true,
     "is_smoking_allowed": false,
-    "price_per_night": "7837.75",
-    "extra_pay_per_person": "2765.80",
-    "floor": 2,
+    "price_per_night": "13755.90",
+    "extra_pay_per_person": "5685.53",
+    "floor": 1,
     "number_on_floor": 1,
     "variant": null
   }
 },
 {
   "model": "hotels.room",
-  "pk": 285,
+  "pk": 2,
   "fields": {
-    "hotel": 55,
-    "room_type": 42,
+    "hotel": 1,
+    "room_type": 2,
+    "bed_count": 9,
+    "is_pets_allowed": true,
+    "is_smoking_allowed": false,
+    "price_per_night": "10229.02",
+    "extra_pay_per_person": "3790.14",
+    "floor": 1,
+    "number_on_floor": 2,
+    "variant": null
+  }
+},
+{
+  "model": "hotels.room",
+  "pk": 3,
+  "fields": {
+    "hotel": 1,
+    "room_type": 9,
     "bed_count": 8,
     "is_pets_allowed": false,
     "is_smoking_allowed": false,
-    "price_per_night": "4718.36",
-    "extra_pay_per_person": "1682.68",
-    "floor": 2,
-    "number_on_floor": 2,
-    "variant": null
-  }
-},
-{
-  "model": "hotels.room",
-  "pk": 286,
-  "fields": {
-    "hotel": 55,
-    "room_type": 36,
-    "bed_count": 1,
-    "is_pets_allowed": false,
-    "is_smoking_allowed": false,
-    "price_per_night": "17706.41",
-    "extra_pay_per_person": "8410.73",
-    "floor": 2,
+    "price_per_night": "2061.64",
+    "extra_pay_per_person": "576.97",
+    "floor": 1,
     "number_on_floor": 3,
     "variant": null
   }
 },
 {
   "model": "hotels.room",
-  "pk": 287,
+  "pk": 4,
   "fields": {
-    "hotel": 55,
-    "room_type": 34,
-    "bed_count": 9,
-    "is_pets_allowed": false,
-    "is_smoking_allowed": false,
-    "price_per_night": "15608.61",
-    "extra_pay_per_person": "6053.85",
-    "floor": 2,
-    "number_on_floor": 4,
-    "variant": null
-  }
-},
-{
-  "model": "hotels.room",
-  "pk": 288,
-  "fields": {
-    "hotel": 55,
-    "room_type": 45,
-    "bed_count": 9,
-    "is_pets_allowed": false,
-    "is_smoking_allowed": false,
-    "price_per_night": "17678.24",
-    "extra_pay_per_person": "5940.48",
-    "floor": 3,
-    "number_on_floor": 1,
-    "variant": null
-  }
-},
-{
-  "model": "hotels.room",
-  "pk": 289,
-  "fields": {
-    "hotel": 55,
-    "room_type": 34,
-    "bed_count": 10,
-    "is_pets_allowed": true,
-    "is_smoking_allowed": false,
-    "price_per_night": "14627.25",
-    "extra_pay_per_person": "5085.12",
-    "floor": 3,
-    "number_on_floor": 2,
-    "variant": null
-  }
-},
-{
-  "model": "hotels.room",
-  "pk": 290,
-  "fields": {
-    "hotel": 55,
-    "room_type": 32,
+    "hotel": 1,
+    "room_type": 4,
     "bed_count": 7,
     "is_pets_allowed": false,
     "is_smoking_allowed": false,
-    "price_per_night": "13238.66",
-    "extra_pay_per_person": "5289.87",
-    "floor": 3,
-    "number_on_floor": 3,
-    "variant": null
-  }
-},
-{
-  "model": "hotels.room",
-  "pk": 291,
-  "fields": {
-    "hotel": 55,
-    "room_type": 46,
-    "bed_count": 4,
-    "is_pets_allowed": false,
-    "is_smoking_allowed": true,
-    "price_per_night": "12362.33",
-    "extra_pay_per_person": "3858.92",
-    "floor": 4,
+    "price_per_night": "5565.31",
+    "extra_pay_per_person": "1578.09",
+    "floor": 2,
     "number_on_floor": 1,
-    "variant": null
+    "variant": "A"
   }
 },
 {
   "model": "hotels.room",
-  "pk": 292,
+  "pk": 5,
   "fields": {
-    "hotel": 55,
-    "room_type": 44,
-    "bed_count": 6,
-    "is_pets_allowed": false,
-    "is_smoking_allowed": false,
-    "price_per_night": "4416.87",
-    "extra_pay_per_person": "2026.26",
-    "floor": 4,
-    "number_on_floor": 2,
-    "variant": null
-  }
-},
-{
-  "model": "hotels.room",
-  "pk": 293,
-  "fields": {
-    "hotel": 55,
-    "room_type": 36,
-    "bed_count": 9,
-    "is_pets_allowed": false,
-    "is_smoking_allowed": false,
-    "price_per_night": "6730.27",
-    "extra_pay_per_person": "1805.76",
-    "floor": 4,
-    "number_on_floor": 3,
-    "variant": null
-  }
-},
-{
-  "model": "hotels.room",
-  "pk": 294,
-  "fields": {
-    "hotel": 55,
-    "room_type": 39,
-    "bed_count": 9,
-    "is_pets_allowed": false,
-    "is_smoking_allowed": true,
-    "price_per_night": "8406.95",
-    "extra_pay_per_person": "2870.67",
-    "floor": 5,
-    "number_on_floor": 1,
-    "variant": null
-  }
-},
-{
-  "model": "hotels.room",
-  "pk": 295,
-  "fields": {
-    "hotel": 55,
-    "room_type": 35,
-    "bed_count": 6,
-    "is_pets_allowed": true,
-    "is_smoking_allowed": false,
-    "price_per_night": "3470.43",
-    "extra_pay_per_person": "932.96",
-    "floor": 5,
-    "number_on_floor": 2,
-    "variant": null
-  }
-},
-{
-  "model": "hotels.room",
-  "pk": 296,
-  "fields": {
-    "hotel": 55,
-    "room_type": 44,
+    "hotel": 1,
+    "room_type": 4,
     "bed_count": 10,
     "is_pets_allowed": false,
     "is_smoking_allowed": false,
-    "price_per_night": "8733.41",
-    "extra_pay_per_person": "4333.05",
-    "floor": 5,
-    "number_on_floor": 3,
-    "variant": null
-  }
-},
-{
-  "model": "hotels.room",
-  "pk": 297,
-  "fields": {
-    "hotel": 55,
-    "room_type": 37,
-    "bed_count": 6,
-    "is_pets_allowed": true,
-    "is_smoking_allowed": true,
-    "price_per_night": "9536.18",
-    "extra_pay_per_person": "4647.44",
-    "floor": 6,
-    "number_on_floor": 1,
-    "variant": "A"
-  }
-},
-{
-  "model": "hotels.room",
-  "pk": 298,
-  "fields": {
-    "hotel": 55,
-    "room_type": 46,
-    "bed_count": 4,
-    "is_pets_allowed": true,
-    "is_smoking_allowed": false,
-    "price_per_night": "2621.23",
-    "extra_pay_per_person": "1066.53",
-    "floor": 6,
-    "number_on_floor": 2,
-    "variant": null
-  }
-},
-{
-  "model": "hotels.room",
-  "pk": 299,
-  "fields": {
-    "hotel": 55,
-    "room_type": 42,
-    "bed_count": 3,
-    "is_pets_allowed": false,
-    "is_smoking_allowed": true,
-    "price_per_night": "2504.26",
-    "extra_pay_per_person": "1221.04",
-    "floor": 6,
-    "number_on_floor": 3,
-    "variant": null
-  }
-},
-{
-  "model": "hotels.room",
-  "pk": 300,
-  "fields": {
-    "hotel": 55,
-    "room_type": 38,
-    "bed_count": 2,
-    "is_pets_allowed": false,
-    "is_smoking_allowed": false,
-    "price_per_night": "18593.64",
-    "extra_pay_per_person": "7222.77",
-    "floor": 7,
-    "number_on_floor": 1,
-    "variant": null
-  }
-},
-{
-  "model": "hotels.room",
-  "pk": 301,
-  "fields": {
-    "hotel": 56,
-    "room_type": 40,
-    "bed_count": 8,
-    "is_pets_allowed": false,
-    "is_smoking_allowed": false,
-    "price_per_night": "10260.21",
-    "extra_pay_per_person": "4753.62",
-    "floor": 1,
-    "number_on_floor": 1,
-    "variant": null
-  }
-},
-{
-  "model": "hotels.room",
-  "pk": 302,
-  "fields": {
-    "hotel": 56,
-    "room_type": 32,
-    "bed_count": 2,
-    "is_pets_allowed": false,
-    "is_smoking_allowed": true,
-    "price_per_night": "17921.01",
-    "extra_pay_per_person": "5122.40",
-    "floor": 1,
-    "number_on_floor": 2,
-    "variant": null
-  }
-},
-{
-  "model": "hotels.room",
-  "pk": 303,
-  "fields": {
-    "hotel": 56,
-    "room_type": 32,
-    "bed_count": 6,
-    "is_pets_allowed": false,
-    "is_smoking_allowed": true,
-    "price_per_night": "12802.23",
-    "extra_pay_per_person": "4812.70",
-    "floor": 1,
-    "number_on_floor": 3,
-    "variant": "A"
-  }
-},
-{
-  "model": "hotels.room",
-  "pk": 304,
-  "fields": {
-    "hotel": 56,
-    "room_type": 34,
-    "bed_count": 3,
-    "is_pets_allowed": false,
-    "is_smoking_allowed": true,
-    "price_per_night": "4350.84",
-    "extra_pay_per_person": "1436.57",
+    "price_per_night": "3723.28",
+    "extra_pay_per_person": "974.76",
     "floor": 2,
-    "number_on_floor": 1,
-    "variant": null
-  }
-},
-{
-  "model": "hotels.room",
-  "pk": 305,
-  "fields": {
-    "hotel": 56,
-    "room_type": 33,
-    "bed_count": 8,
-    "is_pets_allowed": false,
-    "is_smoking_allowed": true,
-    "price_per_night": "2355.19",
-    "extra_pay_per_person": "772.69",
-    "floor": 2,
-    "number_on_floor": 2,
-    "variant": null
-  }
-},
-{
-  "model": "hotels.room",
-  "pk": 306,
-  "fields": {
-    "hotel": 56,
-    "room_type": 32,
-    "bed_count": 7,
-    "is_pets_allowed": false,
-    "is_smoking_allowed": false,
-    "price_per_night": "9839.54",
-    "extra_pay_per_person": "2485.22",
-    "floor": 2,
-    "number_on_floor": 3,
-    "variant": null
-  }
-},
-{
-  "model": "hotels.room",
-  "pk": 307,
-  "fields": {
-    "hotel": 56,
-    "room_type": 32,
-    "bed_count": 10,
-    "is_pets_allowed": false,
-    "is_smoking_allowed": true,
-    "price_per_night": "10161.15",
-    "extra_pay_per_person": "4823.05",
-    "floor": 2,
-    "number_on_floor": 4,
-    "variant": "A"
-  }
-},
-{
-  "model": "hotels.room",
-  "pk": 308,
-  "fields": {
-    "hotel": 56,
-    "room_type": 35,
-    "bed_count": 4,
-    "is_pets_allowed": false,
-    "is_smoking_allowed": false,
-    "price_per_night": "12263.38",
-    "extra_pay_per_person": "5757.19",
-    "floor": 3,
-    "number_on_floor": 1,
-    "variant": null
-  }
-},
-{
-  "model": "hotels.room",
-  "pk": 309,
-  "fields": {
-    "hotel": 56,
-    "room_type": 35,
-    "bed_count": 7,
-    "is_pets_allowed": false,
-    "is_smoking_allowed": false,
-    "price_per_night": "9875.33",
-    "extra_pay_per_person": "2504.37",
-    "floor": 3,
-    "number_on_floor": 2,
-    "variant": "A"
-  }
-},
-{
-  "model": "hotels.room",
-  "pk": 310,
-  "fields": {
-    "hotel": 56,
-    "room_type": 39,
-    "bed_count": 2,
-    "is_pets_allowed": false,
-    "is_smoking_allowed": true,
-    "price_per_night": "16249.74",
-    "extra_pay_per_person": "5616.72",
-    "floor": 3,
-    "number_on_floor": 3,
-    "variant": null
-  }
-},
-{
-  "model": "hotels.room",
-  "pk": 311,
-  "fields": {
-    "hotel": 56,
-    "room_type": 39,
-    "bed_count": 5,
-    "is_pets_allowed": false,
-    "is_smoking_allowed": true,
-    "price_per_night": "8158.46",
-    "extra_pay_per_person": "3147.92",
-    "floor": 3,
-    "number_on_floor": 4,
-    "variant": "A"
-  }
-},
-{
-  "model": "hotels.room",
-  "pk": 312,
-  "fields": {
-    "hotel": 56,
-    "room_type": 33,
-    "bed_count": 10,
-    "is_pets_allowed": false,
-    "is_smoking_allowed": true,
-    "price_per_night": "13887.97",
-    "extra_pay_per_person": "4662.28",
-    "floor": 4,
-    "number_on_floor": 1,
-    "variant": "A"
-  }
-},
-{
-  "model": "hotels.room",
-  "pk": 313,
-  "fields": {
-    "hotel": 56,
-    "room_type": 33,
-    "bed_count": 3,
-    "is_pets_allowed": true,
-    "is_smoking_allowed": false,
-    "price_per_night": "19293.77",
-    "extra_pay_per_person": "9265.58",
-    "floor": 4,
     "number_on_floor": 1,
     "variant": "B"
   }
 },
 {
   "model": "hotels.room",
-  "pk": 314,
+  "pk": 6,
   "fields": {
-    "hotel": 56,
-    "room_type": 42,
-    "bed_count": 2,
-    "is_pets_allowed": true,
+    "hotel": 1,
+    "room_type": 8,
+    "bed_count": 9,
+    "is_pets_allowed": false,
     "is_smoking_allowed": false,
-    "price_per_night": "15732.12",
-    "extra_pay_per_person": "7846.39",
-    "floor": 4,
+    "price_per_night": "12815.33",
+    "extra_pay_per_person": "5158.41",
+    "floor": 2,
     "number_on_floor": 2,
     "variant": null
   }
 },
 {
   "model": "hotels.room",
-  "pk": 315,
+  "pk": 7,
   "fields": {
-    "hotel": 56,
-    "room_type": 37,
-    "bed_count": 7,
-    "is_pets_allowed": false,
+    "hotel": 1,
+    "room_type": 11,
+    "bed_count": 8,
+    "is_pets_allowed": true,
     "is_smoking_allowed": false,
-    "price_per_night": "12652.87",
-    "extra_pay_per_person": "4318.59",
-    "floor": 4,
+    "price_per_night": "10556.00",
+    "extra_pay_per_person": "3322.50",
+    "floor": 2,
     "number_on_floor": 3,
     "variant": null
   }
 },
 {
   "model": "hotels.room",
-  "pk": 316,
+  "pk": 8,
   "fields": {
-    "hotel": 56,
-    "room_type": 36,
-    "bed_count": 5,
+    "hotel": 1,
+    "room_type": 13,
+    "bed_count": 10,
     "is_pets_allowed": false,
-    "is_smoking_allowed": false,
-    "price_per_night": "17098.74",
-    "extra_pay_per_person": "4610.29",
-    "floor": 5,
+    "is_smoking_allowed": true,
+    "price_per_night": "6000.49",
+    "extra_pay_per_person": "2243.75",
+    "floor": 3,
     "number_on_floor": 1,
     "variant": null
   }
 },
 {
   "model": "hotels.room",
-  "pk": 317,
+  "pk": 9,
   "fields": {
-    "hotel": 56,
-    "room_type": 32,
+    "hotel": 1,
+    "room_type": 11,
+    "bed_count": 3,
+    "is_pets_allowed": true,
+    "is_smoking_allowed": true,
+    "price_per_night": "1341.34",
+    "extra_pay_per_person": "406.60",
+    "floor": 3,
+    "number_on_floor": 2,
+    "variant": null
+  }
+},
+{
+  "model": "hotels.room",
+  "pk": 10,
+  "fields": {
+    "hotel": 1,
+    "room_type": 9,
     "bed_count": 1,
     "is_pets_allowed": false,
     "is_smoking_allowed": false,
-    "price_per_night": "13989.38",
-    "extra_pay_per_person": "4035.85",
+    "price_per_night": "17903.51",
+    "extra_pay_per_person": "4750.70",
+    "floor": 3,
+    "number_on_floor": 3,
+    "variant": null
+  }
+},
+{
+  "model": "hotels.room",
+  "pk": 11,
+  "fields": {
+    "hotel": 1,
+    "room_type": 7,
+    "bed_count": 3,
+    "is_pets_allowed": false,
+    "is_smoking_allowed": false,
+    "price_per_night": "7848.25",
+    "extra_pay_per_person": "3746.26",
+    "floor": 3,
+    "number_on_floor": 4,
+    "variant": null
+  }
+},
+{
+  "model": "hotels.room",
+  "pk": 12,
+  "fields": {
+    "hotel": 1,
+    "room_type": 1,
+    "bed_count": 2,
+    "is_pets_allowed": false,
+    "is_smoking_allowed": false,
+    "price_per_night": "18880.96",
+    "extra_pay_per_person": "7387.02",
+    "floor": 4,
+    "number_on_floor": 1,
+    "variant": null
+  }
+},
+{
+  "model": "hotels.room",
+  "pk": 13,
+  "fields": {
+    "hotel": 1,
+    "room_type": 11,
+    "bed_count": 6,
+    "is_pets_allowed": true,
+    "is_smoking_allowed": false,
+    "price_per_night": "14204.60",
+    "extra_pay_per_person": "5195.22",
+    "floor": 4,
+    "number_on_floor": 2,
+    "variant": null
+  }
+},
+{
+  "model": "hotels.room",
+  "pk": 14,
+  "fields": {
+    "hotel": 1,
+    "room_type": 10,
+    "bed_count": 2,
+    "is_pets_allowed": true,
+    "is_smoking_allowed": false,
+    "price_per_night": "6601.55",
+    "extra_pay_per_person": "3153.88",
+    "floor": 4,
+    "number_on_floor": 3,
+    "variant": null
+  }
+},
+{
+  "model": "hotels.room",
+  "pk": 15,
+  "fields": {
+    "hotel": 1,
+    "room_type": 13,
+    "bed_count": 4,
+    "is_pets_allowed": false,
+    "is_smoking_allowed": false,
+    "price_per_night": "11348.19",
+    "extra_pay_per_person": "4790.61",
+    "floor": 4,
+    "number_on_floor": 4,
+    "variant": null
+  }
+},
+{
+  "model": "hotels.room",
+  "pk": 16,
+  "fields": {
+    "hotel": 1,
+    "room_type": 9,
+    "bed_count": 4,
+    "is_pets_allowed": false,
+    "is_smoking_allowed": false,
+    "price_per_night": "19659.01",
+    "extra_pay_per_person": "8994.35",
+    "floor": 5,
+    "number_on_floor": 1,
+    "variant": "A"
+  }
+},
+{
+  "model": "hotels.room",
+  "pk": 17,
+  "fields": {
+    "hotel": 1,
+    "room_type": 14,
+    "bed_count": 1,
+    "is_pets_allowed": false,
+    "is_smoking_allowed": false,
+    "price_per_night": "4113.92",
+    "extra_pay_per_person": "1052.07",
     "floor": 5,
     "number_on_floor": 2,
     "variant": null
@@ -1580,15 +718,15 @@
 },
 {
   "model": "hotels.room",
-  "pk": 318,
+  "pk": 18,
   "fields": {
-    "hotel": 56,
-    "room_type": 43,
-    "bed_count": 9,
+    "hotel": 1,
+    "room_type": 3,
+    "bed_count": 7,
     "is_pets_allowed": false,
-    "is_smoking_allowed": false,
-    "price_per_night": "2496.85",
-    "extra_pay_per_person": "1051.67",
+    "is_smoking_allowed": true,
+    "price_per_night": "12497.81",
+    "extra_pay_per_person": "5795.68",
     "floor": 5,
     "number_on_floor": 3,
     "variant": null
@@ -1596,15 +734,15 @@
 },
 {
   "model": "hotels.room",
-  "pk": 319,
+  "pk": 19,
   "fields": {
-    "hotel": 56,
-    "room_type": 38,
-    "bed_count": 8,
-    "is_pets_allowed": false,
+    "hotel": 1,
+    "room_type": 7,
+    "bed_count": 3,
+    "is_pets_allowed": true,
     "is_smoking_allowed": false,
-    "price_per_night": "19928.46",
-    "extra_pay_per_person": "6840.39",
+    "price_per_night": "1911.68",
+    "extra_pay_per_person": "831.88",
     "floor": 5,
     "number_on_floor": 4,
     "variant": null
@@ -1612,15 +750,15 @@
 },
 {
   "model": "hotels.room",
-  "pk": 320,
+  "pk": 20,
   "fields": {
-    "hotel": 56,
-    "room_type": 36,
-    "bed_count": 4,
-    "is_pets_allowed": false,
-    "is_smoking_allowed": true,
-    "price_per_night": "3823.77",
-    "extra_pay_per_person": "1185.66",
+    "hotel": 1,
+    "room_type": 10,
+    "bed_count": 1,
+    "is_pets_allowed": true,
+    "is_smoking_allowed": false,
+    "price_per_night": "10970.66",
+    "extra_pay_per_person": "4774.04",
     "floor": 6,
     "number_on_floor": 1,
     "variant": null
@@ -1628,863 +766,351 @@
 },
 {
   "model": "hotels.room",
-  "pk": 321,
+  "pk": 21,
   "fields": {
-    "hotel": 57,
-    "room_type": 32,
+    "hotel": 1,
+    "room_type": 14,
     "bed_count": 10,
     "is_pets_allowed": false,
     "is_smoking_allowed": true,
-    "price_per_night": "13717.87",
-    "extra_pay_per_person": "4576.58",
-    "floor": 1,
-    "number_on_floor": 1,
-    "variant": "A"
-  }
-},
-{
-  "model": "hotels.room",
-  "pk": 322,
-  "fields": {
-    "hotel": 57,
-    "room_type": 36,
-    "bed_count": 3,
-    "is_pets_allowed": true,
-    "is_smoking_allowed": false,
-    "price_per_night": "19961.05",
-    "extra_pay_per_person": "6818.19",
-    "floor": 1,
+    "price_per_night": "8261.90",
+    "extra_pay_per_person": "3470.89",
+    "floor": 6,
     "number_on_floor": 2,
     "variant": null
   }
 },
 {
   "model": "hotels.room",
-  "pk": 323,
+  "pk": 22,
   "fields": {
-    "hotel": 57,
-    "room_type": 46,
-    "bed_count": 5,
-    "is_pets_allowed": false,
-    "is_smoking_allowed": true,
-    "price_per_night": "16973.02",
-    "extra_pay_per_person": "7835.45",
-    "floor": 1,
+    "hotel": 1,
+    "room_type": 14,
+    "bed_count": 6,
+    "is_pets_allowed": true,
+    "is_smoking_allowed": false,
+    "price_per_night": "8828.93",
+    "extra_pay_per_person": "3535.15",
+    "floor": 6,
     "number_on_floor": 3,
-    "variant": null
+    "variant": "A"
   }
 },
 {
   "model": "hotels.room",
-  "pk": 324,
+  "pk": 23,
   "fields": {
-    "hotel": 57,
-    "room_type": 32,
-    "bed_count": 9,
+    "hotel": 1,
+    "room_type": 8,
+    "bed_count": 4,
     "is_pets_allowed": false,
-    "is_smoking_allowed": true,
-    "price_per_night": "18953.08",
-    "extra_pay_per_person": "4789.71",
-    "floor": 1,
+    "is_smoking_allowed": false,
+    "price_per_night": "14447.34",
+    "extra_pay_per_person": "5552.02",
+    "floor": 6,
     "number_on_floor": 4,
     "variant": null
   }
 },
 {
   "model": "hotels.room",
-  "pk": 325,
+  "pk": 24,
   "fields": {
-    "hotel": 57,
-    "room_type": 32,
+    "hotel": 1,
+    "room_type": 5,
+    "bed_count": 8,
+    "is_pets_allowed": false,
+    "is_smoking_allowed": false,
+    "price_per_night": "3333.35",
+    "extra_pay_per_person": "1354.54",
+    "floor": 7,
+    "number_on_floor": 1,
+    "variant": null
+  }
+},
+{
+  "model": "hotels.room",
+  "pk": 25,
+  "fields": {
+    "hotel": 2,
+    "room_type": 14,
     "bed_count": 1,
-    "is_pets_allowed": false,
-    "is_smoking_allowed": false,
-    "price_per_night": "10261.57",
-    "extra_pay_per_person": "4359.07",
-    "floor": 1,
-    "number_on_floor": 5,
-    "variant": "A"
-  }
-},
-{
-  "model": "hotels.room",
-  "pk": 326,
-  "fields": {
-    "hotel": 57,
-    "room_type": 45,
-    "bed_count": 5,
-    "is_pets_allowed": false,
+    "is_pets_allowed": true,
     "is_smoking_allowed": true,
-    "price_per_night": "17781.61",
-    "extra_pay_per_person": "8105.43",
+    "price_per_night": "861.73",
+    "extra_pay_per_person": "258.95",
     "floor": 1,
-    "number_on_floor": 6,
+    "number_on_floor": 1,
     "variant": null
   }
 },
 {
   "model": "hotels.room",
-  "pk": 327,
+  "pk": 26,
   "fields": {
-    "hotel": 57,
-    "room_type": 32,
-    "bed_count": 5,
-    "is_pets_allowed": false,
-    "is_smoking_allowed": true,
-    "price_per_night": "18153.87",
-    "extra_pay_per_person": "5884.00",
-    "floor": 1,
-    "number_on_floor": 7,
-    "variant": null
-  }
-},
-{
-  "model": "hotels.room",
-  "pk": 328,
-  "fields": {
-    "hotel": 57,
-    "room_type": 37,
-    "bed_count": 5,
-    "is_pets_allowed": false,
-    "is_smoking_allowed": false,
-    "price_per_night": "14734.63",
-    "extra_pay_per_person": "4359.64",
-    "floor": 1,
-    "number_on_floor": 8,
-    "variant": null
-  }
-},
-{
-  "model": "hotels.room",
-  "pk": 329,
-  "fields": {
-    "hotel": 57,
-    "room_type": 45,
-    "bed_count": 1,
-    "is_pets_allowed": false,
-    "is_smoking_allowed": false,
-    "price_per_night": "7806.58",
-    "extra_pay_per_person": "2828.89",
-    "floor": 1,
-    "number_on_floor": 9,
-    "variant": null
-  }
-},
-{
-  "model": "hotels.room",
-  "pk": 330,
-  "fields": {
-    "hotel": 57,
-    "room_type": 37,
-    "bed_count": 6,
-    "is_pets_allowed": false,
-    "is_smoking_allowed": false,
-    "price_per_night": "4691.04",
-    "extra_pay_per_person": "2054.91",
-    "floor": 1,
-    "number_on_floor": 10,
-    "variant": null
-  }
-},
-{
-  "model": "hotels.room",
-  "pk": 331,
-  "fields": {
-    "hotel": 57,
-    "room_type": 38,
-    "bed_count": 7,
-    "is_pets_allowed": false,
-    "is_smoking_allowed": false,
-    "price_per_night": "14241.88",
-    "extra_pay_per_person": "6168.25",
-    "floor": 1,
-    "number_on_floor": 11,
-    "variant": null
-  }
-},
-{
-  "model": "hotels.room",
-  "pk": 332,
-  "fields": {
-    "hotel": 57,
-    "room_type": 38,
-    "bed_count": 6,
-    "is_pets_allowed": false,
-    "is_smoking_allowed": false,
-    "price_per_night": "10503.05",
-    "extra_pay_per_person": "4083.28",
-    "floor": 1,
-    "number_on_floor": 12,
-    "variant": "A"
-  }
-},
-{
-  "model": "hotels.room",
-  "pk": 333,
-  "fields": {
-    "hotel": 57,
-    "room_type": 42,
-    "bed_count": 10,
-    "is_pets_allowed": false,
-    "is_smoking_allowed": false,
-    "price_per_night": "9744.92",
-    "extra_pay_per_person": "2665.65",
-    "floor": 1,
-    "number_on_floor": 13,
-    "variant": null
-  }
-},
-{
-  "model": "hotels.room",
-  "pk": 334,
-  "fields": {
-    "hotel": 57,
-    "room_type": 35,
-    "bed_count": 4,
-    "is_pets_allowed": false,
-    "is_smoking_allowed": false,
-    "price_per_night": "12973.75",
-    "extra_pay_per_person": "4038.01",
-    "floor": 1,
-    "number_on_floor": 14,
-    "variant": null
-  }
-},
-{
-  "model": "hotels.room",
-  "pk": 335,
-  "fields": {
-    "hotel": 57,
-    "room_type": 44,
-    "bed_count": 2,
-    "is_pets_allowed": false,
-    "is_smoking_allowed": false,
-    "price_per_night": "16211.13",
-    "extra_pay_per_person": "8050.40",
-    "floor": 1,
-    "number_on_floor": 15,
-    "variant": null
-  }
-},
-{
-  "model": "hotels.room",
-  "pk": 336,
-  "fields": {
-    "hotel": 57,
-    "room_type": 44,
+    "hotel": 2,
+    "room_type": 14,
     "bed_count": 9,
     "is_pets_allowed": false,
     "is_smoking_allowed": false,
-    "price_per_night": "8992.06",
-    "extra_pay_per_person": "3299.04",
+    "price_per_night": "13000.14",
+    "extra_pay_per_person": "4038.17",
     "floor": 1,
-    "number_on_floor": 16,
+    "number_on_floor": 2,
     "variant": "A"
   }
 },
 {
   "model": "hotels.room",
-  "pk": 337,
+  "pk": 27,
   "fields": {
-    "hotel": 57,
-    "room_type": 46,
-    "bed_count": 5,
-    "is_pets_allowed": true,
-    "is_smoking_allowed": false,
-    "price_per_night": "10493.51",
-    "extra_pay_per_person": "3114.31",
-    "floor": 1,
-    "number_on_floor": 17,
-    "variant": null
-  }
-},
-{
-  "model": "hotels.room",
-  "pk": 338,
-  "fields": {
-    "hotel": 57,
-    "room_type": 46,
-    "bed_count": 1,
-    "is_pets_allowed": false,
-    "is_smoking_allowed": false,
-    "price_per_night": "18689.36",
-    "extra_pay_per_person": "5707.14",
-    "floor": 1,
-    "number_on_floor": 18,
-    "variant": "A"
-  }
-},
-{
-  "model": "hotels.room",
-  "pk": 339,
-  "fields": {
-    "hotel": 57,
-    "room_type": 43,
-    "bed_count": 6,
-    "is_pets_allowed": true,
-    "is_smoking_allowed": false,
-    "price_per_night": "9394.85",
-    "extra_pay_per_person": "4577.57",
-    "floor": 1,
-    "number_on_floor": 19,
-    "variant": null
-  }
-},
-{
-  "model": "hotels.room",
-  "pk": 340,
-  "fields": {
-    "hotel": 57,
-    "room_type": 45,
-    "bed_count": 10,
-    "is_pets_allowed": true,
-    "is_smoking_allowed": false,
-    "price_per_night": "11253.28",
-    "extra_pay_per_person": "5400.87",
-    "floor": 2,
-    "number_on_floor": 1,
-    "variant": null
-  }
-},
-{
-  "model": "hotels.room",
-  "pk": 341,
-  "fields": {
-    "hotel": 58,
-    "room_type": 36,
-    "bed_count": 7,
-    "is_pets_allowed": true,
-    "is_smoking_allowed": false,
-    "price_per_night": "13261.33",
-    "extra_pay_per_person": "5081.04",
-    "floor": 1,
-    "number_on_floor": 1,
-    "variant": "A"
-  }
-},
-{
-  "model": "hotels.room",
-  "pk": 342,
-  "fields": {
-    "hotel": 58,
-    "room_type": 37,
+    "hotel": 2,
+    "room_type": 12,
     "bed_count": 4,
     "is_pets_allowed": false,
     "is_smoking_allowed": false,
-    "price_per_night": "12746.70",
-    "extra_pay_per_person": "3617.50",
-    "floor": 1,
-    "number_on_floor": 2,
-    "variant": null
-  }
-},
-{
-  "model": "hotels.room",
-  "pk": 343,
-  "fields": {
-    "hotel": 58,
-    "room_type": 40,
-    "bed_count": 4,
-    "is_pets_allowed": false,
-    "is_smoking_allowed": true,
-    "price_per_night": "16048.59",
-    "extra_pay_per_person": "7627.06",
+    "price_per_night": "4572.42",
+    "extra_pay_per_person": "1188.79",
     "floor": 2,
     "number_on_floor": 1,
-    "variant": "A"
-  }
-},
-{
-  "model": "hotels.room",
-  "pk": 344,
-  "fields": {
-    "hotel": 58,
-    "room_type": 44,
-    "bed_count": 3,
-    "is_pets_allowed": false,
-    "is_smoking_allowed": false,
-    "price_per_night": "11730.26",
-    "extra_pay_per_person": "4817.68",
-    "floor": 2,
-    "number_on_floor": 2,
     "variant": null
   }
 },
 {
   "model": "hotels.room",
-  "pk": 345,
+  "pk": 28,
   "fields": {
-    "hotel": 58,
-    "room_type": 39,
-    "bed_count": 4,
-    "is_pets_allowed": true,
-    "is_smoking_allowed": true,
-    "price_per_night": "5234.54",
-    "extra_pay_per_person": "1398.34",
-    "floor": 2,
-    "number_on_floor": 3,
-    "variant": null
-  }
-},
-{
-  "model": "hotels.room",
-  "pk": 346,
-  "fields": {
-    "hotel": 58,
-    "room_type": 44,
-    "bed_count": 1,
-    "is_pets_allowed": false,
-    "is_smoking_allowed": true,
-    "price_per_night": "14145.89",
-    "extra_pay_per_person": "4292.76",
-    "floor": 3,
-    "number_on_floor": 1,
-    "variant": null
-  }
-},
-{
-  "model": "hotels.room",
-  "pk": 347,
-  "fields": {
-    "hotel": 58,
-    "room_type": 46,
-    "bed_count": 10,
-    "is_pets_allowed": false,
-    "is_smoking_allowed": false,
-    "price_per_night": "5290.02",
-    "extra_pay_per_person": "1960.14",
-    "floor": 3,
-    "number_on_floor": 2,
-    "variant": null
-  }
-},
-{
-  "model": "hotels.room",
-  "pk": 348,
-  "fields": {
-    "hotel": 58,
-    "room_type": 32,
-    "bed_count": 1,
-    "is_pets_allowed": false,
-    "is_smoking_allowed": true,
-    "price_per_night": "12820.30",
-    "extra_pay_per_person": "5344.50",
-    "floor": 3,
-    "number_on_floor": 3,
-    "variant": null
-  }
-},
-{
-  "model": "hotels.room",
-  "pk": 349,
-  "fields": {
-    "hotel": 58,
-    "room_type": 36,
-    "bed_count": 5,
-    "is_pets_allowed": false,
-    "is_smoking_allowed": true,
-    "price_per_night": "3690.07",
-    "extra_pay_per_person": "1018.88",
-    "floor": 4,
-    "number_on_floor": 1,
-    "variant": null
-  }
-},
-{
-  "model": "hotels.room",
-  "pk": 350,
-  "fields": {
-    "hotel": 58,
-    "room_type": 46,
-    "bed_count": 5,
-    "is_pets_allowed": false,
-    "is_smoking_allowed": false,
-    "price_per_night": "5249.16",
-    "extra_pay_per_person": "2153.08",
-    "floor": 4,
-    "number_on_floor": 2,
-    "variant": null
-  }
-},
-{
-  "model": "hotels.room",
-  "pk": 351,
-  "fields": {
-    "hotel": 58,
-    "room_type": 46,
-    "bed_count": 6,
-    "is_pets_allowed": false,
-    "is_smoking_allowed": true,
-    "price_per_night": "6949.95",
-    "extra_pay_per_person": "3147.54",
-    "floor": 4,
-    "number_on_floor": 3,
-    "variant": "A"
-  }
-},
-{
-  "model": "hotels.room",
-  "pk": 352,
-  "fields": {
-    "hotel": 58,
-    "room_type": 43,
-    "bed_count": 8,
-    "is_pets_allowed": false,
-    "is_smoking_allowed": false,
-    "price_per_night": "15025.89",
-    "extra_pay_per_person": "6366.00",
-    "floor": 5,
-    "number_on_floor": 1,
-    "variant": null
-  }
-},
-{
-  "model": "hotels.room",
-  "pk": 353,
-  "fields": {
-    "hotel": 58,
-    "room_type": 40,
-    "bed_count": 1,
-    "is_pets_allowed": false,
-    "is_smoking_allowed": true,
-    "price_per_night": "4636.48",
-    "extra_pay_per_person": "1630.46",
-    "floor": 5,
-    "number_on_floor": 2,
-    "variant": null
-  }
-},
-{
-  "model": "hotels.room",
-  "pk": 354,
-  "fields": {
-    "hotel": 58,
-    "room_type": 44,
-    "bed_count": 10,
-    "is_pets_allowed": false,
-    "is_smoking_allowed": false,
-    "price_per_night": "9476.33",
-    "extra_pay_per_person": "3760.81",
-    "floor": 5,
-    "number_on_floor": 3,
-    "variant": null
-  }
-},
-{
-  "model": "hotels.room",
-  "pk": 355,
-  "fields": {
-    "hotel": 58,
-    "room_type": 33,
-    "bed_count": 1,
-    "is_pets_allowed": true,
-    "is_smoking_allowed": false,
-    "price_per_night": "955.13",
-    "extra_pay_per_person": "257.36",
-    "floor": 6,
-    "number_on_floor": 1,
-    "variant": null
-  }
-},
-{
-  "model": "hotels.room",
-  "pk": 356,
-  "fields": {
-    "hotel": 58,
-    "room_type": 33,
-    "bed_count": 5,
-    "is_pets_allowed": false,
-    "is_smoking_allowed": false,
-    "price_per_night": "18779.87",
-    "extra_pay_per_person": "8795.39",
-    "floor": 6,
-    "number_on_floor": 2,
-    "variant": "A"
-  }
-},
-{
-  "model": "hotels.room",
-  "pk": 357,
-  "fields": {
-    "hotel": 58,
-    "room_type": 42,
-    "bed_count": 10,
-    "is_pets_allowed": false,
-    "is_smoking_allowed": false,
-    "price_per_night": "14279.55",
-    "extra_pay_per_person": "6254.41",
-    "floor": 6,
-    "number_on_floor": 3,
-    "variant": null
-  }
-},
-{
-  "model": "hotels.room",
-  "pk": 358,
-  "fields": {
-    "hotel": 58,
-    "room_type": 40,
-    "bed_count": 6,
-    "is_pets_allowed": false,
-    "is_smoking_allowed": false,
-    "price_per_night": "812.78",
-    "extra_pay_per_person": "337.07",
-    "floor": 7,
-    "number_on_floor": 1,
-    "variant": null
-  }
-},
-{
-  "model": "hotels.room",
-  "pk": 359,
-  "fields": {
-    "hotel": 58,
-    "room_type": 39,
-    "bed_count": 6,
-    "is_pets_allowed": true,
-    "is_smoking_allowed": false,
-    "price_per_night": "15959.06",
-    "extra_pay_per_person": "7289.45",
-    "floor": 7,
-    "number_on_floor": 2,
-    "variant": null
-  }
-},
-{
-  "model": "hotels.room",
-  "pk": 360,
-  "fields": {
-    "hotel": 58,
-    "room_type": 44,
-    "bed_count": 2,
-    "is_pets_allowed": false,
-    "is_smoking_allowed": false,
-    "price_per_night": "19961.32",
-    "extra_pay_per_person": "5196.14",
-    "floor": 8,
-    "number_on_floor": 1,
-    "variant": null
-  }
-},
-{
-  "model": "hotels.room",
-  "pk": 361,
-  "fields": {
-    "hotel": 59,
-    "room_type": 35,
-    "bed_count": 6,
-    "is_pets_allowed": false,
-    "is_smoking_allowed": false,
-    "price_per_night": "9743.42",
-    "extra_pay_per_person": "2664.12",
-    "floor": 1,
-    "number_on_floor": 1,
-    "variant": null
-  }
-},
-{
-  "model": "hotels.room",
-  "pk": 362,
-  "fields": {
-    "hotel": 59,
-    "room_type": 35,
+    "hotel": 2,
+    "room_type": 1,
     "bed_count": 9,
     "is_pets_allowed": true,
     "is_smoking_allowed": false,
-    "price_per_night": "2435.55",
-    "extra_pay_per_person": "727.33",
-    "floor": 2,
-    "number_on_floor": 1,
-    "variant": null
-  }
-},
-{
-  "model": "hotels.room",
-  "pk": 363,
-  "fields": {
-    "hotel": 59,
-    "room_type": 35,
-    "bed_count": 8,
-    "is_pets_allowed": false,
-    "is_smoking_allowed": false,
-    "price_per_night": "9188.52",
-    "extra_pay_per_person": "2969.84",
+    "price_per_night": "16187.22",
+    "extra_pay_per_person": "4708.12",
     "floor": 2,
     "number_on_floor": 2,
+    "variant": null
+  }
+},
+{
+  "model": "hotels.room",
+  "pk": 29,
+  "fields": {
+    "hotel": 2,
+    "room_type": 1,
+    "bed_count": 5,
+    "is_pets_allowed": false,
+    "is_smoking_allowed": false,
+    "price_per_night": "16612.88",
+    "extra_pay_per_person": "5565.39",
+    "floor": 2,
+    "number_on_floor": 3,
     "variant": "A"
   }
 },
 {
   "model": "hotels.room",
-  "pk": 364,
+  "pk": 30,
   "fields": {
-    "hotel": 59,
-    "room_type": 36,
-    "bed_count": 8,
-    "is_pets_allowed": true,
-    "is_smoking_allowed": false,
-    "price_per_night": "15841.31",
-    "extra_pay_per_person": "4990.88",
-    "floor": 3,
-    "number_on_floor": 1,
-    "variant": "A"
-  }
-},
-{
-  "model": "hotels.room",
-  "pk": 365,
-  "fields": {
-    "hotel": 59,
-    "room_type": 34,
-    "bed_count": 6,
-    "is_pets_allowed": true,
-    "is_smoking_allowed": true,
-    "price_per_night": "16182.11",
-    "extra_pay_per_person": "5146.94",
-    "floor": 3,
-    "number_on_floor": 2,
-    "variant": null
-  }
-},
-{
-  "model": "hotels.room",
-  "pk": 366,
-  "fields": {
-    "hotel": 59,
-    "room_type": 40,
-    "bed_count": 10,
-    "is_pets_allowed": false,
-    "is_smoking_allowed": false,
-    "price_per_night": "11768.28",
-    "extra_pay_per_person": "5386.51",
-    "floor": 4,
-    "number_on_floor": 1,
-    "variant": null
-  }
-},
-{
-  "model": "hotels.room",
-  "pk": 367,
-  "fields": {
-    "hotel": 59,
-    "room_type": 40,
-    "bed_count": 7,
-    "is_pets_allowed": false,
-    "is_smoking_allowed": true,
-    "price_per_night": "4417.68",
-    "extra_pay_per_person": "1169.48",
-    "floor": 4,
-    "number_on_floor": 2,
-    "variant": "A"
-  }
-},
-{
-  "model": "hotels.room",
-  "pk": 368,
-  "fields": {
-    "hotel": 59,
-    "room_type": 40,
-    "bed_count": 8,
-    "is_pets_allowed": false,
-    "is_smoking_allowed": false,
-    "price_per_night": "12926.71",
-    "extra_pay_per_person": "3739.92",
-    "floor": 5,
-    "number_on_floor": 1,
-    "variant": null
-  }
-},
-{
-  "model": "hotels.room",
-  "pk": 369,
-  "fields": {
-    "hotel": 59,
-    "room_type": 41,
-    "bed_count": 1,
-    "is_pets_allowed": true,
-    "is_smoking_allowed": false,
-    "price_per_night": "12463.97",
-    "extra_pay_per_person": "3161.47",
-    "floor": 5,
-    "number_on_floor": 2,
-    "variant": null
-  }
-},
-{
-  "model": "hotels.room",
-  "pk": 370,
-  "fields": {
-    "hotel": 59,
-    "room_type": 45,
-    "bed_count": 6,
-    "is_pets_allowed": false,
-    "is_smoking_allowed": false,
-    "price_per_night": "6660.76",
-    "extra_pay_per_person": "3182.39",
-    "floor": 6,
-    "number_on_floor": 1,
-    "variant": "A"
-  }
-},
-{
-  "model": "hotels.room",
-  "pk": 371,
-  "fields": {
-    "hotel": 59,
-    "room_type": 45,
-    "bed_count": 1,
-    "is_pets_allowed": false,
-    "is_smoking_allowed": false,
-    "price_per_night": "14323.51",
-    "extra_pay_per_person": "4420.30",
-    "floor": 6,
-    "number_on_floor": 1,
-    "variant": "B"
-  }
-},
-{
-  "model": "hotels.room",
-  "pk": 372,
-  "fields": {
-    "hotel": 59,
-    "room_type": 39,
-    "bed_count": 4,
-    "is_pets_allowed": false,
-    "is_smoking_allowed": true,
-    "price_per_night": "3585.00",
-    "extra_pay_per_person": "1736.58",
-    "floor": 7,
-    "number_on_floor": 1,
-    "variant": null
-  }
-},
-{
-  "model": "hotels.room",
-  "pk": 373,
-  "fields": {
-    "hotel": 59,
-    "room_type": 35,
-    "bed_count": 4,
-    "is_pets_allowed": false,
-    "is_smoking_allowed": false,
-    "price_per_night": "1661.96",
-    "extra_pay_per_person": "649.82",
-    "floor": 7,
-    "number_on_floor": 2,
-    "variant": null
-  }
-},
-{
-  "model": "hotels.room",
-  "pk": 374,
-  "fields": {
-    "hotel": 59,
-    "room_type": 36,
+    "hotel": 2,
+    "room_type": 1,
     "bed_count": 3,
     "is_pets_allowed": false,
     "is_smoking_allowed": false,
-    "price_per_night": "19814.37",
-    "extra_pay_per_person": "7384.19",
+    "price_per_night": "9874.83",
+    "extra_pay_per_person": "3499.62",
+    "floor": 3,
+    "number_on_floor": 1,
+    "variant": null
+  }
+},
+{
+  "model": "hotels.room",
+  "pk": 31,
+  "fields": {
+    "hotel": 2,
+    "room_type": 10,
+    "bed_count": 9,
+    "is_pets_allowed": false,
+    "is_smoking_allowed": false,
+    "price_per_night": "4062.82",
+    "extra_pay_per_person": "1724.41",
+    "floor": 3,
+    "number_on_floor": 2,
+    "variant": null
+  }
+},
+{
+  "model": "hotels.room",
+  "pk": 32,
+  "fields": {
+    "hotel": 2,
+    "room_type": 10,
+    "bed_count": 10,
+    "is_pets_allowed": true,
+    "is_smoking_allowed": false,
+    "price_per_night": "3213.73",
+    "extra_pay_per_person": "1189.56",
+    "floor": 3,
+    "number_on_floor": 3,
+    "variant": "A"
+  }
+},
+{
+  "model": "hotels.room",
+  "pk": 33,
+  "fields": {
+    "hotel": 2,
+    "room_type": 5,
+    "bed_count": 4,
+    "is_pets_allowed": false,
+    "is_smoking_allowed": false,
+    "price_per_night": "8247.80",
+    "extra_pay_per_person": "3677.28",
+    "floor": 4,
+    "number_on_floor": 1,
+    "variant": null
+  }
+},
+{
+  "model": "hotels.room",
+  "pk": 34,
+  "fields": {
+    "hotel": 2,
+    "room_type": 11,
+    "bed_count": 3,
+    "is_pets_allowed": false,
+    "is_smoking_allowed": true,
+    "price_per_night": "11599.16",
+    "extra_pay_per_person": "3206.83",
+    "floor": 4,
+    "number_on_floor": 2,
+    "variant": null
+  }
+},
+{
+  "model": "hotels.room",
+  "pk": 35,
+  "fields": {
+    "hotel": 2,
+    "room_type": 5,
+    "bed_count": 2,
+    "is_pets_allowed": false,
+    "is_smoking_allowed": false,
+    "price_per_night": "15777.89",
+    "extra_pay_per_person": "7523.59",
+    "floor": 4,
+    "number_on_floor": 3,
+    "variant": null
+  }
+},
+{
+  "model": "hotels.room",
+  "pk": 36,
+  "fields": {
+    "hotel": 2,
+    "room_type": 9,
+    "bed_count": 7,
+    "is_pets_allowed": false,
+    "is_smoking_allowed": false,
+    "price_per_night": "12571.34",
+    "extra_pay_per_person": "3875.94",
+    "floor": 5,
+    "number_on_floor": 1,
+    "variant": "A"
+  }
+},
+{
+  "model": "hotels.room",
+  "pk": 37,
+  "fields": {
+    "hotel": 2,
+    "room_type": 11,
+    "bed_count": 3,
+    "is_pets_allowed": false,
+    "is_smoking_allowed": false,
+    "price_per_night": "8440.73",
+    "extra_pay_per_person": "2547.79",
+    "floor": 5,
+    "number_on_floor": 2,
+    "variant": null
+  }
+},
+{
+  "model": "hotels.room",
+  "pk": 38,
+  "fields": {
+    "hotel": 2,
+    "room_type": 8,
+    "bed_count": 7,
+    "is_pets_allowed": false,
+    "is_smoking_allowed": false,
+    "price_per_night": "13924.50",
+    "extra_pay_per_person": "5655.60",
+    "floor": 6,
+    "number_on_floor": 1,
+    "variant": null
+  }
+},
+{
+  "model": "hotels.room",
+  "pk": 39,
+  "fields": {
+    "hotel": 2,
+    "room_type": 13,
+    "bed_count": 1,
+    "is_pets_allowed": false,
+    "is_smoking_allowed": true,
+    "price_per_night": "11210.01",
+    "extra_pay_per_person": "4414.83",
+    "floor": 6,
+    "number_on_floor": 2,
+    "variant": null
+  }
+},
+{
+  "model": "hotels.room",
+  "pk": 40,
+  "fields": {
+    "hotel": 2,
+    "room_type": 2,
+    "bed_count": 3,
+    "is_pets_allowed": false,
+    "is_smoking_allowed": false,
+    "price_per_night": "9510.62",
+    "extra_pay_per_person": "2379.50",
+    "floor": 7,
+    "number_on_floor": 1,
+    "variant": null
+  }
+},
+{
+  "model": "hotels.room",
+  "pk": 41,
+  "fields": {
+    "hotel": 2,
+    "room_type": 9,
+    "bed_count": 4,
+    "is_pets_allowed": false,
+    "is_smoking_allowed": false,
+    "price_per_night": "15467.59",
+    "extra_pay_per_person": "6398.31",
+    "floor": 7,
+    "number_on_floor": 2,
+    "variant": null
+  }
+},
+{
+  "model": "hotels.room",
+  "pk": 42,
+  "fields": {
+    "hotel": 2,
+    "room_type": 5,
+    "bed_count": 2,
+    "is_pets_allowed": false,
+    "is_smoking_allowed": false,
+    "price_per_night": "11809.23",
+    "extra_pay_per_person": "3884.56",
     "floor": 8,
     "number_on_floor": 1,
     "variant": null
@@ -2492,15 +1118,15 @@
 },
 {
   "model": "hotels.room",
-  "pk": 375,
+  "pk": 43,
   "fields": {
-    "hotel": 59,
-    "room_type": 34,
-    "bed_count": 4,
+    "hotel": 2,
+    "room_type": 9,
+    "bed_count": 5,
     "is_pets_allowed": false,
-    "is_smoking_allowed": false,
-    "price_per_night": "3658.96",
-    "extra_pay_per_person": "1330.22",
+    "is_smoking_allowed": true,
+    "price_per_night": "5887.37",
+    "extra_pay_per_person": "2619.09",
     "floor": 8,
     "number_on_floor": 2,
     "variant": null
@@ -2508,31 +1134,31 @@
 },
 {
   "model": "hotels.room",
-  "pk": 376,
+  "pk": 44,
   "fields": {
-    "hotel": 59,
-    "room_type": 38,
-    "bed_count": 10,
+    "hotel": 2,
+    "room_type": 15,
+    "bed_count": 3,
     "is_pets_allowed": false,
-    "is_smoking_allowed": false,
-    "price_per_night": "18259.81",
-    "extra_pay_per_person": "8040.38",
+    "is_smoking_allowed": true,
+    "price_per_night": "19207.55",
+    "extra_pay_per_person": "5862.08",
     "floor": 9,
     "number_on_floor": 1,
-    "variant": "A"
+    "variant": null
   }
 },
 {
   "model": "hotels.room",
-  "pk": 377,
+  "pk": 45,
   "fields": {
-    "hotel": 59,
-    "room_type": 44,
-    "bed_count": 4,
-    "is_pets_allowed": true,
-    "is_smoking_allowed": false,
-    "price_per_night": "7572.99",
-    "extra_pay_per_person": "2449.04",
+    "hotel": 2,
+    "room_type": 9,
+    "bed_count": 5,
+    "is_pets_allowed": false,
+    "is_smoking_allowed": true,
+    "price_per_night": "10998.57",
+    "extra_pay_per_person": "3499.58",
     "floor": 9,
     "number_on_floor": 2,
     "variant": null
@@ -2540,15 +1166,15 @@
 },
 {
   "model": "hotels.room",
-  "pk": 378,
+  "pk": 46,
   "fields": {
-    "hotel": 59,
-    "room_type": 35,
-    "bed_count": 10,
+    "hotel": 2,
+    "room_type": 9,
+    "bed_count": 8,
     "is_pets_allowed": true,
     "is_smoking_allowed": false,
-    "price_per_night": "15740.99",
-    "extra_pay_per_person": "4290.80",
+    "price_per_night": "8735.66",
+    "extra_pay_per_person": "3893.43",
     "floor": 10,
     "number_on_floor": 1,
     "variant": null
@@ -2556,671 +1182,1183 @@
 },
 {
   "model": "hotels.room",
-  "pk": 379,
+  "pk": 47,
   "fields": {
-    "hotel": 59,
-    "room_type": 40,
-    "bed_count": 3,
-    "is_pets_allowed": true,
+    "hotel": 2,
+    "room_type": 9,
+    "bed_count": 9,
+    "is_pets_allowed": false,
     "is_smoking_allowed": false,
-    "price_per_night": "11414.93",
-    "extra_pay_per_person": "2954.60",
+    "price_per_night": "859.84",
+    "extra_pay_per_person": "257.64",
     "floor": 10,
     "number_on_floor": 2,
-    "variant": null
+    "variant": "A"
   }
 },
 {
   "model": "hotels.room",
-  "pk": 380,
+  "pk": 48,
   "fields": {
-    "hotel": 59,
-    "room_type": 34,
-    "bed_count": 7,
+    "hotel": 2,
+    "room_type": 8,
+    "bed_count": 10,
     "is_pets_allowed": false,
     "is_smoking_allowed": false,
-    "price_per_night": "15135.45",
-    "extra_pay_per_person": "4905.35",
+    "price_per_night": "4403.71",
+    "extra_pay_per_person": "1903.35",
     "floor": 11,
     "number_on_floor": 1,
-    "variant": "A"
-  }
-},
-{
-  "model": "hotels.room",
-  "pk": 381,
-  "fields": {
-    "hotel": 60,
-    "room_type": 36,
-    "bed_count": 10,
-    "is_pets_allowed": true,
-    "is_smoking_allowed": false,
-    "price_per_night": "11211.14",
-    "extra_pay_per_person": "4813.41",
-    "floor": 1,
-    "number_on_floor": 1,
-    "variant": "A"
-  }
-},
-{
-  "model": "hotels.room",
-  "pk": 382,
-  "fields": {
-    "hotel": 60,
-    "room_type": 40,
-    "bed_count": 8,
-    "is_pets_allowed": false,
-    "is_smoking_allowed": true,
-    "price_per_night": "10425.94",
-    "extra_pay_per_person": "3131.66",
-    "floor": 1,
-    "number_on_floor": 2,
     "variant": null
   }
 },
 {
   "model": "hotels.room",
-  "pk": 383,
+  "pk": 49,
   "fields": {
-    "hotel": 60,
-    "room_type": 38,
-    "bed_count": 6,
-    "is_pets_allowed": false,
-    "is_smoking_allowed": false,
-    "price_per_night": "15648.64",
-    "extra_pay_per_person": "6789.72",
-    "floor": 2,
-    "number_on_floor": 1,
-    "variant": "A"
-  }
-},
-{
-  "model": "hotels.room",
-  "pk": 384,
-  "fields": {
-    "hotel": 60,
-    "room_type": 33,
-    "bed_count": 5,
-    "is_pets_allowed": true,
-    "is_smoking_allowed": false,
-    "price_per_night": "7380.75",
-    "extra_pay_per_person": "2109.72",
-    "floor": 2,
-    "number_on_floor": 2,
-    "variant": null
-  }
-},
-{
-  "model": "hotels.room",
-  "pk": 385,
-  "fields": {
-    "hotel": 60,
-    "room_type": 34,
-    "bed_count": 2,
-    "is_pets_allowed": false,
-    "is_smoking_allowed": false,
-    "price_per_night": "9865.10",
-    "extra_pay_per_person": "2671.02",
-    "floor": 2,
-    "number_on_floor": 3,
-    "variant": null
-  }
-},
-{
-  "model": "hotels.room",
-  "pk": 386,
-  "fields": {
-    "hotel": 60,
-    "room_type": 37,
+    "hotel": 3,
+    "room_type": 3,
     "bed_count": 1,
-    "is_pets_allowed": false,
-    "is_smoking_allowed": false,
-    "price_per_night": "6009.99",
-    "extra_pay_per_person": "2459.10",
-    "floor": 3,
-    "number_on_floor": 1,
-    "variant": "A"
-  }
-},
-{
-  "model": "hotels.room",
-  "pk": 387,
-  "fields": {
-    "hotel": 60,
-    "room_type": 39,
-    "bed_count": 7,
-    "is_pets_allowed": false,
-    "is_smoking_allowed": false,
-    "price_per_night": "5045.80",
-    "extra_pay_per_person": "1627.34",
-    "floor": 3,
-    "number_on_floor": 2,
-    "variant": null
-  }
-},
-{
-  "model": "hotels.room",
-  "pk": 388,
-  "fields": {
-    "hotel": 60,
-    "room_type": 34,
-    "bed_count": 2,
-    "is_pets_allowed": false,
-    "is_smoking_allowed": false,
-    "price_per_night": "16234.70",
-    "extra_pay_per_person": "4396.98",
-    "floor": 4,
-    "number_on_floor": 1,
-    "variant": null
-  }
-},
-{
-  "model": "hotels.room",
-  "pk": 389,
-  "fields": {
-    "hotel": 60,
-    "room_type": 40,
-    "bed_count": 10,
     "is_pets_allowed": true,
     "is_smoking_allowed": false,
-    "price_per_night": "6176.77",
-    "extra_pay_per_person": "1990.94",
-    "floor": 4,
-    "number_on_floor": 2,
-    "variant": null
-  }
-},
-{
-  "model": "hotels.room",
-  "pk": 390,
-  "fields": {
-    "hotel": 60,
-    "room_type": 39,
-    "bed_count": 3,
-    "is_pets_allowed": true,
-    "is_smoking_allowed": false,
-    "price_per_night": "4486.32",
-    "extra_pay_per_person": "1495.32",
-    "floor": 5,
-    "number_on_floor": 1,
-    "variant": null
-  }
-},
-{
-  "model": "hotels.room",
-  "pk": 391,
-  "fields": {
-    "hotel": 60,
-    "room_type": 39,
-    "bed_count": 5,
-    "is_pets_allowed": false,
-    "is_smoking_allowed": false,
-    "price_per_night": "9054.09",
-    "extra_pay_per_person": "2389.94",
-    "floor": 5,
-    "number_on_floor": 2,
-    "variant": "A"
-  }
-},
-{
-  "model": "hotels.room",
-  "pk": 392,
-  "fields": {
-    "hotel": 60,
-    "room_type": 39,
-    "bed_count": 5,
-    "is_pets_allowed": true,
-    "is_smoking_allowed": true,
-    "price_per_night": "5954.60",
-    "extra_pay_per_person": "2008.43",
-    "floor": 6,
-    "number_on_floor": 1,
-    "variant": null
-  }
-},
-{
-  "model": "hotels.room",
-  "pk": 393,
-  "fields": {
-    "hotel": 60,
-    "room_type": 45,
-    "bed_count": 9,
-    "is_pets_allowed": false,
-    "is_smoking_allowed": true,
-    "price_per_night": "18300.81",
-    "extra_pay_per_person": "7002.56",
-    "floor": 6,
-    "number_on_floor": 2,
-    "variant": null
-  }
-},
-{
-  "model": "hotels.room",
-  "pk": 394,
-  "fields": {
-    "hotel": 60,
-    "room_type": 36,
-    "bed_count": 6,
-    "is_pets_allowed": false,
-    "is_smoking_allowed": false,
-    "price_per_night": "4075.12",
-    "extra_pay_per_person": "1806.46",
-    "floor": 7,
-    "number_on_floor": 1,
-    "variant": null
-  }
-},
-{
-  "model": "hotels.room",
-  "pk": 395,
-  "fields": {
-    "hotel": 60,
-    "room_type": 36,
-    "bed_count": 3,
-    "is_pets_allowed": false,
-    "is_smoking_allowed": false,
-    "price_per_night": "12555.41",
-    "extra_pay_per_person": "3485.12",
-    "floor": 7,
-    "number_on_floor": 2,
-    "variant": "A"
-  }
-},
-{
-  "model": "hotels.room",
-  "pk": 396,
-  "fields": {
-    "hotel": 60,
-    "room_type": 35,
-    "bed_count": 9,
-    "is_pets_allowed": false,
-    "is_smoking_allowed": true,
-    "price_per_night": "1794.88",
-    "extra_pay_per_person": "756.06",
-    "floor": 8,
-    "number_on_floor": 1,
-    "variant": null
-  }
-},
-{
-  "model": "hotels.room",
-  "pk": 397,
-  "fields": {
-    "hotel": 60,
-    "room_type": 34,
-    "bed_count": 9,
-    "is_pets_allowed": true,
-    "is_smoking_allowed": true,
-    "price_per_night": "1821.11",
-    "extra_pay_per_person": "507.49",
-    "floor": 8,
-    "number_on_floor": 2,
-    "variant": null
-  }
-},
-{
-  "model": "hotels.room",
-  "pk": 398,
-  "fields": {
-    "hotel": 60,
-    "room_type": 44,
-    "bed_count": 6,
-    "is_pets_allowed": false,
-    "is_smoking_allowed": false,
-    "price_per_night": "15110.17",
-    "extra_pay_per_person": "3813.57",
-    "floor": 9,
-    "number_on_floor": 1,
-    "variant": null
-  }
-},
-{
-  "model": "hotels.room",
-  "pk": 399,
-  "fields": {
-    "hotel": 60,
-    "room_type": 44,
-    "bed_count": 9,
-    "is_pets_allowed": false,
-    "is_smoking_allowed": false,
-    "price_per_night": "15142.26",
-    "extra_pay_per_person": "4912.51",
-    "floor": 9,
-    "number_on_floor": 2,
-    "variant": "A"
-  }
-},
-{
-  "model": "hotels.room",
-  "pk": 400,
-  "fields": {
-    "hotel": 60,
-    "room_type": 35,
-    "bed_count": 5,
-    "is_pets_allowed": false,
-    "is_smoking_allowed": false,
-    "price_per_night": "8347.48",
-    "extra_pay_per_person": "3299.54",
-    "floor": 10,
-    "number_on_floor": 1,
-    "variant": null
-  }
-},
-{
-  "model": "hotels.room",
-  "pk": 401,
-  "fields": {
-    "hotel": 61,
-    "room_type": 34,
-    "bed_count": 8,
-    "is_pets_allowed": false,
-    "is_smoking_allowed": false,
-    "price_per_night": "6241.35",
-    "extra_pay_per_person": "1622.07",
+    "price_per_night": "15053.28",
+    "extra_pay_per_person": "5651.58",
     "floor": 1,
     "number_on_floor": 1,
-    "variant": null
-  }
-},
-{
-  "model": "hotels.room",
-  "pk": 402,
-  "fields": {
-    "hotel": 61,
-    "room_type": 34,
-    "bed_count": 4,
-    "is_pets_allowed": false,
-    "is_smoking_allowed": false,
-    "price_per_night": "5063.18",
-    "extra_pay_per_person": "1557.86",
-    "floor": 1,
-    "number_on_floor": 2,
     "variant": "A"
   }
 },
 {
   "model": "hotels.room",
-  "pk": 403,
+  "pk": 50,
   "fields": {
-    "hotel": 61,
-    "room_type": 34,
-    "bed_count": 2,
-    "is_pets_allowed": false,
-    "is_smoking_allowed": true,
-    "price_per_night": "16847.21",
-    "extra_pay_per_person": "4572.57",
-    "floor": 2,
-    "number_on_floor": 1,
-    "variant": null
-  }
-},
-{
-  "model": "hotels.room",
-  "pk": 404,
-  "fields": {
-    "hotel": 61,
-    "room_type": 42,
-    "bed_count": 7,
-    "is_pets_allowed": false,
-    "is_smoking_allowed": true,
-    "price_per_night": "15156.00",
-    "extra_pay_per_person": "6200.87",
-    "floor": 2,
-    "number_on_floor": 2,
-    "variant": null
-  }
-},
-{
-  "model": "hotels.room",
-  "pk": 405,
-  "fields": {
-    "hotel": 61,
-    "room_type": 38,
-    "bed_count": 2,
-    "is_pets_allowed": false,
-    "is_smoking_allowed": false,
-    "price_per_night": "19743.77",
-    "extra_pay_per_person": "9395.91",
-    "floor": 2,
-    "number_on_floor": 3,
-    "variant": null
-  }
-},
-{
-  "model": "hotels.room",
-  "pk": 406,
-  "fields": {
-    "hotel": 61,
-    "room_type": 32,
+    "hotel": 3,
+    "room_type": 3,
     "bed_count": 8,
-    "is_pets_allowed": false,
-    "is_smoking_allowed": false,
-    "price_per_night": "913.46",
-    "extra_pay_per_person": "377.56",
-    "floor": 3,
-    "number_on_floor": 1,
-    "variant": null
-  }
-},
-{
-  "model": "hotels.room",
-  "pk": 407,
-  "fields": {
-    "hotel": 61,
-    "room_type": 43,
-    "bed_count": 3,
-    "is_pets_allowed": false,
-    "is_smoking_allowed": false,
-    "price_per_night": "12013.62",
-    "extra_pay_per_person": "5004.88",
-    "floor": 3,
-    "number_on_floor": 2,
-    "variant": null
-  }
-},
-{
-  "model": "hotels.room",
-  "pk": 408,
-  "fields": {
-    "hotel": 61,
-    "room_type": 34,
-    "bed_count": 9,
-    "is_pets_allowed": false,
-    "is_smoking_allowed": false,
-    "price_per_night": "12001.41",
-    "extra_pay_per_person": "5467.19",
-    "floor": 4,
-    "number_on_floor": 1,
-    "variant": null
-  }
-},
-{
-  "model": "hotels.room",
-  "pk": 409,
-  "fields": {
-    "hotel": 61,
-    "room_type": 34,
-    "bed_count": 5,
-    "is_pets_allowed": false,
-    "is_smoking_allowed": true,
-    "price_per_night": "12595.67",
-    "extra_pay_per_person": "3624.77",
-    "floor": 4,
-    "number_on_floor": 2,
-    "variant": "A"
-  }
-},
-{
-  "model": "hotels.room",
-  "pk": 410,
-  "fields": {
-    "hotel": 61,
-    "room_type": 37,
-    "bed_count": 2,
     "is_pets_allowed": true,
-    "is_smoking_allowed": true,
-    "price_per_night": "11481.57",
-    "extra_pay_per_person": "5451.71",
-    "floor": 5,
-    "number_on_floor": 1,
-    "variant": null
-  }
-},
-{
-  "model": "hotels.room",
-  "pk": 411,
-  "fields": {
-    "hotel": 61,
-    "room_type": 36,
-    "bed_count": 2,
-    "is_pets_allowed": true,
-    "is_smoking_allowed": true,
-    "price_per_night": "2909.17",
-    "extra_pay_per_person": "1435.89",
-    "floor": 5,
-    "number_on_floor": 2,
-    "variant": null
-  }
-},
-{
-  "model": "hotels.room",
-  "pk": 412,
-  "fields": {
-    "hotel": 61,
-    "room_type": 44,
-    "bed_count": 2,
-    "is_pets_allowed": false,
-    "is_smoking_allowed": true,
-    "price_per_night": "14717.70",
-    "extra_pay_per_person": "5983.14",
-    "floor": 6,
-    "number_on_floor": 1,
-    "variant": null
-  }
-},
-{
-  "model": "hotels.room",
-  "pk": 413,
-  "fields": {
-    "hotel": 61,
-    "room_type": 43,
-    "bed_count": 4,
-    "is_pets_allowed": false,
     "is_smoking_allowed": false,
-    "price_per_night": "18482.74",
-    "extra_pay_per_person": "5511.85",
-    "floor": 6,
-    "number_on_floor": 2,
-    "variant": null
-  }
-},
-{
-  "model": "hotels.room",
-  "pk": 414,
-  "fields": {
-    "hotel": 61,
-    "room_type": 44,
-    "bed_count": 1,
-    "is_pets_allowed": false,
-    "is_smoking_allowed": false,
-    "price_per_night": "3957.32",
-    "extra_pay_per_person": "1106.42",
-    "floor": 7,
-    "number_on_floor": 1,
-    "variant": "A"
-  }
-},
-{
-  "model": "hotels.room",
-  "pk": 415,
-  "fields": {
-    "hotel": 61,
-    "room_type": 33,
-    "bed_count": 2,
-    "is_pets_allowed": false,
-    "is_smoking_allowed": false,
-    "price_per_night": "16536.04",
-    "extra_pay_per_person": "5448.41",
-    "floor": 7,
-    "number_on_floor": 2,
-    "variant": null
-  }
-},
-{
-  "model": "hotels.room",
-  "pk": 416,
-  "fields": {
-    "hotel": 61,
-    "room_type": 43,
-    "bed_count": 7,
-    "is_pets_allowed": false,
-    "is_smoking_allowed": false,
-    "price_per_night": "18984.57",
-    "extra_pay_per_person": "5189.49",
-    "floor": 8,
-    "number_on_floor": 1,
-    "variant": "A"
-  }
-},
-{
-  "model": "hotels.room",
-  "pk": 417,
-  "fields": {
-    "hotel": 61,
-    "room_type": 43,
-    "bed_count": 6,
-    "is_pets_allowed": false,
-    "is_smoking_allowed": false,
-    "price_per_night": "6124.33",
-    "extra_pay_per_person": "2511.41",
-    "floor": 8,
+    "price_per_night": "15051.00",
+    "extra_pay_per_person": "3859.80",
+    "floor": 1,
     "number_on_floor": 1,
     "variant": "B"
   }
 },
 {
   "model": "hotels.room",
-  "pk": 418,
+  "pk": 51,
   "fields": {
-    "hotel": 61,
-    "room_type": 41,
-    "bed_count": 4,
+    "hotel": 3,
+    "room_type": 3,
+    "bed_count": 7,
     "is_pets_allowed": false,
     "is_smoking_allowed": false,
-    "price_per_night": "1919.50",
-    "extra_pay_per_person": "581.71",
-    "floor": 9,
+    "price_per_night": "17198.44",
+    "extra_pay_per_person": "7410.43",
+    "floor": 1,
     "number_on_floor": 1,
-    "variant": null
+    "variant": "C"
   }
 },
 {
   "model": "hotels.room",
-  "pk": 419,
+  "pk": 52,
   "fields": {
-    "hotel": 61,
-    "room_type": 44,
-    "bed_count": 1,
+    "hotel": 3,
+    "room_type": 13,
+    "bed_count": 7,
     "is_pets_allowed": false,
-    "is_smoking_allowed": true,
-    "price_per_night": "3460.94",
-    "extra_pay_per_person": "989.40",
-    "floor": 9,
+    "is_smoking_allowed": false,
+    "price_per_night": "14784.25",
+    "extra_pay_per_person": "6431.17",
+    "floor": 2,
+    "number_on_floor": 1,
+    "variant": "A"
+  }
+},
+{
+  "model": "hotels.room",
+  "pk": 53,
+  "fields": {
+    "hotel": 3,
+    "room_type": 5,
+    "bed_count": 4,
+    "is_pets_allowed": false,
+    "is_smoking_allowed": false,
+    "price_per_night": "17533.11",
+    "extra_pay_per_person": "6379.16",
+    "floor": 2,
     "number_on_floor": 2,
     "variant": null
   }
 },
 {
   "model": "hotels.room",
-  "pk": 420,
+  "pk": 54,
   "fields": {
-    "hotel": 61,
-    "room_type": 36,
+    "hotel": 3,
+    "room_type": 14,
+    "bed_count": 5,
+    "is_pets_allowed": false,
+    "is_smoking_allowed": true,
+    "price_per_night": "11040.95",
+    "extra_pay_per_person": "4530.78",
+    "floor": 2,
+    "number_on_floor": 3,
+    "variant": null
+  }
+},
+{
+  "model": "hotels.room",
+  "pk": 55,
+  "fields": {
+    "hotel": 3,
+    "room_type": 1,
+    "bed_count": 6,
+    "is_pets_allowed": false,
+    "is_smoking_allowed": false,
+    "price_per_night": "4097.14",
+    "extra_pay_per_person": "1346.34",
+    "floor": 2,
+    "number_on_floor": 4,
+    "variant": null
+  }
+},
+{
+  "model": "hotels.room",
+  "pk": 56,
+  "fields": {
+    "hotel": 3,
+    "room_type": 12,
+    "bed_count": 7,
+    "is_pets_allowed": false,
+    "is_smoking_allowed": true,
+    "price_per_night": "9517.30",
+    "extra_pay_per_person": "4239.76",
+    "floor": 3,
+    "number_on_floor": 1,
+    "variant": null
+  }
+},
+{
+  "model": "hotels.room",
+  "pk": 57,
+  "fields": {
+    "hotel": 3,
+    "room_type": 1,
+    "bed_count": 7,
+    "is_pets_allowed": false,
+    "is_smoking_allowed": false,
+    "price_per_night": "3096.44",
+    "extra_pay_per_person": "998.14",
+    "floor": 3,
+    "number_on_floor": 2,
+    "variant": null
+  }
+},
+{
+  "model": "hotels.room",
+  "pk": 58,
+  "fields": {
+    "hotel": 3,
+    "room_type": 11,
+    "bed_count": 2,
+    "is_pets_allowed": true,
+    "is_smoking_allowed": false,
+    "price_per_night": "12199.55",
+    "extra_pay_per_person": "5954.63",
+    "floor": 3,
+    "number_on_floor": 3,
+    "variant": null
+  }
+},
+{
+  "model": "hotels.room",
+  "pk": 59,
+  "fields": {
+    "hotel": 3,
+    "room_type": 8,
+    "bed_count": 1,
+    "is_pets_allowed": true,
+    "is_smoking_allowed": true,
+    "price_per_night": "4146.86",
+    "extra_pay_per_person": "1129.63",
+    "floor": 3,
+    "number_on_floor": 4,
+    "variant": null
+  }
+},
+{
+  "model": "hotels.room",
+  "pk": 60,
+  "fields": {
+    "hotel": 3,
+    "room_type": 13,
+    "bed_count": 1,
+    "is_pets_allowed": false,
+    "is_smoking_allowed": false,
+    "price_per_night": "12171.28",
+    "extra_pay_per_person": "4929.36",
+    "floor": 4,
+    "number_on_floor": 1,
+    "variant": null
+  }
+},
+{
+  "model": "hotels.room",
+  "pk": 61,
+  "fields": {
+    "hotel": 3,
+    "room_type": 3,
+    "bed_count": 9,
+    "is_pets_allowed": false,
+    "is_smoking_allowed": false,
+    "price_per_night": "16817.63",
+    "extra_pay_per_person": "6288.81",
+    "floor": 4,
+    "number_on_floor": 2,
+    "variant": null
+  }
+},
+{
+  "model": "hotels.room",
+  "pk": 62,
+  "fields": {
+    "hotel": 3,
+    "room_type": 6,
+    "bed_count": 9,
+    "is_pets_allowed": false,
+    "is_smoking_allowed": false,
+    "price_per_night": "1751.00",
+    "extra_pay_per_person": "766.33",
+    "floor": 4,
+    "number_on_floor": 3,
+    "variant": null
+  }
+},
+{
+  "model": "hotels.room",
+  "pk": 63,
+  "fields": {
+    "hotel": 3,
+    "room_type": 13,
+    "bed_count": 8,
+    "is_pets_allowed": false,
+    "is_smoking_allowed": false,
+    "price_per_night": "16915.45",
+    "extra_pay_per_person": "7276.51",
+    "floor": 4,
+    "number_on_floor": 4,
+    "variant": null
+  }
+},
+{
+  "model": "hotels.room",
+  "pk": 64,
+  "fields": {
+    "hotel": 3,
+    "room_type": 7,
+    "bed_count": 9,
+    "is_pets_allowed": false,
+    "is_smoking_allowed": false,
+    "price_per_night": "13310.86",
+    "extra_pay_per_person": "6309.58",
+    "floor": 5,
+    "number_on_floor": 1,
+    "variant": null
+  }
+},
+{
+  "model": "hotels.room",
+  "pk": 65,
+  "fields": {
+    "hotel": 3,
+    "room_type": 5,
+    "bed_count": 4,
+    "is_pets_allowed": true,
+    "is_smoking_allowed": false,
+    "price_per_night": "19773.05",
+    "extra_pay_per_person": "8207.45",
+    "floor": 5,
+    "number_on_floor": 2,
+    "variant": null
+  }
+},
+{
+  "model": "hotels.room",
+  "pk": 66,
+  "fields": {
+    "hotel": 3,
+    "room_type": 5,
+    "bed_count": 3,
+    "is_pets_allowed": false,
+    "is_smoking_allowed": false,
+    "price_per_night": "14600.39",
+    "extra_pay_per_person": "5842.54",
+    "floor": 5,
+    "number_on_floor": 3,
+    "variant": "A"
+  }
+},
+{
+  "model": "hotels.room",
+  "pk": 67,
+  "fields": {
+    "hotel": 3,
+    "room_type": 11,
+    "bed_count": 8,
+    "is_pets_allowed": true,
+    "is_smoking_allowed": false,
+    "price_per_night": "8674.84",
+    "extra_pay_per_person": "3140.59",
+    "floor": 5,
+    "number_on_floor": 4,
+    "variant": null
+  }
+},
+{
+  "model": "hotels.room",
+  "pk": 68,
+  "fields": {
+    "hotel": 3,
+    "room_type": 12,
     "bed_count": 2,
     "is_pets_allowed": false,
     "is_smoking_allowed": false,
-    "price_per_night": "13836.24",
-    "extra_pay_per_person": "4640.25",
+    "price_per_night": "2283.76",
+    "extra_pay_per_person": "1062.38",
+    "floor": 6,
+    "number_on_floor": 1,
+    "variant": null
+  }
+},
+{
+  "model": "hotels.room",
+  "pk": 69,
+  "fields": {
+    "hotel": 3,
+    "room_type": 1,
+    "bed_count": 6,
+    "is_pets_allowed": false,
+    "is_smoking_allowed": false,
+    "price_per_night": "2768.95",
+    "extra_pay_per_person": "1199.36",
+    "floor": 6,
+    "number_on_floor": 2,
+    "variant": null
+  }
+},
+{
+  "model": "hotels.room",
+  "pk": 70,
+  "fields": {
+    "hotel": 3,
+    "room_type": 1,
+    "bed_count": 1,
+    "is_pets_allowed": true,
+    "is_smoking_allowed": false,
+    "price_per_night": "13507.98",
+    "extra_pay_per_person": "6725.91",
+    "floor": 6,
+    "number_on_floor": 3,
+    "variant": null
+  }
+},
+{
+  "model": "hotels.room",
+  "pk": 71,
+  "fields": {
+    "hotel": 3,
+    "room_type": 1,
+    "bed_count": 7,
+    "is_pets_allowed": false,
+    "is_smoking_allowed": false,
+    "price_per_night": "2977.16",
+    "extra_pay_per_person": "1307.68",
+    "floor": 6,
+    "number_on_floor": 4,
+    "variant": "A"
+  }
+},
+{
+  "model": "hotels.room",
+  "pk": 72,
+  "fields": {
+    "hotel": 3,
+    "room_type": 3,
+    "bed_count": 10,
+    "is_pets_allowed": true,
+    "is_smoking_allowed": false,
+    "price_per_night": "15983.27",
+    "extra_pay_per_person": "5184.17",
+    "floor": 7,
+    "number_on_floor": 1,
+    "variant": null
+  }
+},
+{
+  "model": "hotels.room",
+  "pk": 73,
+  "fields": {
+    "hotel": 4,
+    "room_type": 9,
+    "bed_count": 10,
+    "is_pets_allowed": false,
+    "is_smoking_allowed": false,
+    "price_per_night": "9084.88",
+    "extra_pay_per_person": "2690.68",
+    "floor": 1,
+    "number_on_floor": 1,
+    "variant": null
+  }
+},
+{
+  "model": "hotels.room",
+  "pk": 74,
+  "fields": {
+    "hotel": 4,
+    "room_type": 9,
+    "bed_count": 3,
+    "is_pets_allowed": false,
+    "is_smoking_allowed": true,
+    "price_per_night": "8802.93",
+    "extra_pay_per_person": "3400.34",
+    "floor": 1,
+    "number_on_floor": 2,
+    "variant": "A"
+  }
+},
+{
+  "model": "hotels.room",
+  "pk": 75,
+  "fields": {
+    "hotel": 4,
+    "room_type": 9,
+    "bed_count": 8,
+    "is_pets_allowed": false,
+    "is_smoking_allowed": false,
+    "price_per_night": "10509.95",
+    "extra_pay_per_person": "3487.90",
+    "floor": 1,
+    "number_on_floor": 2,
+    "variant": "B"
+  }
+},
+{
+  "model": "hotels.room",
+  "pk": 76,
+  "fields": {
+    "hotel": 4,
+    "room_type": 9,
+    "bed_count": 2,
+    "is_pets_allowed": false,
+    "is_smoking_allowed": true,
+    "price_per_night": "4162.53",
+    "extra_pay_per_person": "1873.27",
+    "floor": 1,
+    "number_on_floor": 2,
+    "variant": "C"
+  }
+},
+{
+  "model": "hotels.room",
+  "pk": 77,
+  "fields": {
+    "hotel": 4,
+    "room_type": 6,
+    "bed_count": 8,
+    "is_pets_allowed": false,
+    "is_smoking_allowed": false,
+    "price_per_night": "6173.97",
+    "extra_pay_per_person": "2057.92",
+    "floor": 2,
+    "number_on_floor": 1,
+    "variant": null
+  }
+},
+{
+  "model": "hotels.room",
+  "pk": 78,
+  "fields": {
+    "hotel": 4,
+    "room_type": 13,
+    "bed_count": 6,
+    "is_pets_allowed": true,
+    "is_smoking_allowed": false,
+    "price_per_night": "12934.09",
+    "extra_pay_per_person": "3899.20",
+    "floor": 2,
+    "number_on_floor": 2,
+    "variant": null
+  }
+},
+{
+  "model": "hotels.room",
+  "pk": 79,
+  "fields": {
+    "hotel": 4,
+    "room_type": 13,
+    "bed_count": 1,
+    "is_pets_allowed": true,
+    "is_smoking_allowed": false,
+    "price_per_night": "9457.85",
+    "extra_pay_per_person": "3980.54",
+    "floor": 2,
+    "number_on_floor": 3,
+    "variant": "A"
+  }
+},
+{
+  "model": "hotels.room",
+  "pk": 80,
+  "fields": {
+    "hotel": 4,
+    "room_type": 13,
+    "bed_count": 9,
+    "is_pets_allowed": false,
+    "is_smoking_allowed": true,
+    "price_per_night": "4016.10",
+    "extra_pay_per_person": "1322.24",
+    "floor": 2,
+    "number_on_floor": 3,
+    "variant": "B"
+  }
+},
+{
+  "model": "hotels.room",
+  "pk": 81,
+  "fields": {
+    "hotel": 4,
+    "room_type": 8,
+    "bed_count": 6,
+    "is_pets_allowed": false,
+    "is_smoking_allowed": true,
+    "price_per_night": "9877.79",
+    "extra_pay_per_person": "2902.22",
+    "floor": 2,
+    "number_on_floor": 4,
+    "variant": null
+  }
+},
+{
+  "model": "hotels.room",
+  "pk": 82,
+  "fields": {
+    "hotel": 4,
+    "room_type": 6,
+    "bed_count": 9,
+    "is_pets_allowed": false,
+    "is_smoking_allowed": true,
+    "price_per_night": "18313.52",
+    "extra_pay_per_person": "7976.88",
+    "floor": 3,
+    "number_on_floor": 1,
+    "variant": null
+  }
+},
+{
+  "model": "hotels.room",
+  "pk": 83,
+  "fields": {
+    "hotel": 4,
+    "room_type": 5,
+    "bed_count": 3,
+    "is_pets_allowed": false,
+    "is_smoking_allowed": false,
+    "price_per_night": "13035.97",
+    "extra_pay_per_person": "5816.28",
+    "floor": 3,
+    "number_on_floor": 2,
+    "variant": null
+  }
+},
+{
+  "model": "hotels.room",
+  "pk": 84,
+  "fields": {
+    "hotel": 4,
+    "room_type": 10,
+    "bed_count": 3,
+    "is_pets_allowed": false,
+    "is_smoking_allowed": false,
+    "price_per_night": "15264.96",
+    "extra_pay_per_person": "4184.95",
+    "floor": 3,
+    "number_on_floor": 3,
+    "variant": null
+  }
+},
+{
+  "model": "hotels.room",
+  "pk": 85,
+  "fields": {
+    "hotel": 4,
+    "room_type": 10,
+    "bed_count": 1,
+    "is_pets_allowed": false,
+    "is_smoking_allowed": false,
+    "price_per_night": "9983.83",
+    "extra_pay_per_person": "3023.74",
+    "floor": 3,
+    "number_on_floor": 4,
+    "variant": "A"
+  }
+},
+{
+  "model": "hotels.room",
+  "pk": 86,
+  "fields": {
+    "hotel": 4,
+    "room_type": 10,
+    "bed_count": 9,
+    "is_pets_allowed": false,
+    "is_smoking_allowed": true,
+    "price_per_night": "14926.04",
+    "extra_pay_per_person": "6959.04",
+    "floor": 3,
+    "number_on_floor": 5,
+    "variant": null
+  }
+},
+{
+  "model": "hotels.room",
+  "pk": 87,
+  "fields": {
+    "hotel": 4,
+    "room_type": 15,
+    "bed_count": 5,
+    "is_pets_allowed": true,
+    "is_smoking_allowed": false,
+    "price_per_night": "7350.17",
+    "extra_pay_per_person": "2915.50",
+    "floor": 4,
+    "number_on_floor": 1,
+    "variant": "A"
+  }
+},
+{
+  "model": "hotels.room",
+  "pk": 88,
+  "fields": {
+    "hotel": 4,
+    "room_type": 1,
+    "bed_count": 3,
+    "is_pets_allowed": false,
+    "is_smoking_allowed": false,
+    "price_per_night": "17024.18",
+    "extra_pay_per_person": "7083.98",
+    "floor": 4,
+    "number_on_floor": 2,
+    "variant": null
+  }
+},
+{
+  "model": "hotels.room",
+  "pk": 89,
+  "fields": {
+    "hotel": 4,
+    "room_type": 2,
+    "bed_count": 2,
+    "is_pets_allowed": true,
+    "is_smoking_allowed": false,
+    "price_per_night": "6911.98",
+    "extra_pay_per_person": "2257.34",
+    "floor": 4,
+    "number_on_floor": 3,
+    "variant": null
+  }
+},
+{
+  "model": "hotels.room",
+  "pk": 90,
+  "fields": {
+    "hotel": 4,
+    "room_type": 2,
+    "bed_count": 5,
+    "is_pets_allowed": true,
+    "is_smoking_allowed": true,
+    "price_per_night": "10265.89",
+    "extra_pay_per_person": "2898.69",
+    "floor": 4,
+    "number_on_floor": 4,
+    "variant": "A"
+  }
+},
+{
+  "model": "hotels.room",
+  "pk": 91,
+  "fields": {
+    "hotel": 4,
+    "room_type": 2,
+    "bed_count": 2,
+    "is_pets_allowed": false,
+    "is_smoking_allowed": false,
+    "price_per_night": "11792.67",
+    "extra_pay_per_person": "5342.32",
+    "floor": 4,
+    "number_on_floor": 4,
+    "variant": "B"
+  }
+},
+{
+  "model": "hotels.room",
+  "pk": 92,
+  "fields": {
+    "hotel": 4,
+    "room_type": 15,
+    "bed_count": 1,
+    "is_pets_allowed": false,
+    "is_smoking_allowed": false,
+    "price_per_night": "7023.95",
+    "extra_pay_per_person": "2952.07",
+    "floor": 5,
+    "number_on_floor": 1,
+    "variant": null
+  }
+},
+{
+  "model": "hotels.room",
+  "pk": 93,
+  "fields": {
+    "hotel": 4,
+    "room_type": 15,
+    "bed_count": 4,
+    "is_pets_allowed": true,
+    "is_smoking_allowed": true,
+    "price_per_night": "13930.96",
+    "extra_pay_per_person": "4724.97",
+    "floor": 5,
+    "number_on_floor": 2,
+    "variant": "A"
+  }
+},
+{
+  "model": "hotels.room",
+  "pk": 94,
+  "fields": {
+    "hotel": 4,
+    "room_type": 7,
+    "bed_count": 8,
+    "is_pets_allowed": false,
+    "is_smoking_allowed": false,
+    "price_per_night": "18385.91",
+    "extra_pay_per_person": "4945.77",
+    "floor": 5,
+    "number_on_floor": 3,
+    "variant": null
+  }
+},
+{
+  "model": "hotels.room",
+  "pk": 95,
+  "fields": {
+    "hotel": 4,
+    "room_type": 7,
+    "bed_count": 8,
+    "is_pets_allowed": false,
+    "is_smoking_allowed": false,
+    "price_per_night": "6654.76",
+    "extra_pay_per_person": "2061.27",
+    "floor": 5,
+    "number_on_floor": 4,
+    "variant": null
+  }
+},
+{
+  "model": "hotels.room",
+  "pk": 96,
+  "fields": {
+    "hotel": 4,
+    "room_type": 10,
+    "bed_count": 7,
+    "is_pets_allowed": false,
+    "is_smoking_allowed": false,
+    "price_per_night": "12994.84",
+    "extra_pay_per_person": "5437.96",
+    "floor": 6,
+    "number_on_floor": 1,
+    "variant": null
+  }
+},
+{
+  "model": "hotels.room",
+  "pk": 97,
+  "fields": {
+    "hotel": 5,
+    "room_type": 15,
+    "bed_count": 2,
+    "is_pets_allowed": true,
+    "is_smoking_allowed": false,
+    "price_per_night": "15988.63",
+    "extra_pay_per_person": "5244.85",
+    "floor": 1,
+    "number_on_floor": 1,
+    "variant": "A"
+  }
+},
+{
+  "model": "hotels.room",
+  "pk": 98,
+  "fields": {
+    "hotel": 5,
+    "room_type": 3,
+    "bed_count": 4,
+    "is_pets_allowed": false,
+    "is_smoking_allowed": false,
+    "price_per_night": "16524.70",
+    "extra_pay_per_person": "7253.61",
+    "floor": 1,
+    "number_on_floor": 2,
+    "variant": null
+  }
+},
+{
+  "model": "hotels.room",
+  "pk": 99,
+  "fields": {
+    "hotel": 5,
+    "room_type": 9,
+    "bed_count": 6,
+    "is_pets_allowed": false,
+    "is_smoking_allowed": true,
+    "price_per_night": "19503.77",
+    "extra_pay_per_person": "8778.20",
+    "floor": 2,
+    "number_on_floor": 1,
+    "variant": null
+  }
+},
+{
+  "model": "hotels.room",
+  "pk": 100,
+  "fields": {
+    "hotel": 5,
+    "room_type": 9,
+    "bed_count": 9,
+    "is_pets_allowed": false,
+    "is_smoking_allowed": false,
+    "price_per_night": "10014.25",
+    "extra_pay_per_person": "2537.31",
+    "floor": 2,
+    "number_on_floor": 2,
+    "variant": "A"
+  }
+},
+{
+  "model": "hotels.room",
+  "pk": 101,
+  "fields": {
+    "hotel": 5,
+    "room_type": 8,
+    "bed_count": 7,
+    "is_pets_allowed": false,
+    "is_smoking_allowed": false,
+    "price_per_night": "15045.86",
+    "extra_pay_per_person": "5939.71",
+    "floor": 2,
+    "number_on_floor": 3,
+    "variant": null
+  }
+},
+{
+  "model": "hotels.room",
+  "pk": 102,
+  "fields": {
+    "hotel": 5,
+    "room_type": 8,
+    "bed_count": 1,
+    "is_pets_allowed": false,
+    "is_smoking_allowed": false,
+    "price_per_night": "15022.05",
+    "extra_pay_per_person": "4847.23",
+    "floor": 3,
+    "number_on_floor": 1,
+    "variant": null
+  }
+},
+{
+  "model": "hotels.room",
+  "pk": 103,
+  "fields": {
+    "hotel": 5,
+    "room_type": 4,
+    "bed_count": 10,
+    "is_pets_allowed": false,
+    "is_smoking_allowed": false,
+    "price_per_night": "1566.49",
+    "extra_pay_per_person": "412.23",
+    "floor": 3,
+    "number_on_floor": 2,
+    "variant": null
+  }
+},
+{
+  "model": "hotels.room",
+  "pk": 104,
+  "fields": {
+    "hotel": 5,
+    "room_type": 11,
+    "bed_count": 10,
+    "is_pets_allowed": true,
+    "is_smoking_allowed": true,
+    "price_per_night": "4883.98",
+    "extra_pay_per_person": "1897.01",
+    "floor": 3,
+    "number_on_floor": 3,
+    "variant": null
+  }
+},
+{
+  "model": "hotels.room",
+  "pk": 105,
+  "fields": {
+    "hotel": 5,
+    "room_type": 12,
+    "bed_count": 7,
+    "is_pets_allowed": false,
+    "is_smoking_allowed": false,
+    "price_per_night": "7093.64",
+    "extra_pay_per_person": "2867.91",
+    "floor": 4,
+    "number_on_floor": 1,
+    "variant": null
+  }
+},
+{
+  "model": "hotels.room",
+  "pk": 106,
+  "fields": {
+    "hotel": 5,
+    "room_type": 12,
+    "bed_count": 3,
+    "is_pets_allowed": false,
+    "is_smoking_allowed": false,
+    "price_per_night": "12937.94",
+    "extra_pay_per_person": "4261.95",
+    "floor": 4,
+    "number_on_floor": 2,
+    "variant": "A"
+  }
+},
+{
+  "model": "hotels.room",
+  "pk": 107,
+  "fields": {
+    "hotel": 5,
+    "room_type": 3,
+    "bed_count": 4,
+    "is_pets_allowed": false,
+    "is_smoking_allowed": true,
+    "price_per_night": "4256.75",
+    "extra_pay_per_person": "1730.95",
+    "floor": 4,
+    "number_on_floor": 3,
+    "variant": null
+  }
+},
+{
+  "model": "hotels.room",
+  "pk": 108,
+  "fields": {
+    "hotel": 5,
+    "room_type": 13,
+    "bed_count": 9,
+    "is_pets_allowed": false,
+    "is_smoking_allowed": false,
+    "price_per_night": "17820.58",
+    "extra_pay_per_person": "8455.58",
+    "floor": 5,
+    "number_on_floor": 1,
+    "variant": "A"
+  }
+},
+{
+  "model": "hotels.room",
+  "pk": 109,
+  "fields": {
+    "hotel": 5,
+    "room_type": 1,
+    "bed_count": 8,
+    "is_pets_allowed": false,
+    "is_smoking_allowed": true,
+    "price_per_night": "9747.26",
+    "extra_pay_per_person": "2483.83",
+    "floor": 5,
+    "number_on_floor": 2,
+    "variant": null
+  }
+},
+{
+  "model": "hotels.room",
+  "pk": 110,
+  "fields": {
+    "hotel": 5,
+    "room_type": 5,
+    "bed_count": 4,
+    "is_pets_allowed": false,
+    "is_smoking_allowed": false,
+    "price_per_night": "10547.96",
+    "extra_pay_per_person": "5262.88",
+    "floor": 5,
+    "number_on_floor": 3,
+    "variant": null
+  }
+},
+{
+  "model": "hotels.room",
+  "pk": 111,
+  "fields": {
+    "hotel": 5,
+    "room_type": 5,
+    "bed_count": 9,
+    "is_pets_allowed": false,
+    "is_smoking_allowed": false,
+    "price_per_night": "14948.31",
+    "extra_pay_per_person": "6654.10",
+    "floor": 6,
+    "number_on_floor": 1,
+    "variant": null
+  }
+},
+{
+  "model": "hotels.room",
+  "pk": 112,
+  "fields": {
+    "hotel": 5,
+    "room_type": 5,
+    "bed_count": 9,
+    "is_pets_allowed": true,
+    "is_smoking_allowed": true,
+    "price_per_night": "18136.48",
+    "extra_pay_per_person": "7780.26",
+    "floor": 6,
+    "number_on_floor": 2,
+    "variant": "A"
+  }
+},
+{
+  "model": "hotels.room",
+  "pk": 113,
+  "fields": {
+    "hotel": 5,
+    "room_type": 8,
+    "bed_count": 1,
+    "is_pets_allowed": false,
+    "is_smoking_allowed": false,
+    "price_per_night": "19211.43",
+    "extra_pay_per_person": "5426.31",
+    "floor": 6,
+    "number_on_floor": 3,
+    "variant": null
+  }
+},
+{
+  "model": "hotels.room",
+  "pk": 114,
+  "fields": {
+    "hotel": 5,
+    "room_type": 6,
+    "bed_count": 1,
+    "is_pets_allowed": false,
+    "is_smoking_allowed": false,
+    "price_per_night": "9227.00",
+    "extra_pay_per_person": "2361.84",
+    "floor": 7,
+    "number_on_floor": 1,
+    "variant": null
+  }
+},
+{
+  "model": "hotels.room",
+  "pk": 115,
+  "fields": {
+    "hotel": 5,
+    "room_type": 6,
+    "bed_count": 10,
+    "is_pets_allowed": true,
+    "is_smoking_allowed": false,
+    "price_per_night": "13450.87",
+    "extra_pay_per_person": "5171.29",
+    "floor": 7,
+    "number_on_floor": 2,
+    "variant": "A"
+  }
+},
+{
+  "model": "hotels.room",
+  "pk": 116,
+  "fields": {
+    "hotel": 5,
+    "room_type": 15,
+    "bed_count": 4,
+    "is_pets_allowed": false,
+    "is_smoking_allowed": false,
+    "price_per_night": "12427.83",
+    "extra_pay_per_person": "4195.54",
+    "floor": 8,
+    "number_on_floor": 1,
+    "variant": "A"
+  }
+},
+{
+  "model": "hotels.room",
+  "pk": 117,
+  "fields": {
+    "hotel": 5,
+    "room_type": 4,
+    "bed_count": 2,
+    "is_pets_allowed": false,
+    "is_smoking_allowed": true,
+    "price_per_night": "10066.02",
+    "extra_pay_per_person": "3839.30",
+    "floor": 8,
+    "number_on_floor": 2,
+    "variant": null
+  }
+},
+{
+  "model": "hotels.room",
+  "pk": 118,
+  "fields": {
+    "hotel": 5,
+    "room_type": 12,
+    "bed_count": 4,
+    "is_pets_allowed": true,
+    "is_smoking_allowed": true,
+    "price_per_night": "2940.09",
+    "extra_pay_per_person": "1337.79",
+    "floor": 9,
+    "number_on_floor": 1,
+    "variant": "A"
+  }
+},
+{
+  "model": "hotels.room",
+  "pk": 119,
+  "fields": {
+    "hotel": 5,
+    "room_type": 12,
+    "bed_count": 3,
+    "is_pets_allowed": false,
+    "is_smoking_allowed": true,
+    "price_per_night": "6915.58",
+    "extra_pay_per_person": "3208.38",
+    "floor": 9,
+    "number_on_floor": 1,
+    "variant": "B"
+  }
+},
+{
+  "model": "hotels.room",
+  "pk": 120,
+  "fields": {
+    "hotel": 5,
+    "room_type": 15,
+    "bed_count": 7,
+    "is_pets_allowed": true,
+    "is_smoking_allowed": false,
+    "price_per_night": "15469.20",
+    "extra_pay_per_person": "4431.00",
     "floor": 10,
     "number_on_floor": 1,
     "variant": null
@@ -3230,8 +2368,8 @@
   "model": "hotels.roomphoto",
   "pk": 1,
   "fields": {
-    "room": 281,
-    "photo": "hotels/55/rooms/281/test_photo_25.jpg",
+    "room": 1,
+    "photo": "hotels/1/rooms/1/test_photo_939.jpg",
     "order_number": 1
   }
 },
@@ -3239,35 +2377,35 @@
   "model": "hotels.roomphoto",
   "pk": 2,
   "fields": {
-    "room": 281,
-    "photo": "hotels/55/rooms/281/test_photo_147.jpg",
-    "order_number": 2
+    "room": 3,
+    "photo": "hotels/1/rooms/3/test_photo_847.jpg",
+    "order_number": 1
   }
 },
 {
   "model": "hotels.roomphoto",
   "pk": 3,
   "fields": {
-    "room": 282,
-    "photo": "hotels/55/rooms/282/test_photo_654.jpg",
-    "order_number": 1
+    "room": 3,
+    "photo": "hotels/1/rooms/3/test_photo_464.jpg",
+    "order_number": 2
   }
 },
 {
   "model": "hotels.roomphoto",
   "pk": 4,
   "fields": {
-    "room": 283,
-    "photo": "hotels/55/rooms/283/test_photo_746.jpg",
-    "order_number": 1
+    "room": 3,
+    "photo": "hotels/1/rooms/3/test_photo_219.jpg",
+    "order_number": 3
   }
 },
 {
   "model": "hotels.roomphoto",
   "pk": 5,
   "fields": {
-    "room": 284,
-    "photo": "hotels/55/rooms/284/test_photo_159.jpg",
+    "room": 4,
+    "photo": "hotels/1/rooms/4/test_photo_515.jpg",
     "order_number": 1
   }
 },
@@ -3275,26 +2413,26 @@
   "model": "hotels.roomphoto",
   "pk": 6,
   "fields": {
-    "room": 285,
-    "photo": "hotels/55/rooms/285/test_photo_446.jpg",
-    "order_number": 1
+    "room": 4,
+    "photo": "hotels/1/rooms/4/test_photo_16.jpg",
+    "order_number": 2
   }
 },
 {
   "model": "hotels.roomphoto",
   "pk": 7,
   "fields": {
-    "room": 285,
-    "photo": "hotels/55/rooms/285/test_photo_142.jpg",
-    "order_number": 2
+    "room": 4,
+    "photo": "hotels/1/rooms/4/test_photo_839.jpg",
+    "order_number": 3
   }
 },
 {
   "model": "hotels.roomphoto",
   "pk": 8,
   "fields": {
-    "room": 286,
-    "photo": "hotels/55/rooms/286/test_photo_495.jpg",
+    "room": 5,
+    "photo": "hotels/1/rooms/5/test_photo_640.jpg",
     "order_number": 1
   }
 },
@@ -3302,8 +2440,8 @@
   "model": "hotels.roomphoto",
   "pk": 9,
   "fields": {
-    "room": 286,
-    "photo": "hotels/55/rooms/286/test_photo_782.jpg",
+    "room": 5,
+    "photo": "hotels/1/rooms/5/test_photo_247.jpg",
     "order_number": 2
   }
 },
@@ -3311,17 +2449,17 @@
   "model": "hotels.roomphoto",
   "pk": 10,
   "fields": {
-    "room": 287,
-    "photo": "hotels/55/rooms/287/test_photo_640.jpg",
-    "order_number": 1
+    "room": 5,
+    "photo": "hotels/1/rooms/5/test_photo_585.jpg",
+    "order_number": 3
   }
 },
 {
   "model": "hotels.roomphoto",
   "pk": 11,
   "fields": {
-    "room": 288,
-    "photo": "hotels/55/rooms/288/test_photo_169.jpg",
+    "room": 6,
+    "photo": "hotels/1/rooms/6/test_photo_981.jpg",
     "order_number": 1
   }
 },
@@ -3329,80 +2467,80 @@
   "model": "hotels.roomphoto",
   "pk": 12,
   "fields": {
-    "room": 288,
-    "photo": "hotels/55/rooms/288/test_photo_118.jpg",
-    "order_number": 2
+    "room": 7,
+    "photo": "hotels/1/rooms/7/test_photo_298.jpg",
+    "order_number": 1
   }
 },
 {
   "model": "hotels.roomphoto",
   "pk": 13,
   "fields": {
-    "room": 289,
-    "photo": "hotels/55/rooms/289/test_photo_431.jpg",
-    "order_number": 1
+    "room": 7,
+    "photo": "hotels/1/rooms/7/test_photo_818.jpg",
+    "order_number": 2
   }
 },
 {
   "model": "hotels.roomphoto",
   "pk": 14,
   "fields": {
-    "room": 289,
-    "photo": "hotels/55/rooms/289/test_photo_347.jpg",
-    "order_number": 2
+    "room": 10,
+    "photo": "hotels/1/rooms/10/test_photo_893.jpg",
+    "order_number": 1
   }
 },
 {
   "model": "hotels.roomphoto",
   "pk": 15,
   "fields": {
-    "room": 289,
-    "photo": "hotels/55/rooms/289/test_photo_828.jpg",
-    "order_number": 3
+    "room": 10,
+    "photo": "hotels/1/rooms/10/test_photo_204.jpg",
+    "order_number": 2
   }
 },
 {
   "model": "hotels.roomphoto",
   "pk": 16,
   "fields": {
-    "room": 290,
-    "photo": "hotels/55/rooms/290/test_photo_864.jpg",
-    "order_number": 1
+    "room": 10,
+    "photo": "hotels/1/rooms/10/test_photo_789.jpg",
+    "order_number": 3
   }
 },
 {
   "model": "hotels.roomphoto",
   "pk": 17,
   "fields": {
-    "room": 290,
-    "photo": "hotels/55/rooms/290/test_photo_452.jpg",
-    "order_number": 2
+    "room": 11,
+    "photo": "hotels/1/rooms/11/test_photo_916.jpg",
+    "order_number": 1
   }
 },
 {
   "model": "hotels.roomphoto",
   "pk": 18,
   "fields": {
-    "room": 291,
-    "photo": "hotels/55/rooms/291/test_photo_782.jpg",
-    "order_number": 1
+    "room": 11,
+    "photo": "hotels/1/rooms/11/test_photo_139.jpg",
+    "order_number": 2
   }
 },
 {
   "model": "hotels.roomphoto",
   "pk": 19,
   "fields": {
-    "room": 293,
-    "photo": "hotels/55/rooms/293/test_photo_253.jpg",
-    "order_number": 1
+    "room": 11,
+    "photo": "hotels/1/rooms/11/test_photo_857.jpg",
+    "order_number": 3
   }
 },
 {
   "model": "hotels.roomphoto",
   "pk": 20,
   "fields": {
-    "room": 294,
-    "photo": "hotels/55/rooms/294/test_photo_473.jpg",
+    "room": 12,
+    "photo": "hotels/1/rooms/12/test_photo_750.jpg",
     "order_number": 1
   }
 },
@@ -3410,71 +2548,71 @@
   "model": "hotels.roomphoto",
   "pk": 21,
   "fields": {
-    "room": 294,
-    "photo": "hotels/55/rooms/294/test_photo_787.jpg",
-    "order_number": 2
+    "room": 13,
+    "photo": "hotels/1/rooms/13/test_photo_433.jpg",
+    "order_number": 1
   }
 },
 {
   "model": "hotels.roomphoto",
   "pk": 22,
   "fields": {
-    "room": 296,
-    "photo": "hotels/55/rooms/296/test_photo_780.jpg",
-    "order_number": 1
+    "room": 13,
+    "photo": "hotels/1/rooms/13/test_photo_976.jpg",
+    "order_number": 2
   }
 },
 {
   "model": "hotels.roomphoto",
   "pk": 23,
   "fields": {
-    "room": 300,
-    "photo": "hotels/55/rooms/300/test_photo_724.jpg",
-    "order_number": 1
+    "room": 13,
+    "photo": "hotels/1/rooms/13/test_photo_807.jpg",
+    "order_number": 3
   }
 },
 {
   "model": "hotels.roomphoto",
   "pk": 24,
   "fields": {
-    "room": 300,
-    "photo": "hotels/55/rooms/300/test_photo_127.jpg",
-    "order_number": 2
+    "room": 14,
+    "photo": "hotels/1/rooms/14/test_photo_668.jpg",
+    "order_number": 1
   }
 },
 {
   "model": "hotels.roomphoto",
   "pk": 25,
   "fields": {
-    "room": 300,
-    "photo": "hotels/55/rooms/300/test_photo_799.jpg",
-    "order_number": 3
+    "room": 14,
+    "photo": "hotels/1/rooms/14/test_photo_384.jpg",
+    "order_number": 2
   }
 },
 {
   "model": "hotels.roomphoto",
   "pk": 26,
   "fields": {
-    "room": 301,
-    "photo": "hotels/56/rooms/301/test_photo_726.jpg",
-    "order_number": 1
+    "room": 14,
+    "photo": "hotels/1/rooms/14/test_photo_223.jpg",
+    "order_number": 3
   }
 },
 {
   "model": "hotels.roomphoto",
   "pk": 27,
   "fields": {
-    "room": 301,
-    "photo": "hotels/56/rooms/301/test_photo_871.jpg",
-    "order_number": 2
+    "room": 15,
+    "photo": "hotels/1/rooms/15/test_photo_222.jpg",
+    "order_number": 1
   }
 },
 {
   "model": "hotels.roomphoto",
   "pk": 28,
   "fields": {
-    "room": 302,
-    "photo": "hotels/56/rooms/302/test_photo_517.jpg",
+    "room": 17,
+    "photo": "hotels/1/rooms/17/test_photo_820.jpg",
     "order_number": 1
   }
 },
@@ -3482,35 +2620,35 @@
   "model": "hotels.roomphoto",
   "pk": 29,
   "fields": {
-    "room": 302,
-    "photo": "hotels/56/rooms/302/test_photo_328.jpg",
-    "order_number": 2
+    "room": 21,
+    "photo": "hotels/1/rooms/21/test_photo_942.jpg",
+    "order_number": 1
   }
 },
 {
   "model": "hotels.roomphoto",
   "pk": 30,
   "fields": {
-    "room": 302,
-    "photo": "hotels/56/rooms/302/test_photo_954.jpg",
-    "order_number": 3
+    "room": 21,
+    "photo": "hotels/1/rooms/21/test_photo_326.jpg",
+    "order_number": 2
   }
 },
 {
   "model": "hotels.roomphoto",
   "pk": 31,
   "fields": {
-    "room": 303,
-    "photo": "hotels/56/rooms/303/test_photo_802.jpg",
-    "order_number": 1
+    "room": 21,
+    "photo": "hotels/1/rooms/21/test_photo_688.jpg",
+    "order_number": 3
   }
 },
 {
   "model": "hotels.roomphoto",
   "pk": 32,
   "fields": {
-    "room": 304,
-    "photo": "hotels/56/rooms/304/test_photo_885.jpg",
+    "room": 22,
+    "photo": "hotels/1/rooms/22/test_photo_84.jpg",
     "order_number": 1
   }
 },
@@ -3518,8 +2656,8 @@
   "model": "hotels.roomphoto",
   "pk": 33,
   "fields": {
-    "room": 304,
-    "photo": "hotels/56/rooms/304/test_photo_259.jpg",
+    "room": 22,
+    "photo": "hotels/1/rooms/22/test_photo_38.jpg",
     "order_number": 2
   }
 },
@@ -3527,71 +2665,71 @@
   "model": "hotels.roomphoto",
   "pk": 34,
   "fields": {
-    "room": 305,
-    "photo": "hotels/56/rooms/305/test_photo_735.jpg",
-    "order_number": 1
+    "room": 22,
+    "photo": "hotels/1/rooms/22/test_photo_527.jpg",
+    "order_number": 3
   }
 },
 {
   "model": "hotels.roomphoto",
   "pk": 35,
   "fields": {
-    "room": 305,
-    "photo": "hotels/56/rooms/305/test_photo_78.jpg",
-    "order_number": 2
+    "room": 23,
+    "photo": "hotels/1/rooms/23/test_photo_501.jpg",
+    "order_number": 1
   }
 },
 {
   "model": "hotels.roomphoto",
   "pk": 36,
   "fields": {
-    "room": 305,
-    "photo": "hotels/56/rooms/305/test_photo_38.jpg",
-    "order_number": 3
+    "room": 23,
+    "photo": "hotels/1/rooms/23/test_photo_271.jpg",
+    "order_number": 2
   }
 },
 {
   "model": "hotels.roomphoto",
   "pk": 37,
   "fields": {
-    "room": 306,
-    "photo": "hotels/56/rooms/306/test_photo_597.jpg",
-    "order_number": 1
+    "room": 23,
+    "photo": "hotels/1/rooms/23/test_photo_486.jpg",
+    "order_number": 3
   }
 },
 {
   "model": "hotels.roomphoto",
   "pk": 38,
   "fields": {
-    "room": 306,
-    "photo": "hotels/56/rooms/306/test_photo_78.jpg",
-    "order_number": 2
+    "room": 24,
+    "photo": "hotels/1/rooms/24/test_photo_655.jpg",
+    "order_number": 1
   }
 },
 {
   "model": "hotels.roomphoto",
   "pk": 39,
   "fields": {
-    "room": 306,
-    "photo": "hotels/56/rooms/306/test_photo_621.jpg",
-    "order_number": 3
+    "room": 24,
+    "photo": "hotels/1/rooms/24/test_photo_623.jpg",
+    "order_number": 2
   }
 },
 {
   "model": "hotels.roomphoto",
   "pk": 40,
   "fields": {
-    "room": 307,
-    "photo": "hotels/56/rooms/307/test_photo_33.jpg",
-    "order_number": 1
+    "room": 24,
+    "photo": "hotels/1/rooms/24/test_photo_369.jpg",
+    "order_number": 3
   }
 },
 {
   "model": "hotels.roomphoto",
   "pk": 41,
   "fields": {
-    "room": 308,
-    "photo": "hotels/56/rooms/308/test_photo_650.jpg",
+    "room": 25,
+    "photo": "hotels/2/rooms/25/test_photo_901.jpg",
     "order_number": 1
   }
 },
@@ -3599,125 +2737,125 @@
   "model": "hotels.roomphoto",
   "pk": 42,
   "fields": {
-    "room": 308,
-    "photo": "hotels/56/rooms/308/test_photo_744.jpg",
-    "order_number": 2
+    "room": 26,
+    "photo": "hotels/2/rooms/26/test_photo_818.jpg",
+    "order_number": 1
   }
 },
 {
   "model": "hotels.roomphoto",
   "pk": 43,
   "fields": {
-    "room": 308,
-    "photo": "hotels/56/rooms/308/test_photo_612.jpg",
-    "order_number": 3
+    "room": 26,
+    "photo": "hotels/2/rooms/26/test_photo_640.jpg",
+    "order_number": 2
   }
 },
 {
   "model": "hotels.roomphoto",
   "pk": 44,
   "fields": {
-    "room": 309,
-    "photo": "hotels/56/rooms/309/test_photo_320.jpg",
-    "order_number": 1
+    "room": 26,
+    "photo": "hotels/2/rooms/26/test_photo_162.jpg",
+    "order_number": 3
   }
 },
 {
   "model": "hotels.roomphoto",
   "pk": 45,
   "fields": {
-    "room": 309,
-    "photo": "hotels/56/rooms/309/test_photo_587.jpg",
-    "order_number": 2
+    "room": 28,
+    "photo": "hotels/2/rooms/28/test_photo_749.jpg",
+    "order_number": 1
   }
 },
 {
   "model": "hotels.roomphoto",
   "pk": 46,
   "fields": {
-    "room": 309,
-    "photo": "hotels/56/rooms/309/test_photo_41.jpg",
-    "order_number": 3
+    "room": 28,
+    "photo": "hotels/2/rooms/28/test_photo_616.jpg",
+    "order_number": 2
   }
 },
 {
   "model": "hotels.roomphoto",
   "pk": 47,
   "fields": {
-    "room": 310,
-    "photo": "hotels/56/rooms/310/test_photo_770.jpg",
-    "order_number": 1
+    "room": 28,
+    "photo": "hotels/2/rooms/28/test_photo_815.jpg",
+    "order_number": 3
   }
 },
 {
   "model": "hotels.roomphoto",
   "pk": 48,
   "fields": {
-    "room": 310,
-    "photo": "hotels/56/rooms/310/test_photo_83.jpg",
-    "order_number": 2
+    "room": 29,
+    "photo": "hotels/2/rooms/29/test_photo_177.jpg",
+    "order_number": 1
   }
 },
 {
   "model": "hotels.roomphoto",
   "pk": 49,
   "fields": {
-    "room": 310,
-    "photo": "hotels/56/rooms/310/test_photo_793.jpg",
-    "order_number": 3
+    "room": 29,
+    "photo": "hotels/2/rooms/29/test_photo_776.jpg",
+    "order_number": 2
   }
 },
 {
   "model": "hotels.roomphoto",
   "pk": 50,
   "fields": {
-    "room": 312,
-    "photo": "hotels/56/rooms/312/test_photo_208.jpg",
-    "order_number": 1
+    "room": 29,
+    "photo": "hotels/2/rooms/29/test_photo_315.jpg",
+    "order_number": 3
   }
 },
 {
   "model": "hotels.roomphoto",
   "pk": 51,
   "fields": {
-    "room": 312,
-    "photo": "hotels/56/rooms/312/test_photo_173.jpg",
-    "order_number": 2
+    "room": 30,
+    "photo": "hotels/2/rooms/30/test_photo_89.jpg",
+    "order_number": 1
   }
 },
 {
   "model": "hotels.roomphoto",
   "pk": 52,
   "fields": {
-    "room": 313,
-    "photo": "hotels/56/rooms/313/test_photo_222.jpg",
-    "order_number": 1
+    "room": 30,
+    "photo": "hotels/2/rooms/30/test_photo_69.jpg",
+    "order_number": 2
   }
 },
 {
   "model": "hotels.roomphoto",
   "pk": 53,
   "fields": {
-    "room": 313,
-    "photo": "hotels/56/rooms/313/test_photo_637.jpg",
-    "order_number": 2
+    "room": 32,
+    "photo": "hotels/2/rooms/32/test_photo_749.jpg",
+    "order_number": 1
   }
 },
 {
   "model": "hotels.roomphoto",
   "pk": 54,
   "fields": {
-    "room": 313,
-    "photo": "hotels/56/rooms/313/test_photo_940.jpg",
-    "order_number": 3
+    "room": 33,
+    "photo": "hotels/2/rooms/33/test_photo_355.jpg",
+    "order_number": 1
   }
 },
 {
   "model": "hotels.roomphoto",
   "pk": 55,
   "fields": {
-    "room": 314,
-    "photo": "hotels/56/rooms/314/test_photo_847.jpg",
+    "room": 34,
+    "photo": "hotels/2/rooms/34/test_photo_661.jpg",
     "order_number": 1
   }
 },
@@ -3725,8 +2863,8 @@
   "model": "hotels.roomphoto",
   "pk": 56,
   "fields": {
-    "room": 314,
-    "photo": "hotels/56/rooms/314/test_photo_440.jpg",
+    "room": 34,
+    "photo": "hotels/2/rooms/34/test_photo_543.jpg",
     "order_number": 2
   }
 },
@@ -3734,17 +2872,17 @@
   "model": "hotels.roomphoto",
   "pk": 57,
   "fields": {
-    "room": 314,
-    "photo": "hotels/56/rooms/314/test_photo_956.jpg",
-    "order_number": 3
+    "room": 35,
+    "photo": "hotels/2/rooms/35/test_photo_344.jpg",
+    "order_number": 1
   }
 },
 {
   "model": "hotels.roomphoto",
   "pk": 58,
   "fields": {
-    "room": 315,
-    "photo": "hotels/56/rooms/315/test_photo_585.jpg",
+    "room": 37,
+    "photo": "hotels/2/rooms/37/test_photo_647.jpg",
     "order_number": 1
   }
 },
@@ -3752,8 +2890,8 @@
   "model": "hotels.roomphoto",
   "pk": 59,
   "fields": {
-    "room": 316,
-    "photo": "hotels/56/rooms/316/test_photo_142.jpg",
+    "room": 38,
+    "photo": "hotels/2/rooms/38/test_photo_902.jpg",
     "order_number": 1
   }
 },
@@ -3761,8 +2899,8 @@
   "model": "hotels.roomphoto",
   "pk": 60,
   "fields": {
-    "room": 316,
-    "photo": "hotels/56/rooms/316/test_photo_104.jpg",
+    "room": 38,
+    "photo": "hotels/2/rooms/38/test_photo_863.jpg",
     "order_number": 2
   }
 },
@@ -3770,26 +2908,26 @@
   "model": "hotels.roomphoto",
   "pk": 61,
   "fields": {
-    "room": 318,
-    "photo": "hotels/56/rooms/318/test_photo_636.jpg",
-    "order_number": 1
+    "room": 38,
+    "photo": "hotels/2/rooms/38/test_photo_908.jpg",
+    "order_number": 3
   }
 },
 {
   "model": "hotels.roomphoto",
   "pk": 62,
   "fields": {
-    "room": 318,
-    "photo": "hotels/56/rooms/318/test_photo_994.jpg",
-    "order_number": 2
+    "room": 39,
+    "photo": "hotels/2/rooms/39/test_photo_570.jpg",
+    "order_number": 1
   }
 },
 {
   "model": "hotels.roomphoto",
   "pk": 63,
   "fields": {
-    "room": 319,
-    "photo": "hotels/56/rooms/319/test_photo_305.jpg",
+    "room": 41,
+    "photo": "hotels/2/rooms/41/test_photo_211.jpg",
     "order_number": 1
   }
 },
@@ -3797,35 +2935,35 @@
   "model": "hotels.roomphoto",
   "pk": 64,
   "fields": {
-    "room": 320,
-    "photo": "hotels/56/rooms/320/test_photo_734.jpg",
-    "order_number": 1
+    "room": 41,
+    "photo": "hotels/2/rooms/41/test_photo_716.jpg",
+    "order_number": 2
   }
 },
 {
   "model": "hotels.roomphoto",
   "pk": 65,
   "fields": {
-    "room": 320,
-    "photo": "hotels/56/rooms/320/test_photo_242.jpg",
-    "order_number": 2
+    "room": 45,
+    "photo": "hotels/2/rooms/45/test_photo_694.jpg",
+    "order_number": 1
   }
 },
 {
   "model": "hotels.roomphoto",
   "pk": 66,
   "fields": {
-    "room": 320,
-    "photo": "hotels/56/rooms/320/test_photo_772.jpg",
-    "order_number": 3
+    "room": 45,
+    "photo": "hotels/2/rooms/45/test_photo_879.jpg",
+    "order_number": 2
   }
 },
 {
   "model": "hotels.roomphoto",
   "pk": 67,
   "fields": {
-    "room": 321,
-    "photo": "hotels/57/rooms/321/test_photo_385.jpg",
+    "room": 46,
+    "photo": "hotels/2/rooms/46/test_photo_448.jpg",
     "order_number": 1
   }
 },
@@ -3833,8 +2971,8 @@
   "model": "hotels.roomphoto",
   "pk": 68,
   "fields": {
-    "room": 321,
-    "photo": "hotels/57/rooms/321/test_photo_954.jpg",
+    "room": 46,
+    "photo": "hotels/2/rooms/46/test_photo_652.jpg",
     "order_number": 2
   }
 },
@@ -3842,35 +2980,35 @@
   "model": "hotels.roomphoto",
   "pk": 69,
   "fields": {
-    "room": 321,
-    "photo": "hotels/57/rooms/321/test_photo_475.jpg",
-    "order_number": 3
+    "room": 48,
+    "photo": "hotels/2/rooms/48/test_photo_95.jpg",
+    "order_number": 1
   }
 },
 {
   "model": "hotels.roomphoto",
   "pk": 70,
   "fields": {
-    "room": 322,
-    "photo": "hotels/57/rooms/322/test_photo_507.jpg",
-    "order_number": 1
+    "room": 48,
+    "photo": "hotels/2/rooms/48/test_photo_154.jpg",
+    "order_number": 2
   }
 },
 {
   "model": "hotels.roomphoto",
   "pk": 71,
   "fields": {
-    "room": 323,
-    "photo": "hotels/57/rooms/323/test_photo_11.jpg",
-    "order_number": 1
+    "room": 48,
+    "photo": "hotels/2/rooms/48/test_photo_138.jpg",
+    "order_number": 3
   }
 },
 {
   "model": "hotels.roomphoto",
   "pk": 72,
   "fields": {
-    "room": 324,
-    "photo": "hotels/57/rooms/324/test_photo_345.jpg",
+    "room": 49,
+    "photo": "hotels/3/rooms/49/test_photo_562.jpg",
     "order_number": 1
   }
 },
@@ -3878,26 +3016,26 @@
   "model": "hotels.roomphoto",
   "pk": 73,
   "fields": {
-    "room": 324,
-    "photo": "hotels/57/rooms/324/test_photo_891.jpg",
-    "order_number": 2
+    "room": 50,
+    "photo": "hotels/3/rooms/50/test_photo_522.jpg",
+    "order_number": 1
   }
 },
 {
   "model": "hotels.roomphoto",
   "pk": 74,
   "fields": {
-    "room": 325,
-    "photo": "hotels/57/rooms/325/test_photo_709.jpg",
-    "order_number": 1
+    "room": 50,
+    "photo": "hotels/3/rooms/50/test_photo_804.jpg",
+    "order_number": 2
   }
 },
 {
   "model": "hotels.roomphoto",
   "pk": 75,
   "fields": {
-    "room": 326,
-    "photo": "hotels/57/rooms/326/test_photo_256.jpg",
+    "room": 51,
+    "photo": "hotels/3/rooms/51/test_photo_294.jpg",
     "order_number": 1
   }
 },
@@ -3905,8 +3043,8 @@
   "model": "hotels.roomphoto",
   "pk": 76,
   "fields": {
-    "room": 326,
-    "photo": "hotels/57/rooms/326/test_photo_595.jpg",
+    "room": 51,
+    "photo": "hotels/3/rooms/51/test_photo_594.jpg",
     "order_number": 2
   }
 },
@@ -3914,134 +3052,134 @@
   "model": "hotels.roomphoto",
   "pk": 77,
   "fields": {
-    "room": 327,
-    "photo": "hotels/57/rooms/327/test_photo_571.jpg",
-    "order_number": 1
+    "room": 51,
+    "photo": "hotels/3/rooms/51/test_photo_975.jpg",
+    "order_number": 3
   }
 },
 {
   "model": "hotels.roomphoto",
   "pk": 78,
   "fields": {
-    "room": 327,
-    "photo": "hotels/57/rooms/327/test_photo_539.jpg",
-    "order_number": 2
+    "room": 52,
+    "photo": "hotels/3/rooms/52/test_photo_204.jpg",
+    "order_number": 1
   }
 },
 {
   "model": "hotels.roomphoto",
   "pk": 79,
   "fields": {
-    "room": 331,
-    "photo": "hotels/57/rooms/331/test_photo_57.jpg",
-    "order_number": 1
+    "room": 52,
+    "photo": "hotels/3/rooms/52/test_photo_732.jpg",
+    "order_number": 2
   }
 },
 {
   "model": "hotels.roomphoto",
   "pk": 80,
   "fields": {
-    "room": 331,
-    "photo": "hotels/57/rooms/331/test_photo_949.jpg",
-    "order_number": 2
+    "room": 53,
+    "photo": "hotels/3/rooms/53/test_photo_398.jpg",
+    "order_number": 1
   }
 },
 {
   "model": "hotels.roomphoto",
   "pk": 81,
   "fields": {
-    "room": 331,
-    "photo": "hotels/57/rooms/331/test_photo_327.jpg",
-    "order_number": 3
+    "room": 55,
+    "photo": "hotels/3/rooms/55/test_photo_222.jpg",
+    "order_number": 1
   }
 },
 {
   "model": "hotels.roomphoto",
   "pk": 82,
   "fields": {
-    "room": 332,
-    "photo": "hotels/57/rooms/332/test_photo_458.jpg",
-    "order_number": 1
+    "room": 55,
+    "photo": "hotels/3/rooms/55/test_photo_744.jpg",
+    "order_number": 2
   }
 },
 {
   "model": "hotels.roomphoto",
   "pk": 83,
   "fields": {
-    "room": 332,
-    "photo": "hotels/57/rooms/332/test_photo_100.jpg",
-    "order_number": 2
+    "room": 55,
+    "photo": "hotels/3/rooms/55/test_photo_166.jpg",
+    "order_number": 3
   }
 },
 {
   "model": "hotels.roomphoto",
   "pk": 84,
   "fields": {
-    "room": 332,
-    "photo": "hotels/57/rooms/332/test_photo_449.jpg",
-    "order_number": 3
+    "room": 56,
+    "photo": "hotels/3/rooms/56/test_photo_16.jpg",
+    "order_number": 1
   }
 },
 {
   "model": "hotels.roomphoto",
   "pk": 85,
   "fields": {
-    "room": 333,
-    "photo": "hotels/57/rooms/333/test_photo_744.jpg",
-    "order_number": 1
+    "room": 56,
+    "photo": "hotels/3/rooms/56/test_photo_887.jpg",
+    "order_number": 2
   }
 },
 {
   "model": "hotels.roomphoto",
   "pk": 86,
   "fields": {
-    "room": 335,
-    "photo": "hotels/57/rooms/335/test_photo_205.jpg",
-    "order_number": 1
+    "room": 56,
+    "photo": "hotels/3/rooms/56/test_photo_438.jpg",
+    "order_number": 3
   }
 },
 {
   "model": "hotels.roomphoto",
   "pk": 87,
   "fields": {
-    "room": 335,
-    "photo": "hotels/57/rooms/335/test_photo_664.jpg",
-    "order_number": 2
+    "room": 57,
+    "photo": "hotels/3/rooms/57/test_photo_231.jpg",
+    "order_number": 1
   }
 },
 {
   "model": "hotels.roomphoto",
   "pk": 88,
   "fields": {
-    "room": 338,
-    "photo": "hotels/57/rooms/338/test_photo_75.jpg",
-    "order_number": 1
+    "room": 57,
+    "photo": "hotels/3/rooms/57/test_photo_14.jpg",
+    "order_number": 2
   }
 },
 {
   "model": "hotels.roomphoto",
   "pk": 89,
   "fields": {
-    "room": 339,
-    "photo": "hotels/57/rooms/339/test_photo_291.jpg",
-    "order_number": 1
+    "room": 57,
+    "photo": "hotels/3/rooms/57/test_photo_493.jpg",
+    "order_number": 3
   }
 },
 {
   "model": "hotels.roomphoto",
   "pk": 90,
   "fields": {
-    "room": 339,
-    "photo": "hotels/57/rooms/339/test_photo_362.jpg",
-    "order_number": 2
+    "room": 58,
+    "photo": "hotels/3/rooms/58/test_photo_356.jpg",
+    "order_number": 1
   }
 },
 {
   "model": "hotels.roomphoto",
   "pk": 91,
   "fields": {
-    "room": 340,
-    "photo": "hotels/57/rooms/340/test_photo_348.jpg",
+    "room": 60,
+    "photo": "hotels/3/rooms/60/test_photo_838.jpg",
     "order_number": 1
   }
 },
@@ -4049,62 +3187,62 @@
   "model": "hotels.roomphoto",
   "pk": 92,
   "fields": {
-    "room": 341,
-    "photo": "hotels/58/rooms/341/test_photo_926.jpg",
-    "order_number": 1
+    "room": 60,
+    "photo": "hotels/3/rooms/60/test_photo_561.jpg",
+    "order_number": 2
   }
 },
 {
   "model": "hotels.roomphoto",
   "pk": 93,
   "fields": {
-    "room": 341,
-    "photo": "hotels/58/rooms/341/test_photo_78.jpg",
-    "order_number": 2
+    "room": 60,
+    "photo": "hotels/3/rooms/60/test_photo_48.jpg",
+    "order_number": 3
   }
 },
 {
   "model": "hotels.roomphoto",
   "pk": 94,
   "fields": {
-    "room": 341,
-    "photo": "hotels/58/rooms/341/test_photo_88.jpg",
-    "order_number": 3
+    "room": 61,
+    "photo": "hotels/3/rooms/61/test_photo_372.jpg",
+    "order_number": 1
   }
 },
 {
   "model": "hotels.roomphoto",
   "pk": 95,
   "fields": {
-    "room": 342,
-    "photo": "hotels/58/rooms/342/test_photo_910.jpg",
-    "order_number": 1
+    "room": 61,
+    "photo": "hotels/3/rooms/61/test_photo_454.jpg",
+    "order_number": 2
   }
 },
 {
   "model": "hotels.roomphoto",
   "pk": 96,
   "fields": {
-    "room": 342,
-    "photo": "hotels/58/rooms/342/test_photo_514.jpg",
-    "order_number": 2
+    "room": 61,
+    "photo": "hotels/3/rooms/61/test_photo_494.jpg",
+    "order_number": 3
   }
 },
 {
   "model": "hotels.roomphoto",
   "pk": 97,
   "fields": {
-    "room": 342,
-    "photo": "hotels/58/rooms/342/test_photo_401.jpg",
-    "order_number": 3
+    "room": 62,
+    "photo": "hotels/3/rooms/62/test_photo_58.jpg",
+    "order_number": 1
   }
 },
 {
   "model": "hotels.roomphoto",
   "pk": 98,
   "fields": {
-    "room": 343,
-    "photo": "hotels/58/rooms/343/test_photo_947.jpg",
+    "room": 64,
+    "photo": "hotels/3/rooms/64/test_photo_461.jpg",
     "order_number": 1
   }
 },
@@ -4112,8 +3250,8 @@
   "model": "hotels.roomphoto",
   "pk": 99,
   "fields": {
-    "room": 343,
-    "photo": "hotels/58/rooms/343/test_photo_542.jpg",
+    "room": 64,
+    "photo": "hotels/3/rooms/64/test_photo_444.jpg",
     "order_number": 2
   }
 },
@@ -4121,35 +3259,35 @@
   "model": "hotels.roomphoto",
   "pk": 100,
   "fields": {
-    "room": 343,
-    "photo": "hotels/58/rooms/343/test_photo_43.jpg",
-    "order_number": 3
+    "room": 65,
+    "photo": "hotels/3/rooms/65/test_photo_10.jpg",
+    "order_number": 1
   }
 },
 {
   "model": "hotels.roomphoto",
   "pk": 101,
   "fields": {
-    "room": 344,
-    "photo": "hotels/58/rooms/344/test_photo_843.jpg",
-    "order_number": 1
+    "room": 65,
+    "photo": "hotels/3/rooms/65/test_photo_344.jpg",
+    "order_number": 2
   }
 },
 {
   "model": "hotels.roomphoto",
   "pk": 102,
   "fields": {
-    "room": 344,
-    "photo": "hotels/58/rooms/344/test_photo_909.jpg",
-    "order_number": 2
+    "room": 65,
+    "photo": "hotels/3/rooms/65/test_photo_786.jpg",
+    "order_number": 3
   }
 },
 {
   "model": "hotels.roomphoto",
   "pk": 103,
   "fields": {
-    "room": 345,
-    "photo": "hotels/58/rooms/345/test_photo_199.jpg",
+    "room": 67,
+    "photo": "hotels/3/rooms/67/test_photo_20.jpg",
     "order_number": 1
   }
 },
@@ -4157,8 +3295,8 @@
   "model": "hotels.roomphoto",
   "pk": 104,
   "fields": {
-    "room": 346,
-    "photo": "hotels/58/rooms/346/test_photo_659.jpg",
+    "room": 68,
+    "photo": "hotels/3/rooms/68/test_photo_396.jpg",
     "order_number": 1
   }
 },
@@ -4166,8 +3304,8 @@
   "model": "hotels.roomphoto",
   "pk": 105,
   "fields": {
-    "room": 346,
-    "photo": "hotels/58/rooms/346/test_photo_122.jpg",
+    "room": 68,
+    "photo": "hotels/3/rooms/68/test_photo_639.jpg",
     "order_number": 2
   }
 },
@@ -4175,8 +3313,8 @@
   "model": "hotels.roomphoto",
   "pk": 106,
   "fields": {
-    "room": 347,
-    "photo": "hotels/58/rooms/347/test_photo_210.jpg",
+    "room": 69,
+    "photo": "hotels/3/rooms/69/test_photo_605.jpg",
     "order_number": 1
   }
 },
@@ -4184,8 +3322,8 @@
   "model": "hotels.roomphoto",
   "pk": 107,
   "fields": {
-    "room": 347,
-    "photo": "hotels/58/rooms/347/test_photo_340.jpg",
+    "room": 69,
+    "photo": "hotels/3/rooms/69/test_photo_882.jpg",
     "order_number": 2
   }
 },
@@ -4193,35 +3331,35 @@
   "model": "hotels.roomphoto",
   "pk": 108,
   "fields": {
-    "room": 348,
-    "photo": "hotels/58/rooms/348/test_photo_530.jpg",
-    "order_number": 1
+    "room": 69,
+    "photo": "hotels/3/rooms/69/test_photo_761.jpg",
+    "order_number": 3
   }
 },
 {
   "model": "hotels.roomphoto",
   "pk": 109,
   "fields": {
-    "room": 348,
-    "photo": "hotels/58/rooms/348/test_photo_53.jpg",
-    "order_number": 2
+    "room": 72,
+    "photo": "hotels/3/rooms/72/test_photo_266.jpg",
+    "order_number": 1
   }
 },
 {
   "model": "hotels.roomphoto",
   "pk": 110,
   "fields": {
-    "room": 349,
-    "photo": "hotels/58/rooms/349/test_photo_63.jpg",
-    "order_number": 1
+    "room": 72,
+    "photo": "hotels/3/rooms/72/test_photo_187.jpg",
+    "order_number": 2
   }
 },
 {
   "model": "hotels.roomphoto",
   "pk": 111,
   "fields": {
-    "room": 350,
-    "photo": "hotels/58/rooms/350/test_photo_665.jpg",
+    "room": 74,
+    "photo": "hotels/4/rooms/74/test_photo_405.jpg",
     "order_number": 1
   }
 },
@@ -4229,8 +3367,8 @@
   "model": "hotels.roomphoto",
   "pk": 112,
   "fields": {
-    "room": 350,
-    "photo": "hotels/58/rooms/350/test_photo_47.jpg",
+    "room": 74,
+    "photo": "hotels/4/rooms/74/test_photo_87.jpg",
     "order_number": 2
   }
 },
@@ -4238,80 +3376,80 @@
   "model": "hotels.roomphoto",
   "pk": 113,
   "fields": {
-    "room": 350,
-    "photo": "hotels/58/rooms/350/test_photo_13.jpg",
-    "order_number": 3
+    "room": 75,
+    "photo": "hotels/4/rooms/75/test_photo_770.jpg",
+    "order_number": 1
   }
 },
 {
   "model": "hotels.roomphoto",
   "pk": 114,
   "fields": {
-    "room": 351,
-    "photo": "hotels/58/rooms/351/test_photo_317.jpg",
-    "order_number": 1
+    "room": 75,
+    "photo": "hotels/4/rooms/75/test_photo_298.jpg",
+    "order_number": 2
   }
 },
 {
   "model": "hotels.roomphoto",
   "pk": 115,
   "fields": {
-    "room": 351,
-    "photo": "hotels/58/rooms/351/test_photo_125.jpg",
-    "order_number": 2
+    "room": 77,
+    "photo": "hotels/4/rooms/77/test_photo_122.jpg",
+    "order_number": 1
   }
 },
 {
   "model": "hotels.roomphoto",
   "pk": 116,
   "fields": {
-    "room": 351,
-    "photo": "hotels/58/rooms/351/test_photo_403.jpg",
-    "order_number": 3
+    "room": 78,
+    "photo": "hotels/4/rooms/78/test_photo_521.jpg",
+    "order_number": 1
   }
 },
 {
   "model": "hotels.roomphoto",
   "pk": 117,
   "fields": {
-    "room": 352,
-    "photo": "hotels/58/rooms/352/test_photo_462.jpg",
-    "order_number": 1
+    "room": 78,
+    "photo": "hotels/4/rooms/78/test_photo_416.jpg",
+    "order_number": 2
   }
 },
 {
   "model": "hotels.roomphoto",
   "pk": 118,
   "fields": {
-    "room": 352,
-    "photo": "hotels/58/rooms/352/test_photo_984.jpg",
-    "order_number": 2
+    "room": 79,
+    "photo": "hotels/4/rooms/79/test_photo_700.jpg",
+    "order_number": 1
   }
 },
 {
   "model": "hotels.roomphoto",
   "pk": 119,
   "fields": {
-    "room": 356,
-    "photo": "hotels/58/rooms/356/test_photo_954.jpg",
-    "order_number": 1
+    "room": 79,
+    "photo": "hotels/4/rooms/79/test_photo_973.jpg",
+    "order_number": 2
   }
 },
 {
   "model": "hotels.roomphoto",
   "pk": 120,
   "fields": {
-    "room": 356,
-    "photo": "hotels/58/rooms/356/test_photo_86.jpg",
-    "order_number": 2
+    "room": 79,
+    "photo": "hotels/4/rooms/79/test_photo_352.jpg",
+    "order_number": 3
   }
 },
 {
   "model": "hotels.roomphoto",
   "pk": 121,
   "fields": {
-    "room": 357,
-    "photo": "hotels/58/rooms/357/test_photo_718.jpg",
+    "room": 81,
+    "photo": "hotels/4/rooms/81/test_photo_323.jpg",
     "order_number": 1
   }
 },
@@ -4319,8 +3457,8 @@
   "model": "hotels.roomphoto",
   "pk": 122,
   "fields": {
-    "room": 358,
-    "photo": "hotels/58/rooms/358/test_photo_970.jpg",
+    "room": 82,
+    "photo": "hotels/4/rooms/82/test_photo_159.jpg",
     "order_number": 1
   }
 },
@@ -4328,44 +3466,44 @@
   "model": "hotels.roomphoto",
   "pk": 123,
   "fields": {
-    "room": 359,
-    "photo": "hotels/58/rooms/359/test_photo_184.jpg",
-    "order_number": 1
+    "room": 82,
+    "photo": "hotels/4/rooms/82/test_photo_487.jpg",
+    "order_number": 2
   }
 },
 {
   "model": "hotels.roomphoto",
   "pk": 124,
   "fields": {
-    "room": 359,
-    "photo": "hotels/58/rooms/359/test_photo_888.jpg",
-    "order_number": 2
+    "room": 83,
+    "photo": "hotels/4/rooms/83/test_photo_554.jpg",
+    "order_number": 1
   }
 },
 {
   "model": "hotels.roomphoto",
   "pk": 125,
   "fields": {
-    "room": 359,
-    "photo": "hotels/58/rooms/359/test_photo_206.jpg",
-    "order_number": 3
+    "room": 83,
+    "photo": "hotels/4/rooms/83/test_photo_917.jpg",
+    "order_number": 2
   }
 },
 {
   "model": "hotels.roomphoto",
   "pk": 126,
   "fields": {
-    "room": 360,
-    "photo": "hotels/58/rooms/360/test_photo_403.jpg",
-    "order_number": 1
+    "room": 83,
+    "photo": "hotels/4/rooms/83/test_photo_43.jpg",
+    "order_number": 3
   }
 },
 {
   "model": "hotels.roomphoto",
   "pk": 127,
   "fields": {
-    "room": 361,
-    "photo": "hotels/59/rooms/361/test_photo_108.jpg",
+    "room": 84,
+    "photo": "hotels/4/rooms/84/test_photo_313.jpg",
     "order_number": 1
   }
 },
@@ -4373,17 +3511,17 @@
   "model": "hotels.roomphoto",
   "pk": 128,
   "fields": {
-    "room": 362,
-    "photo": "hotels/59/rooms/362/test_photo_939.jpg",
-    "order_number": 1
+    "room": 84,
+    "photo": "hotels/4/rooms/84/test_photo_862.jpg",
+    "order_number": 2
   }
 },
 {
   "model": "hotels.roomphoto",
   "pk": 129,
   "fields": {
-    "room": 364,
-    "photo": "hotels/59/rooms/364/test_photo_428.jpg",
+    "room": 85,
+    "photo": "hotels/4/rooms/85/test_photo_945.jpg",
     "order_number": 1
   }
 },
@@ -4391,8 +3529,8 @@
   "model": "hotels.roomphoto",
   "pk": 130,
   "fields": {
-    "room": 365,
-    "photo": "hotels/59/rooms/365/test_photo_369.jpg",
+    "room": 87,
+    "photo": "hotels/4/rooms/87/test_photo_596.jpg",
     "order_number": 1
   }
 },
@@ -4400,26 +3538,26 @@
   "model": "hotels.roomphoto",
   "pk": 131,
   "fields": {
-    "room": 365,
-    "photo": "hotels/59/rooms/365/test_photo_444.jpg",
-    "order_number": 2
+    "room": 88,
+    "photo": "hotels/4/rooms/88/test_photo_135.jpg",
+    "order_number": 1
   }
 },
 {
   "model": "hotels.roomphoto",
   "pk": 132,
   "fields": {
-    "room": 365,
-    "photo": "hotels/59/rooms/365/test_photo_716.jpg",
-    "order_number": 3
+    "room": 89,
+    "photo": "hotels/4/rooms/89/test_photo_38.jpg",
+    "order_number": 1
   }
 },
 {
   "model": "hotels.roomphoto",
   "pk": 133,
   "fields": {
-    "room": 366,
-    "photo": "hotels/59/rooms/366/test_photo_249.jpg",
+    "room": 90,
+    "photo": "hotels/4/rooms/90/test_photo_875.jpg",
     "order_number": 1
   }
 },
@@ -4427,8 +3565,8 @@
   "model": "hotels.roomphoto",
   "pk": 134,
   "fields": {
-    "room": 366,
-    "photo": "hotels/59/rooms/366/test_photo_313.jpg",
+    "room": 90,
+    "photo": "hotels/4/rooms/90/test_photo_494.jpg",
     "order_number": 2
   }
 },
@@ -4436,8 +3574,8 @@
   "model": "hotels.roomphoto",
   "pk": 135,
   "fields": {
-    "room": 366,
-    "photo": "hotels/59/rooms/366/test_photo_298.jpg",
+    "room": 90,
+    "photo": "hotels/4/rooms/90/test_photo_158.jpg",
     "order_number": 3
   }
 },
@@ -4445,8 +3583,8 @@
   "model": "hotels.roomphoto",
   "pk": 136,
   "fields": {
-    "room": 367,
-    "photo": "hotels/59/rooms/367/test_photo_741.jpg",
+    "room": 91,
+    "photo": "hotels/4/rooms/91/test_photo_67.jpg",
     "order_number": 1
   }
 },
@@ -4454,8 +3592,8 @@
   "model": "hotels.roomphoto",
   "pk": 137,
   "fields": {
-    "room": 367,
-    "photo": "hotels/59/rooms/367/test_photo_207.jpg",
+    "room": 91,
+    "photo": "hotels/4/rooms/91/test_photo_54.jpg",
     "order_number": 2
   }
 },
@@ -4463,17 +3601,17 @@
   "model": "hotels.roomphoto",
   "pk": 138,
   "fields": {
-    "room": 368,
-    "photo": "hotels/59/rooms/368/test_photo_678.jpg",
-    "order_number": 1
+    "room": 91,
+    "photo": "hotels/4/rooms/91/test_photo_164.jpg",
+    "order_number": 3
   }
 },
 {
   "model": "hotels.roomphoto",
   "pk": 139,
   "fields": {
-    "room": 370,
-    "photo": "hotels/59/rooms/370/test_photo_965.jpg",
+    "room": 94,
+    "photo": "hotels/4/rooms/94/test_photo_75.jpg",
     "order_number": 1
   }
 },
@@ -4481,8 +3619,8 @@
   "model": "hotels.roomphoto",
   "pk": 140,
   "fields": {
-    "room": 370,
-    "photo": "hotels/59/rooms/370/test_photo_715.jpg",
+    "room": 94,
+    "photo": "hotels/4/rooms/94/test_photo_594.jpg",
     "order_number": 2
   }
 },
@@ -4490,8 +3628,8 @@
   "model": "hotels.roomphoto",
   "pk": 141,
   "fields": {
-    "room": 371,
-    "photo": "hotels/59/rooms/371/test_photo_181.jpg",
+    "room": 95,
+    "photo": "hotels/4/rooms/95/test_photo_731.jpg",
     "order_number": 1
   }
 },
@@ -4499,8 +3637,8 @@
   "model": "hotels.roomphoto",
   "pk": 142,
   "fields": {
-    "room": 371,
-    "photo": "hotels/59/rooms/371/test_photo_190.jpg",
+    "room": 95,
+    "photo": "hotels/4/rooms/95/test_photo_410.jpg",
     "order_number": 2
   }
 },
@@ -4508,35 +3646,35 @@
   "model": "hotels.roomphoto",
   "pk": 143,
   "fields": {
-    "room": 372,
-    "photo": "hotels/59/rooms/372/test_photo_697.jpg",
-    "order_number": 1
+    "room": 95,
+    "photo": "hotels/4/rooms/95/test_photo_378.jpg",
+    "order_number": 3
   }
 },
 {
   "model": "hotels.roomphoto",
   "pk": 144,
   "fields": {
-    "room": 372,
-    "photo": "hotels/59/rooms/372/test_photo_945.jpg",
-    "order_number": 2
+    "room": 96,
+    "photo": "hotels/4/rooms/96/test_photo_42.jpg",
+    "order_number": 1
   }
 },
 {
   "model": "hotels.roomphoto",
   "pk": 145,
   "fields": {
-    "room": 372,
-    "photo": "hotels/59/rooms/372/test_photo_333.jpg",
-    "order_number": 3
+    "room": 96,
+    "photo": "hotels/4/rooms/96/test_photo_453.jpg",
+    "order_number": 2
   }
 },
 {
   "model": "hotels.roomphoto",
   "pk": 146,
   "fields": {
-    "room": 374,
-    "photo": "hotels/59/rooms/374/test_photo_187.jpg",
+    "room": 98,
+    "photo": "hotels/5/rooms/98/test_photo_841.jpg",
     "order_number": 1
   }
 },
@@ -4544,8 +3682,8 @@
   "model": "hotels.roomphoto",
   "pk": 147,
   "fields": {
-    "room": 374,
-    "photo": "hotels/59/rooms/374/test_photo_341.jpg",
+    "room": 98,
+    "photo": "hotels/5/rooms/98/test_photo_354.jpg",
     "order_number": 2
   }
 },
@@ -4553,8 +3691,8 @@
   "model": "hotels.roomphoto",
   "pk": 148,
   "fields": {
-    "room": 374,
-    "photo": "hotels/59/rooms/374/test_photo_393.jpg",
+    "room": 98,
+    "photo": "hotels/5/rooms/98/test_photo_914.jpg",
     "order_number": 3
   }
 },
@@ -4562,8 +3700,8 @@
   "model": "hotels.roomphoto",
   "pk": 149,
   "fields": {
-    "room": 375,
-    "photo": "hotels/59/rooms/375/test_photo_954.jpg",
+    "room": 100,
+    "photo": "hotels/5/rooms/100/test_photo_118.jpg",
     "order_number": 1
   }
 },
@@ -4571,17 +3709,17 @@
   "model": "hotels.roomphoto",
   "pk": 150,
   "fields": {
-    "room": 376,
-    "photo": "hotels/59/rooms/376/test_photo_897.jpg",
-    "order_number": 1
+    "room": 100,
+    "photo": "hotels/5/rooms/100/test_photo_420.jpg",
+    "order_number": 2
   }
 },
 {
   "model": "hotels.roomphoto",
   "pk": 151,
   "fields": {
-    "room": 377,
-    "photo": "hotels/59/rooms/377/test_photo_160.jpg",
+    "room": 101,
+    "photo": "hotels/5/rooms/101/test_photo_506.jpg",
     "order_number": 1
   }
 },
@@ -4589,8 +3727,8 @@
   "model": "hotels.roomphoto",
   "pk": 152,
   "fields": {
-    "room": 377,
-    "photo": "hotels/59/rooms/377/test_photo_493.jpg",
+    "room": 101,
+    "photo": "hotels/5/rooms/101/test_photo_151.jpg",
     "order_number": 2
   }
 },
@@ -4598,8 +3736,8 @@
   "model": "hotels.roomphoto",
   "pk": 153,
   "fields": {
-    "room": 378,
-    "photo": "hotels/59/rooms/378/test_photo_242.jpg",
+    "room": 103,
+    "photo": "hotels/5/rooms/103/test_photo_413.jpg",
     "order_number": 1
   }
 },
@@ -4607,53 +3745,53 @@
   "model": "hotels.roomphoto",
   "pk": 154,
   "fields": {
-    "room": 378,
-    "photo": "hotels/59/rooms/378/test_photo_543.jpg",
-    "order_number": 2
+    "room": 104,
+    "photo": "hotels/5/rooms/104/test_photo_832.jpg",
+    "order_number": 1
   }
 },
 {
   "model": "hotels.roomphoto",
   "pk": 155,
   "fields": {
-    "room": 378,
-    "photo": "hotels/59/rooms/378/test_photo_710.jpg",
-    "order_number": 3
+    "room": 104,
+    "photo": "hotels/5/rooms/104/test_photo_289.jpg",
+    "order_number": 2
   }
 },
 {
   "model": "hotels.roomphoto",
   "pk": 156,
   "fields": {
-    "room": 379,
-    "photo": "hotels/59/rooms/379/test_photo_707.jpg",
-    "order_number": 1
+    "room": 104,
+    "photo": "hotels/5/rooms/104/test_photo_66.jpg",
+    "order_number": 3
   }
 },
 {
   "model": "hotels.roomphoto",
   "pk": 157,
   "fields": {
-    "room": 379,
-    "photo": "hotels/59/rooms/379/test_photo_693.jpg",
-    "order_number": 2
+    "room": 105,
+    "photo": "hotels/5/rooms/105/test_photo_952.jpg",
+    "order_number": 1
   }
 },
 {
   "model": "hotels.roomphoto",
   "pk": 158,
   "fields": {
-    "room": 381,
-    "photo": "hotels/60/rooms/381/test_photo_69.jpg",
-    "order_number": 1
+    "room": 105,
+    "photo": "hotels/5/rooms/105/test_photo_644.jpg",
+    "order_number": 2
   }
 },
 {
   "model": "hotels.roomphoto",
   "pk": 159,
   "fields": {
-    "room": 382,
-    "photo": "hotels/60/rooms/382/test_photo_552.jpg",
+    "room": 106,
+    "photo": "hotels/5/rooms/106/test_photo_585.jpg",
     "order_number": 1
   }
 },
@@ -4661,8 +3799,8 @@
   "model": "hotels.roomphoto",
   "pk": 160,
   "fields": {
-    "room": 382,
-    "photo": "hotels/60/rooms/382/test_photo_516.jpg",
+    "room": 106,
+    "photo": "hotels/5/rooms/106/test_photo_276.jpg",
     "order_number": 2
   }
 },
@@ -4670,62 +3808,62 @@
   "model": "hotels.roomphoto",
   "pk": 161,
   "fields": {
-    "room": 382,
-    "photo": "hotels/60/rooms/382/test_photo_967.jpg",
-    "order_number": 3
+    "room": 107,
+    "photo": "hotels/5/rooms/107/test_photo_182.jpg",
+    "order_number": 1
   }
 },
 {
   "model": "hotels.roomphoto",
   "pk": 162,
   "fields": {
-    "room": 383,
-    "photo": "hotels/60/rooms/383/test_photo_60.jpg",
-    "order_number": 1
+    "room": 107,
+    "photo": "hotels/5/rooms/107/test_photo_297.jpg",
+    "order_number": 2
   }
 },
 {
   "model": "hotels.roomphoto",
   "pk": 163,
   "fields": {
-    "room": 383,
-    "photo": "hotels/60/rooms/383/test_photo_679.jpg",
-    "order_number": 2
+    "room": 107,
+    "photo": "hotels/5/rooms/107/test_photo_740.jpg",
+    "order_number": 3
   }
 },
 {
   "model": "hotels.roomphoto",
   "pk": 164,
   "fields": {
-    "room": 383,
-    "photo": "hotels/60/rooms/383/test_photo_346.jpg",
-    "order_number": 3
+    "room": 108,
+    "photo": "hotels/5/rooms/108/test_photo_29.jpg",
+    "order_number": 1
   }
 },
 {
   "model": "hotels.roomphoto",
   "pk": 165,
   "fields": {
-    "room": 387,
-    "photo": "hotels/60/rooms/387/test_photo_384.jpg",
-    "order_number": 1
+    "room": 108,
+    "photo": "hotels/5/rooms/108/test_photo_238.jpg",
+    "order_number": 2
   }
 },
 {
   "model": "hotels.roomphoto",
   "pk": 166,
   "fields": {
-    "room": 388,
-    "photo": "hotels/60/rooms/388/test_photo_77.jpg",
-    "order_number": 1
+    "room": 108,
+    "photo": "hotels/5/rooms/108/test_photo_535.jpg",
+    "order_number": 3
   }
 },
 {
   "model": "hotels.roomphoto",
   "pk": 167,
   "fields": {
-    "room": 389,
-    "photo": "hotels/60/rooms/389/test_photo_118.jpg",
+    "room": 109,
+    "photo": "hotels/5/rooms/109/test_photo_206.jpg",
     "order_number": 1
   }
 },
@@ -4733,53 +3871,53 @@
   "model": "hotels.roomphoto",
   "pk": 168,
   "fields": {
-    "room": 389,
-    "photo": "hotels/60/rooms/389/test_photo_497.jpg",
-    "order_number": 2
+    "room": 110,
+    "photo": "hotels/5/rooms/110/test_photo_483.jpg",
+    "order_number": 1
   }
 },
 {
   "model": "hotels.roomphoto",
   "pk": 169,
   "fields": {
-    "room": 389,
-    "photo": "hotels/60/rooms/389/test_photo_928.jpg",
-    "order_number": 3
+    "room": 110,
+    "photo": "hotels/5/rooms/110/test_photo_26.jpg",
+    "order_number": 2
   }
 },
 {
   "model": "hotels.roomphoto",
   "pk": 170,
   "fields": {
-    "room": 390,
-    "photo": "hotels/60/rooms/390/test_photo_558.jpg",
-    "order_number": 1
+    "room": 110,
+    "photo": "hotels/5/rooms/110/test_photo_539.jpg",
+    "order_number": 3
   }
 },
 {
   "model": "hotels.roomphoto",
   "pk": 171,
   "fields": {
-    "room": 390,
-    "photo": "hotels/60/rooms/390/test_photo_305.jpg",
-    "order_number": 2
+    "room": 112,
+    "photo": "hotels/5/rooms/112/test_photo_777.jpg",
+    "order_number": 1
   }
 },
 {
   "model": "hotels.roomphoto",
   "pk": 172,
   "fields": {
-    "room": 390,
-    "photo": "hotels/60/rooms/390/test_photo_230.jpg",
-    "order_number": 3
+    "room": 113,
+    "photo": "hotels/5/rooms/113/test_photo_757.jpg",
+    "order_number": 1
   }
 },
 {
   "model": "hotels.roomphoto",
   "pk": 173,
   "fields": {
-    "room": 391,
-    "photo": "hotels/60/rooms/391/test_photo_539.jpg",
+    "room": 116,
+    "photo": "hotels/5/rooms/116/test_photo_995.jpg",
     "order_number": 1
   }
 },
@@ -4787,377 +3925,8 @@
   "model": "hotels.roomphoto",
   "pk": 174,
   "fields": {
-    "room": 391,
-    "photo": "hotels/60/rooms/391/test_photo_2.jpg",
-    "order_number": 2
-  }
-},
-{
-  "model": "hotels.roomphoto",
-  "pk": 175,
-  "fields": {
-    "room": 393,
-    "photo": "hotels/60/rooms/393/test_photo_180.jpg",
-    "order_number": 1
-  }
-},
-{
-  "model": "hotels.roomphoto",
-  "pk": 176,
-  "fields": {
-    "room": 394,
-    "photo": "hotels/60/rooms/394/test_photo_940.jpg",
-    "order_number": 1
-  }
-},
-{
-  "model": "hotels.roomphoto",
-  "pk": 177,
-  "fields": {
-    "room": 396,
-    "photo": "hotels/60/rooms/396/test_photo_867.jpg",
-    "order_number": 1
-  }
-},
-{
-  "model": "hotels.roomphoto",
-  "pk": 178,
-  "fields": {
-    "room": 397,
-    "photo": "hotels/60/rooms/397/test_photo_74.jpg",
-    "order_number": 1
-  }
-},
-{
-  "model": "hotels.roomphoto",
-  "pk": 179,
-  "fields": {
-    "room": 397,
-    "photo": "hotels/60/rooms/397/test_photo_711.jpg",
-    "order_number": 2
-  }
-},
-{
-  "model": "hotels.roomphoto",
-  "pk": 180,
-  "fields": {
-    "room": 397,
-    "photo": "hotels/60/rooms/397/test_photo_328.jpg",
-    "order_number": 3
-  }
-},
-{
-  "model": "hotels.roomphoto",
-  "pk": 181,
-  "fields": {
-    "room": 398,
-    "photo": "hotels/60/rooms/398/test_photo_467.jpg",
-    "order_number": 1
-  }
-},
-{
-  "model": "hotels.roomphoto",
-  "pk": 182,
-  "fields": {
-    "room": 398,
-    "photo": "hotels/60/rooms/398/test_photo_373.jpg",
-    "order_number": 2
-  }
-},
-{
-  "model": "hotels.roomphoto",
-  "pk": 183,
-  "fields": {
-    "room": 400,
-    "photo": "hotels/60/rooms/400/test_photo_73.jpg",
-    "order_number": 1
-  }
-},
-{
-  "model": "hotels.roomphoto",
-  "pk": 184,
-  "fields": {
-    "room": 400,
-    "photo": "hotels/60/rooms/400/test_photo_759.jpg",
-    "order_number": 2
-  }
-},
-{
-  "model": "hotels.roomphoto",
-  "pk": 185,
-  "fields": {
-    "room": 401,
-    "photo": "hotels/61/rooms/401/test_photo_966.jpg",
-    "order_number": 1
-  }
-},
-{
-  "model": "hotels.roomphoto",
-  "pk": 186,
-  "fields": {
-    "room": 401,
-    "photo": "hotels/61/rooms/401/test_photo_593.jpg",
-    "order_number": 2
-  }
-},
-{
-  "model": "hotels.roomphoto",
-  "pk": 187,
-  "fields": {
-    "room": 401,
-    "photo": "hotels/61/rooms/401/test_photo_679.jpg",
-    "order_number": 3
-  }
-},
-{
-  "model": "hotels.roomphoto",
-  "pk": 188,
-  "fields": {
-    "room": 403,
-    "photo": "hotels/61/rooms/403/test_photo_539.jpg",
-    "order_number": 1
-  }
-},
-{
-  "model": "hotels.roomphoto",
-  "pk": 189,
-  "fields": {
-    "room": 403,
-    "photo": "hotels/61/rooms/403/test_photo_891.jpg",
-    "order_number": 2
-  }
-},
-{
-  "model": "hotels.roomphoto",
-  "pk": 190,
-  "fields": {
-    "room": 404,
-    "photo": "hotels/61/rooms/404/test_photo_573.jpg",
-    "order_number": 1
-  }
-},
-{
-  "model": "hotels.roomphoto",
-  "pk": 191,
-  "fields": {
-    "room": 404,
-    "photo": "hotels/61/rooms/404/test_photo_434.jpg",
-    "order_number": 2
-  }
-},
-{
-  "model": "hotels.roomphoto",
-  "pk": 192,
-  "fields": {
-    "room": 405,
-    "photo": "hotels/61/rooms/405/test_photo_818.jpg",
-    "order_number": 1
-  }
-},
-{
-  "model": "hotels.roomphoto",
-  "pk": 193,
-  "fields": {
-    "room": 405,
-    "photo": "hotels/61/rooms/405/test_photo_414.jpg",
-    "order_number": 2
-  }
-},
-{
-  "model": "hotels.roomphoto",
-  "pk": 194,
-  "fields": {
-    "room": 406,
-    "photo": "hotels/61/rooms/406/test_photo_522.jpg",
-    "order_number": 1
-  }
-},
-{
-  "model": "hotels.roomphoto",
-  "pk": 195,
-  "fields": {
-    "room": 406,
-    "photo": "hotels/61/rooms/406/test_photo_897.jpg",
-    "order_number": 2
-  }
-},
-{
-  "model": "hotels.roomphoto",
-  "pk": 196,
-  "fields": {
-    "room": 409,
-    "photo": "hotels/61/rooms/409/test_photo_78.jpg",
-    "order_number": 1
-  }
-},
-{
-  "model": "hotels.roomphoto",
-  "pk": 197,
-  "fields": {
-    "room": 409,
-    "photo": "hotels/61/rooms/409/test_photo_77.jpg",
-    "order_number": 2
-  }
-},
-{
-  "model": "hotels.roomphoto",
-  "pk": 198,
-  "fields": {
-    "room": 412,
-    "photo": "hotels/61/rooms/412/test_photo_665.jpg",
-    "order_number": 1
-  }
-},
-{
-  "model": "hotels.roomphoto",
-  "pk": 199,
-  "fields": {
-    "room": 412,
-    "photo": "hotels/61/rooms/412/test_photo_61.jpg",
-    "order_number": 2
-  }
-},
-{
-  "model": "hotels.roomphoto",
-  "pk": 200,
-  "fields": {
-    "room": 412,
-    "photo": "hotels/61/rooms/412/test_photo_151.jpg",
-    "order_number": 3
-  }
-},
-{
-  "model": "hotels.roomphoto",
-  "pk": 201,
-  "fields": {
-    "room": 413,
-    "photo": "hotels/61/rooms/413/test_photo_165.jpg",
-    "order_number": 1
-  }
-},
-{
-  "model": "hotels.roomphoto",
-  "pk": 202,
-  "fields": {
-    "room": 413,
-    "photo": "hotels/61/rooms/413/test_photo_403.jpg",
-    "order_number": 2
-  }
-},
-{
-  "model": "hotels.roomphoto",
-  "pk": 203,
-  "fields": {
-    "room": 413,
-    "photo": "hotels/61/rooms/413/test_photo_529.jpg",
-    "order_number": 3
-  }
-},
-{
-  "model": "hotels.roomphoto",
-  "pk": 204,
-  "fields": {
-    "room": 414,
-    "photo": "hotels/61/rooms/414/test_photo_485.jpg",
-    "order_number": 1
-  }
-},
-{
-  "model": "hotels.roomphoto",
-  "pk": 205,
-  "fields": {
-    "room": 415,
-    "photo": "hotels/61/rooms/415/test_photo_211.jpg",
-    "order_number": 1
-  }
-},
-{
-  "model": "hotels.roomphoto",
-  "pk": 206,
-  "fields": {
-    "room": 415,
-    "photo": "hotels/61/rooms/415/test_photo_732.jpg",
-    "order_number": 2
-  }
-},
-{
-  "model": "hotels.roomphoto",
-  "pk": 207,
-  "fields": {
-    "room": 415,
-    "photo": "hotels/61/rooms/415/test_photo_497.jpg",
-    "order_number": 3
-  }
-},
-{
-  "model": "hotels.roomphoto",
-  "pk": 208,
-  "fields": {
-    "room": 416,
-    "photo": "hotels/61/rooms/416/test_photo_319.jpg",
-    "order_number": 1
-  }
-},
-{
-  "model": "hotels.roomphoto",
-  "pk": 209,
-  "fields": {
-    "room": 416,
-    "photo": "hotels/61/rooms/416/test_photo_692.jpg",
-    "order_number": 2
-  }
-},
-{
-  "model": "hotels.roomphoto",
-  "pk": 210,
-  "fields": {
-    "room": 417,
-    "photo": "hotels/61/rooms/417/test_photo_30.jpg",
-    "order_number": 1
-  }
-},
-{
-  "model": "hotels.roomphoto",
-  "pk": 211,
-  "fields": {
-    "room": 417,
-    "photo": "hotels/61/rooms/417/test_photo_370.jpg",
-    "order_number": 2
-  }
-},
-{
-  "model": "hotels.roomphoto",
-  "pk": 212,
-  "fields": {
-    "room": 417,
-    "photo": "hotels/61/rooms/417/test_photo_205.jpg",
-    "order_number": 3
-  }
-},
-{
-  "model": "hotels.roomphoto",
-  "pk": 213,
-  "fields": {
-    "room": 418,
-    "photo": "hotels/61/rooms/418/test_photo_385.jpg",
-    "order_number": 1
-  }
-},
-{
-  "model": "hotels.roomphoto",
-  "pk": 214,
-  "fields": {
-    "room": 418,
-    "photo": "hotels/61/rooms/418/test_photo_277.jpg",
-    "order_number": 2
-  }
-},
-{
-  "model": "hotels.roomphoto",
-  "pk": 215,
-  "fields": {
-    "room": 420,
-    "photo": "hotels/61/rooms/420/test_photo_913.jpg",
+    "room": 119,
+    "photo": "hotels/5/rooms/119/test_photo_538.jpg",
     "order_number": 1
   }
 }

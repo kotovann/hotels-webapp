@@ -47,6 +47,6 @@ class UserManager(BaseUserManager):
         )
 
         from app.accounts.models import Administrator
-        Administrator.objects.create(user=user, is_owner=True)
+        Administrator.objects.create(user=user)
 
         return user

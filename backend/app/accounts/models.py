@@ -21,12 +21,11 @@ class User(AbstractUser):
     Кастомная модель пользователя, наследующая AbstractUser.
     В качестве идентификатора используется email, поле username отключено.
     '''
-    class Role:
-        GUEST = 'Гость'
-        EMPLOYEE = 'Сотрудник'
-        MODERATOR = 'Модератор'
-        ADMIN = 'Администратор'
-        OWNER = 'Владелец'
+    class Role(models.TextChoices):
+        GUEST = 'guest', 'Гость'
+        MODERATOR = 'moderator', 'Модератор'
+        ADMIN = 'admin', 'Администратор'
+        NO_ROLE = 'no role', 'Нет роли'
 
     username = None
     email = models.EmailField(
@@ -98,48 +97,54 @@ class User(AbstractUser):
     def is_admin(self) -> bool:
         return hasattr(self, 'admin')
 
+    @is_admin.setter
+    def is_admin(self, _):
+        raise ValueError('Назначьте соответствующую роль через user.assign_role(role)')
+
     @property
     def is_moderator(self) -> bool:
         return hasattr(self, 'moderator')
 
-    @property
-    def is_employee(self) -> bool:
-        return hasattr(self, 'employee')
+    @is_moderator.setter
+    def is_moderator(self, _):
+        raise ValueError('Назначьте соответствующую роль через user.assign_role(role)')
 
     @property
-    def is_owner(self) -> bool:
-        return self.is_admin and self.admin.is_owner
+    def is_guest(self) -> bool:
+        return hasattr(self, 'guest')
+
+    @is_guest.setter
+    def is_guest(self, _):
+        raise ValueError('Назначьте соответствующую роль через user.assign_role(role)')
 
     @property
     def is_superuser(self) -> bool:
-        return self.is_owner
-
-    @property
-    def is_staff(self) -> bool:
-        return self.is_employee or self.is_moderator or self.is_admin
+        return self.is_admin
 
     @is_superuser.setter
     def is_superuser(self, _):
-        pass
+        raise ValueError('Назначьте роль администратора')
+
+    @property
+    def is_staff(self) -> bool:
+        return self.is_moderator or self.is_admin
 
     @is_staff.setter
     def is_staff(self, _):
-        pass
+        raise ValueError('Назначьте роль администратора или модератора')
 
     @property
     def role(self) -> str:
         '''
         Возвращает основную роль пользователя.
         '''
-        if self.is_owner:
-            return self.Role.OWNER
         if self.is_admin:
-            return self.Role.ADMIN
+            return User.Role.ADMIN
         if self.is_moderator:
-            return self.Role.MODERATOR
-        if self.is_employee:
-            return self.Role.EMPLOYEE
-        return self.Role.GUEST
+            return User.Role.MODERATOR
+        if self.is_guest:
+            return User.Role.GUEST
+        return User.Role.NO_ROLE
 
     def get_full_name(self) -> str:
         '''
@@ -153,28 +158,57 @@ class User(AbstractUser):
         '''
         return self.short_name
 
+    def assign_role(self, role: str) -> None:
+        if role == User.Role.GUEST:
+            if self.is_guest:
+                raise ValueError('Пользователь уже является гостем')
+            Guest.objects.create(user=self)
+        elif role == User.Role.MODERATOR:
+            if self.is_moderator:
+                raise ValueError('Пользователь уже является модератором')
+            Moderator.objects.create(user=self)
+        elif role == User.Role.ADMIN:
+            if self.is_admin:
+                raise ValueError('Пользователь уже является администратором')
+            Administrator.objects.create(user=self)
+        else:
+            raise ValueError(f'Неизвестная роль пользователя: {role}')
+
+    def remove_role(self, role: str) -> None:
+        if role == User.Role.GUEST:
+            if not self.is_guest:
+                raise ValueError('Пользователь уже не является гостем')
+            self.guest.delete()
+            self.save()
+        elif role == User.Role.MODERATOR:
+            if not self.is_moderator:
+                raise ValueError('Пользователь уже не является модератором')
+            self.moderator.delete()
+            self.save()
+        elif role == User.Role.ADMIN:
+            if not self.is_admin:
+                raise ValueError('Пользователь уже не является администратором')
+            self.admin.delete()
+            self.save()
+        else:
+            raise ValueError(f'Неизвестная роль пользователя: {role}')
+
     def __str__(self) -> str:
         return f'{self.role} {self.full_name}, {self.email}, {self.phone_number}'
 
 
-class Employee(models.Model):
+class Guest(models.Model):
     user = models.OneToOneField(
         User,
         on_delete=models.CASCADE,
-        related_name='employee',
+        related_name='guest',
         verbose_name='Пользователь'
-    )
-    hotel = models.ForeignKey(
-        'hotels.Hotel',
-        on_delete=models.CASCADE,
-        related_name='employees',
-        verbose_name='Отель'
     )
 
     class Meta:
-        db_table = 'employee'
-        verbose_name = 'Сотрудник'
-        verbose_name_plural = 'Сотрудники'
+        db_table = 'guest'
+        verbose_name = 'Гость'
+        verbose_name_plural = 'Гости'
 
     def __str__(self):
         return str(self.user)
@@ -204,7 +238,6 @@ class Administrator(models.Model):
         related_name='admin',
         verbose_name='Пользователь'
     )
-    is_owner = models.BooleanField(default=False)
 
     class Meta:
         db_table = 'admin'

@@ -30,7 +30,7 @@ class BookingPaymentInline(admin.TabularInline):
 @admin.register(Booking)
 class BookingAdmin(admin.ModelAdmin):
     inlines = [BookingPaymentInline, ReviewInline]
-    list_select_related = ['user', 'room', 'room__hotel', 'room__room_type']
+    list_select_related = ['guest', 'guest__user', 'room', 'room__hotel', 'room__room_type']
     list_display = [
         'id', 'get_user', 'get_hotel', 'get_room',
         'check_in_date', 'check_out_date', 'days_count',
@@ -39,7 +39,8 @@ class BookingAdmin(admin.ModelAdmin):
     list_per_page = 30
     list_filter = ['status', 'room__hotel', 'room__room_type']
     search_fields = [
-        'user__email', 'user__first_name', 'user__last_name', 'user__phone_number',
+        'guest__user__last_name', 'guest__user__first_name',
+        'guest__user__last_name', 'guest__user__phone_number',
     ]
     readonly_fields = ['created_at', 'days_count']
     fieldsets = (
@@ -47,16 +48,16 @@ class BookingAdmin(admin.ModelAdmin):
             'fields': ('room', 'check_in_date', 'check_out_date', 'days_count', 'created_at'),
         }),
         ('Гость', {
-            'fields': ('user', 'adults_count', 'children_count', 'pets_count'),
+            'fields': ('guest', 'adults_count', 'children_count', 'pets_count'),
         }),
         ('Статус и тип', {
             'fields': ('status', 'type', 'moved_to'),
         }),
     )
 
-    @admin.display(description='Гость', ordering=('user__last_name', 'user__first_name'))
+    @admin.display(description='Гость', ordering='guest__user__last_name')
     def get_user(self, obj):
-        return obj.user.short_name
+        return obj.guest.user.short_name
 
     @admin.display(description='Отель', ordering='room__hotel__name')
     def get_hotel(self, obj):
@@ -72,20 +73,23 @@ class BookingAdmin(admin.ModelAdmin):
 
     def get_queryset(self, request):
         return super().get_queryset(request).select_related(
-            'user', 'room', 'room__hotel', 'room__room_type'
+            'guest', 'guest__user', 'room', 'room__hotel', 'room__room_type'
         )
 
 
 @admin.register(BookingPayment)
 class BookingPaymentAdmin(admin.ModelAdmin):
-    list_select_related = ['booking', 'booking__user']
+    list_select_related = ['booking', 'booking__guest__user']
     list_display = [
         'id', 'booking', 'get_user', 'amount', 'purpose', 
         'status', 'created_at', 'paid_at'
     ]
     list_per_page = 30
     list_filter = ['status', 'purpose']
-    search_fields = ['booking__user__email', 'booking__user__phone_number', 'booking__id']
+    search_fields = [
+        'booking__guest__user__email', 'booking__guest__user__phone_number',
+        'booking__guest__user__last_name', 'booking__id'
+    ]
     readonly_fields = ['created_at']
     autocomplete_fields = ['booking']
 
@@ -101,24 +105,24 @@ class BookingPaymentAdmin(admin.ModelAdmin):
         }),
     )
 
-    @admin.display(description='Пользователь', ordering='booking__user__last_name')
+    @admin.display(description='Пользователь', ordering='booking__guest__user__last_name')
     def get_user(self, obj):
-        return obj.booking.user.short_name
+        return obj.booking.guest.user.short_name
 
     def get_queryset(self, request):
-        return super().get_queryset(request).select_related('booking__user')
+        return super().get_queryset(request).select_related('booking__guest__user')
 
 
 @admin.register(CancelledBooking)
 class CancelledBookingAdmin(admin.ModelAdmin):
-    list_select_related = ['booking', 'booking__user', 'booking__room']
+    list_select_related = ['booking', 'booking__guest__user', 'booking__room']
     list_display = [
         'id', 'booking', 'get_user', 'get_hotel', 'cancelled_at'
     ]
     list_per_page = 30
     search_fields = [
-        'booking__user__email', 'booking__user__phone_number',
-        'cancellation_reason', 'booking__id'
+        'booking__guest__user__email', 'booking__guest__user__phone_number',
+        'booking__guest__user__last_name', 'cancellation_reason', 'booking__id'
     ]
     readonly_fields = ['cancelled_at', 'booking']
     fieldsets = (
@@ -130,9 +134,9 @@ class CancelledBookingAdmin(admin.ModelAdmin):
         }),
     )
 
-    @admin.display(description='Пользователь', ordering='booking__user__last_name')
+    @admin.display(description='Гость', ordering='booking__guest__user__last_name')
     def get_user(self, obj):
-        return obj.booking.user.short_name
+        return obj.booking.guest.user.short_name
 
     @admin.display(description='Отель', ordering='booking__room__hotel__name')
     def get_hotel(self, obj):
@@ -140,18 +144,24 @@ class CancelledBookingAdmin(admin.ModelAdmin):
 
     def get_queryset(self, request):
         return super().get_queryset(request).select_related(
-            'booking__user', 'booking__room__hotel'
+            'booking__guest__user', 'booking__room__hotel'
         )
 
 
 @admin.register(Review)
 class ReviewAdmin(admin.ModelAdmin):
-    list_select_related = ['booking', 'booking__user', 'moderated_by']
+    list_select_related = [
+        'booking', 'booking__guest__user',
+        'moderated_by', 'moderated_by__user'
+    ]
     list_display = ['get_user', 'rating', 'get_stars', 'created_at', 'status', 'get_moderated_by']
     list_per_page = 30
     list_filter = ['rating', 'status']
     readonly_fields = ['created_at', 'published_at']
-    search_fields = ['comment', 'booking__user__email', 'booking__user__phone_number']
+    search_fields = [
+        'booking__guest__user__email', 'booking__guest__user__phone_number',
+        'booking__guest__user__last_name', 'comment',
+    ]
     fieldsets = (
         ('Бронь', {
             'fields': ('booking',),
@@ -167,9 +177,9 @@ class ReviewAdmin(admin.ModelAdmin):
         }),
     )
 
-    @admin.display(description='Гость', ordering='booking__user__last_name')
+    @admin.display(description='Гость', ordering='booking__guest__user__last_name')
     def get_user(self, obj):
-        return obj.booking.user.short_name
+        return obj.booking.guest.user.short_name
 
     @admin.display(description='Оценка')
     def get_stars(self, obj):
@@ -180,13 +190,13 @@ class ReviewAdmin(admin.ModelAdmin):
             filled, empty,
         )
 
-    @admin.display(description='Модератор', ordering='moderated_by__last_name')
+    @admin.display(description='Модератор', ordering='moderated_by__user__last_name')
     def get_moderated_by(self, obj):
         if obj.moderated_by:
-            return obj.moderated_by.short_name
+            return obj.moderated_by.user.short_name
         return '-'
 
     def get_queryset(self, request):
         return super().get_queryset(request).select_related(
-            'booking__user', 'moderated_by'
+            'booking__guest__user', 'moderated_by__user'
         )

@@ -2,16 +2,17 @@ import random
 from typing import Any, Optional
 
 from django.db import transaction
+from django.contrib.auth import get_user_model
 from django.core.management.base import BaseCommand, CommandParser
 from faker import Faker
 
-from app.accounts.models import User, Employee, Moderator, Administrator
-from app.hotels.models import Hotel
+from app.accounts.models import Guest, Moderator, Administrator
 from utils.normalizers import normalize_email, normalize_phone
 from utils.validators import validate_email, validate_phone
 
 
 fake = Faker('ru_RU')
+User = get_user_model()
 
 
 class Command(BaseCommand):
@@ -29,39 +30,19 @@ class Command(BaseCommand):
             '--role',
             '-r',
             type=str,
-            choices=(User.Role.GUEST, User.Role.EMPLOYEE, User.Role.MODERATOR, User.Role.ADMIN),
+            choices=(User.Role.GUEST, User.Role.MODERATOR, User.Role.ADMIN),
             default=User.Role.GUEST,
             help='Роль создаваемых пользователей (по умолчанию Гость)'
-        )
-        parser.add_argument(
-            '--hotel-id',
-            type=int,
-            help='ID отеля для роли Сотрудник'
         )
 
     def handle(self, *_args: Any, **options: Any) -> Optional[str]:
         user_count: int = options['users']
         role: str = options['role']
-        hotel_id: Optional[int] = options.get('hotel_id')
 
-        hotels = []
-        if role == User.Role.EMPLOYEE:
-            if hotel_id is not None:
-                try:
-                    hotels.append(Hotel.objects.get(id=hotel_id))
-                except Hotel.DoesNotExist:
-                    self.stderr.write(f'Отель с id "{hotel_id}" не найден.')
-                    return
-            else:
-                hotels = list(Hotel.objects.all())
-            if not hotels:
-                self.stderr.write('Не удалось создать сотрудников: нет доступных отелей.')
-                return
-
-        self._create_users(user_count, role, hotels)
+        self._create_users(user_count, role)
         return None
 
-    def _create_users(self, user_count: int, role: str, hotels: list[Hotel]) -> None:
+    def _create_users(self, user_count: int, role: str) -> None:
         existing_emails = set(User.objects.values_list('email', flat=True))
         existing_phones = set(User.objects.values_list('phone_number', flat=True))
         new_users = []
@@ -107,29 +88,23 @@ class Command(BaseCommand):
             created_users = User.objects.bulk_create(new_users)
 
             for user in created_users:
-                if role == User.Role.EMPLOYEE:
-                    hotel = random.choice(hotels)
-                    roles.append(Employee(user=user, hotel=hotel))
+                if role == User.Role.GUEST:
+                    roles.append(Guest(user=user))
                 elif role == User.Role.MODERATOR:
                     roles.append(Moderator(user=user))
-                elif role in (User.Role.ADMIN, User.Role.OWNER):
-                    is_owner = role == User.Role.OWNER
-                    roles.append(Administrator(user=user, is_owner=is_owner))
+                elif role == User.Role.ADMIN:
+                    roles.append(Administrator(user=user))
 
-            if role == User.Role.EMPLOYEE:
-                Employee.objects.bulk_create(roles)
+            if role == User.Role.GUEST:
+                Guest.objects.bulk_create(roles)
             elif role == User.Role.MODERATOR:
                 Moderator.objects.bulk_create(roles)
-            elif role in (User.Role.ADMIN, User.Role.OWNER):
+            elif role == User.Role.ADMIN:
                 Administrator.objects.bulk_create(roles)
 
         for user in created_users:
-            extra_info = ''
-            if role == User.Role.EMPLOYEE:
-                extra_info = f', отель {hotel.name}'
-
             self.stdout.write(self.style.SUCCESS(
                 f'Создан пользователь: {user.full_name}, email: {user.email}, '
                 f'телефон: {user.phone_number}, дата рождения: {user.date_of_birth}, '
-                f'роль: {role}{extra_info}, пароль: {password}'
+                f'роль: {role}, пароль: {password}'
             ))
