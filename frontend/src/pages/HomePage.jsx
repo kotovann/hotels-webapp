@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { hotels } from '../data/hotels';
 
 function HomePage() {
@@ -42,14 +42,18 @@ function HomePage() {
         <h2 className="text-2xl font-bold">Популярные гостиницы</h2>
         <div className="grid md:grid-cols-3 gap-6 mt-6">
           {hotels.map((hotel) => (
-            <article key={hotel.id} className="bg-white rounded-2xl overflow-hidden shadow-sm border">
+            <Link
+              key={hotel.id}
+              to={`/hotels/${hotel.id}`}
+              className="bg-white rounded-2xl overflow-hidden shadow-sm border hover:shadow-md transition block"
+            >
               <img src={hotel.image} alt={hotel.name} className="h-48 w-full object-cover" />
               <div className="p-5">
                 <h3 className="text-xl font-semibold">{hotel.name}</h3>
                 <p className="text-slate-500 mt-1">{hotel.city}</p>
                 <p className="mt-3 font-semibold">от {hotel.priceFrom} ₽ / ночь</p>
               </div>
-            </article>
+            </Link>
           ))}
         </div>
       </section>
