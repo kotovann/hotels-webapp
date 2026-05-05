@@ -1,3 +1,4 @@
+from datetime import timedelta
 from pathlib import Path
 from decouple import config
 
@@ -26,6 +27,9 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'rest_framework',
+    'rest_framework_simplejwt',
+    'rest_framework_simplejwt.token_blacklist',
     'phonenumber_field',
     'app.accounts',
     'app.hotels',
@@ -33,6 +37,27 @@ INSTALLED_APPS = [
 ]
 
 AUTH_USER_MODEL = 'accounts.User'
+
+REST_FRAMEWORK = {
+    'DEFAULT_PERMISSION_CLASSES': ['rest_framework.permissions.IsAuthenticated'],
+    'DEFAULT_AUTHENTICATION_CLASSES': [
+        'rest_framework_simplejwt.authentication.JWTAuthentication',
+    ],
+    'DEFAULT_FILTER_BACKENDS': [
+        'django_filters.rest_framework.DjangoFilterBackend',
+        'rest_framework.filters.SearchFilter',
+        'rest_framework.filters.OrderingFilter',
+    ],
+}
+
+SIMPLE_JWT = {
+    'ROTATE_REFRESH_TOKENS': True,
+    'BLACKLIST_AFTER_ROTATION': True,
+    'ACCESS_TOKEN_LIFETIME': timedelta(minutes=30),
+    'REFRESH_TOKEN_LIFETIME': timedelta(days=7),
+    'USER_ID_FIELD': 'id',
+    'USER_ID_CLAIM': 'user_id',
+}
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -75,7 +100,10 @@ DATABASES = {
         'PASSWORD': config('POSTGRES_PASSWORD'),
         'HOST': config('POSTGRES_HOST'),
         'PORT': config('POSTGRES_PORT', cast=int),
-    }
+        'TEST': {
+            'ENGINE': 'django.db.backends.sqlite3',
+        }
+    },
 }
 
 
@@ -110,11 +138,42 @@ USE_I18N = True
 USE_TZ = True
 
 PHONENUMBER_DEFAULT_REGION = 'RU'
+
 PHONENUMBER_DB_FORMAT = 'E164'
+
+PHONENUMBER_DEFAULT_FORMAT = 'E164'
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/6.0/howto/static-files/
 
 STATIC_URL = 'static/'
+
 MEDIA_URL = 'media/'
+
 MEDIA_ROOT = BASE_DIR / 'media/'
+
+# Сброс пароля:
+PASSWORD_RESET_TIMEOUT = 14400
+
+## Для генерации ссылки в письме
+FRONTEND_URL = config('FRONTEND_URL')
+
+_email_backend = 'django.core.mail.backends.smtp.EmailBackend'
+## В режиме разработки письма пишутся в консоль
+if DEBUG:
+    _email_backend = 'django.core.mail.backends.console.EmailBackend'
+
+EMAIL_BACKEND = _email_backend
+
+## Только для продакшена:
+EMAIL_HOST = config('EMAIL_HOST')
+
+EMAIL_PORT = config('EMAIL_PORT')
+
+EMAIL_USE_TLS = config('EMAIL_USE_TLS')
+
+EMAIL_HOST_USER = config('EMAIL_HOST_USER')
+
+EMAIL_HOST_PASSWORD = config('EMAIL_HOST_PASSWORD')
+
+DEFAULT_FROM_EMAIL = config('DEFAULT_FROM_EMAIL')

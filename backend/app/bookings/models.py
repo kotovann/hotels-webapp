@@ -1,39 +1,34 @@
-from decimal import Decimal
+from datetime import date
+
 from django.db import models
-from django.conf import settings
+from django.contrib.auth import get_user_model
 from django.core.validators import MinValueValidator, MaxValueValidator
 from django.core.exceptions import ValidationError
 from django.utils import timezone
 
-
-class BookingStatus(models.TextChoices):
-    ACTIVE = 'Активно'
-    MOVED = 'Перенесено'
-    CANCELLED = 'Отменено'
-    CLOSED = 'Завершено'
+from app.accounts.models import Guest, Moderator
 
 
-class PaymentStatus(models.TextChoices):
-    NOT_PAYED = 'Не оплачено'
-    PAYED = 'Оплачено'
+User = get_user_model()
 
 
-def _calc_total_price(instance) -> Decimal:
-    people_count = Decimal(instance.adults_count + instance.children_count)
-    room_type = instance.room.room_type
-    room_capacity = Decimal(room_type.capacity)
-    extra_people_count = max(Decimal(0), people_count - room_capacity)
-    base_price = room_type.price_per_night
-    extra_pay = room_type.extra_pay_per_person * extra_people_count
-    return Decimal(instance.days_count) * (base_price + extra_pay)
-
+class _BookingStatus(models.TextChoices):
+    ACTIVE = 'A', 'Активно'
+    MOVED = 'M', 'Перенесено'
+    CANCELLED = 'CA', 'Отменено'
+    CLOSED = 'CL', 'Завершено'
 
 class Booking(models.Model):
-    user = models.ForeignKey(
-        settings.AUTH_USER_MODEL,
+    class Type(models.TextChoices):
+        GUARANTEED = 'G', 'Гарантированное'
+        NOT_GUARANTEED = 'N', 'Негарантированное'
+    Status = _BookingStatus
+
+    guest = models.ForeignKey(
+        Guest,
         on_delete=models.CASCADE,
         related_name='bookings',
-        verbose_name='Зарегистрированный пользователь'
+        verbose_name='Гость'
     )
     room = models.ForeignKey(
         'hotels.Room',
@@ -46,41 +41,190 @@ class Booking(models.Model):
         verbose_name='Количество взрослых',
     )
     children_count = models.PositiveSmallIntegerField(
+        default=0,
+        validators=[MinValueValidator(0, 'Количество детей не может быть меньше нуля')],
         verbose_name='Количество детей',
     )
     pets_count = models.PositiveSmallIntegerField(
-        verbose_name='Количество животных',
+        default=0,
+        validators=[MinValueValidator(0, 'Количество питомцев не может быть меньше нуля')],
+        verbose_name='Количество питомцев',
     )
-    check_in_date = models.DateField(
-        verbose_name='Дата въезда',
-    )
-    check_out_date = models.DateField(
-        verbose_name='Дата выселения',
-    )
+    check_in_date = models.DateField(verbose_name='Дата въезда')
+    check_out_date = models.DateField(verbose_name='Дата выселения')
     status = models.CharField(
-        choices=BookingStatus.choices,
-        default=BookingStatus.ACTIVE,
-        verbose_name='Статус брони',
+        max_length=2,
+        choices=Status.choices,
+        default=Status.ACTIVE,
+        verbose_name='Статус бронирования',
     )
-    total_price = models.DecimalField(
-        max_digits=10,
-        decimal_places=2,
-        editable=False,
-        verbose_name='К оплате',
-        help_text='Будет расчитана после добавления записи о брони',
-    )
-    payment_status = models.CharField(
-        choices=PaymentStatus.choices,
-        default=PaymentStatus.NOT_PAYED,
-        verbose_name='Статус платежа',
+    type = models.CharField(
+        max_length=2,
+        choices=Type.choices,
+        default=Type.GUARANTEED,
+        verbose_name='Тип бронирования',
+        help_text='С предоплатой или без (гарантированное/негарантированное)'
     )
     created_at = models.DateTimeField(
         auto_now_add=True,
         verbose_name='Дата создания',
     )
-    cancelled_at = models.DateTimeField(
+    updated_at = models.DateTimeField(
+        auto_now=True,
+        verbose_name='Дата обновления',
+    )
+    moved_to = models.ForeignKey(
+        'self',
+        on_delete=models.SET_NULL,
         null=True,
         blank=True,
+        related_name='moved_from',
+        verbose_name='Новое бронирование (при переносе)'
+    )
+
+    class Meta:
+        db_table = 'booking'
+        verbose_name = 'Бронирование'
+        verbose_name_plural = 'Бронирования'
+        ordering = [
+            '-created_at', 'room__hotel__name',
+            'room__floor', 'room__number_on_floor', 'guest__user__last_name'
+        ]
+        constraints = [
+            models.CheckConstraint(
+                condition=models.Q(check_out_date__gt=models.F('check_in_date')),
+                name='booking_check_out_after_check_in',
+                violation_error_message='Дата выезда должна быть позже даты заезда'
+            ),
+            models.CheckConstraint(
+                condition=(
+                    models.Q(status=_BookingStatus.MOVED, moved_to__isnull=False) |
+                    models.Q(~models.Q(status=_BookingStatus.MOVED))
+                ),
+                name='booking_moved_to_required',
+                violation_error_message='При переносе бронирования необходимо указать ссылку на новое'
+            ),
+        ]
+
+    def clean(self):
+        if not self.room.hotel.is_active:
+            raise ValidationError('Нельзя забронировать номер в неактивном отеле')
+
+        if self.pets_count > 0 and not self.room.is_pets_allowed:
+            raise ValidationError('В данном номере нельзя проживать с животными')
+
+        total_guests = self.adults_count + self.children_count
+        if total_guests > self.room.bed_count:
+            raise ValidationError(
+                f'Номер рассчитан на {self.room.bed_count} гостей, '
+                f'указано {total_guests}'
+            )
+        return super().clean()
+
+    def save(self, *args, **kwargs):
+        self.full_clean()
+        super().save(*args, **kwargs)
+
+    def cancel(self, reason: str) -> None:
+        if self.status in (Booking.Status.CANCELLED, Booking.Status.CLOSED):
+            raise ValueError('Нельзя отменить уже завершенное или отмененное бронирование')
+        self.status = Booking.Status.CANCELLED
+        super(Booking, self).save(update_fields=['status'])
+        CancelledBooking.objects.create(booking=self, cancellation_reason=reason)
+
+    def move(self, new_check_in: date, new_check_out: date, **kwargs):
+        if self.status != Booking.Status.ACTIVE:
+            raise ValueError('Нельзя перенести неактивное бронирование')
+        self.status = Booking.Status.MOVED
+        new_booking = Booking.objects.create(
+            guest=self.guest,
+            room=self.room,
+            adults_count=self.adults_count,
+            children_count=self.children_count,
+            pets_count=self.pets_count,
+            check_in_date=new_check_in,
+            check_out_date=new_check_out,
+            status=Booking.Status.ACTIVE,
+            type=self.type,
+            **kwargs,
+        )
+        self.moved_to = new_booking
+        super(Booking, self).save(update_fields=['status', 'moved_to'])
+
+    @property
+    def days_count(self) -> int:
+        return (self.check_out_date - self.check_in_date).days
+
+    def __str__(self) -> str:
+        return f'Бронирование ({self.check_in_date:%d.%m.%Y}, {self.check_out_date:%d.%m.%Y})'
+
+
+class BookingPayment(models.Model):
+    class Purpose(models.TextChoices):
+        PREPAY = 'PP', 'Предоплата'
+        FULL_PAYMENT = 'FP', 'Полная оплата бронирования'
+        EXTRA_PAY = 'EP', 'Доплата'
+        REFUND = 'RF', 'Возврат'
+        PENALTY = 'PN', 'Штраф'
+
+    class Status(models.TextChoices):
+        OPEN = 'O', 'Ждет оплаты'
+        IRRELEVANT = 'I', 'Не актуально'
+        EXPIRED = 'E', 'Просрочен'
+        CLOSED = 'C', 'Оплачено'
+
+    booking = models.ForeignKey(
+        Booking,
+        on_delete=models.CASCADE,
+        related_name='payments',
+        verbose_name='Бронирование'
+    )
+    status = models.CharField(
+        max_length=1,
+        choices=Status.choices,
+        default=Status.OPEN,
+        verbose_name='Статус платежа'
+    )
+    amount = models.DecimalField(
+        max_digits=10,
+        decimal_places=2,
+        verbose_name='К оплате',
+    )
+    purpose = models.CharField(
+        max_length=3,
+        choices=Purpose.choices,
+        default=Purpose.PREPAY,
+        verbose_name='Назначение платежа'
+    )
+    created_at = models.DateTimeField(
+        auto_now_add=True,
+        verbose_name='Дата создания'
+    )
+    paid_at = models.DateTimeField(
+        null=True,
+        blank=True,
+        verbose_name='Дата оплаты'
+    )
+
+    class Meta:
+        db_table = 'booking_payment'
+        verbose_name = 'Платеж'
+        verbose_name_plural = 'Платежи'
+        ordering = ['-created_at', '-paid_at']
+
+    def __str__(self):
+        return f'Оплата по {self.booking}, статус: {self.status}, сумма: {self.amount}'
+
+
+class CancelledBooking(models.Model):
+    booking = models.OneToOneField(
+        Booking,
+        on_delete=models.CASCADE,
+        related_name='cancellation',
+        verbose_name='Бронирование'
+    )
+    cancelled_at = models.DateTimeField(
+        auto_now_add=True,
         verbose_name='Дата отмены',
     )
     cancellation_reason = models.CharField(
@@ -89,55 +233,26 @@ class Booking(models.Model):
     )
 
     class Meta:
-        db_table = 'booking'
-        verbose_name = 'Бронь'
-        verbose_name_plural = 'Брони'
-        ordering = [
-            '-created_at', 'room__hotel__name',
-            'room__floor', 'room__number_on_floor', 'user__last_name'
-        ]
-        constraints = [
-            models.CheckConstraint(
-                condition=models.Q(check_out_date__gt=models.F('check_in_date')),
-                name='booking_checkout_after_checkin',
-                violation_error_message='Дата выезда должна быть позже даты заезда'
-            ),
-            models.CheckConstraint(
-                condition=(
-                    models.Q(status=BookingStatus.CANCELLED, cancelled_at__isnull=False) |
-                    models.Q(
-                        status__in=[BookingStatus.ACTIVE, BookingStatus.CLOSED, BookingStatus.MOVED]
-                    )
-                ),
-                name='booking_cancelled_at_required',
-                violation_error_message='При отмене брони необходимо указать дату отмены'
-            ),
-        ]
-
-    def save(self, *args, **kwargs):
-        if not self.pk:  # только при создании
-            self.total_price = _calc_total_price(self)
-        if self.is_cancelled and not self.cancelled_at:
-            self.cancelled_at = timezone.now()
-        super().save(*args, **kwargs)
-
-    @property
-    def days_count(self) -> int:
-        return (self.check_out_date - self.check_in_date).days
+        db_table = 'cancelled_booking'
+        verbose_name = 'Отменненное бронирование'
+        verbose_name_plural = 'Отмененные бронирования'
+        ordering = ['-cancelled_at']
 
     def __str__(self) -> str:
-        parts = [
-            f'Бронь от {self.created_at}',
-            f'Дата заселения: {self.check_in_date}',
-            f'Дата выселения: {self.check_out_date}',
-            f'К оплате: {self.total_price}',
-            f'Статус оплаты: {self.payment_status}',
-            f'Статус брони: {self.status}',
-        ]
-        return ', '.join(parts)
+        return f'Отмена {self.booking}'
+
+
+class _ReviewStatus(models.TextChoices):
+    PUBLISHED = 'P', 'Опубликован'
+    DRAFT = 'D', 'Черновик'
+    ON_MODERATION = 'M', 'Ожидает проверки'
+    REJECTED = 'R', 'Не прошел модерацию'
+    ARCHIVED = 'A', 'Убран из публичного доступа'
 
 
 class Review(models.Model):
+    Status = _ReviewStatus
+
     booking = models.OneToOneField(
         Booking,
         on_delete=models.CASCADE,
@@ -161,9 +276,24 @@ class Review(models.Model):
         auto_now_add=True,
         verbose_name='Дата создания',
     )
-    is_published = models.BooleanField(
-        default=False,
-        verbose_name='Опубликовать',
+    status = models.CharField(
+        max_length=1,
+        choices=Status.choices,
+        default=Status.ON_MODERATION,
+    )
+    moderated_by = models.ForeignKey(
+        Moderator,
+        on_delete=models.SET_NULL,
+        null=True,
+        blank=True,
+        related_name='moderated_reviews',
+        verbose_name='Модератор'
+    )
+    rejection_reason = models.CharField(
+        max_length=255,
+        null=True,
+        blank=True,
+        verbose_name='Причина отказа',
     )
     published_at = models.DateTimeField(
         null=True,
@@ -175,33 +305,50 @@ class Review(models.Model):
         db_table = 'review'
         verbose_name = 'Отзыв'
         verbose_name_plural = 'Отзывы'
-        ordering = ['is_published', '-created_at']
+        ordering = ['-created_at', 'status']
         constraints = [
             models.CheckConstraint(
                 condition=(
-                    models.Q(is_published=True, published_at__isnull=False) |
-                    models.Q(is_published=False)
+                    models.Q(status=_ReviewStatus.PUBLISHED, published_at__isnull=False) |
+                    models.Q(~models.Q(status=_ReviewStatus.PUBLISHED))
                 ),
                 name='review_published_at_required',
-                violation_error_message='При публикации необходимо указать дату публикации'
+                violation_error_message='Необходимо указать дату публикации'
+            ),
+            models.CheckConstraint(
+                condition=(
+                    models.Q(
+                        ~models.Q(status=_ReviewStatus.DRAFT),
+                        moderated_by__isnull=False
+                    ) | models.Q(status=_ReviewStatus.DRAFT)
+                ),
+                name='review_moderated_by_required',
+                violation_error_message='Необходимо указать модератора'
+            ),
+            models.CheckConstraint(
+                condition=(
+                    models.Q(status=_ReviewStatus.REJECTED, rejection_reason__isnull=False) |
+                    models.Q(models.Q(~models.Q(status=_ReviewStatus.REJECTED)))
+                ),
+                name='review_rejection_reason_required',
+                violation_error_message='Необходимо указать причину отказа'
             ),
         ]
-        
+
     def clean(self):
-        if self.booking.status != BookingStatus.CLOSED:
-            raise ValidationError('Отзыв можно оставить только на завершённую бронь')
-        
+        if self.booking and self.booking.status != Booking.Status.CLOSED:
+            raise ValidationError('Отзыв можно оставить только на завершенную бронь')
+
+        if self.moderated_by and not self.moderated_by.is_staff:
+            raise ValidationError('Модерировать отзывы может только персонал')
+
     def save(self, *args, **kwargs):
-        if self.is_published and not self.published_at:
+        self.full_clean()
+        if self.status == Review.Status.PUBLISHED and not self.published_at:
             self.published_at = timezone.now()
         super().save(*args, **kwargs)
-    
+
     def __str__(self) -> str:
-        parts = [
-            f'Оценка {self.rating}',
-            f'комментарий: {self.comment[:50]}...' if self.comment else 'без комментария',
-            f'опубликовано: {self.published_at}' if self.is_published else 'не опубликовано',
-            f'относится к брони от {self.booking}',
-            f'пользователь: {self.booking.user}'
-        ]
-        return ', '.join(parts)
+        return (
+            f'Оценка {self.rating} от {self.created_at:%d.%m.%Y}, {self.get_status_display()}'
+        )

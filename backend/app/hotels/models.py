@@ -1,9 +1,16 @@
-from django.db import models
+from datetime import time
+
+from django.db import models, transaction
+from django.core.exceptions import ValidationError
 from django.core.validators import MinValueValidator, MaxValueValidator, RegexValidator, FileExtensionValidator
 from phonenumber_field.modelfields import PhoneNumberField
 
 
 class Hotel(models.Model):
+    MAX_FLOOR_COUNT = 10
+    STND_CHECK_IN_TIME = time(hour=14, minute=0, second=0, microsecond=0)
+    STND_CHECK_OUT_TIME = time(hour=12, minute=0, second=0, microsecond=0)
+
     name = models.CharField(
         max_length=100,
         unique=True,
@@ -34,6 +41,21 @@ class Hotel(models.Model):
         max_length=255,
         verbose_name='Адрес',
     )
+    floor_count = models.PositiveSmallIntegerField(
+        verbose_name='Количество этажей',
+        validators=[
+            MinValueValidator(1, message='Количество этажей не может быть меньше 1'),
+            MaxValueValidator(MAX_FLOOR_COUNT, message='Количество этажей не может быть больше 10'),
+        ],
+    )
+    check_in_time = models.TimeField(
+        default=STND_CHECK_IN_TIME,
+        verbose_name='Время заезда'
+    )
+    check_out_time = models.TimeField(
+        default=STND_CHECK_OUT_TIME,
+        verbose_name='Время выезда (расчётный час)'
+    )
     is_active = models.BooleanField(
         default=False,
         verbose_name='Активен',
@@ -43,19 +65,85 @@ class Hotel(models.Model):
         db_table = 'hotel'
         verbose_name = 'Отель'
         verbose_name_plural = 'Отели'
-        ordering = ['is_active', 'country', 'city', 'name']
+        ordering = ['country', 'city', 'name', '-is_active']
 
     def __str__(self) -> str:
-        parts = [
-            f'Отель {self.name}',
-            f'номер телефона: {self.phone}',
-            f'email: {self.email}',
-            f'адрес: {self.address}',
-            self.city,
-            self.country,
-            f'Состояние: {"работает" if self.is_active else "закрыт"}'
+        return self.name
+
+
+class RoomCategory(models.Model):
+    class BathroomType(models.TextChoices):
+        SHARED = 'S', 'Общий'
+        PARTIAL = 'P', 'Частичный (без ванны/душа)'
+        FULL = 'F', 'Полный санузел'
+
+    class Tier(models.TextChoices):
+        # Высшая категория
+        SUITE = 'SU', 'Сюит'
+        APARTMENT = 'A', 'Апартамент'
+        LUX = 'L', 'Люкс'
+        JUNIOR_SUITE = 'JSU', 'Джуниор сюит'
+        STUDIO = 'ST', 'Студия'
+        # Стандартные категории
+        FIRST = '1', 'Первая категория (стандарт)'
+        SECOND = '2', 'Вторая категория'
+        THIRD = '3', 'Третья категория'
+        FOURTH = '4', 'Четвёртая категория'
+        FIFTH = '5', 'Пятая категория'
+
+    MIN_AREA = {
+        Tier.SUITE: 75,
+        Tier.APARTMENT: 40,
+        Tier.LUX: 35,
+        Tier.JUNIOR_SUITE: 25,
+        Tier.STUDIO: 25,
+        Tier.FIRST: 9,
+        Tier.SECOND: 9,
+        Tier.THIRD: 9,
+        Tier.FOURTH: 9,
+        Tier.FIFTH: 9,
+    }
+
+    tier = models.CharField(
+        max_length=3,
+        choices=Tier.choices,
+        unique=True,
+        verbose_name='Категория',
+    )
+    min_area = models.PositiveSmallIntegerField(verbose_name='Минимальная площадь (кв.м.)')
+    requires_kitchen = models.BooleanField(
+        default=False,
+        verbose_name='Требуется кухонное оборудование',
+    )
+    required_bathroom_type = models.CharField(
+        max_length=1,
+        choices=BathroomType.choices,
+        default=BathroomType.FULL,
+        verbose_name='Необходимый тип санузла'
+    )
+    min_rooms = models.PositiveSmallIntegerField(
+        default=1,
+        verbose_name='Минимальное количество комнат',
+    )
+
+    class Meta:
+        db_table = 'room_category'
+        verbose_name = 'Категория номера'
+        verbose_name_plural = 'Категории номеров'
+        ordering = ['tier']
+
+    @property
+    def is_premium(self):
+        return self.tier in [
+            RoomCategory.Tier.SUITE,
+            RoomCategory.Tier.APARTMENT,
+            RoomCategory.Tier.LUX,
+            RoomCategory.Tier.JUNIOR_SUITE,
+            RoomCategory.Tier.STUDIO,
         ]
-        return ', '.join(parts)
+
+    def __str__(self):
+        return self.get_tier_display()
 
 
 class RoomType(models.Model):
@@ -64,26 +152,46 @@ class RoomType(models.Model):
         unique=True,
         verbose_name='Название типа',
     )
+    category = models.ForeignKey(
+        'hotels.RoomCategory',
+        on_delete=models.PROTECT,
+        related_name='room_types',
+        verbose_name='Категория по классификации',
+    )
     description = models.TextField(
         verbose_name='Описание',
     )
     size = models.PositiveSmallIntegerField(
-        validators=[MinValueValidator(2, message='Номер должен быть размером хотя бы 2 кв. м.')],
-        verbose_name='Площадь',
+        validators=[MinValueValidator(2, message='Номер должен быть размером хотя бы 2 кв.м.')],
+        verbose_name='Площадь (кв.м.)',
         help_text='в квадратных метрах',
     )
-    capacity = models.PositiveSmallIntegerField(
+    standard_capacity = models.PositiveSmallIntegerField(
         validators=[MinValueValidator(1, message='Номер должен вмещать хотя бы одного человека')],
         verbose_name='Вместимость',
     )
     bedroom_count = models.PositiveSmallIntegerField(
-        validators=[MinValueValidator(1, message='Номер должен иметь хотя бы одно спальное место')],
+        validators=[MinValueValidator(1, message='Номер должен иметь хотя бы одну спальню')],
         verbose_name='Количество спален',
+    )
+    living_room_count = models.PositiveSmallIntegerField(
+        validators=[MinValueValidator(0, message='Количество гостинных не может быть меньше нуля')],
+        verbose_name='Количество гостинных',
     )
     bathroom_count = models.PositiveSmallIntegerField(
         default=0,
         validators=[MinValueValidator(0, message='Количество ванных не может быть меньше нуля')],
         verbose_name='Количество ванных комнат',
+    )
+    bathroom_type = models.CharField(
+        max_length=1,
+        choices=RoomCategory.BathroomType.choices,
+        default=RoomCategory.BathroomType.FULL,
+        verbose_name='Тип санузла',
+    )
+    has_kitchen = models.BooleanField(
+        default=False,
+        verbose_name='Есть кухня',
     )
     has_balcony = models.BooleanField(
         default=False,
@@ -94,15 +202,33 @@ class RoomType(models.Model):
         db_table = 'room_type'
         verbose_name = 'Тип номера'
         verbose_name_plural = 'Типы номеров'
-        ordering = ['name', '-capacity', '-size']
-    
+        ordering = ['name', '-standard_capacity', '-size']
+
+    def clean(self):
+        if self.category:
+            if self.size:
+                min_area = self.category.min_area
+                if self.size < min_area:
+                    raise ValidationError(
+                        f'Площадь номера категории "{self.category}" '
+                        f'не может быть меньше {min_area} кв.м. '
+                    )
+            if (self.bedroom_count + self.living_room_count) < self.category.min_rooms:
+                raise ValidationError(
+                    f'Категория "{self.category}" требует минимум '
+                    f'{self.category.min_rooms} комнат(ы)'
+                )
+            if self.category.requires_kitchen and not self.has_kitchen:
+                raise ValidationError(
+                    f'Категория "{self.category}" требует наличия кухни'
+                )
+
+    def save(self, *args, **kwargs):
+        self.full_clean()
+        super().save(*args, **kwargs)
+
     def __str__(self) -> str:
-        parts = [
-            f'Тип комнаты: {self.name}',
-            f'Размер: {self.size}',
-            f'Вместимость: {self.capacity} человек',
-        ]
-        return ', '.join(parts)
+        return self.name
 
 
 class Room(models.Model):
@@ -115,6 +241,10 @@ class Room(models.Model):
         'hotels.RoomType',
         on_delete=models.CASCADE,
         related_name='rooms',
+    )
+    bed_count = models.PositiveSmallIntegerField(
+        validators=[MinValueValidator(1, message='Номер должен иметь хотя бы одно спальное место')],
+        verbose_name='Количество спальных мест',
     )
     is_pets_allowed = models.BooleanField(
         default=False,
@@ -139,7 +269,7 @@ class Room(models.Model):
     floor = models.PositiveSmallIntegerField(
         validators=[
             MinValueValidator(1, message='Этаж не может быть меньше 1'),
-            MaxValueValidator(100, message='Этаж не может быть больше 100'),
+            MaxValueValidator(Hotel.MAX_FLOOR_COUNT, message='Этаж не может быть больше 10'),
         ],
         verbose_name='Номер этажа',
     )
@@ -153,7 +283,7 @@ class Room(models.Model):
     variant = models.CharField(
         max_length=1,
         null=True,
-        blank=True, 
+        blank=True,
         validators=[RegexValidator(
             regex=r'^[A-Z]$',
             message='Вариация может быть только латинской буквой в высшем регистре',
@@ -166,39 +296,39 @@ class Room(models.Model):
         db_table = 'room'
         verbose_name = 'Номер'
         verbose_name_plural = 'Номера'
-        ordering = [
-            'hotel__name', 'room_type__name', 'floor',
-            'number_on_floor', 'variant', '-price_per_night'
-        ]
+        ordering = ['floor', 'number_on_floor', 'variant']
         constraints = [
-            models.UniqueConstraint(
-                fields=('hotel', 'floor'),
-                name='unique_floor_per_hotel',
-                violation_error_message='В отеле этаж с таких номером может быть только один',
-            ),
             models.UniqueConstraint(
                 fields=('hotel', 'floor', 'number_on_floor', 'variant'),
                 name='unique_room_per_hotel',
-                violation_error_message='В отеле может быть только одна комната'
+                violation_error_message='В отеле может быть только одна комната '
                 'с таким номером и вариантом на этаже'
             )
         ]
 
+    def clean(self, *args, **kwargs):
+        hotel = self.hotel
+        if hotel and self.floor > hotel.floor_count:
+            raise ValidationError(
+                f'Максимальное количество этажей в отеле {hotel}: {hotel.floor_count}'
+            )
+        super().clean(*args, **kwargs)
+
+    def save(self, *args, **kwargs):
+        self.full_clean()
+        super().save(*args, **kwargs)
+
     @property
     def room_number(self) -> str:
-        return f'{100 * self.floor + self.number_on_floor}{self.variant if self.variant else ""}'
+        number_on_floor = str(self.number_on_floor).rjust(2, '0')
+        return f'{self.floor}{number_on_floor}{self.variant if self.variant else ""}'
 
     def __str__(self) -> str:
-        parts = [
-            f'Номер: {self.room_number}',
-            f'этаж: {self.floor}',
-            f'отель: {str(self.room_type.hotel)}'
-        ]
-        return ', '.join(parts)
+        return self.room_number
 
 
 def _photo_path(instance, filename) -> str:
-    return f'rooms/{instance.room.room_type.hotel_id}/{instance.room_id}/{filename}'
+    return f'hotels/{instance.room.hotel_id}/rooms/{instance.room_id}/{filename}'
 
 
 class RoomPhoto(models.Model):
@@ -207,7 +337,7 @@ class RoomPhoto(models.Model):
         on_delete=models.CASCADE,
         related_name='photos',
     )
-    photo_path = models.ImageField(
+    photo = models.ImageField(
         upload_to=_photo_path,
         validators=[
             FileExtensionValidator(
@@ -217,7 +347,7 @@ class RoomPhoto(models.Model):
         ],
         verbose_name='Фото',
     )
-    sort_order_number = models.PositiveSmallIntegerField(
+    order_number = models.PositiveSmallIntegerField(
         verbose_name='Порядковый номер',
     )
 
@@ -227,15 +357,39 @@ class RoomPhoto(models.Model):
         verbose_name_plural = 'Фото номеров'
         ordering = [
             'room__hotel__name', 'room__floor',
-            'room__number_on_floor', 'room__variant', 'sort_order_number'
-        ]
-        constraints = [
-            models.UniqueConstraint(
-                fields=['room', 'sort_order_number'],
-                name='unique_order_number_per_room',
-                violation_error_message='Уже существует фото комнаты с таким порядковым номером',
-            )
+            'room__number_on_floor', 'room__variant', 'order_number'
         ]
 
+    def save(self, *args, **kwargs):
+        with transaction.atomic():
+            if not self.pk:
+                RoomPhoto.objects.filter(
+                    room=self.room,
+                    order_number__gte=self.order_number
+                ).update(order_number=models.F('order_number') + 1)
+            else:
+                old = RoomPhoto.objects.get(pk=self.pk)
+                if old.order_number != self.order_number:
+                    if self.order_number > old.order_number:
+                        RoomPhoto.objects.filter(
+                            room=self.room,
+                            order_number__gt=old.order_number,
+                            order_number__lte=self.order_number
+                        ).update(order_number=models.F('order_number') - 1)
+                    else:
+                        RoomPhoto.objects.filter(
+                            room=self.room,
+                            order_number__gte=self.order_number,
+                            order_number__lt=old.order_number
+                        ).update(order_number=models.F('order_number') + 1)
+            super().save(*args, **kwargs)
+
+    def delete(self, *args, **kwargs):
+        order_number = self.order_number
+        room = self.room
+        super().delete(*args, **kwargs)
+        RoomPhoto.objects.filter(room=room, order_number__gt=order_number) \
+            .update(order_number=models.F('order_number') - 1)
+
     def __str__(self) -> str:
-        return f'Фото №{self.sort_order_number} комнаты {self.room}'
+        return f'Фото №{self.order_number} комнаты {self.room}'
