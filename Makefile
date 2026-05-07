@@ -1,4 +1,4 @@
-.PHONY: env init dev up build down down-v logs ps migrate fixtures
+.PHONY: env init dev up build down down-v logs ps migrate fixtures db-redo
 
 env:
 	test -f .env || cp .env.example .env

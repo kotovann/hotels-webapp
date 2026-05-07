@@ -34,11 +34,18 @@ jobs:
       POSTGRES_USER: user
       POSTGRES_PASSWORD: pswd
       POSTGRES_PORT: 5432
-      POSTGRES_HOST: db
+      POSTGRES_HOST: localhost
 
       SECRET_KEY: super_ci_secret
       DEBUG: True
       ALLOWED_HOSTS: ""
+      FRONTEND_URL: http://localhost:3000
+      EMAIL_HOST: smtp.ci.com
+      EMAIL_PORT: 587
+      EMAIL_USE_TLS: True
+      EMAIL_HOST_USER: ci@ci.com
+      EMAIL_HOST_PASSWORD: ci_pswd
+      DEFAULT_FROM_EMAIL: ci@ci.com
 
     steps:
       - name: Make checkout
@@ -69,6 +76,9 @@ jobs:
 
       - name: Run migrations
         run: uv run python manage.py migrate --noinput
+
+      - name: Run backend tests
+        run: uv run python manage.py test
 
   frontend:
     name: Frontend
