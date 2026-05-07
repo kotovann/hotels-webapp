@@ -1,0 +1,47 @@
+export const hotels = [
+  {
+    id: 1,
+    name: 'Grand Hotel Neva',
+    city: 'Санкт-Петербург',
+    rating: 4.8,
+    priceFrom: 6200,
+    image: 'https://images.unsplash.com/photo-1566073771259-6a8506099945?q=80&w=1200&auto=format&fit=crop',
+    description: 'Современная гостиница в центре города с удобным расположением, просторными номерами и высоким уровнем сервиса.',
+    amenities: ['Wi-Fi', 'Завтрак', 'Парковка', 'Фитнес-зал'],
+    rooms: [
+      { id: 101, title: 'Стандартный номер', price: 6200, capacity: 2 },
+      { id: 102, title: 'Улучшенный номер', price: 8400, capacity: 2 },
+      { id: 103, title: 'Люкс', price: 12500, capacity: 3 },
+    ],
+  },
+  {
+    id: 2,
+    name: 'Hotel Moscow Garden',
+    city: 'Москва',
+    rating: 4.6,
+    priceFrom: 7100,
+    image: 'https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?q=80&w=1200&auto=format&fit=crop',
+    description: 'Гостиница бизнес-класса с комфортными номерами, конференц-залом и удобной транспортной доступностью.',
+    amenities: ['Wi-Fi', 'Ресторан', 'Трансфер', 'Конференц-зал'],
+    rooms: [
+      { id: 201, title: 'Стандарт', price: 7100, capacity: 2 },
+      { id: 202, title: 'Бизнес', price: 9800, capacity: 2 },
+      { id: 203, title: 'Апартаменты', price: 14800, capacity: 4 },
+    ],
+  },
+  {
+    id: 3,
+    name: 'Sochi Sea Resort',
+    city: 'Сочи',
+    rating: 4.7,
+    priceFrom: 7900,
+    image: 'https://images.unsplash.com/photo-1571896349842-33c89424de2d?q=80&w=1200&auto=format&fit=crop',
+    description: 'Курортная гостиница рядом с морем, подходящая для семейного отдыха и длительного проживания.',
+    amenities: ['Бассейн', 'Wi-Fi', 'Пляж', 'Завтрак'],
+    rooms: [
+      { id: 301, title: 'Стандарт с видом на город', price: 7900, capacity: 2 },
+      { id: 302, title: 'Номер с видом на море', price: 11200, capacity: 2 },
+      { id: 303, title: 'Семейный номер', price: 15600, capacity: 4 },
+    ],
+  },
+];
