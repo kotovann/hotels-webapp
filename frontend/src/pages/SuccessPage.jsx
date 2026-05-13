@@ -1,6 +1,11 @@
 import { Link } from 'react-router-dom';
+import usePageMeta from '../hooks/usePageMeta';
 
 function SuccessPage() {
+  usePageMeta(
+    'HotelsWeb — бронирование оформлено',
+    'Страница успешного оформления бронирования в веб-приложении HotelsWeb.'
+  );
   return (
     <main className="max-w-3xl mx-auto px-4 py-20 text-center">
       <div className="bg-white rounded-3xl p-10 border shadow-sm">

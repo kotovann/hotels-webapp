@@ -1,6 +1,11 @@
 import { Link } from 'react-router-dom';
+import usePageMeta from '../hooks/usePageMeta';
 
 function RegisterPage() {
+  usePageMeta(
+    'HotelsWeb — регистрация пользователя',
+    'Страница регистрации пользователя в веб-приложении HotelsWeb для дальнейшего оформления и просмотра бронирований.'
+  );
   return (
     <main className="max-w-md mx-auto px-4 py-14">
       <h1 className="text-3xl font-bold">Регистрация</h1>

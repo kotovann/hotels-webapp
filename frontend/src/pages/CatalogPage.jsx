@@ -1,8 +1,13 @@
 import { useState } from 'react';
 import { Link, useSearchParams } from 'react-router-dom';
 import { hotels } from '../data/hotels';
+import usePageMeta from '../hooks/usePageMeta';
 
 function CatalogPage() {
+  usePageMeta(
+    'HotelsWeb — каталог гостиниц',
+    'Каталог гостиниц HotelsWeb с карточками отелей, фильтрацией по цене и рейтингу, а также переходом к подробной информации.'
+  );
   const [searchParams] = useSearchParams();
   const city = searchParams.get('city') || '';
 

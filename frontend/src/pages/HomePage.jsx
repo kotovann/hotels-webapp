@@ -1,8 +1,13 @@
 import { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
+import usePageMeta from '../hooks/usePageMeta';
 import { hotels } from '../data/hotels';
 
 function HomePage() {
+  usePageMeta(
+    'HotelsWeb — поиск и бронирование гостиниц',
+    'Главная страница веб-приложения HotelsWeb для поиска гостиниц, выбора дат проживания и перехода к каталогу отелей.'
+  );
   const navigate = useNavigate();
   const [city, setCity] = useState('');
 

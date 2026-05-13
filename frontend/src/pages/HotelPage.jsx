@@ -1,7 +1,12 @@
 import { Link, useParams } from 'react-router-dom';
+import usePageMeta from '../hooks/usePageMeta';
 import { hotels } from '../data/hotels';
 
 function HotelPage() {
+  usePageMeta(
+    'HotelsWeb — информация о гостинице',
+    'Страница гостиницы HotelsWeb с описанием отеля, удобствами, стоимостью проживания и списком доступных номеров.'
+  );
   const { id } = useParams();
   const hotel = hotels.find((item) => item.id === Number(id));
 

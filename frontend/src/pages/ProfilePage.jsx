@@ -1,4 +1,5 @@
 import { useMemo, useState } from 'react';
+import usePageMeta from '../hooks/usePageMeta';
 
 const bookingStatusLabels = {
   A: 'Активно',
@@ -64,6 +65,10 @@ const mockBookings = [
 ];
 
 function ProfilePage() {
+  usePageMeta(
+    'HotelsWeb — личный кабинет пользователя',
+    'Личный кабинет HotelsWeb для просмотра профиля пользователя, статистики бронирований и управления активными заявками.'
+  );
   const [statusFilter, setStatusFilter] = useState('ALL');
   const [bookings, setBookings] = useState(mockBookings);
   const [message, setMessage] = useState('');

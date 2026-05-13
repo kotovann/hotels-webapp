@@ -1,8 +1,13 @@
 import { useMemo, useState } from 'react';
 import { useNavigate, useParams } from 'react-router-dom';
 import { hotels } from '../data/hotels';
+import usePageMeta from '../hooks/usePageMeta';
 
 function BookingPage() {
+  usePageMeta(
+    'HotelsWeb — оформление бронирования',
+    'Страница оформления бронирования гостиничного номера с контактными данными, датами проживания и параметрами гостей.'
+  );
   const navigate = useNavigate();
   const { hotelId, roomId } = useParams();
 

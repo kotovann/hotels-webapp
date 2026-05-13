@@ -1,6 +1,11 @@
 import { Link } from 'react-router-dom';
+import usePageMeta from '../hooks/usePageMeta';
 
 function LoginPage() {
+  usePageMeta(
+    'HotelsWeb — вход в личный кабинет',
+    'Страница входа пользователя в личный кабинет веб-приложения HotelsWeb.'
+  );
   return (
     <main className="max-w-md mx-auto px-4 py-14">
       <h1 className="text-3xl font-bold">Вход</h1>
