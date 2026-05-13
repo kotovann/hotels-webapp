@@ -3,6 +3,13 @@ import { Link, useSearchParams } from 'react-router-dom';
 import { hotels } from '../data/hotels';
 import usePageMeta from '../hooks/usePageMeta';
 
+const ratingOptions = [
+  { label: 'Любой', value: '0' },
+  { label: '4.0+', value: '4.0' },
+  { label: '4.5+', value: '4.5' },
+  { label: '4.8+', value: '4.8' },
+];
+
 function CatalogPage() {
   usePageMeta(
     'HotelsWeb — каталог гостиниц',
@@ -13,7 +20,7 @@ function CatalogPage() {
   const city = searchParams.get('city') || '';
 
   const [maxPrice, setMaxPrice] = useState('');
-  const [minRating, setMinRating] = useState('4.0');
+  const [minRating, setMinRating] = useState('0');
 
   const filteredHotels = hotels.filter((hotel) => {
     const matchesCity = city
@@ -61,25 +68,33 @@ function CatalogPage() {
             />
           </label>
 
-          <label className="block mt-4">
-            <span className="text-sm text-slate-600">Рейтинг от</span>
-            <select
-              className="w-full border rounded-xl px-3 py-2 mt-1"
-              value={minRating}
-              onChange={(event) => setMinRating(event.target.value)}
-            >
-              <option value="4.0">4.0</option>
-              <option value="4.5">4.5</option>
-              <option value="4.8">4.8</option>
-            </select>
-          </label>
+          <fieldset className="mt-4">
+            <legend className="text-sm text-slate-600">Рейтинг</legend>
+            <div className="grid grid-cols-2 gap-2 mt-2">
+              {ratingOptions.map((option) => (
+                <button
+                  key={option.value}
+                  type="button"
+                  className={`rounded-xl px-3 py-2 text-sm font-semibold border ${
+                    minRating === option.value
+                      ? 'bg-blue-600 text-white border-blue-600'
+                      : 'bg-white text-slate-700 border-slate-200 hover:bg-slate-50'
+                  }`}
+                  onClick={() => setMinRating(option.value)}
+                  aria-pressed={minRating === option.value}
+                >
+                  {option.label}
+                </button>
+              ))}
+            </div>
+          </fieldset>
 
           <button
             type="button"
             className="w-full mt-5 bg-slate-900 text-white rounded-xl py-2 font-semibold hover:bg-slate-800"
             onClick={() => {
               setMaxPrice('');
-              setMinRating('4.0');
+              setMinRating('0');
             }}
           >
             Сбросить фильтры
