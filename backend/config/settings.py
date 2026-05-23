@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'app.accounts',
     'app.hotels',
     'app.bookings',
+    'drf_spectacular',
 ]
 
 AUTH_USER_MODEL = 'accounts.User'
@@ -54,6 +55,12 @@ REST_FRAMEWORK = {
         'rest_framework.filters.SearchFilter',
         'rest_framework.filters.OrderingFilter',
     ],
+    'DEFAULT_SCHEMA_CLASS': 'drf_spectacular.openapi.AutoSchema',
+}
+
+SPECTACULAR_SETTINGS = {
+    'TITLE': 'Hotel Website API',
+    'DESCRIPTION': 'API Documentation',
 }
 
 SIMPLE_JWT = {
