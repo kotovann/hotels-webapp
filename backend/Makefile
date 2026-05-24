@@ -88,6 +88,15 @@ superuser:
 test:
 	docker compose exec backend uv run python manage.py test $(TEST_NAME)
 
+coverage:
+	docker compose exec backend uv run coverage run --source="." manage.py test $(APP_NAME)
+
+cov-report:
+	docker compose exec backend uv run coverage report
+
+cov-html:
+	docker compose exec backend uv run coverage html
+
 lint:
 	docker compose exec backend uv run ruff check .
 

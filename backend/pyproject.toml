@@ -18,6 +18,8 @@ dependencies = [
 
 [dependency-groups]
 dev = [
+    "coverage>=7.14.0",
+    "drf-spectacular>=0.29.0",
     "faker>=40.13.0",
     "pytest",
     "pytest-django",
