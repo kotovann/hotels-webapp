@@ -6,7 +6,7 @@ ANSIBLE_ENV = ANSIBLE_LOCAL_TEMP=/tmp/ansible-local ANSIBLE_REMOTE_TEMP=/tmp/ans
 ANSIBLE_PLAYBOOK = $(ANSIBLE_ENV) ansible-playbook -i $(INVENTORY) $(PLAYBOOK) --vault-password-file $(VAULT_PASSWORD_FILE)
 ANSIBLE = $(ANSIBLE_ENV) ansible -i $(INVENTORY)
 
-.PHONY: help roles ping syntax prepare security firewall backup deploy nginx all ps logs migrate vault-edit
+.PHONY: roles ping prepare security firewall backup deploy nginx all ps logs migrate vault-edit
 
 roles:
 	ansible-galaxy collection install -r requirements.yml
@@ -36,13 +36,13 @@ all:
 	$(ANSIBLE_PLAYBOOK)
 
 ps:
-	$(ANSIBLE) webservers -b -m command -a "docker compose -f /opt/hotels-webapp/docker-compose.production.yml ps"
+	$(ANSIBLE) webservers -b -m command -a "chdir=/opt/hotels-webapp docker compose --env-file .env.production -f docker-compose.production.yml ps"
 
 logs:
-	$(ANSIBLE) webservers -b -m command -a "docker compose -f /opt/hotels-webapp/docker-compose.production.yml logs --tail=100"
+	$(ANSIBLE) webservers -b -m command -a "chdir=/opt/hotels-webapp docker compose --env-file .env.production -f docker-compose.production.yml logs --tail=100"
 
 migrate:
-	$(ANSIBLE) webservers -b -m command -a "docker compose -f /opt/hotels-webapp/docker-compose.production.yml exec -T backend uv run python manage.py migrate --noinput"
+	$(ANSIBLE) webservers -b -m command -a "chdir=/opt/hotels-webapp docker compose --env-file .env.production -f docker-compose.production.yml exec -T backend uv run python manage.py migrate --noinput"
 
 vault-edit:
 	EDITOR=$(VAULT_EDITOR) $(ANSIBLE_ENV) ansible-vault edit group_vars/vault.yml --vault-password-file $(VAULT_PASSWORD_FILE)

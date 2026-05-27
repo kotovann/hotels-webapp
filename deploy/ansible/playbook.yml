@@ -217,6 +217,8 @@
     - name: Run migrations
       community.docker.docker_compose_v2_exec:
         project_src: "{{ app_dir }}"
+        files:
+          - docker-compose.production.yml
         env_files:
           - .env.production
         service: backend
