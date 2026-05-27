@@ -345,7 +345,7 @@ class ReviewModelTest(TestCase):
         self.guest = Guest.objects.create(user=self.guest_user)
         self.booking = Booking.objects.create(
             room=self.room,
-            guest=self.user1.guest,
+            guest=self.guest,
             adults_count=1,
             children_count=1,
             pets_count=1,
