@@ -6,12 +6,12 @@ allowed_ports:
   - 80
   - 443
 
-backend_image: ghcr.io/kotovann/hotels-backend:test
-frontend_image: ghcr.io/kotovann/hotels-frontend:test
+backend_image: ghcr.io/kotovann/hotels-backend:production
+frontend_image: ghcr.io/kotovann/hotels-frontend:production
 
 allowed_hosts: xn--80aq2aabd.xn--p1ai
 domain_name: xn--80aq2aabd.xn--p1ai
-frontend_url: http://xn--80aq2aabd.xn--p1ai
+frontend_url: https://xn--80aq2aabd.xn--p1ai
 
 backend_port: 8000
 frontend_port: 3000

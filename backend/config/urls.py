@@ -14,7 +14,7 @@ urlpatterns = [
     path('api/', include('app.accounts.urls')),
     path('api/', include('app.hotels.urls')),
     path('api/', include('app.bookings.urls')),
-    path('health/{HEALTH_TOKEN}/',  HealthCheckView.as_view(
+    path(f'health/{HEALTH_TOKEN}/',  HealthCheckView.as_view(
             checks=[
                 "health_check.Cache",
                 "health_check.Database",
