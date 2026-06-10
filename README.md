@@ -1,4 +1,4 @@
-# HotelsWeb
+<h1 align="center">HotelsWeb</h1>
 
 <p align="center">
   <a href="https://github.com/kotovann/hotels-webapp/actions/workflows/check.yml">
@@ -21,8 +21,9 @@
     - deployment: GitHub Actions + GHCR + Ansible
     - monitoring: Uptime Kuma
 
-
+---
 ###  Локальный запуск
+---
 
 **Требования:**
 
